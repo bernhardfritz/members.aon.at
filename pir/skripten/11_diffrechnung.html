@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Differenzialrechnung</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>XI. DIFFERENZIALRECHNUNG</b></div>
+
+ <div><br>
+<a href='11_diffrechnung.html#A'>A. Differenzialquotient und Ableitung</a><br>
+<a href='11_diffrechnung.html#B'>B. Ableitung elementarer Funktionen</a><br>
+<a href='11_diffrechnung.html#C'>C. Ableitungsregeln</a><br>
+<a href='11_diffrechnung.html#D'>D. Diff-basierte Werkzeuge</a><br>
+<a href='11_diffrechnung.html#E'>E. Kurvendiskussionen</a><br>
+<a href='11_diffrechnung.html#F'>F. Extremwertaufgaben</a><br>
+<a href='11_diffrechnung.html#G'>G. Funktionen in zwei Variablen</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='11a_diffrechnung.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> DIFFERENZIALQUOTIENT UND ABLEITUNG</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Steigung als Differenzialquotient</b></div>
+
+ <div><br>
+Zur Erinnerung: Die Definition der <b>Steigung</b> als Verhältnis von &Delta;y zu &Delta;x macht nur bei Geraden Sinn, weil hier jedes Steigungsdreieck dieselbe Zahl ergibt. Intuitiv nimmt man auch bei krummen Kurven – unterschiedliche – Steigungen wahr, indem man sich die Kurve aus winzigen Geradenstücken zusammengesetzt denkt. Genauer:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/di_00.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+Eine Funktion f(x) heißt <b>differenzierbar an der Stelle x,</b> wenn dort der <b>Differenzialquotient</b> existiert, das ist die folgende Definition für Steigung:<br><br>
+
+<span class='p02'>•</span> <b><div class='frac p02'><div class='num'>df</div><div class='den'>dx</div></div>(x)</b> bzw. <b><span class='p01'>f</span>'(x) :</b>= <div class='lim'><b>lim</b><div class='sos'><b>&Delta;x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0</b></div></div><div class='frac p20'><div class='num'><b>f(x<span class='p22'>+</span>&Delta;x) – f(x)</b></div><div class='den'><b>&Delta;x</b></div></div><br><br>
+
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Die entsprechenden Begriffe bei zeitabhängigen Funktionen:</div>
+
+ <div class='in mt1'>
+mittlere Änderungsrate über dem Intervall [a<span class='p02'>,</span>b] = Differenzenquotient <div class='frac p20'><div class='num'>f(b) – f(a)</div><div class='den'>b – a</div></div></div>
+
+ <div class='in mt1'>
+Änderungsrate zum Zeitpunkt x = Differenzialquotient <span class='p01'>f</span>'(x)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Bestimme f<span class='p20'>'</span>(x) für
+
+  <div class='in'><br>
+<b>a)</b> f(x) = x<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> f(x) = |x|</div></div>
+
+ <div class='in'><br>
+<b>a)</b> f<span class='p20'>'</span>(x) = <div class='lim'>lim<div class='sos'>&Delta;x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0</div></div><div class='frac'><div class='num'>(x<span class='p22'>+</span>&Delta;x)<sup>2</sup> – x<sup>2</sup></div><div class='den'>&Delta;x</div></div> = lim <div class='frac'><div class='num'>x<sup>2</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-18px; margin-right:3px;'>+ 2x&Delta;x + &Delta;x<sup>2</sup> – x<sup>2</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-18px;'></div><div class='den'>&Delta;x</div></div> = lim <div class='frac'><div class='num'>&Delta;x(2x + &Delta;x)</div><div class='den'>&Delta;x</div></div> = <span class='p02'>lim</span>(2x<span class='p44'>+</span>&Delta;x) = 2x</div>
+
+ <div class='in mt2'>
+<img src='img/di_01.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='A.2' class='box'>2</a> Ableitung und höhere Ableitungen</b></div>
+
+ <div><br>
+Die <b>Ableitung</b> einer Funktion f(x) ist die Funktion f<span class='p20'>'</span>(x), die an jeder Stelle den Wert hat, den die Originalfunktion dort als Steigung hat. Der Strich bzw. d/dx ist demnach ein unärer Operator, der auf Funktionen angewandt wird und solche ergibt. Wird er wiederholt angewandt, spricht man von <b>höheren Ableitungen</b> und schreibt:</div>
+
+ <div class='in'style='margin-top:4px;'>
+f<span class='p20'>"</span> <span class='ldf'>:</span>= (f<span class='p20'>'</span>)' &nbsp; bzw. &nbsp; <img src='img/di_02.gif' style='position:relative; top:14px;'></div>
+
+ <div style='margin-top:28px;'>
+<b>Übung:</b> Bestimme die Ableitungen folgender Funktionskurven "grafisch" durch Abschätzen der Steigungen:</div>
+
+ <div class='in'><br>
+<img src='img/di_03.gif'><br>
+<img src='img/di_04.gif' style='margin-top:-3px;'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> ABLEITUNG ELEMENTARER FUNKTIONEN</b></div>
+
+ <div><br><br>
+Üblicherweise haben wir mit Funktionen zu tun, die aus elementaren Funktionen zusammengerechnet werden. Das Differenzieren basiert dann auf zwei Säulen: Einerseits muss man die <b>Ableitungen elementarer Funktionen</b> kennen (andererseits braucht es <b>Ableitungsregeln,</b> die sagen, wie sich das Zusammenrechnen auf die Steigung auswirkt).</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>(x<sup class='p11'>r</sup>)'</b> = <b><span class='p02'>r</span>x<sup class='p11'>r<span class='p20'>–</span>1</sup></b></div>
+
+ <div style='margin-top:18px;'>
+<span class='p02'>•</span> <b>(e<sup>x</sup>)'</b> = <b>e<sup>x</sup></b> &nbsp; bzw. &nbsp; (b<sup>x</sup>)' = b<sup class='p02'>x</sup>lnb</div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b>(lnx)'</b> = <div class='frac'><div class='num'><b>1</b></div><div class='den'><b>x</b></div></div> &nbsp; bzw. &nbsp; (log<sub>b</sub>x)' = <div class='frac'><div class='num'>1</div><div class='den'><span class='p01'>x</span>lnb</div></div></div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b>(cosx)'</b> = <b>–sinx</b></div>
+
+ <div class='mt2'>
+<span class='p02'>•</span> <b>(sinx)'</b> = <b>cosx</b></div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b>(tanx)'</b> = <div class='frac'><div class='num'><b>1</b></div><div class='den'><b>cos<sup>2</sup>x</b></div></div></div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b>(arccosx)'</b> = –<div class='frac to2 p20'><div class='num'><b>1</b></div><div class='den to2'><span class='r2a'>&radic;</span><b class='rad'>1 – x<sup>2</sup></b></div></div></div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b>(arcsinx)'</b> = <div class='frac to2'><div class='num'><b>1</b></div><div class='den to2'><span class='r2a'>&radic;</span><b class='rad'>1 – x<sup>2</sup></b></div></div></div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b>(arctanx)'</b> = <div class='frac'><div class='num'><b>1</b></div><div class='den'><b>1 + x<sup>2</sup></b></div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+Beweis für f(x) = e<sup>x</sup>, wobei e vorläufig nur Platzhalter für eine feste reelle Zahl (&gt; 0) sein soll:</div>
+
+ <div class='in'><br>
+f<span class='p20'>'</span>(x) = <div class='lim'>lim<div class='sos'>&Delta;x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0</div></div><div class='frac'><div class='num'>e<sup>x<span class='p11'>+</span>&Delta;x</sup> – e<sup>x</sup></div><div class='den'>&Delta;x</div></div> = e<sup>x</sup><div class='lim'>lim<div class='sos'>&Delta;x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0</div></div><div class='frac'><div class='num'>e<sup>&Delta;x</sup> – 1</div><div class='den'>&Delta;x</div></div> = e<sup class='p02'>x</sup>f<span class='p20'>'</span>(0)</div>
+
+ <div class='in'><br>
+Die <b>Euler'sche Zahl e</b> definieren wir jetzt implizit als die Zahl, bei der f<span class='p20'>'</span>(0) = 1 ist. Für eine explizite Definition spiegeln wir die Funktionskurve an der 1. Mediane. Die Steigung 1 im Punkt P(0|1) der Originalkurve wird dann zur Steigung 1 im Punkt P'(1|0) der gespiegelten Kurve:</div>
+
+ <div class='in'><br>
+1 = (f<sup class='p20'>–1</sup>)'(1) = <div class='lim'>lim<div class='sos'>&Delta;x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0</div></div><div class='frac'><div class='num'>ln(1<span class='p44'>+</span>&Delta;x) – ln1</div><div class='den'>&Delta;x</div></div> = <div class='lim'>lim<div class='sos'>&Delta;x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0</div></div>ln(1<span class='p44'>+</span>&Delta;x)<sup><span style='position:relative; bottom:14px; left:5px;'>1</span><span style='margin-left:-6px; text-decoration:overline;'>&Delta;x</span></sup> &nbsp; |e<sup>(.)</sup> stetig</div>
+
+ <div class='in'><br>
+<img src='img/di_05.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> ABLEITUNGSREGELN</b></div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Konstantenregel:</b> Konstante Summanden verschwinden beim Differenzieren, konstante Faktoren bleiben unverändert.</div>
+
+ <div><br>
+Beispiel: (5x<sup>2</sup> + 1)' = (5x<sup>2</sup>)' = 5·(x<sup>2</sup>)' = 5·2x</div>
+
+ <div><br>
+Die Konstantenregel merken wir uns, um schneller zu differenzieren, auch wenn es nur Spezialfälle der folgenden <b>Ableitungsregeln</b> sind:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Summenregel: (f ± g)'(x)</b> = <b>f<span class='p10'>'</span>(x) ± g'(x)</b></div>
+
+ <div class='mt2'>
+<span class='p02'>•</span> <b>Produktregel: (<span class='p02'>f</span>g)'(x)</b> = <b>f<span class='p10'>'</span>(x)<span class='p20'>g</span>(x) + f(x)<span class='p20'>g</span>'(x)</b></div>
+
+ <div class='mt2'>
+<span class='p02'>•</span> <b>Quotientenregel: <img src='img/di_06.gif' style='vertical-align:-14px;'></b></div>
+
+ <div class='mt2'>
+<span class='p02'>•</span> <b>Kettenregel: (f<span class='aft'>o</span>g)'(x)</b> = <b>f<span class='p10'>'</span>(u)<span class='p20'>u</span>'</b></div>
+
+ <div style='margin-top:3px; margin-left:179px;'>
+<img src='sym/uarr.gif'></div>
+ <div style='margin-left:160px; font-size:11px;'>
+<b>u</b><span class='p22'>=</span><b>g(x)</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 2:</b> Differenziere die folgende Funktion:
+
+  <div class='in'><br>
+<b>a)</b> y = 3x<sup>4</sup> – 5x<sup>2</sup> + 10 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> y = xe<sup>x</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> y = <div class='frac'><div class='num'>sinx</div><div class='den'>cosx</div></div> (= tanx)  &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> y = <span class='r1t'>&radic;</span><span class='rad'>lnx</span></div></div>
+
+ <div class='in'><br>
+<b>a)</b> y = 3x<sup>4</sup> – 5x<sup>2</sup> + 10 <img src='sym/rarr2.svg' class='p66'> y' = 3(x<sup>4</sup>)' – 5(x<sup>2</sup>)' = 3·4x<sup>3</sup> – 5·2x</div>
+
+ <div class='in'><br>
+<b>b)</b> y = xe<sup>x</sup> <img src='sym/rarr2.svg' class='p66'> y' = (x)<span class='p02'>'</span>e<sup>x</sup> + <span class='p02'>x</span>(e<sup>x</sup>)' = 1e<sup>x</sup> + xe<sup>x</sup></div>
+
+ <div class='in'><br>
+<b>c)</b> y = <div class='frac'><div class='num'>sinx</div><div class='den'>cosx</div></div> <img src='sym/rarr2.svg' class='p66'> y' = <div class='frac'><div class='num'>(sinx)'cosx – sinx(cosx)'</div><div class='den'>cos<sup>2</sup>x</div></div> = <div class='frac'><div class='num'>cos<span class='p02'>x</span>cosx – sin<span class='p02'>x</span>(–sinx)</div><div class='den'>cos<sup>2</sup>x</div></div> = <div class='frac'><div class='num'>1</div><div class='den'>cos<sup>2</sup>x</div></div></div>
+
+ <div class='in'><br>
+<b>d)</b> <img src='img/di_07.gif' style='vertical-align:-11px;'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> DIFF-BASIERTE WERKZEUGE</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Tangente als Näherung</b></div>
+
+ <div><br>
+Im Hinblick auf die Steigung von Funktionskurven haben wir uns diese aus winzigen Geradenstücken zusammengesetzt gedacht. So gesehen ist die <b>Tangente</b> in einem Kurvenpunkt einfach die Verlängerung des dortigen Geradenstücks, d.h. an der Stelle, wo die Tangente an die Funktionskurve angelegt wird, haben beide dieselbe Steigung und denselben Funktionswert.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> "Linearisiere" die Funktion f(x) = e<sup>&lambda;x</sup> an der Stelle 0, d.h. bestimme die Gleichung der dortigen Tangente.</div>
+
+ <div class='in' style='float:left; margin-right:40px;'><br>
+<img src='img/di_08.gif'></div>
+
+ <div class='mt1'><br>
+f(x) = e<sup>&lambda;x</sup> <img src='sym/rarr2.svg' class='p66'> <span class='p02'>f</span>'(x) = e<sup>&lambda;x</sup>&lambda;</div>
+
+ <div><br>
+g(x) = kx + d</div>
+
+
+ <div style='float:left;'><br>
+  <div>
+(1) g'(0) = <span class='p02'>f</span>'(0) = &lambda; = k</div>
+
+ <div class='mt1'>
+(2) g(0) = f(0) = 1 = d</div>
+</div>
+
+ <div style='margin-top:4px;'><br>
+<img src='sym/rbr1.gif' style='margin-left:7px; vertical-align:middle;'>&thinsp; g(x) = &lambda;x + 1</div>
+
+ <div style='clear:left;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='D.2' class='box'>2</a> Newton'sches Näherungsverfahren</b></div>
+
+ <div><br>
+Mit dem <b>Newton'schen Näherungsverfahren</b> werden Nullstellen von Funktionen berechnet. Am besten beginnt man an einer Stelle, die bereits im Nahbereich der Lösung liegt, ermittelt dort die Tangente und schneidet sie mit der x-Achse. An der so gewonnenen Stelle, die typischerweise näher an der gesuchten Nullstelle liegt, setzt die nächste Wiederholung an usw.</div>
+
+ <div class='in'><br>
+<img src='img/di_09.gif'></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Zwei Punkte starten mit gleicher Geschwindigkeit und Richtung an gegenüberliegenden Kreispositionen. Der eine bewegt sich auf dem Kreis, der andere tangential. Bei welchem Winkel wird die Visierlinie von Kreismitte zu Tangentenpunkt erstmals vom anderen Punkt versperrt?</div>
+
+ <div class='in mt2'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/di_10.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+<img src='img/di_11.gif'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+&phi;<sub>0</sub> = 1 <img src='sym/rarr.svg' class='bo1'>
+&phi;<sub>1</sub> = 1,132003716 <img src='sym/rarr.svg' class='bo1'>
+&phi;<sub>2</sub> = 1,113470197 <img src='sym/rarr.svg' class='bo1'>
+&phi;<sub>3</sub> = 1,112835501 <img src='sym/rarr.svg' class='bo1'>
+&phi;<sub>4</sub> = 1,112834815 = &phi;</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='D.3' class='box'>3</a> Regel von de l'Hospital</b></div>
+
+ <div><br>
+Auch nachdem wir bei den Grenzwertsätzen bestimmten Rechnungen mit &infin; ein Ergebnis zugewiesen haben, sind unbestimmte Ausdrücke geblieben,  bei denen verschiedene Ergebnisse möglich sind, weil die Geschwindigkeit (&rarr; Ableitung) mitspielt, mit der 0 bzw. &infin; realisert wird. Die <b>Regel von de l'Hospital</b> greift das für a&nbsp;<img src='sym/isin.gif'>&nbsp;<img src='sym/setR.gif'> bzw. a&nbsp;=&nbsp;±&infin; wie folgt auf:</div>
+
+ <div class='mt1'>
+&bull; <div class='lim'><b>lim</b><div class='sos'><b>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>a</b></div></div><div class='frac p44'><div class='num'><b>f(x)</b></div><div class='den'><b>g(x)</b></div></div>
+
+  <div style='display:inline-block; vertical-align:middle; margin-right:7px;'>
+<img src='sym/2arr2.gif'></div>
+
+  <div style='display:inline-block; vertical-align:-25px;'>
+   <div>
+<div class='frac p04'><div class='num'><b>0</b></div><div class='den'><b>0</b></div></div><b>?</b></div>
+
+  <div class='mt1'>
+<div class='frac p04'><div class='num'><b>&infin;</b></div><div class='den'><b>&infin;</b></div></div><b>?</b></div></div>
+
+&nbsp;=	<div class='lim'><b>lim</b><div class='sos'><b>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>a</b></div></div><div class='frac p40'><div class='num'><b><span class='p01'>f</span>'(x)</b></div><div class='den'><b>g'(x)</b></div></div>
+ </div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 5:</b> Bestimme mit der Regel von de l'Hospital.
+
+  <div class='in'><br>
+<b>a)</b> <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>1</div></div><div class='frac p40'><div class='num'>x<sup>2</sup> – 1</div><div class='den'>x – 1</div></div> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div><div class='frac p40'><div class='num'>e<sup>x</sup></div><div class='den'>x<sup>2</sup> + 1</div></div> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b>  <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0+</div></div><span class='p01'>x</span>ln<div class='frac p20'><div class='num'>1</div><div class='den'>x</div></div></div></div>
+
+ <div class='in'><br>
+<b>a)</b> <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>1</div></div><div class='frac p44'><div class='num'>x<sup>2</sup> – 1</div><div class='den'>x – 1</div></div>
+  <div class='brac grau'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+= <div class='frac p04'><div class='num'>0</div><div class='den'>0</div></div>?</div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>1</div></div><div class='frac p40'><div class='num'>2x</div><div class='den'>1</div></div> = 2</div>
+
+ <div class='in'><br>
+<b>b)</b> <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div> <div class='frac p04'><div class='num'>e<sup>x</sup></div><div class='den'>x<sup>2</sup> + 1</div></div>
+  <div class='brac grau'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+= <div class='frac p04'><div class='num'>&infin;</div><div class='den'>&infin;</div></div>?</div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div> <div class='frac p04'><div class='num'>e<sup>x</sup></div><div class='den'>2x</div></div>
+  <div class='brac grau'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+= <div class='frac p04'><div class='num'>&infin;</div><div class='den'>&infin;</div></div>?</div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div><div class='frac p40'><div class='num'>e<sup>x</sup></div><div class='den'>2</div></div> = &infin;</div>
+
+ <div class='in'><br>
+<b>c)</b> <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0+</div></div><span class='p11'>x</span>ln<div class='frac p20'><div class='num'>1</div><div class='den'>x</div></div><span class='grau' style='margin-left:7px;'>(= 0·&infin; ?)</span> = <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0+</div></div><div class='frac p44'><div class='num'>lnx<sup>–1</sup></div><div class='den'>x<sup>–1</sup></div></div>
+  <div class='brac grau'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+= <div class='frac p04'><div class='num'>&infin;</div><div class='den'>&infin;</div></div>?</div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0+</div></div> <div class='frac p04'><div class='num'>–x<sup>–1</sup></div><div class='den'>–x<sup>–2</sup></div></div> = <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0+</div></div>x = 0</div>
+
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='E' class='box'>E</a> KURVENDISKUSSIONEN</b></div>
+
+ <div><br><br>
+<b><a name='E.1' class='box'>1</a> Asymptoten</b></div>
+
+ <div><br>
+Eine <b>Asymptote</b> ist eine "einfachere" Funktion g(x), die sich in Richtung +&infin; oder –&infin; der vorgegebenen Funktion f(x) beliebig nähert:</div>
+
+ <div class='in'><br>
+<img src='img/di_12.gif'></div>
+
+ <div><br>
+Eine <b>Polstelle bei a</b> bedeutet, dass dort eine vertikale Gerade die Rolle der Asymptote übernimmt:</div>
+
+ <div class='in'><br>
+<img src='img/di_13.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.2' class='box'>2</a> Monotonie und lokale Extrempunkte</b></div>
+
+ <div><br>
+Bei <b>streng monoton steigenden</b> Kurvenabschnitten liegt der linke von zwei beliebigen Kurvenpunkten immer tiefer als der rechte. Im Fall einer differenzierbaren Funktionen ist das gleichbedeutend damit, dass f<span class='p20'>'</span>(x) &gt; 0 ist. Bei <b>streng monoton fallenden</b> Abschnitten ist es andersrum. Unterschiedliche Abschnitte werden durch <b>lokale Extrempunkte</b> (Hoch- und Tiefpunkte) mit waagrechter Tangente verknüpft.</div>
+
+ <div class='in'><br>
+<img src='img/di_14.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b><a name='E.3' class='box'>3</a> Krümmung und Wendepunkte</b></div>
+
+ <div><br>
+Bei <b>linksgekrümmten</b> Kurvenabschnitten haben wir zunehmende Steigungen und dementsprechend f<span class='p20'>"</span>(x) &gt; 0, bei <b>rechtsgekrümmten</b> ist es andersrum. Unterschiedliche Abschnitte werden durch <b>Wendepunkte</b> verknüpft, in denen die Kurve von der einen Seite der Tangente auf die andere wechselt.</div>
+
+ <div class='in'><br>
+<img src='img/di_15.gif'></div>
+
+ <div><br>
+Allgemeiner ist die Formulierung, dass ein (nicht notwendig differenzierbarer) Kurvenabschnitt <b>streng konvex</b> ist, falls die gerade Verbindung zweier beliebiger Kurvenpunkte immer oberhalb der Funktionskurve liegt. Bei <b>streng konkav</b> ist es andersrum. <span class='grau'>Zur Wortherkunft: Wenn wir von unten auf die Funktionskurve schauen, wirkt sie entgegengewölbt (lat. convexus) bzw. ausgehöhlt (lat. concavus).</span></div>
+
+ <div><br>
+So gesehen ist eine linksgekrümmte Kurve streng konvex, eine rechtsgekrümmte streng konkav. Betragsmäßig ist die <b>Krümmung an der Stelle x</b> der Radiuskehrwert des Kreises, der sich dort am besten an die Funktionskurve schmiegt:</div>
+
+ <div class='in' style='margin-top:12px;'>
+ ±<div class='frac p20'><div class='num'>1</div><div class='den'>r</div></div> = <div class='frac'><div class='num'>f<span class='p20'>"</span>(x)</div><div class='den'>(1 + f<span class='p20'>'</span>(x)<sup>2</sup>)<sup>3/2</sup></div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Untersuche die Funktion
+
+  <div class='in'><br>
+f(x) = <div class='frac'><div class='num'>x<sup>4</sup> – 3x<sup>3</sup> – 6x<sup>2</sup> + 16x</div><div class='den'>4x<sup>2</sup> – 12x + 8</div></div></div>
+
+  <div><br>
+im Hinblick auf <b>a)</b> Asymptoten für x <img src='sym/rarr.svg' class='bo1'> ±&infin;, <b>b)</b> Polstellen, <b>c)</b> lokale Extrempunkte, <b>d)</b> Wendepunkte.</div></div>
+
+ <div class='in'><br>
+<b>a)</b> Die Asymptote für x <img src='sym/rarr.svg' class='bo1'> ±&infin; liefert eine Polynomdivision. Der auf dem Divisor "sitzenbleibende" Rest hat dann einen kleineren Grad als dieser:</div>
+
+ <div class='in'><br>
+<img src='img/di_16.gif'></div>
+
+ <div class='in'><br>
+<b>b)</b> Auf Polstellen prüfen wir dort, wo der Funktionsterm nicht definiert ist. In unserem Fall schauen wir also, wo der Nenner Null ist:</div>
+
+ <div class='in mt2'>
+<span class='ws4'>4x<sup>2</sup> – 12x + 8</span> = <span class='ws4'>4(x<sup>2</sup> – 3x + 2)</span> = 0 <img src='sym/rarr2.svg' class='p66'> x<sub>1,2</sub> = <div class='frac'><div class='num'>3 ± <span class='r1t'>&radic;</span><span class='rad'>(–3)<sup>2</sup> – 4·2</span></div><div class='den'>2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17'>2</span><span class='to17' style='margin-left:-8px;'>1</span></div>
+
+ <div class='in'><br>
+f(x) = <div class='frac'><div class='num'>x<sup>2</sup></div><div class='den'>4</div></div> – 2 + <div class='frac'><div class='num'>–8(x – 2)<img src='sym/slash2.gif' style='position:relative; bottom:-6px; margin-left:-39px; margin-right:6px;'></div><div class='den'>4(x – 2)<img src='sym/slash2.gif' style='vertical-align:-7px; margin-left:-39px; margin-right:6px;'>(x – 1)</div></div> = <div class='frac'><div class='num'>x<sup>2</sup></div><div class='den'>4</div></div> – 2 – <div class='frac'><div class='num'>2</div><div class='den'>x – 1</div></div></div>
+
+ <div class='in mt2'>
+Definitionslücke bei x = 1 ist Polstelle mit <img src='img/di_17.gif' style='vertical-align:-45px;'></div>
+
+ <div class='in mt2'>
+Definitionslücke bei x<span class='p44'>=</span>2 ist stetig behebbar mit <img src='img/di_18.gif' style='vertical-align:-14px;'></div>
+
+ <div class='in mt2'>
+<b>c)</b> <span class='p02'>f</span>'(x) = <div class='frac'><div class='num'>1</div><div class='den'>4</div></div> <span class='ws4'>2x – 2(–1)(x – 1)<sup class='p02'>–2</sup></span> = <div class='frac'><div class='num'>x</div><div class='den'>2</div></div>	+ <div class='frac'><div class='num'>2</div><div class='den'>(x – 1)<sup>2</sup></div></div> = 0 &nbsp; <span class='ll ws4'>·2(x – 1)<sup>2</sup></span></div>
+
+ <div class='in'><br>
+<span class='ws4'>x(x – 1)<sup>2</sup> + 4</span> = 0 <img src='sym/rarr2.svg' class='p66'> Newton-Verfahren: x<sub>neu</sub> = x –	<div class='frac to1'><div class='num'>x<sup>3</sup> – 2x<sup>2</sup> + x + 4</div><div class='den'>3x<sup>2</sup> – 4x + 1</div></div> <img src='sym/rarr2.svg' class='p66'> x = –1</div>
+
+ <div class='in'><br>
+<span class='ws4'>(x<sup>3</sup> – 2x<sup>2</sup> + x + 4):(x + 1)</span> = <span class='ws4'>x<sup>2</sup> – 3x + 4</span> <img src='sym/rarr2.svg' class='p66'> keine weiteren Lösungen</div>
+
+ <div class='in'><br>
+<span class='p02'>f</span>"(x) = <div class='frac'><div class='num'>1</div><div class='den'>2</div></div> + 2(–2)(x – 1)<sup class='p02'>–3</sup> = <div class='frac'><div class='num'>1</div><div class='den'>2</div></div> – <div class='frac'><div class='num'>4</div><div class='den'>(x – 1)<sup>3</sup></div></div> <img src='sym/rarr2.svg' class='p66'> <span class='p02'>f</span>"(–1) &gt; 0 <img src='sym/rarr2.svg' class='p66'> T(–1|–0,75)</div>
+
+ <div class='in mt1'>
+<b>d)</b> <span class='p02'>f</span>"(x) = <div class='frac'><div class='num'>1</div><div class='den'>2</div></div> – <div class='frac'><div class='num'>4</div><div class='den'>(x – 1)<sup>3</sup></div></div> = 0 &nbsp; <span class='ll ws4'>·2(x – 1)<sup>3</sup></span></div>
+
+ <div class='in'><br>
+<span class='ws4'>(x – 1)<sup>3</sup> – 8</span> = 0 <img src='sym/rarr2.svg' class='p66'> <span class='ws4'>x – 1</span> = <sup>3</sup><span class='r1t'>&radic;</span><span class='rad'>8</span> <img src='sym/rarr2.svg' class='p66'> x = 3</div>
+
+ <div class='in'><br>
+<span class='p02'>f</span>"<span style='margin-left:-1px;'>'</span>(x) = (–4)(–3)(x – 1)<sup class='p02'>–4</sup> =  <div class='frac'><div class='num'>12</div><div class='den'>(x – 1)<sup>4</sup></div></div> <img src='sym/rarr2.svg' class='p66'> <span class='p02'>f</span>"<span style='margin-left:-1px;'>'</span>(3) &ne; 0 <img src='sym/rarr2.svg' class='p66'> W(3|–0,75)</div>
+
+ <div class='in mt2'>
+<img src='img/di_19.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.4' class='box'>4</a> Verallgemeinerte Interpolationen</b></div>
+
+ <div><br>
+... sind Umkehraufgaben in dem Sinn, dass Eigenschaften des Graphen vorgegebenen sind und die Funktionsgleichung gesucht wird.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 7:</b> Wie lautet die Funktionsgleichung für ein Polynom dritten Grades, wenn der Wendepunkt bei x = 1 liegt, die Tangente bei x = 2 mit der positiven x-Achse den Winkel &alpha; = 83,66° einschließt und P(3|10) ein lokaler Extrempunkt ist?</div>
+
+ <div class='in mt1'>
+y = ax<sup>3</sup> + bx<sup>2</sup> + cx + d</div>
+
+ <div class='in mt1'>
+y' = 3ax<sup>2</sup> + 2bx + c</div>
+
+ <div class='in mt1'>
+y" = 6ax + 2b</div>
+
+ <div class='in' style='margin-top:-4px;'>
+___________________</div>
+
+ <div class='in' style='margin-top:8px;'>
+(1)&nbsp; y"(1) = 0 <img src='sym/rarr2.svg' class='p66'> 6a·1 + 2b = 0</div>
+
+ <div class='in mt1'>
+(2)&nbsp; y'(2) = tan83,66° <img src='sym/rarr2.svg' class='p66'> 3a·2<sup>2</sup> + 2b·2 + c = 9</div>
+
+ <div class='in mt1'>
+(3)&nbsp; y'(3) = 0 <img src='sym/rarr2.svg' class='p66'> 3a·3<sup>2</sup> + 2b·3 + c = 0</div>
+
+ <div class='in mt1'>
+(4)&nbsp; y(3) = 10 <img src='sym/rarr2.svg' class='p66'> a·3<sup>3</sup> + b·3<sup>2</sup> + c·3 + d = 10</div>
+
+ <div class='in' style='margin-top:-4px;'>
+________________________________________</div>
+
+ <div class='in' style='margin-top:8px;'>
+(2)-(3)&nbsp; –15a – 2b = 9</div>
+
+ <div style='margin-left:32px; margin-top:10px;'>
++(1)&nbsp; –9a = 9 <img src='sym/rarr.svg' class='bo1'> a = –1</div>
+
+ <div style='margin-left:20px; margin-top:10px;'>
+<img src='sym/rarr.svg' class='bo1'> (1)&nbsp; –6 + 2b = 0 <img src='sym/rarr.svg' class='bo1'> b = 3</div>
+
+ <div style='margin-left:20px; margin-top:10px;'>
+<img src='sym/rarr.svg' class='bo1'> (3)&nbsp; –27 + 18 + c <img src='sym/rarr.svg' class='bo1'> c = 9</div>
+
+ <div style='margin-left:20px; margin-top:10px;'>
+<img src='sym/rarr.svg' class='bo1'> (4)&nbsp; –27 + 27 + 27 + d = 10 <img src='sym/rarr.svg' class='bo1'> d = –17</div>
+
+ <div class='in'><br>
+<b>Lösung:</b> y = –x<sup>3</sup> + 3x<sup>2</sup> + 9x – 17</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='F' class='box'>F</a> EXTREMWERTAUFGABEN</b></div>
+
+ <div class='in' style='float:left; margin-right:40px;'><br>
+<img src='img/di_20.gif'></div>
+
+ <div><br>
+Es geht um Textaufgaben, in denen der <b>kleinste/größte Wert</b> gesucht wird, den eine differenzierbare Funktion in einem Intervall annimmt. Dazu nehmen wir die Stellen mit <b>waagrechter Tangente</b> und die Randstellen und schauen, welcher der zugehörigen Funktionswerte am kleinsten/größten ist.<br><br>
+
+Oft findet sich im Intervall nur <i>eine</i> Stelle mit <span class='p02'>f</span>'(x) = 0 und dort <span class='nw'><span class='p02'>f</span>"(x) &gt; 0</span> (zunehmende Steigungen) bzw. <span class='nw'><span class='p02'>f</span>"(x) &lt; 0</span> (abnehmende Steigungen), das ist dann automatisch das globale Minimum bzw. Maximum.</div>
+
+ <div style='clear:left'></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Ein Biker befindet sich 5 km abseits einer geraden Straße und 13 km von einem Ort entfernt, zu dem die Straße führt. Wie kommt er am schnellsten dorthin, wenn er sich im Gelände mit 15 km/h bewegt und auf der Straße mit 25 km/h?
+
+  <div class='in'><br>
+<img src='img/di_21.gif'></div></div>
+
+ <div class='in'><br>
+<b>Hauptbedingung:</b> Fahrtzeit t(x,y) = <div class='frac'><div class='num'>x</div><div class='den'>15</div></div> + <div class='frac'><div class='num'>y</div><div class='den'>25</div></div> = min!</div>
+
+ <div class='in'><br>
+Die "Zielgröße" könnte so von x und y abhängen, dass wir beide unabhängig voneinander ändern können (siehe nächster Abschnitt). In unserem Fall ist das aber nicht so, d.h. es es gibt eine</div>
+
+ <div class='in'><br>
+<b>Nebenbedingung:</b> y = <span class='r1t'>&radic;</span><span class='rad'>13<sup>2</sup> – 5<sup>2</sup></span> – <span class='r1t'>&radic;</span><span class='rad'>x<sup>2</sup> – 5<sup>2</sup></span></div>
+
+ <div class='in'><br>
+Wir setzen die Nebenbedingung in die Hauptbedingung ein, sodass die Zielgröße nur mehr von <i>einer</i> Variablen abhängt:</div>
+
+ <div class='in'><br>
+t(x) = 0,0<span class='ol'>6</span>x + 0,04(12 – <span class='r1t'>&radic;</span><span class='rad'>x<sup>2</sup> – 25</span>) = min! &nbsp; für 5 &le; x &le; 13</div>
+
+ <div class='in'><br>
+<img src='img/di_22.gif'></div>
+
+ <div class='in mt1'>
+0,0<span class='ol'>6</span><span class='r1t p10'>&radic;</span><span class='rad'>x<sup>2</sup> – 25</span> – 0,04x = 0 &nbsp; <span class='ll p02'>+</span>0,04x &nbsp; <span class='ll'>:</span>0,0<span class='ol'>6</span></div>
+
+ <div class='in mt2'>
+<span class='r1t'>&radic;</span><span class='rad'>x<sup>2</sup> – 25</span> = 0,6x &nbsp; <span class='ll p02'>(.)<sup>2</sup></span></div>
+
+ <div class='in'><br>
+x<sup>2</sup> – 25 = 0,36x<sup>2</sup></div>
+
+ <div class='in'><br>
+x<sub>1,2</sub> = ±6,25 <img src='sym/rarr2.svg' class='p66'> x = 6,25 km</div>
+
+ <div class='in'><br>
+Ob es sich tatsächlich um ein Minimum handelt, können wir anhand der zweiten Ableitung überprüfen:</div>
+
+ <div class='in'><br>
+<img src='img/di_23.gif' style='vertical-align:-12px;'> <img src='sym/rarr2.svg' class='p66'> t"(6,25) &gt; 0 <img src='sym/ok.svg' class='to3'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='G' class='box'>G</a> FUNKTIONEN IN ZWEI VARIABLEN</b></div>
+
+ <div><br><br>
+<b><a name='G.1' class='box'>1</a> Partielle Ableitungen</b></div>
+
+ <div><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/di_24.gif' style='margin-right:50px;'>
+  </td>
+    <td>
+Der Graph einer Funktion z = f(x<span class='p02'>,</span>y) ist ein <b>Funktionsgebirge</b> über der xy-Ebene. Die <b>partiellen Ableitungen</b> an der Stelle (x<span class='p02'>,</span>y) sagen, wie stark das Funktionsgebirge dort in x- und y-Richtung ansteigt. Dazu denken wir uns den Funktionsterm nur von der Variablen abhängig, nach der partiell differenziert wird, und halten die andere Variable konstant:<br><br>
+
+<span class='p02'>•</span> <b><div class='frac p04'><div class='num'>&part;f</div><div class='den'>&part;x</div></div>(x<span class='p02'>,</span>y) :</b>= <b><div class='frac p04'><div class='num'>df<sub>y<span class='dn bo1'>=</span>fix</sub></div><div class='den'>dx</div></div>(x)</b><br><br>
+
+<span class='p02'>•</span> <b><div class='frac'><div class='num'>&part;f</div><div class='den'>&part;y</div></div> (x<span class='p02'>,</span>y) :</b>= <b><div class='frac p04'><div class='num'>df<sub>x<span class='dn bo1'>=</span>fix</sub></div><div class='den'>dy</div></div>(y)</b>
+    </td>
+   </tr></table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b> Bilde die ersten und zweiten partiellen Ableitungen der Funktion f: z = x<sup>2</sup>e<sup>x–y</sup></div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>&part;z</div><div class='den'>&part;x</div></div> = 2xe<sup>x–y</sup> + x<sup>2</sup>e<sup>x–y</sup></div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>&part;<sup>2</sup>z</div><div class='den'>&part;x<sup>2</sup></div></div> = <div class='frac p04'><div class='num'>&part;</div><div class='den'>&part;x</div></div>((2x + x<sup>2</sup>)e<sup>x–y</sup>) = (2 + 2x)e<sup>x–y</sup> + (2x + x<sup>2</sup>)e<sup>x–y</sup></div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>&part;<sup>2</sup>z</div><div class='den'>&part;y&part;x</div></div> = <div class='frac p04'><div class='num'>&part;</div><div class='den'>&part;y</div></div>((2x + x<sup>2</sup>)e<sup>x–y</sup>) = (2x + x<sup>2</sup>)e<sup>x–y</sup>(–1)</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>&part;z</div><div class='den'>&part;y</div></div> = x<sup>2</sup>e<sup>x–y</sup>(–1)</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>&part;<sup>2</sup>z</div><div class='den'>&part;y<sup>2</sup></div></div> = <div class='frac'><div class='num p04'>&part;</div><div class='den'>&part;y</div></div> (–x<sup>2</sup>e<sup>x–y</sup>) = –x<sup>2</sup>e<sup>x–y</sup>(–1)</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>&part;<sup>2</sup>z</div><div class='den'>&part;x&part;y</div></div> = <div class='frac p04'><div class='num'>&part;</div><div class='den'>&part;x</div></div> (–x<sup>2</sup>e<sup>x–y</sup>) = –2xe<sup>x–y</sup> – x<sup>2</sup>e<sup>x–y</sup></div>
+
+ <div class='grau'><br>
+Schwarz'scher Vertauschungssatz: Die gemischten Ableitungen sind – wenn stetig – unabhängig von der Reihenfolge, in der differenziert wird.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='G.2' class='box'>2</a> Tangentialebene und Gradient</b></div>
+
+ <div><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/di_25.gif' style='margin-right:50px;'>
+  </td>
+   <td>
+Wo die partiellen Ableitungen stetig sind, können wir eine <b>Tangentialebene</b> anlegen (alle durch den Berührungspunkt laufenden Geraden aus dieser Ebene sind dann Tangenten). Die Gleichung der Tangentialebene an der Stelle (x<span class='p02'>,</span>y), ausgedrückt in Koordinaten dx, dy, dz ("Differenziale"), die ihren Ursprung im Berührungspunkt der Tangentialebene haben, heißt <b>vollständiges Differenzial:</b><br><br>
+
+<span class='p02'>•</span> <b>dz</b> = <b>k<sub>1</sub>dx + k<sub>2</sub>dy</b> &nbsp;
+
+mit k<sub>1</sub> = <div class='frac p04'><div class='num'>&part;f</div><div class='den'>&part;x</div></div>(x<span class='p02'>,</span>y) und k<sub>2</sub> = <div class='frac p04'><div class='num'>&part;f</div><div class='den'>&part;y</div></div>(x<span class='p02'>,</span>y)
+   </td>
+  </tr></table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 10:</b> Bestimme das vollständige Differenzial von z = x<sup>2</sup>(1 – y)  an der Stelle (1|–2).</div>
+
+ <div class='in'><br>
+df(x, y): dz = 2x(1 – y)dx + (–x<sup>2</sup>)dy <img src='sym/rarr2.svg' class='p66'> df(1, –2): dz = 6dx – dy</div>
+
+ <div><br>
+Der <b>Gradientenvektor</b> ist die Projektion des Normalvektors der Tangentialebene in die xy-Ebene, sodass er in Richtung der größten Steigung zeigt und diese als Betrag hat.</div>
+
+
+ <div><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/di_26.gif' style='margin-right:50px;'>
+  </td>
+    <td>
+df(x,y): k<sub>1</sub>dx + k<sub>2</sub>dy – dz = 0 <img src='sym/rarr2.svg' class='p66'> <img src='img/di_27.gif' style='vertical-align:-25px;'><br><br>
+größte Steigung = <div class='frac to2 p20'><div class='num'>dz(k<sub>1</sub>, k<sub>2</sub>)</div><div class='den to2'><span class='r2a'>&radic;</span><span class='rad'>k<sub>1</sub><sup>2</sup> + k<sub>2</sub><sup>2</sup></span></div></div> = <span class='r2a'>&radic;</span><span class='rad'>k<sub>1</sub><sup>2</sup> + k<sub>2</sub><sup>2</sup></span>
+    </td>
+   </tr></table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='G.3' class='box'>3</a> Lineare Fehlerfortpflanzung</b></div>
+
+ <div><br>
+Wenn wir einen gemessenen Wert, der sich vom wahren Wert etwas unterscheidet, in eine Formel einsetzen, pflanzt sich der Fehler ins Ergebnis fort. Um diesen Fehler abzuschätzen, können wir das vollständige Differenzial verwenden:</div>
+
+ <div><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/di_28.gif' style='margin-right:50px;'>
+  </td>
+    <td>
+x = gemessener Wert<br><br>
+|&Delta;x| = absoluter Maximalfehler<br><br>
+<span class='abs' style='padding:6px 4px;'><div class='frac'><div class='num'>&Delta;x</div><div class='den'>x</div></div></span> = relativer Maximalfehler (%)<br><br>
+vollständiges Differenzial: dy = <span class='p02'>f</span>'(x)dx<br><br>
+<img src='sym/rarr2.svg' class='p06'> &Delta;y<sub>max</sub> &asymp; <span class='abs p22'><span class='p02'>f</span>'(x)&Delta;x</span>
+    </td>
+   </tr></table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 11:</b> Ein Kreis hat den Radius r = (48 ± 0,5) cm. Bestimme den maximalen Fehler bei Berechnung der Fläche näherungsweise über lineare Fehlerfortpflanzung.</div>
+
+ <div class='in'><br>
+A = <span class='p01' style='font-family:arial;'>&pi;</span>r<sup>2</sup></div>
+
+ <div class='in'><br>
+vollständiges Differenzial: dA = 2<span style='font-family:arial;'>&pi;</span><span class='p11'>r</span>dr</div>
+
+ <div class='in'><br>
+<img src='sym/rarr2.svg' class='p06'> &Delta;A<sub>max</sub> &asymp; <span class='abs p22'>2<span style='font-family:arial;'>&pi;</span>48·0,5</span> = 150,8 cm<sup>2</sup> <img src='sym/corr.gif'> 2,08%</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Die lineare Fehlerfortpflanzung wird vor allem dann interessant, wenn das Ergebnis von mehreren Variablen abhängt: z = f(x,y)</div>
+
+ <div class='in'><br>
+vollständiges Differenzial: dz = <div class='frac p04'><div class='num'>&part;f</div><div class='den'>&part;x</div></div>(x<span class='p02'>,</span>y)<span class='p20'>dx</span> + <div class='frac p04'><div class='num'>&part;f</div><div class='den'>&part;y</div></div>(x<span class='p02'>,</span>y)<span class='p20'>dy</span></div>
+
+ <div class='in'><br>
+<img src='sym/rarr2.svg' class='p06'> &Delta;z<sub>max</sub> &asymp; <span class='abs' style='padding:6px 4px;'><div class='frac p04'><div class='num'>&part;f</div><div class='den'>&part;x</div></div>(x<span class='p02'>,</span>y)<span class='p20'>&Delta;x</span></span> + <span class='abs' style='padding:6px 4px;'><div class='frac p04'><div class='num'>&part;f</div><div class='den'>&part;y</div></div>(x<span class='p02'>,</span>y)<span class='p20'>&Delta;y</span></span></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 12:</b> Ein Drehzylinder hat den Radius r = (55 ± 1) mm und die Höhe h = (180 ± 2) mm. Bestimme den maximalen Fehler bei Berechnung des Volumens näherungsweise über lineare Fehlerfortpflanzung.</div>
+
+ <div class='in'><br>
+V = <span class='p01' style='font-family:arial;'>&pi;</span>r<sup>2</sup>h</div>
+
+ <div class='in'><br>
+vollständiges Differenzial: dV = 2<span style='font-family:arial;'>&pi;</span><span class='p11'>r</span>hdr + <span class='p01' style='font-family:arial;'>&pi;</span>r<sup>2</sup>dh</div>
+
+ <div class='in'><br>
+<img src='sym/rarr2.svg' class='p06'> &Delta;V<sub>max</sub> &asymp; <span class='abs p22'>2<span style='font-family:arial;'>&pi;</span>55·180·1</span> + <span class='abs p22'><span class='p01' style='font-family:arial;'>&pi;</span>55<sup>2</sup>·2</span> = 81210 mm<sup>3</sup> <img src='sym/corr.gif'> 4,75%</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='G.4' class='box'>4</a> Extremwertaufgabe in zwei Variablen</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 13:</b> Ein Blechstreifen mit Breite b soll zu einer Rinne mit trapezförmigem Querschnitt geformt werden. Bestimme Breite und Neigungswinkel der Seitenwände, sodass das Fassungsvermögen der Rinne maximal wird.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/di_29.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+HB: A = xr<span class='p10'>sin</span>&alpha; + r<sup>2</sup><span class='p10'>cos</span>&alpha;sin&alpha; = max!<br><br>
+NB: b = x + 2r <img src='sym/rarr2.svg' class='p66'> x = b – 2r &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; HB<br><br>
+A(r<span class='p02'>,</span>&alpha;) = (br<span class='p22'>–</span>2r<sup>2</sup>)<span class='p10'>sin</span>&alpha; + r<sup>2</sup><span class='p10'>cos</span>&alpha;sin&alpha;
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+Was bei Funktionen in einer Variablen die Stelle mit waagrechter Tangente war, ist jetzt die Stelle mit waagrechter Tangentialebene:</div>
+
+ <div class='in'><br>
+(1) <div class='frac'><div class='num'>&part;A</div><div class='den'>&part;r</div></div> = (b<span class='p22'>–</span>4r)<span class='p10'>sin</span>&alpha; + 2r<span class='p10'>cos</span>&alpha;sin&alpha; = 0 <span class='ll' style='margin-left:93px;'>:</span>sin&alpha; (= 0 scheidet aus)</div>
+
+ <div class='in'><br>
+(2) <div class='frac'><div class='num'>&part;A</div><div class='den'>&part;&alpha;</div></div> = (br<span class='p22'>–</span>2r<sup>2</sup>)<span class='p10'>cos</span>&alpha; – r<sup>2</sup><span class='p10'>sin</span><sup>2</sup>&alpha;  + r<sup>2</sup><span class='p10'>cos</span><sup>2</sup>&alpha; = 0</div>
+
+ <div class='in'><br>
+(1) b = 4r – 2r<span class='p10'>cos&alpha;</span> &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; (2)</div>
+
+ <div class='in'><br>
+(4r<sup>2</sup> – 2r<sup>2</sup><span class='p10'>cos</span>&alpha; – 2r<sup>2</sup>)<span class='p10'>cos</span>&alpha; – r<sup>2</sup><span class='p10'>sin</span><sup>2</sup>&alpha;  + r<sup>2</sup><span class='p10'>cos<sup>2</sup>&alpha;</span> = 0 &nbsp; <span class='ll'>:</span>r<sup>2</sup> (= 0 scheidet aus)</div>
+
+ <div class='in'><br>
+(2 – 2<span class='p10'>cos</span>&alpha;)<span class='p10'>cos</span>&alpha; – sin<sup>2</sup>&alpha;  + cos<sup>2</sup>&alpha; = 0 <span class='ll' style='margin-left:98px;'>&nbsp;</span>sin<sup>2</sup>&alpha; = 1 – cos<sup>2</sup>&alpha;</div>
+
+ <div class='in'><br>
+2<span class='p10'>cos</span>&alpha; – 2<span class='p10'>cos</span><sup>2</sup>&alpha; – 1 + cos<sup>2</sup>&alpha; + cos<sup>2</sup>&alpha; = 0</div>
+
+ <div class='in'><br>
+cos&alpha; = 0,5 <img src='sym/rarr2.svg' class='p66'> &alpha; = 60° <img src='sym/rarr.svg' class='bo1'> (1) b = 4r – 2r<span class='p10'>cos</span>60° = 3r <img src='sym/rarr2.svg' class='p66'> r = a/3</div>
+
+ </div></body>
+ </html>

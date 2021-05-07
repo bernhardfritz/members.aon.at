@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Verteilungen - Aufgaben 1</title>
+ <style type='text/css'>@import url(../css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(../css/iefix.css);</style><![endif]-->
+ <style type="text/css">
+.ctm {
+ 	font-size:80%;
+  margin-left:-8px;
+  position:relative;
+  bottom:5px;
+ }
+.lt {
+  position:relative;
+  top:1px;
+  margin-left:-8px;
+  margin-right:1px;
+  font-size:120%;
+}
+.min {
+	font-size:10px;
+	margin-top:5px;
+	margin-bottom:-7px;
+}
+.op {
+  position:relative;
+  margin-left:-15px;
+  margin-right:5px;
+}
+ </style>
+ </head>
+
+ <body><div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<a name='02'><b>Aufgabe 2:</b></a> Bestimme <b>a)</b> die Verteilungsfunktion G(x) und damit die Wahrscheinlichkeit <span class='nw ws4'>P(0,8 &le; X &le; 2),</span> <b>b)</b> die Quantilfunktion G<sup>–1</sup>(&alpha;) und damit das 0,83-Quantil einer stetigen Zufallsvariablen X mit Dichtefunktion
+
+  <div class='in' style='margin-top:5px; margin-bottom:5px;'>
+g(x) = <img src='../sym/lbra.gif' style='position:relative; top:19px;'> <span style='position:relative; bottom:18px;'><div class='frac'><div class='num'>1</div><div class='den'><span style='font-family:arial;'>&pi;</span></div></div><span class='p22'>·</span><div class='frac p02'><div class='num'>1</div><div class='den to3'><span class='r1t'>&radic;</span><span class='rad'>x(1 – x)</span></div></div>, 0 &lt; x &lt; 1</span><span style='position:relative; top:20px; margin-left:-153px;'>0, <span style='margin-left:74px;'>sonst</span></span></div><br>
+<b>Hintergrund:</b> Wir beginnen mit einem Zufallsexperiment, bei dem ein Teilchen auf Position k entweder mit Wahrscheinlichkeit p zur Position k<span class='p22'>+</span>2 weiterspringt oder mit Wahrscheinlichkeit q zur Position 0 zurückgeworfen wird, wobei der Erwartungswert bei k<span class='p22'>+</span>1 liegen soll (<img src='http://members.aon.at/pir/skripten/sym/rarr2.gif'> p, q).<br><br>
+
+Wenn wir das Teilchen auf Position 0 setzen, dieses Experiment n-mal ausführen und die Endposition in Prozent der Extremposition 2n angeben, ist das eine Zufallsvariable X, deren Wahrscheinlichkeitsdichte mit zunehmendem n zum obigen g(x) wird.</div>
+
+ <div class='in'><br>
+<b>a)</b> <img src='img/vt1L_00.gif' style='vertical-align:-23px;'></div>
+
+ <div class='in mt2'>
+<img src='img/vt1L_01.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/vt1L_02.gif'></div>
+
+ <div class='in'><br><br>
+<img src='img/vt1L_03.gif'></div>
+
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<a name='04'><b>Aufgabe 4:</b></a> Bestimme den Luftduck y auf Seehöhe x durch exponentielle Regression, wenn<br><br>
+
+  <table class='in t0'>
+   <tr>
+    <td class='tc br bb'>
+x (in km)
+    </td>
+    <td class='tr br bb'>
+5
+    </td>
+    <td class='tr br bb'>
+10
+    </td>
+    <td class='tr bb'>
+15
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+y (in hPa)
+    </td>
+    <td class='tr br'>
+652
+    </td>
+    <td class='tr br'>
+235
+    </td>
+    <td class='tr'>
+202
+    </td>
+   </tr>
+  </table><br>
+Hinweis: Setze y<span class='ctm'>^</span> = lny (2 Nachkommastellen) und bestimme y<span class='ctm'>^</span>(x) durch lineare Regression.</div>
+
+ <div class='in'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br bb'>
+x
+    </td>
+    <td class='tr br bb'>
+5
+    </td>
+    <td class='tr br bb'>
+10
+    </td>
+    <td class='tr bb'>
+15
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+y<span class='ctm'>^</span>
+    </td>
+    <td class='tr br'>
+6,48
+    </td>
+    <td class='tr br'>
+5,46
+    </td>
+    <td class='tr'>
+5,31
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+y<span class='ctm'>^</span>(x) = a + bx</div>
+
+ <div class='in'><br>
+q(a<span class='p02'>,</span>b) = <span class='ws4'>(6,48 – a – 5b)<sup>2</sup> + (5,46 – a – 10b)<sup>2</sup> + (5,31 – a – 15b)<sup>2</sup></span></div>
+
+ <div class='in'><br>
+(1) <div class='frac'><div class='num'>&part;q</div><div class='den'>&part;a</div></div> = <span class='ws4'>2<span class='lt'>/</span>(6,48 – a – 5b)(–1) + 2<span class='lt'>/</span>(5,46 – a – 10b)(–1) + 2<span class='lt'>/</span>(5,31 – a – 15b)(–1)</span> = 0</div>
+
+ <div class='in mt1'>
+(2) <div class='frac'><div class='num'>&part;q</div><div class='den'>&part;b</div></div> = <span class='ws4'>2<span class='lt'>/</span>(6,48 – a – 5b)(–5) + 2<span class='lt'>/</span>(5,46 – a – 10b)(–10) + 2<span class='lt'>/</span>(5,31 – a – 15b)(–15)</span> = 0</div>
+
+ <div class='in' style='float:left;'><br>
+  <div>
+(1) <span class='ws4'>3a + 30b</span> = 17,25</div>
+
+ <div class='mt1'>
+(2) <span class='ws4'>30a + 350b</span> = 166,65</div>
+</div>
+
+ <div style='margin-top:4px;'><br>
+<img src='../sym/rbr1.gif' style='margin-left:7px; vertical-align:middle;'>	a = 6,92, b = –0,117</div>
+
+ <div class='in mt2'>
+y<span class='ctm'>^</span> = lny = 6,92 – 0,117x &nbsp;<span class='ll'>&thinsp;</span>e<sup>(.)</sup></div>
+
+ <div class='in'><br>
+y = e<sup class='p01'>6,92</sup>e<sup>–0,117x</sup> = <span class='p01'>1012</span>e<sup>–0,117x</sup></div>
+
+<br><br><br><br><br><br><br><br><br>
+
+ </div></body>
+ </html>

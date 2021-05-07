@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Folgen und Grenzprozesse</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ <style type='text/css'>
+.tc4 {
+  border-width:1px;
+  padding:2px 8px 4px 8px;
+  text-align:center;
+}
+.tr4 {
+  border-width:1px;
+  padding:2px 8px 4px 8px;
+  text-align:right;
+}
+ </style>
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>X. FOLGEN UND GRENZPROZESSE</b></div>
+
+ <div><br>
+<a href='10_folgen.html#A'>A. Folgen und Bildungsgesetze</a><br>
+<a href='10_folgen.html#B'>B. Arithmetische Folgen</a><br>
+<a href='10_folgen.html#C'>C. Geometrische Folgen</a><br>
+<a href='10_folgen.html#D'>D. Exkurs: Finanzmathematik</a><br>
+<a href='10_folgen.html#E'>E. Grenzwert und Cauchy-Kriterium</a><br>
+<a href='10_folgen.html#F'>F. Stetigkeit von Funktionen</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='10a_folgen.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> FOLGEN UND BILDUNGSGESETZE</b></div>
+
+ <div><br><br>
+Eine <b>Folge</b> ist eine endliche oder unendliche Auflistung mathematischer Objekte, die typischerweise mit 0 oder 1 beginnend durchnummeriert sind. Im Folgenden betrachten wir unendliche Folgen, bei denen die Objekte reelle Zahlen sind. Das ist nichts anderes als eine Funktion</div>
+
+ <div class='in'><br>
+a: <img src='sym/setN.gif'><sup>(</sup>*<sup>)</sup> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'>, n <img src='sym/farr.gif'> a<sub>n</sub></div>
+
+ <div><br>
+Üblicherweise schreiben wir eine Folge aber nicht als Funktion, sondern als &infin;-Tupel:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+(a<sub>n</sub>)<sub><img src='sym/niN.gif'></sub>
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:8px 8px 0px;'>
+    </td>
+    <td>
+(a<sub>0</sub>, a<sub>1</sub>, a<sub>2</sub>, ...)<br><br>
+(a<sub>1</sub>, a<sub>2</sub>, a<sub>3</sub>, ...)
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Beim <b>expliziten Bildungsgesetz</b> wird a<sub>n</sub> über einen <b>Term in n</b> charakterisiert:</div>
+
+ <div class='in mt2'>
+<img src='img/fo_00.gif'></div>
+
+ <div><br>
+Beim <b>rekursiven Bildungsgesetz</b> enthält der Term zudem Folgenglieder, die dem zu berechnenden vorhergehen:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+a<sub>1</sub> = 0
+     <div class='mt1'>
+a<sub>n+1</sub> = <span class='ws4'>1 – a<sub>n</sub></span>
+     </div>
+    </td>
+    <td>
+<img src='sym/rbra.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+(a<sub>n</sub>)<sub><img src='sym/niN.gif'></sub> = (0, 1, 0, ...)
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='grau'><br>
+Bem: Ein explizites Bildungsgesetz dazu wäre</div>
+
+ <div class='in'><br>
+<img src='img/fo_01.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> ARITHMETISCHE FOLGEN</b></div>
+
+ <div><br><br>
+<b><a name='B.1' class='box'>1</a> Bildungsgesetz</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Folge (a<sub>n</sub>) heißt <b>arithmetisch,</b> wenn die Differenz d aufeinanderfolgender Glieder konstant ist:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/fo_02.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+a<sub>n+1</sub> – a<sub>n</sub> = d &nbsp; bzw. &nbsp; a<sub>n+1</sub> = a<sub>n</sub> + d &nbsp; (rekursiv)<br><br>
+<img src='sym/d2arr.gif' style='margin-left:120px;'><br><br>
+<span class='p02'>•</span> <b>a<sub>n</sub></b> = <b>a<sub>1</sub> + (n<span class='p22'>–</span>1)<span class='p20'>d</span></b> = a<sub>0</sub> + n<span class='p20'>d</span> &nbsp; (explizit)
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Bem: Eine arithmetische Folge ist nichts anderes als eine lineare Funktion mit n <img src='sym/isin.gif'> <img src='sym/setN.gif'> statt x <img src='sym/isin.gif'> <img src='sym/setR.gif'>.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.2' class='box'>2</a> Summenformel</b></div>
+
+ <div><br>
+Statt die ersten n Glieder einer arithmetischen Folge einzeln aufzusummieren, können wir auch so rechnen:</div>
+
+ <div><br>
+<img src='img/fo_03.gif'></div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in mt1' style='float:left; line-height:23px; margin-bottom:5px;'>
+s<sub>n</sub> = <span class='ws4'>a<sub>1</sub> + (a<sub>1</sub> + d) + ... + <span class='up'>[</span>a<sub>1</sub> + (n<span class='p22'>–</span>1)d<span class='up'>]</span></span><br>
+s<sub>n</sub> = <span class='ws4'>a<sub>n</sub> + (a<sub>n</sub> – d) + ... + <span class='up'>[</span>a<sub>n</sub> – (n<span class='p22'>–</span>1)d<span class='up'>]</span></span></div>
+
+ <div style='margin-top:22px;'>&nbsp;
+<img src='sym/add.gif'></div>
+
+ <div class='in' style='clear:left; border-top:solid 1px; width:258px;'></div>
+
+ <div class='in' style='margin-top:5px;'>
+2s<sub>n</sub> = <span class='ws4'>na<sub>1</sub> + na<sub>n</sub></span> &nbsp; |:2</div>
+
+ <div class='in mt1'>
+s<sub>n</sub> = n<div class='frac p40'><div class='num'>a<sub>1</sub> + a<sub>n</sub></div><div class='den'>2</div></div></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Wie viel Rundhölzer können in 20 Lagen übereinander gestapelt werden, wenn zuunterst 50 Hölzer nebeneinander liegen und die Hölzer darüber jeweils auf Lücke gelegt werden?</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/fo_04.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+<img src='img/fo_05.gif'>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> GEOMETRISCHE FOLGEN</b></div>
+
+ <div><br><br>
+<b><a name='C.1' class='box'>1</a> Bildungsgesetz</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Folge (b<sub>n</sub>) heißt <b>geometrisch,</b> wenn der Quotient q aufeinanderfolgender Glieder konstant ist:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/fo_06.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+<div class='frac'><div class='num'>b<sub>n+1</sub></div><div class='den'>b<sub>n</sub></div></div> = q  &nbsp; bzw. &nbsp; b<sub>n+1</sub> = b<sub>n</sub>q &nbsp; (rekursiv)<br>
+<img src='sym/d2arr.gif' style='margin-top:10px; margin-left:100px;'><br><br>
+<span class='p02'>•</span> <b>b<sub>n</sub></b> = <b>b<sub class='p02'>1</sub>q<sup>n–1</sup></b> = b<sub class='p02'>0</sub>q<sup>n</sup> &nbsp; (explizit)
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Bem: Eine geometrische Folge mit positivem q ist nichts anderes als eine Exponentialfunktion mit n <img src='sym/isin.gif'> <img src='sym/setN.gif'> statt x <img src='sym/isin.gif'> <img src='sym/setR.gif'>.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Summenformel</b></div>
+
+ <div><br>
+Statt die ersten n Glieder einer geometrischen Folge einzeln aufzusummieren, können wir auch so rechnen:</div>
+
+ <div><br>
+<img src='img/fo_07.gif'></div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in mt1' style='float:left; line-height:24px; margin-bottom:5px;'>
+s<sub>n</sub> = <span class='ws4'>b<sub>1</sub> + b<sub>1</sub>q + ... + b<sub>1</sub>q<sup>n–1</sup></span><br>
+s<sub>n</sub>q <span style='margin-right:24px;'>=</span><span class='ws4'> b<sub>1</sub>q + ... + b<sub>1</sub>q<sup>n–1</sup> + b<sub>1</sub>q<sup>n</sup></span></div>
+
+ <div style='margin-top:22px;'>&nbsp;
+<img src='sym/sub.gif'></div>
+
+ <div class='in' style='clear:left; border-top:solid 1px; width:226px;'></div>
+
+ <div class='in' style='margin-top:5px;'>
+<span class='ws4'>s<sub>n</sub>(1 – q)</span> = <span class='ws4'>b<sub>1</sub>(1 – q<sup>n</sup>)</span> &nbsp; |:<span class='ws4'>(1 – q)</span></div>
+
+ <div class='in'><br>
+s<sub>n</sub> = b<sub>1</sub><div class='frac p40'><div class='num'>1 – q<sup>n</sup></div><div class='den'>1 – q</div></div></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> Einem Quadrat mit Seitenlänge 10 cm wird ein zweites so eingeschrieben, dass seine Eckpunkte die Seiten des ersten im Verhältnis 5:6 teilen. Genauso wird dem zweiten Quadrat ein drittes eingeschrieben usw. Wie groß ist die Summe der ersten 15 Quadratumfänge?</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/fo_08.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+<img src='img/fo_09.gif'>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> EXKURS: FINANZMATHEMATIK</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Zinseszinsrechnung</b></div>
+
+ <div><br>
+Der <b>Zins</b> ist der Preis für die befristete Überlassung eines Geldbetrags. Der <b>dekursive Zinssatz i</b> gibt den im Nachhinein fälligen Zins für ein Jahr als Prozentsatz dieses Geldbetrags an. Bei unterjährigen Fristen zählen wir die Tage und bestimmen den Zins anteilsmäßig, wobei wir uns im Folgenden auf die (deutsche) Zinstage-Methode 30/360 beschränken:</div>
+
+ <div class='in'><br>
+<img src='img/fo_10.gif'></div>
+
+ <div><br>
+Falls bei mehrjährigen Laufzeiten die Zinsen nicht vorzu, sondern erst am Ende der Laufzeit gezahlt werden, braucht es eine Vereinbarung, ob die angefallenen Zinsen aufbewahrt oder <b>kapitalisiert</b> werden, also dem Kreditnehmer zu den gleichen Bedingungen wie der ursprüngliche Geldbetrag überlassen werden.</div>
+
+ <div><br>
+<b>Einfache Zinsrechnung:</b> Ohne Kapitalisierung der Zinsen ist der nach n Jahren zurückzuzahlende Betrag</div>
+
+ <div class='in'><br>
+<b>K<sub>n</sub></b> = <b class='ws4'>K<sub>0</sub> + niK<sub>0</sub></b> = arithmetische Folge mit d = iK<sub>0</sub></div>
+
+ <div><br>
+<b>Zinseszinsrechnung:</b> Mit Kapitalisierung nach jedem Jahr ist der nach n Jahren zurückzuzahlende Betrag</div>
+
+ <div class='in'><br>
+<b>K<sub>n</sub></b> = <b class='ws4'>K<sub>0</sub>(1 + i)<sup>n</sup></b> = geometrische Folge mit q = <span class='ws4'>1 + i</span> (Aufzinsungsfaktor)</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Am 27.8.2012 zahlt jemand 540 Euro auf ein mit i = 2% verzinstes Sparbuch ein. Wie viel kann er am 19.4.2016 abheben, wenn vom Ein- und Auszahlungstag nur der erstere verzinst und am Ende jeden Kalenderjahres kapitalisiert wird?</div>
+
+ <div class='in'><br>
+Kapital Ende 2012 = 540 + 0,02·540<div class='frac p40'><div class='num'>124</div><div class='den'>360</div></div> = 543,72</div>
+
+ <div class='in'><br>
+Kapital Ende 2015 = 543,72·1,02<sup>3</sup> = 577,00</div>
+
+ <div class='in'><br>
+Abhebungsbetrag = 577 + 0,02·577<div class='frac p40'><div class='num'>108</div><div class='den'>360</div></div> = 580,46 &euro;</div>
+
+ <div><br>
+<b>Frage:</b> Wie ändert sich die Rechnung unter Einbeziehung von 25% Kapitalertragsteuer?</div>
+
+ <div class='in'><br>
+Da die KESt automatisch abgezogen wird, sobald Zinsen anfallen, rechnen wir genau gleich, aber mit i' = 0,75i (= 0,015) anstelle von i.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> Rentenrechnung</b></div>
+
+ <div><br>
+Wir betrachten Ein/Auszahlungen über <b>n</b> gleiche Zeitspannen hinweg, wobei der Kontostand davor und danach Null sei: Eine Zahlung <b>a</b> am Beginn der ersten Periode, eine Rente aus gleich großen Ratenzahlungen <b>r</b> am Beginn/Ende jeder Periode und eine Zahlung <b>b</b> am Ende der letzten Periode. Der Kontostand am Beginn jeder Periode wird mit dem(selben) Zinsatz <b>i</b> verzinst und die Zinsen am Ende der Periode dem Kontostand zugeschlagen.</div>
+
+ <div><br>
+Begriffe: Mit <b>vor/nachschüssig</b> meinen wir Ratenzahlungen am Beginn/Ende der Periode, mit <b>Barwert a<sub>b=0</sub></b> eine Einmalzahlung am Beginn der ersten Periode, die die gesamte Rente aufwiegt, und mit <b>Endwert b<sub>a=0</sub></b> eine solche am Ende der letzten Periode.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Von einem mit i = 4% verzinsten Konto werden 15 nachschüssige, jährliche Raten in der Höhe von 730 Euro ausgezahlt. <b>a)</b> Welchen Kontostand braucht es am Beginn des ersten Jahres, damit diese Rente abgedeckt ist? <b>b)</b> Welche Einzahlung braucht es am Ende des letzten Jahres, wenn der Kontostand am Beginn des ersten Jahres Null war, also die Raten auf Pump bezogen wurden?</div>
+
+ <div class='in mt2'>
+<img src='img/fo_11.gif'></div>
+
+ <div class='in'><br>
+<b>a)</b> <span class='ws4'>a·1,04<sup>15</sup> + (–730)<div class='frac p40'><div class='num'>1 – 1,04<sup>15</sup></div><div class='den'>1 – 1,04</div></div> + 0 = 0 <img src='sym/rarr2.svg' class='p66'> Barwert a = 8116,42 €</div>
+
+ <div class='in'><br>
+<b>b)</b> <span class='ws4'>0 + (–730)<div class='frac p40'><div class='num'>1 – 1,04<sup>15</sup></div><div class='den'>1 – 1,04</div></div> + b = 0 <img src='sym/rarr2.svg' class='p66'> Endwert b = 14617,22 € &nbsp; <span class='grau'><span class='up'>(</span>= a·1,04<sup>15</sup><span class='up'>)</span></span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> Wie zuvor, diesmal mit 20 vorschüssigen, jährlichen Raten in der Höhe von 1600 Euro bei i = 3%.</div>
+
+ <div class='in mt2'>
+<img src='img/fo_12.gif'></div>
+
+ <div class='in'><br>
+<b>a)</b> <span class='ws4'>a·1,03<sup>20</sup> + (–1600)<div class='frac p44'><div class='num'>1 – 1,03<sup>20</sup></div><div class='den'>1 – 1,03</div></div>1,03 + 0 = 0 <img src='sym/rarr2.svg' class='p66'> Barwert a = 24518,08 €</div>
+
+ <div class='in'><br>
+<b>b)</b> <span class='ws4'>0 + (–1600)<div class='frac p44'><div class='num'>1 – 1,03<sup>20</sup></div><div class='den'>1 – 1,03</div></div>1,03 + b = 0 <img src='sym/rarr2.svg' class='p66'> Endwert b = 44282,38 € &nbsp; <span class='grau'><span class='up'>(</span>= a·1,03<sup>20</sup><span class='up'>)</span></span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='bsp mt2'>
+<b>Aufgabe 6:</b> Eine Schuld von 175&thinsp;000 Euro ist durch 6 nachschüssige, jährliche Raten bei i = 8,5% zu begleichen. Erstelle einen Tilgungsplan, der zeilenweise die Situation nach n Jahren wie folgt wiedergibt:
+
+ <div class='in'><br>
+n – jährliche Rate – davon Zinsen – davon Tilgung – Restschuld</div></div>
+
+ <div class='in'><br>
+<span class='ws4'>(–175000)·1,085<sup>6</sup> + r<div class='frac p40'><div class='num'>1 – 1,085<sup>6</sup></div><div class='den'>1 – 1,085</div></div> + 0 = 0 <img src='sym/rarr2.svg' class='p66'> r = 38431,24 €</div>
+
+ <div class='in'><br>
+  <table class='t0' cellpadding='0'>
+   <tr><!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 01 -->
+    <td class='tc4 br bb'>
+n
+    </td>
+    <td class='tc4 br bb'>
+jährl. Rate
+    </td>
+    <td class='tc4 br bb'>
+davon Zinsen
+    </td>
+    <td class='tc4 br bb'>
+davon Tilgung
+    </td>
+    <td class='tc4 bb'>
+Restschuld
+    </td>
+   </tr>
+   <tr><!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 02 -->
+    <td class='tr br'>
+0
+    </td>
+    <td class='tr br'>
+0,00
+    </td>
+    <td class='tr br'>
+0,00
+    </td>
+    <td class='tr br'>
+0,00
+    </td>
+    <td class='tr'>
+175000,00
+    </td>
+   </tr>
+   <tr><!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 03 -->
+    <td class='tr br'>
+1
+    </td>
+    <td class='tr br'>
+38431,24
+    </td>
+    <td class='tr br'>
+14875,00
+    </td>
+    <td class='tr br'>
+23556,24
+    </td>
+    <td class='tr'>
+151443,76
+    </td>
+   </tr>
+   <tr><!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 04 -->
+    <td class='tr br'>
+2
+    </td>
+    <td class='tr br'>
+38431,24
+    </td>
+    <td class='tr br'>
+12872,72
+    </td>
+    <td class='tr br'>
+25558,52
+    </td>
+    <td class='tr'>
+125885,24
+    </td>
+   </tr>
+   <tr><!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 05 -->
+    <td class='tr br'>
+3
+    </td>
+    <td class='tr br'>
+38431,24
+    </td>
+    <td class='tr br'>
+10700,25
+    </td>
+    <td class='tr br'>
+27730,99
+    </td>
+    <td class='tr'>
+98154,25
+    </td>
+   </tr>
+   <tr><!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 06 -->
+    <td class='tr br'>
+4
+    </td>
+    <td class='tr br'>
+38431,24
+    </td>
+    <td class='tr br'>
+8343,11
+    </td>
+    <td class='tr br'>
+30088,13
+    </td>
+    <td class='tr'>
+68066,12
+    </td>
+   </tr>
+   <tr><!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 07 -->
+    <td class='tr br'>
+5
+    </td>
+    <td class='tr br'>
+38431,24
+    </td>
+    <td class='tr br'>
+5785,62
+    </td>
+    <td class='tr br'>
+32645,62
+    </td>
+    <td class='tr'>
+35420,50
+    </td>
+   <tr><!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 08 -->
+    <td class='tr4 br'>
+6
+    </td>
+    <td class='tr4 br'>
+38431,24
+    </td>
+    <td class='tr4 br'>
+3010,74
+    </td>
+    <td class='tr4 br'>
+35420,50
+    </td>
+    <td class='tr4'>
+0,00
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='E' class='box'>E</a> GRENZWERT UND CAUCHY-KRITERIUM</b></div>
+
+ <div><br><br>
+<b><a name='E.1' class='box'>1</a> Grenzwertdefinition</b></div>
+
+ <div><br>
+Grenzprozesse waren schon in der Antike bekannt, in den Werken von Archimedes findet sich etwa die "Endlosrechnung"</div>
+
+ <div class='in'><br>
+1 +	<div class='frac'><div class='num'>1</div><div class='den'>4</div></div> + <div class='frac'><div class='num'>1</div><div class='den'>16</div></div> + <div class='frac'><div class='num'>1</div><div class='den'>64</div></div> + … = <div class='frac'><div class='num'>4</div><div class='den'>3</div></div></div>
+
+ <div><br>
+Aber erst an der Wende zum 19. Jahrhundert wurde klar, dass der mangelnde Fortschritt dem Fehlen einer exakten Definition zuzuschreiben war:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Zahl a heißt <b>Grenzwert</b> der Folge (a<sub>n</sub>), wenn es zu jedem &epsilon; &gt; 0 einen Index N gibt, sodass für alle n &gt; N gilt: |a<sub>n</sub> – a| &lt; &epsilon;</div>
+
+ <div class='in'><br>
+<img src='img/fo_13.gif'></div>
+
+ <div><br>
+Dass a Grenzwert (lat. limes) der Folge (a<sub>n</sub>) ist, schreiben wir so:</div>
+
+ <div class='in'><br>
+a = <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>a<sub>n</sub></div>
+
+ <div class='mt1'>
+Oder wir folgen der Sprechweise, dass die a<sub>n</sub> gegen a laufen, und schreiben:</div>
+
+ <div class='in'><br>
+a<sub>n</sub> <img src='sym/rarr.svg' class='bo1'> a (für n <img src='sym/rarr.svg' class='bo1'> &infin;)</div>
+
+ <div><br>
+Wenn eine Folge einen Grenzwert hat, ist er eindeutig und die Folge heißt <b>konvergent,</b> andernfalls <b>divergent.</b> Von bestimmter Divergenz bzw. von uneigentlichen Grenzwerten sprechen wir, wenn die Folgenglieder gegen &infin; oder gegen –&infin; laufen.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 7:</b> Zeige, dass die Folge (q<sup>n</sup>) den Grenzwert 0 hat, falls |q| &lt; 1.</div>
+
+ <div class='in'><br>
+Für q = 0 klar und für 0 &lt; |q| &lt; 1 ist <div class='frac'><div class='num'>1</div><div class='den'>|q|</div></div> &gt; 1, d.h. es ein p &gt; 0, sodass <div class='frac'><div class='num'>1</div><div class='den'>|q|</div></div> = 1 + p.</div>
+
+ <div class='in mt1'>
+Zu jedem &epsilon; &gt; 0 finden wir dann einen Index N, sodass <div class='frac'><div class='num'>1</div><div class='den'>Np</div></div> &lt; &epsilon;, und damit gilt für alle n &gt; N:</div>
+
+ <div class='in'><br>
+|q<sup>n</sup> – 0| = |q|<sup>n</sup> = <div class='frac'><div class='num'>1</div><div class='den'>(1<span class='p44'>+</span>p)<sup>n</sup></div></div> = <div class='frac'><div class='num'>1</div><div class='den'>1<span class='p44'>+</span>np<span class='p44'>+</span> …</div></div> &lt; <div class='frac'><div class='num'>1</div><div class='den'>np</div></div> &lt; <div class='frac'><div class='num'>1</div><div class='den'>Np</div></div> &lt; &epsilon;</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='E.2' class='box'>2</a> Grenzwertsätze</b></div>
+
+ <div><br>
+Grenzwerte so wie oben über die Grenzwertdefinition zu beweisen, ist mühsam. Hier helfen die <b>Grenzwertsätze:</b></div>
+
+ <div><br>
+• <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>(a<sub>n</sub><span class='p44'>+</span>b<sub>n</sub>) = <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>a<sub>n</sub> + <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>b<sub>n</sub> &nbsp; und analog für Differenz, Produkt und Quotient (wobei aus der Existenz der rechten Seite die der linken folgt)</div>
+
+ <div><br>
+Die Grenzwertsätze lassen sich sogar auf bisher undefinierte Ausdrücke ausdehnen:</div>
+
+ <div class='in mt1'>
+Zahl + &infin; <span class='ldf'>:</span>= &infin;, <div class='frac'><div class='num'>Zahl</div><div class='den'>&infin;</div></div> <span class='ldf'>:</span>= 0, …</div>
+
+ <div class='mt1'>
+Aber es bleiben "unbestimmte" Ausdrücke, wie etwa <div class='frac p01'><div class='num'>&infin;</div><div class='den'>&infin;</div></div>, bei denen verschiedene Ergebnisse möglich sind:</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>n</div><div class='den'>n<sup>2</sup></div></div> <img src='sym/rarr.svg' class='bo1'> 0, <div class='frac'><div class='num'>n<sup>2</sup></div><div class='den'>n</div></div> <img src='sym/rarr.svg' class='bo1'> &infin;</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 8:</b> Bestimme über die Grenzwertsätze:
+
+  <div class='in'><br>
+<img src='img/fo_14.gif'></div></div>
+
+ <div class='in mt2'>
+<img src='img/fo_15.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/fo_16.gif'></div>
+
+ <div class='in'><br>
+Bei unbestimmten Ausdrücken helfen die Grenzwertsätze nicht weiter! Mitunter hilft eine Termumformung:</div>
+
+ <div class='in'><br>
+<img src='img/fo_17.gif'></div>
+
+ <div class='in'><br>
+<img src='img/fo_18.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt1'>
+<b><a name='E.3' class='box'>3</a> Cauchy-Kriterium</b></div>
+
+ <div><br>
+Folgenglieder, die sich einem Grenzwert beliebig nähern, tun dies auch im Hinblick auf <i>alle</i> nachfolgenden Glieder:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Folge (a<sub>n</sub>) heißt <b>Cauchy-Folge,</b> wenn es zu jedem &epsilon; &gt; 0 einen Index N gibt, sodass für alle n &gt; N gilt: |a<sub>n</sub> – a<sub>N</sub></sub>| &lt; &epsilon;</div>
+
+ <div class='in'><br>
+<img src='img/fo_19.gif'></div>
+
+ <div class='grau'><br>
+Bem: Meist wird das Cauchy-Kriterium so formuliert, dass für alle n, m &gt; N gilt: |a<sub>n</sub> – a<sub>m</sub>| &lt; &epsilon;. Das gilt aber automatisch für jedes N, das unsere Formulierung für &epsilon;/2 erfüllt, da zwei Folgenglieder, die von a<sub>N</sub> weniger als &epsilon;/2 entfernt sind, voneinander weniger als &epsilon; entfernt sind.</div>
+
+ <div><br>
+In <img src='sym/setQ.gif' style='position:relative; top:2px'> hat noch nicht jede Cauchy-Folge einen Grenzwert: Wenn wir als erstes Glied soviel Zehntel, als zweites soviel Hundertstel usw. wählen, dass das jeweilige Quadrat gerade noch unter 2 bleibt, haben wir eine rationale Cauchy-Folge (weil sich das n-te Glied von allen nachfolgenden um weniger als 1/10<sup>n</sup> unterscheidet). Es gibt aber keine rationale Zahl, deren Quadrat 2 ist.</div>
+
+ <div><br>
+Eine reelle Zahl ist letztlich nichts anderes als ein Bündel rationaler Cauchy-Folgen, die insoweit gleichwertig sind, als ihre Differenz gegen Null läuft (repräsentiert werden solche Bündel durch die oben verwendete dezimale Verfeinerung). In <img src='sym/setR.gif'> hat jetzt jede Cauchy-Folge einen Grenzwert. Wir können also mit dem Cauchy-Kriterium auf Konvergenz prüfen, ohne den Grenzwert zu kennen.</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='F' class='box'>F</a> STETIGKEIT VON FUNKTIONEN</b></div>
+
+ <div><br><br>
+<b><a name='F.1' class='box'>1</a> Funktionsgrenzwerte</b></div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/fo_20.gif' style='margin-right:40px;'>
+    </td>
+    <td style='vertical-align:top;'>
+Eine Funktion f(x) hat an der Stelle a den ...<br><br>
+<span class='p02'>•</span> <b>linksseitigen Grenzwert <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>a–</div></div>f(x)</b> = b<sub>1</sub>, wenn für jede Folge (x<sub>n</sub>&nbsp;&lt;&nbsp;a) mit x<sub>n</sub> <img src='sym/rarr.svg' class='bo1'> a gilt: f(x<sub>n</sub>) <img src='sym/rarr.svg' class='bo1'> b<sub>1</sub><br><br>
+
+<span class='p02'>•</span> <b>rechtsseitigen Grenzwert <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>a+</div></div>f(x)</b> = b<sub>2</sub>, wenn für jede Folge (x<sub>n</sub>&nbsp;&gt;&nbsp;a) mit x<sub>n</sub> <img src='sym/rarr.svg' class='bo1'> a gilt: f(x<sub>n</sub>) <img src='sym/rarr.svg' class='bo1'> b<sub>2</sub><br><br>
+<span class='p02'>•</span> <b>Grenzwert <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>a</div></div>f(x)</b> = b, wenn für jede Folge (x<sub>n</sub>&nbsp;&ne;&nbsp;a) mit x<sub>n</sub> <img src='sym/rarr.svg' class='bo1'> a gilt: f(x<sub>n</sub>) <img src='sym/rarr.svg' class='bo1'> b
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b> Bestimme die Definitionslücken der folgenden Terme und die dortigen Grenzwerte:
+
+  <div class='in mt1'>
+<b>a)</b> <div class='frac'><div class='num'>1</div><div class='den'>x<sup>2</sup></div></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> <div class='frac'><div class='num'>x</div><div class='den'>|x|</div></div> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> <div class='frac'><div class='num'>x<sup>2</sup> – 1</div><div class='den'>x – 1</div></div></div></div>
+
+ <div class='in'><br>
+<b>a)</b> <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0</div></div><div class='frac p40'><div class='num'>1</div><div class='den'>x<sup>2<sup></div></div> = &infin; <img src='sym/nisin.gif' style='vertical-align:-2px;'> <img src='sym/setR.gif'>, also kein Grenzwert im eigentlichen Sinn</div>
+
+ <div class='in' style='float:left;'>
+  <div><br>
+<b>b)</b> <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0–</div></div><div class='frac p40'><div class='num'>x</div><div class='den'>|x|</div></div> = <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0–</div></div><div class='frac p40'><div class='num'>x</div><div class='den'>–x</div></div> = <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0–</div></div>(–1)</span> = –1</div>
+
+  <div class='mt1'>
+<div class='lim' style='margin-left:21px;'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0+</div></div><div class='frac p40'><div class='num'>x</div><div class='den'>|x|</div></div> = <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0+</div></div><div class='frac p40'><div class='num'>x</div><div class='den'>x</div></div> = <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0+</div></div>1</span> = 1</div>
+ </div>
+
+ <div style='margin-top:7px;'><br>
+<img src='sym/rbr3.gif' style='margin-left:7px; vertical-align:middle;'> verschieden, also kein Grenzwert</div>
+
+ <div class='in mt2'>
+<b>c)</b> <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>1</div></div><div class='frac p40'><div class='num'>x<sup>2</sup> – 1</div><div class='den'>x – 1</div></div> = <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>1</div></div><div class='frac p40'><div class='num'>(x – 1)<img src='sym/slash2.gif' style='position:relative; bottom:-6px; margin-left:-39px; margin-right:6px;'>(x  + 1)</div><div class='den'>x – 1<img src='sym/slash2.gif' style='vertical-align:-7px; margin-left:-33px;'></div></div> = <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>1</div></div><span class='ws4'>(x + 1)</span> = 2</div>
+
+ <div class='in' style='margin-top:3px;'>
+<img src='sym/uarr_g.gif' style='margin-left:176px;'></div>
+ <div class='in grau' style='font-size:11px;'>
+Da x<span class='p22'>=</span>1 ausgeblendet wird, ist die Division durch (x<b class='p22'>–</b>1) immer zulässig</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='F.2' class='box'>2</a> Lokale und globale Stetigkeit</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Funktion f(x) heißt <b>stetig an der Stelle a,</b> wenn <div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>a</div></div>f(x) = f(a).</div>
+
+ <div class='mt1'>
+Rechentechnisch bedeutet das für jede Folge (x<sub>n</sub>) <img src='sym/rarr.svg' class='bo1'> a, dass man <b>Limes- und Funktionszeichen vertauschen</b> kann:</div>
+
+ <div class='in'><br>
+<div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>f(x<sub>n</sub>) = f(<div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>x<sub>n</sub>)</div>
+
+ <div class='in mt1'>
+<span class='out'>•</span> Eine Funktion heißt <b>stetig über einem Intervall,</b> wenn sie an jeder Stelle im Intervall stetig und an den Intervallgrenzen – so sie dazugehören – links/rechtsseitig stetig ist.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-top:8px; padding-bottom:8px;'>
+  <table>
+   <tr>
+    <td>
+<b>Aufgabe 10:</b><img src='img/fo_21.gif' style='margin-right:40px; margin-left:-64px; vertical-align:top;'>
+    </td>
+    <td style='vertical-align:top;'>
+Beurteile, ob die Funktion f(x) stetig ist:
+     <div style='line-height:25px; margin-top:10px;'>
+<b>a)</b> an der Stelle x = 0<br>
+<b>b)</b> an der Stelle x = 1<br>
+<b>c)</b> an der Stelle x = 2<br>
+<b>d)</b> über dem Intervall [0, 1]<br>
+<b>e)</b> über dem Intervall [1, 2]<br>
+<b>f)</b> über dem Intervall ]0, 2[</div>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+<b>a)</b> nein &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> ja &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> nein (nur linksseitig) &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> nein &nbsp;&nbsp;&nbsp;&nbsp;
+<b>e)</b> ja &nbsp;&nbsp;&nbsp;&nbsp;
+<b>f)</b> ja</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Offenbar läuft globale Stetigkeit darauf hinaus, dass der Graph eine <b>zusammenhängende Linie</b> bildet. Daraus schließen wir, dass eine Funktion f, die über [a, b] stetig ist, jeden Wert zwischen f(a) und f(b) in diesem Intervall annimmt (<b>Zwischenwertsatz</b>).</div>
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 11:</b> Ein kreisrunder Tisch mit 4 gleich langen Beinen wackelt, weil der Boden stetige Unebenheiten aufweist. Begründe, warum es weniger als eine Vierteldrehung braucht, um den Tisch zu stabilisieren.</div>
+
+ <div class='in'><br>
+Wir stellen uns so, dass der Tisch nach links/rechts wackelt, und ersetzen das rechte Bein durch ein Teleskop-Bein. Dann drehen wir den Tisch um den Winkel &alpha; und bringen das Teleskop-Bein auf die Länge l(&alpha;), sodass alle 4 Beine den Boden berühren. Von oben:</div>
+
+ <div class='in'><br>
+<img src='img/fo_22.gif'></div>
+
+ <div class='in'><br>
+Bringen wir im linken und rechten Bild das Teleskop-Bein auf die ursprüngliche Beinlänge L, dann wackelt der Tisch wieder nach links/rechts, d.h. l(0°) &gt; L und l(90°) &lt; L. Da l(&alpha;) stetigt ist, finden wir nach dem Zwischenwertsatz ein 0° &lt; &alpha; &lt; 90° mit l(&alpha;) = L.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Die <b>elementaren Funktionen</b> <img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'> sind über ihrem Definitionsbereich stetig. Ebenso die <b>Grundrechnungsarten</b> <img src='sym/setR.gif'><sup>2</sup> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'>, was letztlich gerade die Aussage der Grenzwertsätze ist:</div>
+
+ <div class='in'><br>
+<div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>f(x<sub>n</sub>, y<sub>n</sub>) = f(<div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>x<sub>n</sub>, <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>y<sub>n</sub>)</div>
+
+ <div class='mt1'>
+Da auch die <b>Hinter/Nebeneinanderausführung</b> stetiger Funktionen wieder eine solche ergibt, ist typischerweise alles, was man aus elementaren Funktionen zusammenrechnet, wieder stetig. Nur dort, wo Undefiniertheiten auftreten, ist zu klären, ob diese stetig behebbar sind oder nicht.</div>
+
+ </div></body>
+ </html>

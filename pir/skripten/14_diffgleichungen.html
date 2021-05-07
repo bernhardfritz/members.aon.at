@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Differenzialgleichungen</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>XIV. DIFFERENZIALGLEICHUNGEN</b></div>
+
+ <div><br>
+<a href='14_diffgleichungen.html#A'>A. Einführung und Klassifikation</a><br>
+<a href='14_diffgleichungen.html#B'>B. Lineare DG 1. Ordnung</a><br>
+<a href='14_diffgleichungen.html#C'>C. Lineare DG 2. Ordnung</a><br>
+<a href='14_diffgleichungen.html#D'>D. Praktische Anwendungen</a><br>
+<a href='14_diffgleichungen.html#E'>E. Exkurs: Differenzengleichungen</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='14a_diffgleichungen.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> EINFÜHRUNG UND KLASSIFIKATION</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Was ist eine Differenzialgleichung?</b></div>
+
+ <div><br>
+Bei einer "normalen" Gleichung werden bekannte Zahlen und Platzhalter für Zahlen zusammengerechnet, bei einer <b>Differenzialgleichung</b> wie
+
+ <div class='in'><br>
+y' + 3xy<sup>2</sup> = 0</div>
+
+ <div><br>
+sind es bekannte x-Terme und Platzhalter für x-Terme, die – wie der Name sagt – auch differenziert werden. In unserem Fall wäre etwa</div>
+
+ <div class='in'><br>
+<img src='img/dg_00.gif' style='vertical-align:-14px;'> <img src='sym/ok.svg' class='to3'></div>
+
+ <div><br>
+eine Lösung der Gleichung – allerdings nur eine <b>partikuläre Lösung.</b> Die Zusammenfassung aller Lösungen heißt <b>allgemeine Lösung.</b> Wenn an die Lösung weitere Bedingungen geknüpft sind, wie vorgegebene Funktionswerte und/oder Ableitungen an bestimmten Stellen, bildet die allgemeine Lösung den Pool, in dem wir die spezielle Lösung finden.</div>
+
+ <div><br>
+Bem: Klarer, weil wir dann nicht aus dem Kontext schließen müssen, wofür y steht, ist die Schreibweise</div>
+
+ <div class='in'><br>
+y'(x) + 3xy(x)<sup>2</sup> = 0</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Charakterisiere folgende t-Terme über ihre DG (was den Sachverhalt einfacher charakterisiert als die explizite Funktionsgleichung):
+
+  <div class='in mt1'><br>
+<b>a)</b> y(t) =  y<sub class='p02'>0</sub>e<sup><span style='position:relative; bottom:7px; margin-right:3px;'>–</span><span style='position:relative; bottom:14px; left:-2px;'>t</span><span style='margin-left:-6px; text-decoration:overline;'>&tau;</span></sup> <span class='grau'>= exponentieller Zerfall</span></div>
+
+  <div class='in'><br>
+<b>b)</b> y(t) = <span class='p02'>r</span>sin(&omega;t<span class='p44'>+</span>&phi;) <span class='grau'>= sinusförmige Wechselgröße</span></div></div>
+
+ <div class='in'><br>
+<b>a)</b> y' = –<div class='frac p20 p04'><div class='num'>y<sub>0</sub></div><div class='den'>&tau;</div></div>e<sup><span style='position:relative; bottom:7px; margin-right:3px;'>–</span><span style='position:relative; bottom:14px; left:-2px;'>t</span><span style='margin-left:-6px; text-decoration:overline;'>&tau;</span></sup> = –<div class='frac p20'><div class='num'>1</div><div class='den'>&tau;</div></div> y <img src='sym/rarr2.svg' class='p66'> y' + <div class='frac p04'><div class='num'>1</div><div class='den'>&tau;</div></div>y = 0</div>
+
+ <div class='in mt1'>
+<b>b)</b> y' = <span class='p01'>r&omega;</span>cos(&omega;t<span class='p44'>+</span>&phi;) <img src='sym/rarr2.svg' class='p66'> y" = –r&omega;<sup class='p01'>2</sup>sin(&omega;t<span class='p44'>+</span>&phi;) = –&omega;<sup>2</sup>y <img src='sym/rarr2.svg' class='p66'> y"<span class='p44'>+</span>&omega;<sup class='p01'>2</sup>y = 0</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.2' class='box'>2</a> Richtungsfeld</b></div>
+
+ <div><br>
+Die allgemeine Lösung unseres Einführungsbeispiels können wir genauso veranschaulichen wie Physiker ein Magnetfeld mit Hilfe von Eisenfeilspänen: Wir stellen y' frei und zeichnen in den Punkten der xy-Ebene Geradenstücke mit der entsprechenden Steigung ein. Aus einem solchen <b>Richtungsfeld</b> die x-Terme abzulesen, die die allgemeine Lösung bilden, gelingt aber nur in einfachen Fällen.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> Zeichne die Richtungsfelder und lies daraus die allgemeine Lösung der DG ab:
+
+  <div class='in mt1'>
+<b>a)</b> y' = <div class='frac'><div class='num'>1</div><div class='den'>2</div></div> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> y' = <div class='frac'><div class='num'>y</div><div class='den'>x</div></div> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> y' = – 	<div class='frac p20'><div class='num'>x</div><div class='den'>y</div></div></div></div>
+
+ <div class='in mt2'>
+<img src='img/dg_01.gif'></div>
+
+ <div style='margin-left:75px;'>
+y = <div class='frac p04'><div class='num'>1</div><div class='den'>2</div></div>x + c
+<span style='margin-left:150px;'>y = cx</span>
+<span style='margin-left:140px;'>y = ±<span class='r1t'>&radic;</span><span class='rad'>c<sup>2</sup> – x<sup>2</sup></span></span></div>
+
+ <div class='grau'><br>
+Bem: Punkte ohne Steigung heißen singulär, in b) ist das ein Strahlpunkt, in c) ein Wirbelpunkt.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.3' class='box'>3</a> Trennung der Variablen</b></div>
+
+ <div><br>
+Eine DG 1. Ordnung heißt <b>separierbar,</b> falls das freigestellte y' ein Produkt aus x-Term und y-Term ist. In diesem Fall schreiben wir y' als dy/dx, tun so, als ob wir dy und dx trennen können, bringen die x-Teile auf die eine Seite und die y-Teile auf die andere (<b>Trennung der Variablen</b>) und setzen das Integralzeichen vor beide Seiten:</div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>dy</div><div class='den'>dx</div></div> = g(x)<div class='frac p40'><div class='num'>1</div><div class='den'>h(y)</div></div> <span class='ll' style='margin-left:25px;'>·dx</span> &nbsp;<span class='ll'>·h(y)</span></div>
+
+ <div class='in'><br>
+h(y)<span class='p20'>dy</span> = g(x)<span class='p20'>dx</span> &nbsp; <span class='ll'>&thinsp;</span><img src='sym/int.gif' style='vertical-align:-12px;'>(.)</div>
+
+ <div class='in'><br>
+<img src='sym/int.gif' style='vertical-align:-12px;'>h(y)<span class='p20'>dy</span> = <img src='sym/int.gif' style='vertical-align:-12px;'>g(x)<span class='p20'>dx</span> <img src='sym/rarr2.svg' class='p66'> y freistellen</div>
+
+ <div><br>
+Zum Beweis differenzieren wir das nach x:</div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>d</div><div class='den'>dy</div></div> <img src='sym/int.gif' style='vertical-align:-12px;'>h(y)<span class='p22'>dy</span>·<div class='frac p20'><div class='num'>dy</div><div class='den'>dx</div></div> = <div class='frac'><div class='num'>d</div><div class='den'>dx</div></div> <img src='sym/int.gif' style='vertical-align:-12px;'>g(x)<span class='p22'>dx</span> <img src='sym/rarr2.svg' class='p66'> <span class='p02'>h(y)</span><div class='frac p40'><div class='num'>dy</div><div class='den'>dx</div></div> = g(x)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Bestimme die allgemeine Lösung der DG: y' + 3xy<sup>2</sup> = 0</div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>dy</div><div class='den'>dx</div></div> = –3xy<sup>2</sup><span class='ll' style='margin-left:85px;'>·dx</span> &nbsp;<span class='ll'>:y<sup>2</sup> &ne; 0 (y = 0 Lösung? ja)</span></div>
+
+ <div class='in mt1'>
+y<sup>–2</sup><span class='p20'>dy</span> = –3x<span class='p20'>dx</span><span class='ll' style='margin-left:59px;'>&thinsp;</span><img src='sym/int.gif' style='vertical-align:-12px;'>(.)</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>y<sup>–1</sup></div><div class='den'>–1</div></div> + c<sub>1</sub> = –3<div class='frac p40'><div class='num'>x<sup>2</sup></div><div class='den'>2</div></div> + c<sub>2</sub> &nbsp; <span class='ll'>&thinsp;</span>c<sub>3</sub> = c<sub>2</sub><span class='p44'>–</span>c<sub>1</sub> &nbsp;<span class='ll'>·</span>(–1)</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>1</div><div class='den'>y</div></div> = <div class='frac'><div class='num'>3x<sup>2</sup> – 2c<sub>3</sub></div><div class='den'>2</div></div><span class='ll' style='margin-left:70px;'>&thinsp;</span>c = –2c<sub>3</sub></div>
+
+ <div class='in mt1'>
+y = <div class='frac'><div class='num'>2</div><div class='den'>3x<sup>2</sup> + c</div></div> &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'> &nbsp; oder &nbsp; y = 0</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='A.4' class='box'>4</a> Klassifikation</b></div>
+
+ <div><br>
+Im Folgenden behandeln wir <b>gewöhnliche DGen,</b> das sind solche, bei denen Funktionen in einer Variablen gesucht sind. Bei <b>partiellen DGen</b> geht es um Funktionen in mehreren Variablen. Die <b>Ordnung</b> einer DG ist die höchste Ableitung, in der die Variable vorkommt.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Klassifiziere im Hinblick auf gewöhnliche/partielle DG und Ordnung:
+
+  <div class='in mt1'>
+<b>a)</b> y' + (1 + x)y<sup>2</sup> = sinx &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> <div class='frac'><div class='num'>&part;z</div><div class='den'>&part;x</div></div> + <div class='frac p02'><div class='num'>4z</div><div class='den'>x<sup>2</sup> + y<sup>2</sup></div></div>·<div class='frac p20'><div class='num'>&part;z</div><div class='den'>&part;y</div></div> = 1 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> x<sup>3</sup>y" – e<sup>x</sup>(y' + y)<sup>2</sup> = 0</div></div>
+
+ <div class='in'><br>
+<b>a)</b> gewöhnliche DG 1. Ordnung &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> partielle DG 1. Ordnung &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> gewöhnliche DG 2. Ordnung</div>
+
+ <div><br>
+<span class='p02'>•</span> Von einer <b>linearen DG</b> sprechen wir, wenn Ableitungen von y mit x-Termen multipliziert, dann addiert und einem x-Term gleichgesetzt werden.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<span class='p02'>f<sub>n</sub>(x)</span>y<sup>(n)</sup> + ... + <span class='p02'>f<sub>0</sub>(x)</span>y = s(x)
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+s(x) = 0 &nbsp; ... <b>homogene</b> lineare DG<br><br>
+s(x) &ne; 0 &nbsp; ... <b>inhomogene</b> lineare DG
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> Klassifiziere im Hinblick auf Linearität und Homogenität:
+
+  <div class='in'><br>
+<b>a)</b> 3xy' + 2y = ye<sup>x</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> y" + xy<sup>2</sup> = 0 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> y" + y<sup>2</sup> = (x – y)(1 – y)</div></div>
+
+ <div class='in'><br>
+<b>a)</b> 3xy' + (2 – e<sup>x</sup>)y = 0 <img src='sym/rarr2.svg' class='p66'> homogene lineare DG</div>
+
+ <div class='in'><br>
+<b>b)</b> y" + xy<sup>2</sup> = 0 <img src='sym/rarr2.svg' class='p66'> nichtlineare DG</div>
+
+ <div class='in'><br>
+<b>c)</b> y" + (x + 1)y = x <img src='sym/rarr2.svg' class='p66'> inhomogene lineare DG</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.5' class='box'>5</a> Superpositionsgesetz</b></div>
+
+ <div><br>
+Wenn wir in einer linearen DG n-ter Ordnung</div>
+
+ <div class='in'><br>
+<span class='p02'>f<sub>n</sub>(x)</span>y<sup>(n)</sup> + ... + <span class='p02'>f<sub>0</sub>(x)</span>y = s(x)</div>
+
+ <div><br>
+die Störfunktion s(x) durch 0 ersetzen, erhalten wir die "verkürzte DG"</div>
+
+ <div class='in'><br>
+<span class='p02'>f<sub>n</sub>(x)</span>y<sup>(n)</sup> + ... + <span class='p02'>f<sub>0</sub>(x)</span>y = 0 &nbsp; mit Lösungsmenge L<sub>h</sub>.</div>
+
+ <div><br>
+Damit brauchen wir nur mehr eine partikuläre Lösung y<sub>p</sub> der "vollständigen" DG und können deren Lösungsmenge L durch <b>Superposition</b> bilden:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>L</b> = <b>{ y<sub>p</sub><span class='p22'>+</span>y<sub>h</sub> | y<sub>h</sub> <img src='sym/iisin.gif'> L<sub>h</sub> }</b></div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in'><br>
+Wenn y<sub>p</sub> <img src='sym/isin.gif'> L und y<sub>h</sub> <img src='sym/isin.gif'> L<sub>h</sub>, dann ist y<sub>p</sub><span class='p44'>+</span>y<sub>h</sub> <img src='sym/isin.gif'> L, weil:</div>
+
+ <div class='in'><br>
+<img src='img/dg_02.gif'></div>
+
+ <div class='in'><br>
+Wenn y <img src='sym/isin.gif'> L und y<sub>p</sub> <img src='sym/isin.gif'> L, dann ist y<span class='p44'>–</span>y<sub>p</sub> <img src='sym/isin.gif'> L<sub>h</sub> (also y = y<sub>p</sub><span class='p22'>+</span>y<sub>h</sub>), weil:</div>
+
+ <div class='in mt2'>
+<img src='img/dg_03.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> LINEARE DG 1. ORDNUNG</b></div>
+
+ <div><br><br>
+Nach Division durch den Hauptkoeffizienten schaut eine <b>lineare DG 1. Ordnung</b> so aus:</div>
+
+ <div class='in'><br>
+y' + f(x)<span class='p20'>y</span> = s(x)</div>
+
+ <div><br>
+Separierbar, also durch Trennung der Variablen lösbar, ist sie nur, wenn s(x) &sim; f(x). Ansonsten gehen wir schrittweise vor:</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.1' class='box'>1</a> Lösung der verkürzten DG</b></div>
+
+ <div><br>
+Die verkürzte DG</div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>dy</div><div class='den'>dx</div></div> + f(x)<span class='p20'>y</span> = 0</div>
+
+ <div><br>
+ist separierbar, also:</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>dy</div><div class='den'>dx</div></div> = –f(x)<span class='p20'>y</span><span class='ll' style='margin-left:58px;'>·</span>dx &nbsp;<span class='ll'>:</span>y &ne; 0 (y = 0 Lösung? ja)</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>dy</div><div class='den'>dx</div></div> = –f(x)<span class='p20'>dx</span><span class='ll' style='margin-left:51px;'>&thinsp;</span><img src='sym/int.gif' style='vertical-align:-12px;'>(.)</div>
+
+ <div class='in'><br>
+ln|y| = –F(x) + c<sub>3</sub> &nbsp; <span class='ll'>&thinsp;</span>e<sup>(.)</sup></div>
+
+ <div class='in mt2'>
+|y| = e<sup>–F(x)<span class='p22'>+</span>c<sub>3</sub></sup><span class='ll' style='margin-left:31px;'>&thinsp;</span>c<sub>4</sub> = e<sup>c<sub>3</sub></sup></div>
+
+ <div class='in mt2'>
+y = <span class='p02'>±</span>c<sub>4</sub>e<sup>–F(x)</sup><span class='ll' style='margin-left:45px;'>&thinsp;</span>c = <span class='p02'>±</span>c<sub>4</sub> oder 0 (für y = 0)</div>
+
+ <div class='in mt2'>
+y<sub>h</sub> = ce<sup>–F(x)</sup> &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='B.2' class='box'>2</a> Variation der Konstanten</b></div>
+
+ <div><br>
+Jede Funktion y(x) lässt sich "à la homogene Lösung" schreiben, wenn wir die Konstante c durch einen Term c(x) ersetzen:</div>
+
+ <div class='in'><br>
+y = c(x)e<sup>–F(x)</sup></div>
+
+ <div><br>
+Insbesondere lassen sich alle y(x) so schreiben, die – in die vollständige DG eingesetzt – diese erfüllen:</div>
+
+ <div class='in'><br>
+c'(x)e<sup>–F(x)</sup> + c(x)e<sup>–F(x)</sup>(–f(x))<img src='sym/slash3.gif' style='position:relative; bottom:-6px; margin-left:-78px; margin-right:32px;'> + f(x)c(x)e<sup>–F(x)</sup><img src='sym/slash3.gif' style='position:relative; bottom:-6px; margin-left:-70px; margin-right:24px;'> = s(x) <img src='sym/rarr2.svg' class='p66'> c'(x) = s(x)e<sup>F(x)</sup></div>
+
+ <div class='mt2'>
+Die in c(x) enthaltene Intergrationskonstante würde die allgemeine Lösung der vollständigen DG liefern. Zwecks einheitlicher Vorgehensweise (siehe Ansatz à la Störfunktion) lassen wir aber die Intergrationskonstante weg und kombinieren die sich ergebende partikuläre Lösung mit der allgemeinen Lösung der homogenen DG (Superpositionsgesetz).</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Bestimme die allgemeine Lösung der DG: y' + 2xy = xe<sup>x(1–x)</sup></div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> Lösung der verkürzten DG</div>
+
+ <div class='in' style='margin-top:12px;'>
+<div class='frac'><div class='num'>dy</div><div class='den'>dx</div></div> = –2xy<span class='ll' style='margin-left:56px;'>·</span>dx &nbsp; <span class='ll'>:</span> y &ne; 0 (y = 0 Lösung? ja)</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>dy</div><div class='den'>dx</div></div> = –2x<span class='p20'>dx</span><span class='ll' style='margin-left:47px;'>&thinsp;</span><img src='sym/int.gif' style='vertical-align:-12px;'>(.)</div>
+
+ <div class='in mt2'>
+ln|y| = –x<sup>2</sup> + c<sub>3</sub> &nbsp; <span class='ll'>&thinsp;</span>e<sup>(.)</sup></div>
+
+ <div class='in mt2'>
+|y| = e<sup>–x<sup>2</sup><span class='p22'>+</span>c<sub>3</sub></sup><span class='ll' style='margin-left:27px;'>&thinsp;</span>c<sub>4</sub> = e<sup>c<sub>3</sub></sup></div>
+
+ <div class='in mt2'>
+y = <span class='p02'>±</span>c<sub>4</sub>e<sup>–x<sup>2</sup></sup><span class='ll' style='margin-left:41px;'>&thinsp;</span>c = <span class='p02'>±</span>c<sub>4</sub> oder 0 (für y = 0)</div>
+
+ <div class='in mt2'>
+y<sub>h</sub> = ce<sup>–x<sup>2</sup></sup> &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div class='in'><br>
+<b>Schritt 2:</b> Variation der Konstanten</div>
+
+ <div class='in mt2'>
+y = c(x)e<sup>–x<sup>2</sup></sup> &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; vollständige DG</div>
+
+ <div class='in'><br>
+c'(x)e<sup>–x<sup>2</sup></sup> + c(x)e<sup>–x<sup>2</sup></sup>(–2x)<img src='sym/slash3.gif' style='position:relative; bottom:-6px; margin-left:-70px; margin-right:24px;'> + 2xc(x)e<sup>–x<sup>2</sup></sup><img src='sym/slash3.gif' style='position:relative; bottom:-6px; margin-left:-60px; margin-right:14px;'> = xe<sup>x–x<sup>2</sup></sup> |·e<sup>x<sup>2</sup></sup> <img src='sym/rarr2.svg' class='p66'> c'(x) = xe<sup>x</sup></div>
+
+ <div class='in mt2'>
+<img src='img/dg_04.gif'></div>
+
+ <div class='in'><br>
+y<sub>p</sub> = (xe<sup>x</sup><span class='p22'>–</span>e<sup>x</sup>)e<sup>–x<sup>2</sup></sup></div>
+
+ <div class='in'><br>
+<b>Schritt 3:</b> Superpositionsgesetz</div>
+
+ <div class='in'><br>
+y = y<sub>p</sub> + y<sub>h</sub> = (xe<sup>x</sup><span class='p22'>–</span>e<sup>x</sup>)e<sup>–x<sup>2</sup></sup> + ce<sup>–x<sup>2</sup></sup> &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.3' class='box'>3</a> Ansatz à la Störfunktion</b></div>
+
+ <div><br>
+Bei einer linearen DG mit <b>Zahlen als Koeffizienten</b></div>
+
+ <div class='in'><br>
+y' + py = s(x)</div>
+
+<div><br>
+merken wir uns zum einen den <b>e<sup>&lambda;x</sup>-Ansatz</b> als Lösung der verkürzten DG:</div>
+
+ <div class='in' style='margin-top:12px;'>
+<span class='p02'>&lambda;</span>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> + <span class='p02'>p</span>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> = 0 <img src='sym/rarr2.svg' class='p66'> &lambda; = –p</div>
+
+ <div><br>
+Zum anderen gibt es für die wichtigsten Störfunktionen <b>daran angepasste Ansätze,</b> um eine partikuläre Lösung der vollständigen DG zu erhalten:</div>
+
+ <div class='in'><br>
+s(x) = <span class='ws4'>a<sub>n</sub>x<sup>n</sup> + … +  a<sub>0</sub></span> <img src='sym/rarr2.svg' class='p66'> y<sub>p</sub> = <span class='ws4'>A<sub>n</sub>x<sup>n</sup> + … +  A<sub>0</sub></span></div>
+
+ <div class='in'><br>
+s(x) = ae<sup>&alpha;x</sup> <img src='sym/rarr2.svg' class='p66'> y<sub>p</sub> = Ae<sup>&alpha;x</sup></div>
+
+ <div class='in'><br>
+s(x) = <span class='p02'>a</span>cos&beta;x<span class='p44'>+</span><span class='p02'>b</span>sin&beta;x <img src='sym/rarr2.svg' class='p66'> y<sub>p</sub> = Acos&beta;x<span class='p44'>+</span>Bsin&beta;x</div>
+
+ <div><br>
+Bem: Bei Summen/Produkten dieser Störfunktionen nehmen wir die Summen/Produkte ihrer Ansätze.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 7:</b> Bestimme die allgemeine Lösung der DG: y' + 4y = 32x<sup>2</sup></div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> e<sup>&lambda;x</sup>-Ansatz &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; verkürzte DG</div>
+
+ <div class='in' style='margin-top:13px;'>
+<span class='p02'>&lambda;</span>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> + <span class='p02'>4</span>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> = 0 <img src='sym/rarr2.svg' class='p66'> &lambda; = –4</div>
+
+ <div class='in'><br>
+y<sub>h</sub> = ce<sup>–4x</sup> &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div class='in'><br>
+<b>Schritt 2:</b> Ansatz à la Störfunktion</div>
+
+ <div class='in'><br>
+y<sub>p</sub> = Ax<sup>2</sup> + Bx + C &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; vollständige DG</div>
+
+ <div class='in'><br>
+2Ax + B + 4Ax<sup>2</sup> + 4Bx + 4C = 32x<sup>2</sup></div>
+
+ <div class='in'><br>
+<img src='img/dg_05.gif'></div>
+
+ <div class='in mt1'>
+y<sub>p</sub> = 8x<sup>2</sup> – 4x + 1</div>
+
+ <div class='in'><br>
+<b>Schritt 3:</b> Superpositionsgesetz</div>
+
+ <div class='in'><br>
+y = y<sub>p</sub> + y<sub>h</sub> = 8x<sup>2</sup> – 4x + 1 + ce<sup>–4x</sup> &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> LINEARE DG 2. ORDNUNG</b></div>
+
+ <div><br><br>
+Bei den linearen DG 2. Ordnung beschränken wir uns von vornherein auf Zahlen als Koeffizienten:</div>
+
+ <div class='in'><br>
+y" + py' + qy = s(x)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.1' class='box'>1</a> Struktur der Lösungen</b></div>
+
+ <div><br>
+So wie die allgemeine Lösung einer linearen DG 1. Ordnung</div>
+
+ <div class='in'><br>
+<img src='img/dg_06.gif'></div>
+
+ <div><br>
+eine <b>Gerade</b> im reellen Vektorraum der Funktionen darstellt, ist die allgemeine Lösung einer linearen DG 2. Ordnung eine <b>Ebene:</b></div>
+
+ <div class='in'><br>
+<img src='img/dg_07.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Lösung der verkürzten DG</b></div>
+
+ <div><br>
+Um die Spannvektoren y<sub>1,2</sub> zu bekommen, gehen wir mit dem <b>e<sup>&lambda;x</sup>-Ansatz</b> in die verkürzte DG:</div>
+
+ <div class='in' style='margin-top:13px;'>
+&lambda;<sup>2</sup>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> + p&lambda;e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> + qe<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> = 0</div>
+
+ <div><br>
+<b>a) aperiodischer Fall:</b> zwei reelle Lösungen &lambda;<sub>1</sub>, &lambda;<sub>2</sub></div>
+
+ <div class='in'><br>
+y<sub>h</sub> = c<sub>1</sub>e<sup>&lambda;<sub>1</sub>x</sup> + c<sub>2</sub>e<sup>&lambda;<sub>2</sub>x</sup> &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div></div>
+
+ <div><br>
+<b>b) aperiodischer Grenzfall:</b> eine reelle Doppellösung &lambda;</div>
+
+ <div><br>
+Der e<sup>&lambda;x</sup>-Ansatz liefert hier nur <i>eine</i> Lösung, aber wenn wir diese mit x multiplizieren, erhalten wir eine zweite:</div>
+
+ <div class='in'><br>
+y = xe<sup>&lambda;x</sup> &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; verkürzte DG &nbsp;<img src='img/dg_08.gif' style='vertical-align:-48px;'></div>
+
+ <div class='in'><br>
+y<sub>h</sub> = c<sub>1</sub>e<sup>&lambda;x</sup> + c<sub>2</sub>xe<sup>&lambda;x</sup> &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div><br>
+<b>c) periodischer Fall:</b> konjugiert komplexe Lösungen &alpha; ± j&beta;</div>
+
+ <div><br>
+Die komplexe Lösung erfüllt zwar die Gleichung, aber wir suchen reelle Lösungen und finden solche in den Komponenten der komplexen Lösung:</div>
+
+ <div class='in'><br>
+y = e<sup>(&alpha;<span class='p22'>±</span>j&beta;)x</sup> = e<sup>&alpha;x</sup>e<sup>±j&beta;x</sup> = e<sup>&alpha;x</sup>cos&beta;x ± je<sup>&alpha;x</sup>sin&beta;x &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; verkürzte DG <img src='sym/rarr2.svg' class='p66'> Re = 0, Im = 0</div>
+
+ <div class='in'><br>
+y<sub>h</sub> = c<sub>1</sub>e<sup>&alpha;x</sup>cos&beta;x + c<sub>2</sub>e<sup>&alpha;x</sup>sin&beta;x &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.3' class='box'>3</a> Variation der Konstanten</b></div>
+
+ <div><br>
+Jede Funktion y(x) lässt sich "à la homogene Lösung" schreiben, wenn wir die Konstanten c<sub>1,2</sub> durch Terme c<sub>1,2</sub>(x) ersetzen. Zudem können wir c<sub>1,2</sub>(x) so wählen, dass in y' alle Teile mit c<sub>1,2</sub>'(x) verschwinden:</div>
+
+ <div class='in'><br>
+y = c<sub>1</sub>(x)y<sub>1</sub> + c<sub>2</sub>(x)y<sub>2</sub></div>
+
+ <div class='in mt1'>
+y' = c<sub>1</sub>'(x)y<sub>1</sub><img src='sym/slash3.gif' style='position:relative; bottom:-6px; margin-left:-50px; margin-right:4px;'> + c<sub>1</sub>(x)y<sub>1</sub>' + c<sub>2</sub>'(x)y<sub>2</sub><img src='sym/slash3.gif' style='position:relative; bottom:-6px; margin-left:-50px; margin-right:4px;'> + c<sub>2</sub>(x)y<sub>2</sub>'</div>
+
+ <div><br>
+(Zum Beweis, dass es solche c<sub>1,2</sub>(x) gibt, brauchen wir sie nur aus obigen Gleichungen herauszurechnen.) Insbesondere lassen sich alle y(x) so schreiben, die die vollständige DG erfüllen. Zusammengefasst haben wir also folgende Forderungen an c<sub>1,2</sub>(x):</div>
+
+ <div class='in'><br>
+(1) c<sub>1</sub>'(x)y<sub>1</sub> + c<sub>2</sub>'(x)y<sub>2</sub> = 0</div>
+
+ <div class='in mt1'>
+(2) c<sub>1</sub>'(x)y<sub>1</sub>'<span class='p22'>+</span>c<sub>1</sub>(x)y<sub>1</sub>"<img src='sym/slash2r.gif' style='position:relative; bottom:-6px; margin-left:-42px; margin-right:8px;'><span class='p22'>+</span>c<sub>2</sub>'(x)y<sub>2</sub>'<span class='p22'>+</span>c<sub>2</sub>(x)y<sub>2</sub>"<img src='sym/slash2b.gif' style='position:relative; bottom:-6px; margin-left:-42px; margin-right:8px;'><span class='p22'>+</span>pc<sub>1</sub>(x)y<sub>1</sub>'<img src='sym/slash2r.gif' style='position:relative; bottom:-6px; margin-left:-48px; margin-right:14px;'><span class='p22'>+</span>pc<sub>2</sub>(x)y<sub>2</sub>'<img src='sym/slash2b.gif' style='position:relative; bottom:-6px; margin-left:-48px; margin-right:14px;'><span class='p22'>+</span>qc<sub>1</sub>(x)y<sub>1</sub><img src='sym/slash2r.gif' style='position:relative; bottom:-6px; margin-left:-48px; margin-right:14px;'><span class='p22'>+</span>qc<sub>2</sub>(x)y<sub>2</sub><img src='sym/slash2b.gif' style='position:relative; bottom:-6px; margin-left:-48px; margin-right:14px;'> = s(x)</div>
+
+ <div><br>
+Über die Cramer'sche Regel können wir unmittelbar ablesen:</div>
+
+ <div class='in mt1'>
+c<sub>1</sub>'(x) = <div class='frac'><div class='num'>–s(x)y<sub>2</sub></div><div class='den'>y<sub>2</sub>'y<sub>1</sub><span class='p22'>–</span>y<sub>2</sub>y<sub>1</sub>'</div></div> &nbsp; und &nbsp; c<sub>2</sub>'(x) = <div class='frac'><div class='num'>s(x)y<sub>1</sub></div><div class='den'>y<sub>2</sub>'y<sub>1</sub><span class='p22'>–</span>y<sub>2</sub>y<sub>1</sub>'</div></div></div>
+
+ <div style='margin-top:25px;'>
+<b>a) aperiodischer Fall:</b> y = c<sub>1</sub>(x)e<sup>&lambda;<sub>1</sub>x</sup> + c<sub>2</sub>(x)e<sup>&lambda;<sub>2</sub>x</sup></div>
+
+ <div class='in'><br>
+y<sub>2</sub>'y<sub>1</sub><span class='p22'>–</span>y<sub>2</sub>y<sub>1</sub>' = &lambda;<sub>2</sub>e<sup>&lambda;<sub>2</sub>x</sup>e<sup>&lambda;<sub>1</sub>x</sup> – e<sup>&lambda;<sub>2</sub>x</sup>&lambda;<sub>1</sub>e<sup>&lambda;<sub>1</sub>x</sup> = e<sup>&lambda;<sub>1</sub>x</sup>e<sup>&lambda;<sub>2</sub>x</sup>(&lambda;<sub>2</sub><span class='p22'>–</span>&lambda;<sub>1</sub>)</div>
+
+ <div class='in'><br>
+c<sub>1</sub>'(x) = <div class='frac'><div class='num'>–s(x)e<sup>–&lambda;<sub>1</sub>x</sup></div><div class='den'>&lambda;<sub>2</sub><span class='p22'>–</span>&lambda;<sub>1</sub></div></div> &nbsp; und &nbsp; c<sub>2</sub>'(x) = <div class='frac'><div class='num'>s(x)e<sup>–&lambda;<sub>2</sub>x</sup></div><div class='den'>&lambda;<sub>2</sub><span class='p22'>–</span>&lambda;<sub>1</sub></div></div></div>
+
+ <div style='margin-top:25px;'>
+<b>b) aperiodischer Grenzfall:</b> y = <span class='p02'>c<sub>1</sub>(x)</span>e<sup>&lambda;x</sup> + <span class='p02'>c<sub>2</sub>(x)</span>xe<sup>&lambda;x</sup></div>
+
+ <div class='in'><br>
+y<sub>2</sub>'y<sub>1</sub><span class='p22'>–</span>y<sub>2</sub>y<sub>1</sub>' = (e<sup>&lambda;x</sup> + x&lambda;e<sup>&lambda;x</sup><img src='sym/slash2.gif' style='position:relative; bottom:-6px; margin-left:-35px;'>)e<sup>&lambda;x</sup> – xe<sup>&lambda;x</sup>&lambda;e<sup>&lambda;x</sup><img src='sym/slash2.gif' style='position:relative; bottom:-6px; margin-left:-48px; margin-right:14px;'> = e<sup>2&lambda;x</sup></div>
+
+ <div class='in mt2'>
+c<sub>1</sub>'(x) = –s(x)xe<sup>–&lambda;x</sup> &nbsp; und &nbsp; c<sub>2</sub>'(x) = s(x)e<sup>–&lambda;x</sup></div>
+
+ <div style='margin-top:25px;'>
+<b>c) periodischer Fall:</b> y = c<sub>1</sub>(x)e<sup>&alpha;x</sup>cos&beta;x + c<sub>2</sub>(x)e<sup>&alpha;x</sup>sin&beta;x</div>
+
+ <div class='in' style='line-height:34px; margin-top:15px;'>
+y<sub>2</sub>'y<sub>1</sub><span class='p22'>–</span>y<sub>2</sub>y<sub>1</sub>' = (&alpha;e<sup>&alpha;x</sup>sin&beta;x<img src='sym/slash3.gif' style='position:relative; bottom:-6px; margin-left:-55px; margin-right:9px;'> + e<sup>&alpha;x</sup>&beta;cos&beta;x)e<sup>&alpha;x</sup>cos&beta;x – e<sup>&alpha;x</sup>sin&beta;x(&alpha;e<sup>&alpha;x</sup>cos&beta;x<img src='sym/slash3.gif' style='position:relative; bottom:-6px; margin-left:-58px; margin-right:12px;'> – e<sup>&alpha;x</sup>&beta;sin&beta;x) = e<sup>2&alpha;x</sup>&beta;(cos<sup>2</sup>&beta;x + sin<sup>2</sup>&beta;x) = e<sup>2&alpha;x</sup>&beta;</div>
+
+ <div class='in mt1'>
+c<sub>1</sub>'(x) = <div class='frac'><div class='num'>–s(x)e<sup>–&alpha;x</sup>sin&beta;x</div><div class='den'>&beta;</div></div> &nbsp; und &nbsp; c<sub>2</sub>'(x) = <div class='frac'><div class='num'>s(x)e<sup>–&alpha;x</sup>cos&beta;x</div><div class='den'>&beta;</div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Bestimme die allgemeine Lösung der DG: y" – 3y' + 2y = <div class='frac'><div class='num'>e<sup>3x</sup></div><div class='den'>e<sup>2x</sup> + 1</div></div></div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> e<sup>&lambda;x</sup>-Ansatz &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; verkürzte DG</div>
+
+ <div class='in'><br>
+<span class='p02'>&lambda;<sup>2</sup></span>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> – <span class='p02'>3&lambda;</span>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> + <span class='p02'>2</span>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> = 0 <img src='sym/rarr2.svg' class='p66'> &lambda;<sub>1,2</sub> = <div class='frac to1'><div class='num'>3 ± <span class='r1t'>&radic;</span><span class='rad'>(–3)<sup>2</sup> – 4·2</span></div><div class='den'>2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17'>&lambda;<sub>1</sub> = 1</span><span class='to17' style='margin-left:-42px;'>&lambda;<sub>2</sub> = 2</span></div>
+
+ <div class='in mt1'>
+y<sub>h</sub> = c<sub>1</sub>e<sup>x</sup> + c<sub>2</sub>e<sup>2x</sup> &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div class='in'><br>
+<b>Schritt 2:</b> Variation der Konstanten:</div>
+
+	 <div class='in'><br>
+y<sub>p</sub> = c<sub>1</sub>(x)e<sup>x</sup> + c<sub>2</sub>(x)e<sup>2x</sup> mit c<sub>1</sub>'(x)e<sup>x</sup> + c<sub>2</sub>'(x)e<sup>2x</sup> = 0 &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; vollständige DG</div>
+
+ <div class='in' style='margin-top:25px;'>
+<img src='img/dg_09.gif'></div>
+
+ <div class='in' style='margin-top:20px;'>
+<img src='img/dg_10.gif'></div>
+
+ <div class='in' style='margin-top:5px;'>
+y<sub>p</sub> = –<div class='frac p20 p04'><div class='num'>1</div><div class='den'>2</div></div>e<sup class='p02'>x</sup>ln(e<sup>2x</sup><span class='p22'>+</span>1) + e<sup>2x</sup>arctan<span class='p20'>e</span><sup>x</sup></div>
+
+ <div class='in' style='margin-top:10px;'>
+<b>Schritt 3:</b> Superpositionsgesetz</div>
+
+ <div class='in' style='margin-top:5px;'>
+y = y<sub>p</sub> + y<sub>h</sub> = –<div class='frac p20 p04'><div class='num'>1</div><div class='den'>2</div></div>e<sup class='p02'>x</sup>ln(e<sup>2x</sup><span class='p22'>+</span>1) + e<sup>2x</sup>arctan<span class='p20'>e</span><sup>x</sup> + c<sub>1</sub>e<sup>x</sup> + c<sub>2</sub>e<sup>2x</sup> &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.4' class='box'>4</a> Ansatz à la Störfunktion</b></div>
+
+ <div><br>
+In den dafür geeigneten Fällen können wir auch die bei der DG 1. Ordnung besprochenen (an die Störfunktion angepassten) Ansätze verwenden. Nachzutragen ist noch eine Ergänzung hinsichtlich "entarteter" Fälle, wo eine bzw. beide Lösungen der charakteristischen Gleichung:</div>
+
+ <div class='in'><br>
+s(x) = <span class='ws4'>a<sub>n</sub>x<sup>n</sup> + … +  a<sub>0</sub></span>, &lambda;<sub>1</sub> = 0 bzw. &lambda;<sub>1,2</sub> = 0 <img src='sym/rarr2.svg' class='p66'> y<sub>p</sub> = <b class='p01'>x</b>(<span class='ws4'>A<sub>n</sub>x<sup>n</sup> + … +  A<sub>0</sub></span>) bzw. <b class='p01'>x<sup>2</sup></b>(<span class='ws4'>A<sub>n</sub>x<sup>n</sup> + … +  A<sub>0</sub></span>)</div>
+
+ <div class='in'><br>
+s(x) = ae<sup>&alpha;x</sup>, &lambda;<sub>1</sub> =  &alpha; bzw. &lambda;<sub>1,2</sub> = &alpha; <img src='sym/rarr2.svg' class='p66'> y<sub>p</sub> = <b class='p01'>x</b>(Ae<sup>&alpha;x</sup>) bzw. <b class='p01'>x<sup>2</sup></b>(Ae<sup>&alpha;x</sup>)</div>
+
+ <div class='in'><br>
+s(x) = <span class='p01'>a</span>cos&beta;x<span class='p44'>+</span><span class='p01'>b</span>sin&beta;x, &lambda;<sub>1,2</sub> = ±j&beta; <img src='sym/rarr2.svg' class='p66'> y<sub>p</sub> = <b class='p01'>x</b>(Acos&beta;x<span class='p44'>+</span>Bsin&beta;x)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b> Bestimme die allgemeine Lösung der DG: y" – 2y' + y = 10e<sup>x</sup></div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> e<sup>&lambda;x</sup>-Ansatz &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; verkürzte DG</div>
+
+ <div class='in'><br>
+<span class='p02'>&lambda;<sup>2</sup></span>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> – <span class='p02'>2&lambda;</span>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> + <span class='p02'>1</span>e<sup>&lambda;x</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-21px;'> = 0 <img src='sym/rarr2.svg' class='p66'> (&lambda; – 1)<sup>2</sup> = 0 <img src='sym/rarr2.svg' class='p66'> &lambda;<sub>1,2</sub> = 1</div>
+
+ <div class='in'><br>
+y<sub>h</sub> = c<sub>1</sub>e<sup>x</sup> + c<sub>2</sub>xe<sup>x</sup> &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div class='in'><br>
+<b>Schritt 2:</b> Ansatz à la Störfunktion (entartet)</div>
+
+ <div class='in'><br>
+y<sub>p</sub> = Ax<sup>2</sup>e<sup>x</sup> &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; vollständige DG</div>
+
+ <div class='in mt1'>
+Ax<sup>2</sup>e<sup>x</sup><img src='sym/slash2r.gif' style='position:relative; bottom:-6px; margin-left:-36px; margin-right:1px;'> + 4Axe<sup>x</sup><img src='sym/slash2b.gif' style='position:relative; bottom:-6px; margin-left:-36px; margin-right:1px;'> + 2Ae<sup>x</sup> – 2Ax<sup>2</sup>e<sup>x</sup><img src='sym/slash2r.gif' style='position:relative; bottom:-6px; margin-left:-40px; margin-right:5px;'> – 4Axe<sup>x</sup><img src='sym/slash2b.gif' style='position:relative; bottom:-6px; margin-left:-36px; margin-right:1px;'> + Ax<sup>2</sup>e<sup>x</sup><img src='sym/slash2r.gif' style='position:relative; bottom:-6px; margin-left:-36px; margin-right:1px;'> = 10e<sup>x</sup> <img src='sym/rarr2.svg' class='p66'> A = 5</div>
+
+ <div class='in'><br>
+y<sub>p</sub> = 5x<sup>2</sup>e<sup>x</sup></div>
+
+ <div class='in'><br>
+<b>Schritt 3:</b> Superpositionsgesetz</div>
+
+ <div class='in'><br>
+y = y<sub>p</sub> + y<sub>h</sub> = 5x<sup>2</sup>e<sup>x</sup> + c<sub>2</sub>xe<sup>x</sup> + c<sub>1</sub>e<sup>x</sup> &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> PRAKTISCHE ANWENDUNGEN</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Abkühlungsvorgang</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 10:</b> Bei einer Umgebungstemperatur <span class='nw ws4'><img src='sym/theta.gif'><sub>u</sub> = 25 °C</span> kühlt ein <span class='nw'>110 °C</span> heißes Metallstück in 3 min auf 96 °C ab. Bestimme die Metalltemperatur <span class='nw ws4'><img src='sym/theta.gif'>(t)</span> nach t sec, wenn
+
+  <div class='in mt1'>
+<div class='frac'><div class='num'>d<img src='sym/theta.gif'></div><div class='den'>dt</div></div> &sim; <img src='sym/theta.gif'> – <img src='sym/theta.gif'><sub>u</sub>.</div></div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> Allgemeine Lösung (der separierbaren DG)</div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>d<img src='sym/theta.gif'></div><div class='den'>dt</div></div> = k(<img src='sym/theta.gif'><span class='p44'>–</span><img src='sym/theta.gif'><sub>u</sub>) <span class='ll' style='margin-left:43px;'>·</span>dt &nbsp;<span class='ll'>:</span>(<img src='sym/theta.gif'><span class='p44'>–</span><img src='sym/theta.gif'><sub>u</sub>)</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>d<img src='sym/theta.gif'></div><div class='den'><img src='sym/theta.gif'><span class='p44'>–</span><img src='sym/theta.gif'><sub>u</sub></div></div> = kdt <span class='ll' style='margin-left:59px;'>&thinsp;</span><img src='sym/int.gif' style='vertical-align:-12px;'>(.)</div>
+
+ <div class='in'><br>
+ln(<img src='sym/theta.gif'><span class='p44'>–</span><img src='sym/theta.gif'><sub>u</sub>) = kt + c<sub>3</sub> &nbsp; <span class='ll'>&thinsp;</span>e<sup>(.)</sup></div>
+
+ <div class='in'><br>
+<img src='sym/theta.gif'> = <img src='sym/theta.gif'><sub>u</sub> + ce<sup>kt</sup> &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'><sup>+</sup></div>
+
+ <div class='in'><br>
+<b>Schritt 2:</b> Spezielle Lösung</div>
+
+ <div class='in'><br>
+<img src='sym/theta.gif'>(0) = 25 + ce<sup>0</sup> = 110 <img src='sym/rarr2.svg' class='p66'> c = 85</div>
+
+ <div class='in'><br>
+<img src='sym/theta.gif'>(180) = 25 + ce<sup>180k</sup> = 96 <img src='sym/rarr2.svg' class='p66'> k = –0,001</div>
+
+ <div class='in'><br>
+<img src='sym/theta.gif'> = 25 + 85e<sup>–0,001t</sup></div>
+
+ <div><br>
+<b>Zusatzaufgabe:</b> Nach welcher Zeit hat das Metallstück eine Temperatur von 50 °C?</div>
+
+ <div class='in' style='margin-bottom:3px;'><br>
+50 = 25 + 85e<sup>–0,001t</sup> <img src='sym/rarr2.svg' class='p66'> 25 = 85e<sup>–0,001t</sup> <img src='sym/rarr2.svg' class='p66'> t = 1224 s = 20,4 min</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> Serienschwingkreis</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 11:</b> Bestimmme i(t) für die angegebene Schaltung, wenn <span class='nw'>u(t) = <span class='p02'>60</span>sin125t V</span> und <span class='nw'>i<sub>L</sub>(0) = u<sub>C</sub>(0) = 0.</span><br>
+
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/dg_11.gif' style='margin-top:15px; margin-right:40px; margin-left:14px;'>
+    </td>
+    <td valign='top'><br>
+L = 1,6 H<br><br>
+R = 160 &Omega;<br><br>
+C = 25 &mu;F<br><br>
+Formeln dazu: u<sub>L</sub>(t) = <span class='p02'>L</span>i'(t), u<sub>R</sub>(t) = <span class='p02'>R</span>i(t), q(t) = <span class='p02'>C</span>u<sub>C</sub>(t)
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> DG aufstellen</div>
+
+ <div class='in mt1'>
+<span class='blau'>u<sub>L</sub> + u<sub>R</sub> + u<sub>C</sub> = u</span> <span class='ll' style='margin-left:22px;'>&thinsp;</span><div class='frac p04'><div class='num'>d</div><div class='den'>dt</div></div>(.)</div>
+
+ <div class='in mt1'>
+u<sub>L</sub>' + u<sub>R</sub>' + u<sub>C</sub>' = u' &nbsp; <span class='ll'>&thinsp;</span>u<sub>L</sub> = <span class='p02'>L</span>i', u<sub>R</sub> = <span class='p02'>R</span>i, i = <span class='p02'>C</span>u<sub>C</sub>'</div>
+
+ <div class='in mt1'>
+<span class='p02'>L</span>i" + <span class='p02'>R</span>i' + <div class='frac'><div class='num'>i</div><div class='den'>C</div></div> = u'</div>
+
+ <div class='in mt1'>
+<span class='p02'>1,6</span>i" + <span class='p02'>160</span>i' + <span class='p02'>40000</span>i = <span class='p02'>7500</span>cos125t &nbsp; <span class='ll'>:1,6</span></div>
+
+ <div class='in'><br>
+i" + <span class='p02'>100</span>i' + <span class='p02'>25000</span>i = <span class='p02'>4687,5</span>cos125t</div>
+
+ <div class='in'><br>
+<b>Schritt 2:</b> e<sup>&lambda;t</sup>-Ansatz &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; verkürzte DG</div>
+
+ <div class='in mt1'>
+&lambda;<sup>2</sup><span class='p20'>e</span><sup>&lambda;t</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-19px;'> + 100&lambda;<span class='p20'>e</span><sup>&lambda;t</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-19px;'> + 25000<span class='p20'>e</span><sup>&lambda;t</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-19px;'> = 0 <img src='sym/rarr2.svg' class='p66'> &lambda;<sub>1,2</sub> = <div class='frac to1'><div class='num'>–100 ± <span class='r1t'>&radic;</span><span class='rad'>100<sup>2</sup> – 4·25000</span></div><div class='den'>2</div></div> = <span class='ws4'>–50 ± 150j</span></div>
+
+  <div class='in'><br>
+<span class='uo p10 p02'><span class='ui'>i</span></span><sub>1,2</sub> = e<sup>(–50<span class='p11'>±</span>150j)t</sup> <img src='sym/rarr2.svg' class='p66'> i<sub>h</sub> = c<sub>1</sub>e<sup>–50t</sup>cos150t + c<sub>2</sub>e<sup>–50t</sup>sin150t &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div class='in'><br>
+<b>Schritt 3:</b> Ansatz à la Störfunktion</div>
+
+ <div class='in'><br>
+i<sub>p</sub> = Acos125t + Bsin125t &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; vollständige DG</div>
+
+ <div class='in'><br>
+<span class='p02'>–15625A</span>cos125t – <span class='p02'>15625B</span>sin125t – <span class='p02'>12500A</span>sin125t + <span class='p02'>12500B</span>cos125t + <span class='p02'>25000A</span>cos125t + <span class='p02'>25000B</span>sin125t = <span class='p02'>4687,5</span>cos125t</div>
+
+  <div class='in'><br>
+<img src='img/dg_12.gif'></div>
+
+ <div class='in mt1'>
+i<sub>p</sub> = 0,18cos125t + 0,24sin125t</div>
+
+ <div class='in'><br>
+<b>Schritt 4:</b> Superpositionsgesetz</div>
+
+ <div class='in'><br>
+i = i<sub>p</sub> + i<sub>h</sub> = 0,18cos125t + 0,24sin125t + c<sub>1</sub>e<sup>–50t</sup>cos150t + c<sub>2</sub>e<sup>–50t</sup>sin150t &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div class='in'><br>
+<b>Schritt 5:</b> Spezielle Lösung</div>
+
+ <div class='in'><br>
+i(0) = 0,18 + c<sub>1</sub> = 0 <img src='sym/rarr2.svg' class='p66'> c<sub>1</sub> = –0,18</div>
+
+ <div class='in'><br>
+u<sub>C</sub>(0) = u(0) – <span class='p02'>R</span>i(0) – <span class='p02'>L</span>i'(0) = 0 <img src='sym/rarr2.svg' class='p66'> i'(0) = 30 – 50c<sub>1</sub> + 150c<sub>2</sub> = 0 <img src='sym/rarr2.svg' class='p66'> c<sub>2</sub> = –0,26</div>
+
+ <div class='in'><br>
+i = 0,18cos125t + 0,24sin125t – 0,18e<sup>–50t</sup>cos150t – 0,26e<sup>–50t</sup>sin150t</div>
+
+ <div class='in mt2'>
+<img src='img/dg_13.gif'></div>
+
+ <div><br>
+<b>Zusatzaufgabe:</b> Übeprüfe das Ergebnis im eingeschwungenen Zustand (t <img src='sym/rarr.svg' class='bo1'> &infin;) mit komplexer Wechselstromrechnung.</div>
+
+ <div class='in'><br>
+<img src='img/dg_14.gif'></div>
+
+ <div class='in mt1'>
+<span class='uo p11'><span class='ui'>i</span></span>(t) = <div class='frac'><div class='num'><span class='uo'><span class='ui'>u</span></span>(t)</div><div class='den'><span class='uo'><span class='ui'>Z</span></span></div></div> = <div class='frac'><div class='num'><span class='p01'>60</span>e<sup>j125t</sup></div><div class='den'><span class='p01'>200</span>e<sup>–j36,9°</sup></div></div> = <span class='p01'>0,3</span>e<sup class='p10'>j(125t<span class='p22'>+</span>36,9°)</sup> &nbsp; <span class='ll'>&thinsp;</span>Im(.)</div>
+
+ <div class='in mt2'>
+<img src='img/dg_15.gif'></div>
+
+  <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='E' class='box'>E</a> EXKURS: DIFFERENZENGLEICHUNGEN</b></div>
+
+ <div><br>
+Eine <b>Differenzengleichung</b> schaut aus wie eine Differenzialgleichung, es sind aber Folgen <img src='sym/setN.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'> und nicht Funktionen <img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'> gesucht, d.h.</div>
+
+ <div class='in'><br>
+<b>y<sub>n</sub></b> statt y(x), <b>&Delta;y<sub>n</sub></b> <span class='ldf'>:</span>= y<sub>n+1</sub><span class='p44'>–</span>y<sub>n</sub> statt y'(x), <b>&Delta;<sup>2</sup>y<sub>n</sub></b> <span class='ldf'>:</span>= &Delta;y<sub>n+1</sub><span class='p44'>–</span>&Delta;y<sub>n</sub> statt y"(x),…</div>
+
+ <div><br>
+Nach Ersetzen aller Deltas durch die entsprechenden Differenzen erhalten wir ein <b>rekursives</b> Bildungsgesetz der gesuchten Folge(n) und wir suchen das <b>explizite.</b> Wir beschränken uns im Folgenden auf die einfachsten Fälle und übernehmen die Lösungsstrategie von den Differenzialgleichungen.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.1' class='box'>1</a> y<sub>n+1</sub> + py<sub>n</sub></b> = <b>0</b></div>
+
+ <div><br>
+a<sup>n</sup>-Ansatz &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; Differenzengleichung: a<sup>n+1</sup> + pa<sup>n</sup> = 0 |:a<sup>n</sup> <img src='sym/rarr2.svg' class='p66'> a + p = 0</div>
+
+ <div class='in'><br>
+y<sub>n</sub> = c(–p)<sup>n</sup> &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div class='grau'><br>
+Bem: Wir haben a <img src='sym/isin_g.gif'> <img src='sym/setR_g.gif'> an die Stelle von e<sup>&lambda;</sup> treten lassen, weil im diskreten Fall auch negative Basen als Lösung in Frage kommen. Überhaupt ist der Ansatz hier nur dem größeren Kontext geschuldet, weil wir die Lösung auch unmittelbar ablesen können:</div>
+
+ <div class='in grau'><br>
+y<sub>0</sub> = c</div>
+
+ <div class='in grau mt1'>
+y<sub>1</sub> = (–p)y<sub>0</sub> = (–p)c</div>
+
+ <div class='in grau mt1'>
+y<sub>2</sub> = (–p)y<sub>1</sub> = (–p)<sup>2</sup>c</div>
+
+ <div class='in grau mt1'>
+···</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.2' class='box'>2</a> y<sub>n+2</sub> + py<sub>n+1</sub> + qy<sub>n</sub></b> = <b>0</b></div>
+
+ <div><br>
+a<sup>n</sup>-Ansatz &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; Differenzengleichung: a<sup>n+2</sup> + pa<sup>n+1</sup> + qa<sup>n</sup> = 0 |:a<sup>n</sup> <img src='sym/rarr2.svg' class='p66'> a<sup>2</sup> + pa + q = 0</div>
+
+ <div><br>
+<b>Fall 1:</b> zwei reelle Lösungen a<sub>1</sub>, a<sub>2</sub></div>
+
+ <div class='in'><br>
+y<sub>n</sub> = c<sub>1</sub>a<sub>1</sub><sup>n</sup> + c<sub>2</sub>a<sub>2</sub><sup>n</sup> &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div><br>
+<b>Fall 2:</b> eine reelle Doppellösung a</div>
+
+ <div class='in'><br>
+y<sub>n</sub> = c<sub>1</sub>a<sup>n</sup> + c<sub>2</sub>na<sup>n</sup> &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div><br>
+<b>Fall 3:</b> konjugiert komplexe Lösungen re<sup>±j&phi;</sup></div>
+
+ <div class='in'><br>
+y<sub>n</sub> = c<sub>1</sub>r<sup>n</sup>cos<span class='p20'>n&phi;</span> + c<sub>2</sub>r<sup>n</sup>sin<span class='p20'>n&phi;</span> &nbsp; mit c<sub>1,2</sub> <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='bsp mt2'>
+<b>Aufgabe 12:</b> Leonardo da Pisa, auch Fibonacci genannt, hat die Kaninchenvermehrung so modelliert, dass ein Paar erstmals nach zwei Monaten und dann im Monatsabstand ein weiteres Paar zur Welt bringt. Mangels Sterblichkeit leben dann nach n Monaten noch alle Paare, die schon einen Monat davor am Leben waren, und von denen setzt jedes Paar, das schon vor zwei Monaten am Leben war, ein weiteres Paar in die Welt:
+
+ <div class='in'><br>
+y<sub>n</sub> = Kaninchenpaare nach n Monaten (y<sub>0</sub> = y<sub>1</sub> = 1,  y<sub>n+2</sub> = y<sub>n+1</sub> + y<sub>n</sub>) = ?</div></div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> Allgemeine Lösung</div>
+
+ <div class='in mt1'>
+a<sup>n</sup>-Ansatz &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; Differenzengleichung: a<sup>2</sup> – a – 1 = 0 <img src='sym/rarr2.svg' class='p66'> <img src='img/dg_16.gif' style='vertical-align:-11px;'></div>
+
+ <div class='in'><br>
+<img src='img/dg_17.gif'></div>
+
+ <div class='in'><br>
+<b>Schritt 2:</b> Spezielle Lösung</div>
+
+ <div class='in'><br>
+<img src='img/dg_18.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/dg_19.gif'></div>
+
+ <div class='grau'><br>
+Bem: Man spricht von der Fibonacci-Folge (um 1227 veröffentlicht) und der Binet-Formel (1843 veröffentlicht), auch wenn beide nicht die ersten waren, die darauf gestoßen sind.</div>
+
+ </div></body>
+ </html>

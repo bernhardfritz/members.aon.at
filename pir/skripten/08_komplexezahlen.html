@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Komplexe Zahlen</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>VIII. KOMPLEXE ZAHLEN</b></div>
+
+ <div><br>
+<a href='08_komplexezahlen.html#A'>A. Rechnen in Komponentenform</a><br>
+<a href='08_komplexezahlen.html#B'>B. Rechnen in Exponentialform</a><br>
+<a href='08_komplexezahlen.html#C'>C. Komplexe Mehrfachwerte/Lösungen</a><br>
+<a href='08_komplexezahlen.html#D'>D. Komplexe Wechselstromrechnung</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='08a_komplexezahlen.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> RECHNEN IN KOMPONENTENFORM</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Erweiterung von <img src='sym/ssetR.gif'> auf <img src='sym/ssetC.gif'></b></div>
+
+ <div><br>
+Die <b>imaginäre Einheit</b> ist eine nichtreelle Zahl j mit der Eigenschaft:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>j<sup>2</sup></b> = <b>–1</b></div>
+
+ <div><br>
+Wenn die bisherigen Rechenregeln weiterhin gelten sollen, müssen neue Zahlen zu alten addiert und mit solchen &ne; 0 multipliziert	auch neue Zahlen ergeben. Das führt zu <b>komplexen Zahlen</b> in der sogenannten <b>Komponentenform</b></div>
+
+ <div class='in'><br>
+<b>a + jb &isin; <img src='sym/ssetC.gif'></b> &nbsp; mit a, b <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div><br>
+Die Komponenten heißen <b>Realteil a</b> und <b>Imaginärteil b,</b> über b = 0 sind die alten Zahlen mitumfasst (<img src='sym/setR.gif'> <img src='sym/sube.gif'> <img src='sym/setC.gif'>).</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.2' class='box'>2</a> Grundrechnungsarten in <img src='sym/ssetC.gif'></b></div>
+
+ <div><br>
+<img src='sym/setQ.gif' style='position:relative; top:2px'>, <img src='sym/setR.gif'> und <img src='sym/setC.gif'> bilden zusammen mit Addition und Multiplikation "Körper" in dem Sinn, dass sie alle dieselbe Rechenstruktur haben. So gesehen rechnen wir mit komplexen Zahlen nicht anders, als ob wir mit reellen Zahlen und einer Variablen j rechnen würden.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Rechne mit <span class='uo'><span class='ui'>z</span></span><sub>1</sub> = 7<span class='p22'>–</span>4j und <span class='uo'><span class='ui'>z</span></span><sub>2</sub> = 2<span class='p22'>+</span>j wie folgt, bis das Ergebnis die Form a + jb hat:
+
+  <div class='in'><br>
+<b>a)</b> <span class='uo'><span class='ui'>z</span></span><sub>1</sub> + <span class='uo'><span class='ui'>z</span></span><sub>2</sub> &nbsp;&nbsp;&nbsp;
+<b>b)</b> <span class='uo'><span class='ui'>z</span></span><sub>1</sub> – <span class='uo'><span class='ui'>z</span></span><sub>2</sub> &nbsp;&nbsp;&nbsp;
+<b>c)</b> <span class='uo'><span class='ui'>z</span></span><sub>1</sub>·<span class='uo'><span class='ui'>z</span></span><sub>2</sub> &nbsp;&nbsp;&nbsp;
+<b>d)</b> <span class='uo'><span class='ui'>z</span></span><sub>1</sub>:<span class='uo'><span class='ui'>z</span></span><sub>2</sub></div></div>
+
+ <div class='in'><br>
+<b>a)</b> <span class='uo'><span class='ui'>z</span></span><sub>1</sub> + <span class='uo'><span class='ui'>z</span></span><sub>2</sub> = (7 – 4j) + (2 + j) = 9 – 3j</div>
+
+ <div class='in'><br>
+<b>b)</b> <span class='uo'><span class='ui'>z</span></span><sub>1</sub> – <span class='uo'><span class='ui'>z</span></span><sub>2</sub> = (7 – 4j) – (2 + j) = 5 – 5j</div>
+
+ <div class='in'><br>
+<b>c)</b> <span class='uo'><span class='ui'>z</span></span><sub>1</sub>·<span class='uo'><span class='ui'>z</span></span><sub>2</sub> = (7 – 4j)(2 + j) = 14 + 7j – 8j – 4j<sup>2</sup> <span class='grau'>(= +4)</span> = 18 – j</div>
+
+ <div class='in'><br>
+<b>d)</b> <span class='uo'><span class='ui'>z</span></span><sub>1</sub>:<span class='uo'><span class='ui'>z</span></span><sub>2</sub> = <img src='img/ko_00.gif' style='vertical-align:-19px;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Der Nenner und die Zahl, mit der wir hier erweitert haben, heißen <b>konjugiert komplex:</b></div>
+
+ <div><br>
+<span class='p02'>•</span> <b class='uo'><span class='ui'>z</span></b> = <b>a + jb</b> <img src='sym/rarr2.svg' class='p66'> <b class='uo'><span class='ui'>z</span></b>* <b>:</b>= <b>a – jb</b></div>
+
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div class='mt1'><br>
+<b><a name='B' class='box'>B</a> RECHNEN IN EXPONENTIALFORM</b></div>
+
+ <div><br>
+<b><a name='B.1' class='box'>1</a> Grafische Darstellung komplexer Zahlen</b></div>
+
+ <div><br>
+Wenn wir Real- und Imaginärteil als <b>kartesische Koordinaten</b> interpretieren, können wir komplexe Zahlen als <b>Zeiger</b> in der komplexen Zahlenebene veranschaulichen. Solche Zeiger sind auch über <b>Polarkoordinatem</b> charakterisierbar: Das sind der <b>Betrag r,</b> der die Länge des Zeigers angibt, und der <b>Winkel &phi;,</b> den der Zeiger mit der positiven reellen Achse einschließt. Die Umrechnung schaut so aus:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/ko_01.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+polar <img src='sym/rarr2.svg' class='p22'> kartesisch:<br><br>
+<span class='p20'>•</span> <b>r<sub>x</sub></b> = <b><span class='p02'>r</span>cos&phi;</b><span class='p20' style='margin-left:45px;'>•</span> <b>r<sub>y</sub></b> = <b><span class='p02'>r</span>sin&phi;</b><br><br>
+kartesisch <img src='sym/rarr2.svg' class='p22'> polar:<br>
+
+     <div class='mt1'>
+<span class='p20'>•</span> <b>r</b> = <span class='r2a'>&radic;</span><b class='rad'>r<sub>x</sub><sup>2</sup> + r<sub>y</sub><sup>2</sup></b> <span class='p20' style='margin-left:20px;'>•</span> <b>&phi;</b> = <b>arctan</b><div class='frac p40'><div class='num'><b class='bo2'>r<sub>y</sub></b></div><div class='den'><b>r<sub>x</sub></b></div></div> <b>(± 180°, falls r<sub>x</sub></b> &lt; <b>0)</b></div>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Bem: Ob wir bei Zeigern, die nach links zeigen, zum arctan-Wert 180° addieren/subtrahieren, ist egal. Standardmäßig gehen wir aber so vor, dass das Ergebnis im Bereich von –180° bis +180° liegt (vgl. geographische Länge).</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.2' class='box'>2</a> Grafische Addition und Multiplikation</b></div>
+
+ <div><br>
+Hinsichtlich Addition/Subtraktion und Multiplikation-mit-reeller-Zahl verhalten sich Zeiger wie 2-koordinatige Vektoren. Weiters gilt:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>Multiplikation mit j</b> enspricht einer <b>90°-Drehung</b> des Zeigers:</div>
+
+ <div class='in'><br>
+<img src='img/ko_02.gif'></div>
+
+ <div><br>
+Und daraus folgt als Verallgemeinerung:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Zeiger werden <b>miteinander multipliziert</b>, indem man die <b>Beträge multipliziert</b> und die <b>Winkel addiert.</b></div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in'>
+<img src='img/ko_03.gif'></div>
+
+ <div><br>
+Bem: Die Division durch j entspricht einer Drehung um –90°, in der Verallgemeinerung werden die Beträge dividiert und die Winkel subtrahiert.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.3' class='box'>3</a> Exponentialform und 3. Rechenstufe</b></div>
+
+ <div><br>
+Obiges weist den Weg zur Definition der komplexen exp-log-Funktionen, vorweggenommen als weitere Schreibweise für komplexe Zahlen:</div>
+
+ <div><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<span class='p02'>•</span> <b><span class='uo'><span class='ui'>z</span></span></b>
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+<b>Komponentenform: r<sub>x</sub><span class='p22'>+</span><span class='p01'>j</span>r<sub>y</sub></b><br><br>
+<b>Exponentialform: <span class='p01'>r</span>e<sup>j&phi;</sup></b>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Damit lässt sich das Rechnen mit komplexen Zahlen <b>in einem Satz</b> skizzieren: Wir bringen die Operanden in die Form, wo vom Reellen her bekannte Regeln ansetzen können, und hangeln uns weiter, bis wir auf ein Ergebnis in der einen oder anderen Form stoßen:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Potenz:</b> (<span class='p01'>r</span>e<sup class='p20'>j&phi;</sup>)<sup>c<span class='p22'>+</span>jd</sup> = (e<sup>lnr</sup>e<sup>j&phi;</sup>)<sup>c<span class='p22'>+</span>jd</sup> = (e<sup>lnr<span class='p22'>+</span>j&phi;</sup>)<sup>c<span class='p22'>+</span>jd</sup> = ...</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>exp-Funktion:</b> e<sup>a+jb</sup> = e<sup>a</sup>e<sup>jb</sup> &nbsp; <span class='grau'>(Argument in Komponentenform <img src='sym/rarr_g.svg' class='bo1'> Ergebnis in Exponentialform)</span></div>
+
+ <div><br>
+<span class='p02'>•</span> <b>log-Funktion:</b> ln(re<sup>j&phi;</sup>) = lnr + lne<sup>j&phi;</sup> = lnr + j&phi; &nbsp; <span class='grau'>(Argument in Exponentialform <img src='sym/rarr_g.svg' class='bo1'> Ergebnis in Komponentenform)</span></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> <div class='frac'><div class='num'>(0,7 + 1,45j)<sup>4</sup></div><div class='den'><span class='p01'>4,28</span>e<sup>2,16j</sup></div></div> + 2j = ?</div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>(0,7 + 1,45j)<sup>4</sup></div><div class='den'><span class='p01'>4,28</span>e<sup>2,16j</sup></div></div> + 2j = (<span class='to4'>*</span>)</div>
+
+ <div class='in mt2'>
+r = <span class='r1t'>&radic;</span><span class='rad'>r<sub>x</sub><sup>2</sup> + r<sub>y</sub><sup>2</sup></span> = <span class='r1t'>&radic;</span><span class='rad'>0,7<sup>2</sup> + 1,45<sup>2</sup></span> = 1,61</div>
+
+ <div class='in mt1'>
+&phi; = arctan<div class='frac p40'><div class='num'>r<sub>y</sub></div><div class='den'>r<sub>x</sub></div></div> (± <span style='font-family:arial;'>&pi;</span>, falls r<sub>x</sub><span class='p44'>&lt;</span>0) = arctan<div class='frac p40'><div class='num'>1,45</div><div class='den'>0,7</div></div> = 1,12</div>
+
+ <div class='in'><br>
+(<span class='to4'>*</span>) = <div class='frac'><div class='num'><span class='up'>(</span><span class='p01'>1,61</span>e<sup>1,12j</sup><span class='up'>)</span><sup>4</sup></div><div class='den'><span class='p01'>4,28</span>e<sup>2,16j</sup></div></div> + 2j = <div class='frac'><div class='num'><span class='p01'>6,72</span>e<sup>4,48j</sup></div><div class='den'><span class='p01'>4,28</span>e<sup>2,16j</sup></div></div> + 2j = <span class='p01'>1,57</span>e<sup>2,32j</sup> + 2j = (<span class='to4'>**</span>)</div>
+
+ <div class='in'><br>
+r<sub>x</sub> = <span class='p01'>r</span>cos&phi; = <span class='p01'>1,57</span>cos2,32 = –1,07</div>
+
+ <div class='in mt1'>
+r<sub>y</sub> = <span class='p01'>r</span>sin&phi; = <span class='p01'>1,57</span>sin2,32 = 1,15</div>
+
+ <div class='in'><br>
+(<span class='to4'>**</span>) = –1,07 + 1,15j + 2j = –1,07 + 3,15j</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> KOMPLEXE MEHRFACHWERTE/LÖSUNGEN</b></div>
+
+ <div><br><br>
+<b><a name='C.1' class='box'>1</a> Haupt- und Nebenwerte</b></div>
+
+ <div><br>
+In der Exponentialform gibt es <b>unterschiedliche Darstellungen</b> für denselben Zeiger:</div>
+
+ <div class='in'><br>
+<span class='uo'><span class='ui'>z</span></span> = <span class='p01'>r</span>e<sup class='p20'>j&phi;</sup> = <span class='p01'>r</span>e<sup class='p20'>j(&phi;<span class='p22'>±</span>n·360°)</sup> &nbsp; mit &phi; <img src='sym/isin.gif'> ]–180°, 180°] und n <img src='sym/isin.gif'> <img src='sym/setN.gif'></div>
+
+ <div><br>
+Rechenregeln, die an der Exponentialform ansetzen, erzeugen daraus in bestimmten Fällen (Wurzel, Logarithmus,…) unterschiedliche Zeiger. Der <b>Hauptwert</b> ist der, der ausgehend von &phi; <img src='sym/isin.gif'> ]–180°, 180°] entstanden ist, die anderen heißen Nebenwerte.</div>
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe 3:</b> Bestimme Haupt- und Nebenwerte für <span class='uo'><span class='ui'>z</span></span> = <sup>3</sup><span class='r1t'>&radic;</span><span class='rad'><span class='p01'>2</span>e<sup>129°<span class='p10'>j</span></sup></span>.</div>
+
+ <div class='in mt2'>
+<img src='img/ko_04.gif'></div>
+
+ <div class='in'><br>
+n = 0 <img src='sym/rarr2.svg' class='p66'> <span class='uo'><span class='ui'>z</span></span><sub>1</sub> = <span class='p01'>1,26</span>e<sup>43°j</sup> &nbsp; <span class='grau'>(= Hauptwert)</span></div>
+
+ <div class='in'><br>
+n = 1 <img src='sym/rarr2.svg' class='p66'> <span class='uo'><span class='ui'>z</span></span><sub>2</sub> = <span class='p01'>1,26</span>e<sup>163°j</sup></div>
+
+ <div class='in'><br>
+n = 2 <img src='sym/rarr2.svg' class='p66'> <span class='uo'><span class='ui'>z</span></span><sub>3</sub> = <span class='p01'>1,26</span>e<sup>283°j</sup></div>
+
+ <div class='in mt2'>
+<img src='img/ko_05.gif'></div>
+
+ <div><br>
+Die n-ten Wurzeln einer Zahl c <img src='sym/isin.gif'> <img src='sym/setC.gif'> bilden also einen regelmäßigen Stern aus n Zeigern. Als Lösung der Gleichung <span class='uo'><span class='ui'>z</span></span><sup>n</sup><span class='p44'>–</span>c = 0 interpretiert, lässt sich das zum <b>Hauptsatz der Algebra</b> verallgemeinern: Eine Gleichung n-ten Grades hat im Komplexen genau n Lösungen, wobei jede Lösüng <span class='uo'><span class='ui'>z</span></span><sub>i</sub> so oft gezählt wird, wie das Polynom durch (<span class='uo'><span class='ui'>z</span></span><span class='p44'>–</span><span class='uo'><span class='ui'>z</span></span><sub>i</sub>) dividierbar ist (siehe Satz von Vieta).</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Quadratische Gleichungen</b></div>
+
+ <div><br>
+Die Lösungsformel der quadratischen Gleichung</div>
+
+ <div class='in'><br>
+a<span class='uo'><span class='ui'>z</span></span><sup>2</sup> + b<span class='uo'><span class='ui'>z</span></span> + c = 0 &nbsp; mit a<span class='p02'>,</span>b<span class='p02'>,</span>c <img src='sym/isin.gif'> <img src='sym/setC.gif'></div>
+
+ <div><br>
+wird wie im Reellen hergeleitet und schaut auch genauso aus:</div>
+
+ <div class='in'><br>
+<span class='uo'><span class='ui'>z</span></span><sub class='p20'>1,2</sub> = <div class='frac'><div class='num'>–b ± <span class='r1t'>&radic;</span><span class='rad'>b<sup>2</sup> – 4ac</span></div><div class='den'>2a</div></div></div>
+
+ <div><br>
+Bem: Der Wurzelausdruck steht für den Hauptwert und wird mit dem Plus/Minus davor zu Haupt- und Nebenwert (zwischen denen 180° liegen).</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Bestimme die Lösungsmenge in <img src='sym/setC.gif'>:
+
+  <div class='in'><br>
+<b>a)</b> <span class='uo'><span class='ui'>z</span></span><sup>2</sup> – 6<span class='uo'><span class='ui'>z</span></span> + 10 = 0 &nbsp;&nbsp;&nbsp;
+<b>b)</b> <span class='uo'><span class='ui'>z</span></span><sup>2</sup> + <span class='p01'>(1 – 5j)</span><span class='uo'><span class='ui'>z</span></span> + 15j = 0</div></div>
+
+ <div class='in'><br>
+<b>a)</b> <span class='uo'><span class='ui'>z</span></span><sub class='p20'>1,2</sub> = <div class='frac'><div class='num'>6 ± <span class='r1t'>&radic;</span><span class='rad'>(–6)<sup>2</sup> – 4·10</span></div><div class='den'>2</div></div> = <div class='frac'><div class='num'>6 ± <span class='r1t'>&radic;</span><span class='rad'>–4</span></div><div class='den'>2</div></div> = <div class='frac'><div class='num'>6 ± <span class='r1t'>&radic;</span><span class='rad'>–1</span><span class='r1t p20'>&radic;</span><span class='rad'>4</span></div><div class='den'>2</div></div> = <div class='frac'><div class='num'>6 ± 2j</div><div class='den'>2</div></div> = 3 ± j</div>
+
+ <div class='in mt2'>
+<b>b)</b> <span class='uo'><span class='ui'>z</span></span><sub class='p20'>1,2</sub> = <div class='frac'><div class='num'>–(1 – 5j) ± <span class='r1t'>&radic;</span><span class='rad'>(1 – 5j)<sup>2</sup> – 4·15j</span></div><div class='den'>2</div></div> = <div class='frac'><div class='num'>–1 + 5j ± <span class='r1t'>&radic;</span><span class='rad'>–24 – 70j</span></div><div class='den'>2</div></div> = (<span class='to4'>*</span>)</div>
+
+ <div class='in'><br>
+r = <span class='r1t'>&radic;</span><span class='rad'>r<sub>x</sub><sup>2</sup> + r<sub>y</sub><sup>2</sup></span> = <span class='r1t'>&radic;</span><span class='rad'>(–24)<sup>2</sup> + (–70)<sup>2</sup></span> = 74</div>
+
+ <div class='in mt1'>
+&phi; = arctan<div class='frac p40'><div class='num'>r<sub>y</sub></div><div class='den'>r<sub>x</sub></div></div> (± <span style='font-family:arial;'>&pi;</span>, falls r<sub>x</sub><span class='p44'>&lt;</span>0) = arctan<div class='frac p40'><div class='num'>–70</div><div class='den'>–24</div></div> – <span style='font-family:arial;'>&pi;</span> = –1,9</div>
+
+ <div class='in mt2'>
+(<span class='to4'>*</span>) = <div class='frac'><div class='num'>–1 + 5j ± <span class='up'>(</span><span class='p01'>74</span>e<sup>–1,9j</sup><span class='up'>)</span><sup><span class='dn' style='position:relative; left:1px; bottom:13px;'>1</span><span class='dn' style='margin-left:-6px; text-decoration:overline;'>2</span></sup></div><div class='den'>2</div></div> = <div class='frac'><div class='num'>–1 + 5j ± <span class='p01'>8,6</span>e<sup>–0,95j</sup></div><div class='den'>2</div></div> = (<span class='to4'>**</span>)</div>
+
+ <div class='in mt1'>
+r<sub>x</sub> = <span class='p01'>r</span>cos&phi; = <span class='p01'>8,6</span>cos(–0,95) = 5</div>
+
+ <div class='in mt1'>
+r<sub>y</sub> = <span class='p01'>r</span>sin&phi; = <span class='p01'>8,6</span>sin(–0,95) = –7j</div>
+
+ <div class='in'><br>
+(<span class='to4'>**</span>) = <div class='frac'><div class='num'>–1 + 5j ± (5 – 7j)</div><div class='den'>2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='to17 ws4'>–3 + 6j</span><span class='bo17 ws4' style='margin-left:-35px;'>2 – j</span></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> KOMPLEXE WECHSELSTROMRECHNUNG</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Sinusförmige Wechselgrößen</b></div>
+
+ <div><br>
+Wenn wir zum Zeitpunkt t = 0 einen Zeiger <span class='p01'>r</span>e<sup>j&phi;</sup> haben und ihn dann mit der Winkelgeschwindigkeit &omega; drehen, erhalten wir als Imaginärteil davon eine <b>sinusförmige Wechselgröße,</b> die eine harmonische Schwingung auf der y-Achse beschreibt:</div>
+
+ <div><br>
+<img src='img/ko_06.gif' style='vertical-align:-33px; margin-right:-11px;'>= <span class='p01'>r</span>e<sup>j(&omega;t<span class='p22'>+</span>&phi;)</sup> = <span class='ws4'><span class='p01'>r</span>cos(&omega;t + &phi;) + j<b><span class='p11'>r</span>sin(&omega;t + &phi;)</b></span></div>
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 5:</b> Die Nabe eines Riesenrads mit 50 m Durchmesser liegt 28 m über dem Boden, die Umlaufzeit liegt bei 210 s. Bestimme, wie viel Meter über dem Boden sich die unten eingezeichnete Gondel nach t Sekunden befindet.<br><br>
+
+<img src='img/ko_07.gif' class='in'></div>
+
+ <div class='in'><br>
+Wir legen den Koordinatenursprung in die Nabe und betrachten den Zeiger <span class='uo'><span class='ui'>z</span></span>(t) von dort zur Gondel:</div>
+
+ <div class='in'><br>
+Startzeiger = <span class='p01'>25</span>e<sup>j(–2<span style='font-family:arial;'>&pi;</span>/12)</sup></div>
+
+ <div class='in'><br>
+Drehfaktor = e<sup>j(2<span style='font-family:arial;'>&pi;</span>/210)t</sup></div>
+
+ <div class='in'><br>
+h(t) = <span class='ws4'>28  + Im<span class='uo'><span class='ui'>z</span></span>(t)</span> = <span class='ws4'>28 + <span class='p01'>25</span>sin(0,03t – 0,525)</span></div>
+
+ <div><br>
+Die Amplituden-Phasen-Form können wir in eine Kosinus-Sinus-Linearkombination umwandeln, indem wir die "komplexe Verpackung" so entwickeln:<div>
+
+ <div><br>
+<img src='img/ko_08.gif' style='vertical-align:-33px; margin-right:-11px;'>= <span class='ws4'>(r<sub>x</sub> + <span class='p01'>j</span>r<sub>y</sub>)(cos&omega;t + jsin&omega;t)</span> = <span class='ws4'>(r<sub class='p01'>x</sub>cos&omega;t – r<sub class='p01'>y</sub>sin&omega;t) + <span class='p01'>j</span>(<b>r<sub class='p01'>y</sub>cos&omega;t + r<sub class='p01'>x</sub>sin&omega;t</b>)</span></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Rechne Amplituden-Phasen-Form und Kosinus-Sinus-Form ineinander um.
+
+  <div class='in'><br>
+<b>a)</b> <span class='ws4'><span class='p01'>1,66</span>sin(&omega;t + 1,24)</span> &nbsp;&nbsp;&nbsp;
+<b>b)</b> <span class='ws4'><span class='p01'>61</span>cos&omega;t – <span class='p01'>54,5</span>sin&omega;t</span></div></div>
+
+ <div class='in'><br>
+<b>a)</b> <img src='img/ko_09.gif' style='vertical-align:-6px;'> = (<span class='to4'>*</span>)</div>
+
+ <div class='in'><br>
+r<sub>x</sub> = <span class='p01'>r</span>cos&phi; = <span class='p01'>1,66</span>cos1,24 = 0,54</div>
+
+ <div class='in mt1'>
+r<sub>y</sub> = <span class='p01'>r</span>sin&phi; = <span class='p01'>1,66</span>sin1,24 = 1,57</div>
+
+ <div class='in'><br>
+(<span class='to4'>*</span>) = <span class='ws4'><span class='p01'>1,57</span>cos&omega;t + <span class='p01'>0,54</span>sin&omega;t</span></div>
+
+ <div class='in'><br>
+<b>b)</b> <img src='img/ko_10.gif' style='vertical-align:-6px;'> = (<span class='to4'>*</span>)</div>
+
+ <div class='in mt2'>
+r = <span class='r1t'>&radic;</span><span class='rad'>r<sub>x</sub><sup>2</sup> + r<sub>y</sub><sup>2</sup></span> = <span class='r1t'>&radic;</span><span class='rad'>(–54,5)<sup>2</sup> + 61<sup>2</sup></span> = 81,8</div>
+
+ <div class='in mt1'>
+&phi; = arctan<div class='frac p40'><div class='num'>r<sub>y</sub></div><div class='den'>r<sub>x</sub></div></div> (± <span style='font-family:arial;'>&pi;</span>, falls r<sub>x</sub><span class='p44'>&lt;</span>0) = arctan<div class='frac p40'><div class='num'>61</div><div class='den'>–54,5</div></div> + <span style='font-family:arial;'>&pi;</span> = 2,3</div>
+
+ <div class='in mt1'>
+(<span class='to4'>*</span>) = <span class='ws4'><span class='p01'>81,8</span>sin(&omega;t + 2,3)</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> Elektrische Netzwerke</b></div>
+
+ <div><br>
+Wenn wir eine sinusförmige Wechselspannung</div>
+
+ <div class='in'><br>
+u(t) = <span class='p01'>&Ucirc;</span>sin(&omega;t<span class='p22'>+</span>&phi;<sub>u</sub>)</div>
+
+ <div><br>
+an ein Netzwerk aus ohmschen, induktiven und kapazitiven Bauelementen anlegen, stellt sich nach einem Einschwingvorgang ein sinusförmiger Wechselstrom mit derselben Frequenz ein:</div>
+
+ <div class='in'><br>
+i(t) = <span class='p01'>&Icirc;</span>sin(&omega;t<span class='p22'>+</span>&phi;<sub>i</sub>)</div>
+
+ <div><br>
+Wie oben dargelegt, können wir sinusförmige Wechselgrößen komplex verpacken und erhalten dann als Verallgemeinerung des ohmschen Gesetzes:</div>
+
+ <div class='in'><br>
+<span class='uo'><span class='ui'>u</span></span>(t) = <span class='uo' style='margin-right:2px;'><span class='ui'>Z</span></span><span class='uo p11'><span class='ui'>i</span></span>(t)</div>
+
+ <div><br>
+Der Wechselstromwiderstand</div>
+
+ <div class='in'><br>
+<span class='uo'><span class='ui'>Z</span></span> =  R + <span class='p01'>j</span>X = Ze<sup>j&phi;</sup> &nbsp; (R = Wirkwiderstand, X = Blindwiderstand, Z = Scheinwiderstand, &phi; = <span class='ws4'>&phi;<sub>u</sub> – &phi;<sub>i</sub></span> = Phasenverschiebung)</div>
+
+ <div><br>
+ist also der Faktor, der den <span class='uo p11'><span class='ui'>i</span></span>-Zeiger in den <span class='uo'><span class='ui'>u</span></span>-Zeiger dreht und auf dessen Länge justiert. Je nach Bauelement wird <span class='uo'><span class='ui'>Z</span></span> so berechnet:</div>
+
+ <div class='in'><br>
+<img src='img/ko_11.gif'></div>
+
+ <div><br>
+Dazu kommen die bekannten Regeln, wonach sich bei Serienschaltungen die <span class='uo'><span class='ui'>Z</span></span> addieren und bei Parallelschaltungen ihre Kehrwerte.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 7:</b> Bestimme <span class='uo'><span class='ui'>Z</span></span> für folgende Schaltung und interpretiere das Ergebnis.
+
+  <div class='in'><br>
+<img src='img/ko_12.gif' style='float:left; margin-right:40px;'></div>
+  <div style='line-height:25px;'>
+&omega; = 200 s<sup>–1</sup><br>
+L = 0,7 H<br>
+R = 300 &Omega;<br>
+C = 50 &mu;F</div></div>
+
+ <div class='in mt2'>
+<img src='img/ko_13.gif' style='vertical-align:-19px;'> <span class='nw'>30 + 50j</span> = (<span class='to4'>*</span>)</div>
+
+ <div class='in mt2'>
+r = <span class='r1t'>&radic;</span><span class='rad'>r<sub>x</sub><sup>2</sup> + r<sub>y</sub><sup>2</sup></span> = <span class='r1t'>&radic;</span><span class='rad'>30<sup>2</sup> + 50<sup>2</sup></span> = 58,31</div>
+
+ <div class='in mt1'>
+&phi; = arctan<div class='frac p40'><div class='num'>r<sub>y</sub></div><div class='den'>r<sub>x</sub></div></div> (± 180°, falls r<sub>x</sub><span class='p44'>&lt;</span>0) = arctan<div class='frac p40'><div class='num'>50</div><div class='den'>30</div></div> = 59°</div>
+
+ <div class='in'><br>
+(<span class='to4'>*</span>) = <span class='p01'>58,31</span>e<sup>59°j</sup></div>
+
+ <div class='in'><br>
+Der <span class='uo'><span class='ui'>u</span></span>-Zeiger ist also 58,31mal so lang wie der <span class='uo p11'><span class='ui'>i</span></span>-Zeiger und eilt ihm um 59° voraus.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Welchen Wert muss R in folgender Schaltung annehmen, damit bei f = 35 Hz die Phasenverschiebung &phi; = 14°?
+
+  <div class='in'><br>
+<img src='img/ko_14.gif' style='float:left; margin-right:40px;'></div>
+  <div style='line-height:25px; margin-top:25px; margin-bottom:25px;'>
+R<sub>L</sub> = 23 &Omega;<br>
+L = 50 mH</div></div>
+
+ <div class='in'>
+<img src='img/ko_15.gif' style='margin-top:17px;'> <img src='img/ko_16.gif' style='vertical-align:5px; margin-top:17px;'></div>
+
+ <div class='in mt2'>
+tan&phi; = <div class='frac'><div class='num'>Im<span class='uo'><span class='ui'>z</span></span></div><div class='den'>Re<span class='uo'><span class='ui'>z</span></span></div></div> <img src='sym/rarr2.svg' class='p66'> tan14° = <div class='frac'><div class='num'>11R</div><div class='den'>23R + 650</div></div> <img src='sym/rarr2.svg' class='p66'> 5,73R + 162,06 = 11R <img src='sym/rarr2.svg' class='p66'> R = 30,8 &Omega;</div>
+
+ </div></body>
+ </html>

@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Vektorrechnung</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>VI. VEKTORRECHNUNG</b></div>
+
+ <div><br>
+<a href='06_vektoren.html#A'>A. Vektoren als Pfeile</a><br>
+<a href='06_vektoren.html#B'>B. Koordinatendarstellung</a><br>
+<a href='06_vektoren.html#C'>C. Skalarprodukt</a><br>
+<a href='06_vektoren.html#D'>D. Vektorprodukt</a><br>
+<a href='06_vektoren.html#E'>E. Abstandsberechnungen</a><br>
+<a href='06_vektoren.html#F'>F. Gerade/Ebene in Vektorform</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='06a_vektoren.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> VEKTOREN ALS PFEILE</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Euklidische Vektoren</b></div>
+
+ <div><br>
+Unter <b>euklidischen Vektoren</b> stellen wir uns in der Mathematik Schiebungen in der Ebene bzw. im Raum vor (ein weiteres Beispiel sind in einem Punkt angreifende Kräfte). <b>Pfeile,</b> die von Ausgangs- zu Endpunkten der Schiebung führen, haben die gleiche <b>Richtung</b> (= parallele Trägergeraden), <b>Orientierung</b> und <b>Länge.</b> Jeder dieser Pfeile repräsentiert damit den Vektor.</div>
+
+ <div class='in'><br>
+<img src='img/ve_00.gif' style='float:left; margin-right:40px;'></div>
+
+ <div class='mt1'>
+  <div style='float:left; margin-top:12px;'><br>
+<span class='ol'>AA'</span><span class='vec'>`</span> <img src='sym/2arr1.gif' style='vertical-align:middle;'>&nbsp;</div>
+
+  <div><br>
+Pfeil von A nach A'</div>
+
+  <div><br>
+dadurch repräsentierte Vektor: <span class='ol'>AA'</span><span class='vec'>`</span> = <span class='ol'>BB'</span><span class='vec'>`</span></div>
+
+  <div style='clear:left;'></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.2' class='box'>2</a> Vektoraddition</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>Vektoraddition</b> entspricht der Hintereinanderausführung von Schiebungen: Wenn wir zwei <b>aneinandergehängte</b> Pfeile als Ausgangssituation wählen, führt der <b>Summenvektor</b> vom Fußpunkt des ersten Pfeils zur Spitze des zweiten Pfeils.</div>
+
+ <div class='in'><br>
+<img src='img/ve_01.gif'></div>
+
+ <div><br>
+Dasselbe liefert die <b>Parallelogrammregel</b> (inspiriert von Kräften, die im selben Punkt angreifen):</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Wenn wir zwei Pfeile mit <b>demselben Fußtpunkt</b> als Ausgangsituation wählen und zu einem Parallelogramm ergänzen, führt der <b>Summenvektor</b> vom gemeinsamen Fußpunkt zur gegenüberliegenden Ecke.</div>
+
+ <div class='in'><br>
+<img src='img/ve_02.gif'></div>
+
+ <div><br>
+Das neutrale Element der Vektoraddition heißt <b>Nullvektor</b> und ist die Schiebung, die alles an ihrem Platz belässt. Inverse Elemente haben daher die Aufgabe, alles an die ursprüngliche Position zurückzuschieben, d.h. wir erhalten sie durch <b>Umdrehen</b> der Pfeile.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.3' class='box'>3</a> Vektorsubtraktion</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span>Die <b>Vektorsubtraktion</b> ist die Umkehrung der Vektoraddition und lässt sich als solche schreiben, indem man den zweiten Pfeil umdreht.</div>
+
+ <div class='in'><br>
+<img src='img/ve_03.gif'></div>
+
+ <div><br>
+Schneller geht's mit der <b>Spitze-minus-Fuß-Regel:</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Wenn wir zwei Pfeile mit <b>demselben Fußtpunkt</b> als Ausgangsituation wählen, verbindet der <b>Differenzvektor</b> ihre Spitzen und zwar so, dass der erste Operand zur Spitze des Differenzpfeils zeigt und der zweite zum Fuß.</div>
+
+ <div class='in'><br>
+<img src='img/ve_04.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.4' class='box'>4</a> Multiplikation/Division mit reeller Zahl</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>Multiplikation mit reeller Zahl</b> skaliert den Vektor, d.h. der Pfeil wird entsprechend gestreckt/gestaucht und bei negativer Zahl zudem umgedreht. Bei der Division durch reelle Zahl wird der Vektor mit dem Kehrwert der Zahl multipliziert.</div>
+
+ <div class='in'><br>
+<img src='img/ve_05.gif'></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Der <b>Betrag</b> eines Vektors ist die Länge "des" Pfeils.  Einen Vektor <b>normieren,</b> heißt, ihn durch seinen Betrag dividieren. Das ergibt einen Pfeil mit Länge 1, einen sogenannten <b>Einheitsvektor</b></div>
+
+ <div class='in'><br>
+<b class='ol'>a</b><span class='vec'>`</span><b><sup class='p10'>0</sup> :</b>= <div class='frac to1'><div class='num'><b class='ol'>a</b><span class='vec'>`</span></div><div class='den to2'><b><span class='up'>|</span><span class='ol'>a</span></b><span class='vec'>`</span><b><span class='up'>|</span></b></div></div></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> KOORDINATENDARSTELLUNG</b></div>
+
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b><a name='B.1' class='box'>1</a> Reeller Vektorraum und Basis</b></div>
+
+ <div><br>
+Die obige Rechenstruktur, losgelöst von einer konkreten Bedeutung der Operatoren/Operanden, heißt <b>reeller Vektorraum.</b> Soll heißen: Wir haben Hauptobjekte (<b>Vektoren</b>) und die reellen Zahlen als Nebenobjekte (<b>Skalare</b>). Erstere sind addierbar und mit zweiteren multiplizierbar, sodass:</div>
+
+ <div class='in' style='float:left; margin-right:50px;'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+Vektoraddition
+    </td>
+    <td>
+<img src='sym/lbr3.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td style='line-height:23px; padding-top:2px;'>
+assoziativ<br>
+kommutativ</br>
+neutrales Element<br>
+inverse Elemente
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+Multiplikation-mit-Skalar
+    </td>
+    <td>
+<img src='sym/lbr3.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td style='line-height:23px; padding-top:2px; white-space:nowrap;'>
+(ts)<span class='ol'>a</span><span class='vec'>`</span> = t(s<span class='ol'>a</span><span class='vec'>`</span>)<br>
+(t<span class='p44'>+</span>s)<span class='ol'>a</span><span class='vec'>`</span> = t<span class='ol'>a</span><span class='vec'>`</span><span class='p44'>+</span>s<span class='ol'>a</span><span class='vec'>`</span><br>
+t(<span class='ol'>a</span><span class='vec'>`</span><span class='p44'>+</span><span class='ol'>b</span><span class='vec'>`</span>) = t<span class='ol'>a</span><span class='vec'>`</span><span class='p44'>+</span>t<span class='ol'>b</span><span class='vec'>`</span><br>
+1<span class='ol'>a</span><span class='vec'>`</span> = <span class='ol'>a</span><span class='vec'>`</span>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <span class='out'>•</span> Wenn Vektoren mit Zahlen multipliziert und aufaddiert werden, sprechen wir von einer <b>Linearkombination.</b> Mehrere Vektoren heißen <b>linear unabhängig,</b> wenn keiner davon als Linearkombination der übrigen Vektoren darstellbar ist. Die maximale Anzahl linear unabhängiger Vektoren heißt <b>Dimension</b> des Vektorraums.</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <span class='out'>•</span> In einem n-dimensionalen Vektorraum bilden linear unabhängige Vektoren <span class='ol'>a</span><span class='vec'>`</span><sub>1</sub><span class='p02'>,</span>... <span class='ol'>a</span><span class='vec'>`</span><sub>n</sub> eine <b>Basis</b> in dem Sinn, dass sich <i>jeder</i> Vektor <i>eindeutig</i> als Linearkombination der Basisvektoren darstellen lässt. Die Zahlen, die den Vektor so charakterisieren, heißen <b>Koordinaten</b> des Vektors.</div>
+
+ <div class='grau'><br>
+Begründung: Jedes <span class='ol'>a</span><span class='vec'>`</span> muss als Linearkombination von <span class='ol'>a</span><span class='vec'>`</span><sub>1</sub><span class='p02'>,</span>... <span class='ol'>a</span><span class='vec'>`</span><sub>n</sub> darstellbar sein, sonst wäre die Dimension &gt; n. Und verschiedene Darstellungen</div>
+
+ <div class='in grau'><br>
+<span class='ol'>a</span><span class='vec'>`</span> = t<sub>1</sub><span class='ol'>a</span><span class='vec'>`</span><sub>1</sub> + ... + t<sub>n</sub><span class='ol'>a</span><span class='vec'>`</span><sub>n</sub> = s<sub>1</sub><span class='ol'>a</span><span class='vec'>`</span><sub>1</sub> + ... + s<sub>n</sub><span class='ol'>a</span><span class='vec'>`</span><sub>n</sub></div>
+
+ <div class='grau'><br>
+kann es nicht geben, sonst wären <span class='ol'>a</span><span class='vec'>`</span><sub>1</sub><span class='p02'>,</span>... <span class='ol'>a</span><span class='vec'>`</span><sub>n</sub> nicht linear unabhängig, weil beispielsweise aus t<sub>1</sub> &ne; s<sub>1</sub> folgen würde:</div>
+
+ <div class='in grau'><br>
+(t<sub>1</sub><span class='p22'>–</span>s<sub>1</sub>)<span class='p20 ol'>a</span><span class='vec'>`</span><sub>1</sub> = (s<sub>2</sub><span class='p22'>–</span>t<sub>2</sub>)<span class='p20 ol'>a</span><span class='vec'>`</span><sub>2</sub> + ... + (s<sub>n</sub><span class='p22'>–</span>t<sub>n</sub>)<span class='p20 ol'>a</span><span class='vec'>`</span><sub>n</sub> &nbsp; |:(t<sub>1</sub><span class='p22'>–</span>s<sub>1</sub>)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe 1:</b>  Stelle <b>a)</b> <span class='ol'>GF</span><span class='vec'>`</span>, <b>b)</b> <span class='ol'>BE</span><span class='vec'>`</span>, <b>c)</b> <span class='ol'>CN</span><span class='vec'>`</span> als Linearkombination der linear unabhängigen Vektoren <span class='ol'>BM</span><span class='vec'>`</span>, <span class='ol'>BF</span><span class='vec'>`</span>, <span class='ol'>BC</span><span class='vec'>`</span> dar.<br><br>
+
+<img src='img/ve_06.gif' class='in'></div>
+
+ <div class='in'><br>
+<b>a)</b> <span class='ol'>GF</span><span class='vec'>`</span> = –<span class='ol'>BC</span><span class='vec'>`</span></div>
+
+ <div class='in'><br>
+<b>b)</b> <span class='ol'>BE</span><span class='vec'>`</span> = 2<span class='ol'>BM</span><span class='vec'>`</span> – <span class='ol'>BF</span><span class='vec'>`</span> – <span class='ol'>BC</span><span class='vec'>`</span></div>
+
+ <div class='in'><br>
+<b>c)</b> <span class='ol'>CN</span><span class='vec'>`</span> = <span class='ol'>BM</span><span class='vec'>`</span> – 0,5<span class='ol'>BF</span><span class='vec'>`</span> – 1,5<span class='ol'>BC</span><span class='vec'>`</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b><a name='B.2' class='box'>2</a> Rechnen mit Vektorkoordinaten</b></div>
+
+ <div class='in' style='float:left; margin-right:40px;'><br>
+<img src='img/ve_07.gif'></div>
+
+ <div class='mt2'>
+Im Folgenden legen wir der Ebene bzw. dem Raum ein kartesisches Koordinatenssystem zugrunde und nehmen die Einheitsvektoren in Richtung der Koordinatenachsen als Basis:<br><br>
+
+<img src='img/ve_08.gif'></div>
+
+ <div style='clear:left;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Was passiert mit den Koordinaten, wenn wir die anhand von Pfeilen eingeführten Operationen ausführen?</div>
+
+ <div class='in'><br>
+<img src='img/ve_09.gif'></div>
+
+ <div class='in'><br>
+<img src='img/ve_10.gif'></div>
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe 2:</b> Berechne die resultierende Kraft in Koordinatendarstellung mittels Vektoraddition und anschließend ihren Betrag.
+
+  <div class='in'><br>
+<img src='img/ve_11.gif'></div></div>
+
+ <div class='in'><br>
+Wir machen uns zunutze, dass wir Kosinus und Sinus ursprünglich als xy-Koordinaten des Einheitszeigers definiert haben. Wenn wir diesen auf die Länge r strecken, passiert dasselbe mit seinen Koordinaten, also:</div>
+
+ <div class='in'><br>
+<img src='img/ve_12.gif'></div>
+
+ <div class='in'><br>
+<img src='img/ve_13.gif'></div>
+
+ <div class='in'><br>
+<span class='up'>|</span><span class='ol'>F</span><span class='vec'>`</span><sub>res</sub><span class='up'>|</span> = <span class='r1t'>&radic;</span><span class='rad'>12,64<sup>2</sup> + 58,92<sup>2</sup></span> = 60,26 N</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='B.3' class='box'>3</a> Analytische Geometrie</b></div>
+
+ <div><br>
+In der <b>analytischen Geometrie</b> werden geometrische Objekte nicht mit Zirkel und Lineal konstruiert, sondern berechnet. Dazu zerlegen wir sie in Punkte, die in einem kartesischen Koordinatensystem mit Ursprung O liegen. Einen Punkt P charakterisieren wir über seinen</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>Ortsvektor</b> <b class='ol'>P</b><span class='vec'>`</span> <b>:</b>= <b class='ol'>OP</b><span class='vec'>`</span></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Berechne den Vektor <span class='ol'>AB</span><span class='vec'>`</span>, der den Punkt A(1|3) in den Punkt B(5|1) schiebt.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/ve_14.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+Spitze-minus-Fuß-Regel:<br><br>
+
+<img src='img/ve_15.gif' class='mt1'>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Berechne den Mittelpunkt M der Strecke AB[ A(2|3), B(4|1) ].</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/ve_16.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+Arithmetisches Mittel:<br><br>
+
+<img src='img/ve_17.gif' class='mt1'>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> Wo liegt der neue Endpunkt C, wenn man die Strecke AB[ A(–1|5), B(3|2) ] über B hinaus um 2 Einheiten verlängert?</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/ve_18.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+<img src='img/ve_19.gif'>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> SKALARPRODUKT</b></div>
+
+ <div><br><br>
+Vektoren lassen sich nicht nur mit einem Skalar multiplizieren, sondern auch untereinander und das auf zwei Arten. Die Motivation dafür ergibt sich etwa aus physikalischen Konzepten wie Arbeit und Drehmoment.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.1' class='box'>1</a> In Pfeildarstellung</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Das <b>Skalarprodukt</b> zweier Pfeile ergibt einen Skalar und zwar die volle Länge des einen Pfeils mal dem parallelen Anteil des anderen. Dazu kommt ein positives/negatives Vorzeichen, je nachdem, ob der parallele Anteil gleich/entgegengesetzt orientiert ist.</div>
+
+ <div class='in'><br>
+<img src='img/ve_20.gif' style='margin-right:40px; vertical-align:-50px;'> <span class='p02'>•</span> <b class='ol'>a</b><span class='vec'>`</span><b class='p02'>·</b><b class='ol'>b</b><span class='vec'>`</span> = <b><span class='up'>|</span><span class='ol'>a</span></b><span class='vec'>`</span><b><span class='up'>|</span><span class='up' style='margin-left:-2px;'>|</span><span class='ol'>b</span></b><span class='vec'>`</span><b><span class='up'>|</span>cos&gamma;</b></div>
+
+ <div class='mt2'>
+Bem: Das Skalarprodukt ergibt genau dann <b>null,</b> wenn beide Pfeile <b>normal aufeinander</b> stehen oder ein Nullvektor darunter ist.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> In Koordinatendarstellung</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b class='ol'>a</b><span class='vec'>`</span><b class='p02'>·</b><b class='ol'>b</b><span class='vec'>`</span> = <b>a<sub>x</sub>b<sub>x</sub> + a<sub>y</sub>b<sub>y</sub> + a<sub>z</sub>b<sub>z</sub></b></div>
+
+ <br><div class='bsp' style='padding-top:8px; padding-bottom:8px;'>
+<b>Aufgabe 6:</b> Berechne den Winkel &gamma;, den die Vektoren <span class='ol'>a</span><span class='vec'>`</span> und <span class='ol'>b</span><span class='vec'>`</span> einschließen.
+
+  <div class='in'><br>
+<span class='ol'>a</span><span class='vec'>`</span> = 4<span class='ol'>e</span><span class='vec'>`</span><sub>1</sub> + 6<span class='ol'>e</span><span class='vec'>`</span><sub>2</sub> + 3<span class='ol'>e</span><span class='vec'>`</span><sub>3</sub> &nbsp; und &nbsp; <span class='ol'>b</span><span class='vec'>`</span> = 7<span class='ol'>e</span><span class='vec'>`</span><sub>1</sub> + <span class='ol'>e</span><span class='vec'>`</span><sub>2</sub> – 5<span class='ol'>e</span><span class='vec'>`</span><sub>3</sub></div></div>
+
+ <div class='in'><br>
+<span class='ol'>a</span><span class='vec'>`</span><sup class='p10'>0</sup><span class='p02'>·</span><span class='ol'>b</span><span class='vec'>`</span><sup class='p10'>0</sup> = cos&gamma;</div>
+
+ <div class='in'><br>
+<img src='img/ve_21.gif'></div>
+
+ <div class='in'><br>
+<span class='up'>|</span><span class='ol'>a</span><span class='vec'>`</span><span class='up'>|</span> = <span class='r1t'>&radic;</span><span class='rad'>4<sup>2</sup> + 6<sup>2</sup> + 3<sup>2</sup></span> = 7,81</div>
+
+ <div class='in'><br>
+<span class='up'>|</span><span class='ol'>b</span><span class='vec'>`</span><span class='up'>|</span> = <span class='r1t'>&radic;</span><span class='rad'>7<sup>2</sup> + 1<sup>2</sup> + (–5)<sup>2</sup></span> = 8,66</div>
+
+ <div class='in'><br>
+&gamma; = acos<div class='frac p40'><div class='num'><span class='ol'>a</span><span class='vec'>`</span><span class='p02'>·</span><span class='ol'>b</span><span class='vec'>`</span></div><div class='den to1'><span class='up'>|</span><span class='ol'>a</span><span class='vec'>`</span><span class='up'>|</span><span class='up' style='margin-left:-2px;'>|</span><span class='ol'>b</span><span class='vec'>`</span><span class='up'>|</span></div></div> = acos<div class='frac p40'><div class='num'>19</div><div class='den'>7,81·8,66</div></div> = 73,7°</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> VEKTORPRODUKT</b></div>
+
+ <div><br><br>
+Mit dem Skalarprdukt (= 0?) können wir auf Rechtwinkeligkeit <i>prüfen,</i> mit dem Vektorprodukt können wir Rechtwinkeligkeit <i>erzeugen.</i></div>
+
+ <div><br>
+<b><a name='D.1' class='box'>1</a> In Pfeildarstellung</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Das <b>Vektorprodukt</b> zweier Pfeile ergibt einen Vektor, der normal auf beiden steht. Um die Orientierung zu erhalten, dreht man den ersten Pfeil auf kürzestem Weg in den zweiten und schaut, wohin sich eine mitgedrehte Rechtsschraube bohrt. Der Betrag ist die volle Länge des einen Pfeils mal dem normalen Anteil des anderen (= Fläche des Parallelogramms, das beide Pfeile aufspannen).</div>
+
+ <div class='in' style='margin-top:20px;'>
+<img src='img/ve_22.gif'></div>
+
+ <div><br>
+Bem: Das Vektorprodukt ergibt genau dann den <b>Nullvektor,</b> wenn beide Pfeile in <b>derselben Richtung</b> liegen oder ein Nullvektor darunter ist.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 7:</b> Bestimme die Orientierung des Vektorprodukts für die folgenden in der Zeichenebene liegenden Pfeile.
+
+  <div class='in'><br>
+<img src='img/ve_23.gif'></div></div>
+
+ <div class='in'><br>
+<b>a)</b> <span class='ol'>a</span><span class='vec'>`</span><span class='p44'>x</span><span class='ol'>b</span><span class='vec'>`</span> = <span style='font-size:110%'>O</span><span  style='margin-left:-11px;'>&times;</span> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> <span class='ol'>b</span><span class='vec'>`</span><span class='p44'>x</span><span class='ol'>a</span><span class='vec'>`</span> = <span style='font-size:110%'>O</span><b class='bo1' style='margin-left:-9px;'>·</b> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> <span class='ol'>c</span><span class='vec'>`</span><span class='p44'>x</span><span class='ol'>d</span><span class='vec'>`</span> = <span style='font-size:110%'>O</span><span  style='margin-left:-11px;'>&times;</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> In Koordinatendarstellung</b></div>
+
+ <div><br>
+Die <b>Determinante</b> ist ein Rechenschema, über das die Elemente einer quadratischen Tabelle zusammengerechnet werden. Im 2x2-Fall als</div>
+
+ <div class='in'><br>
+Produkt der Hauptdiagonalelemente (\) minus Produkt der Nebendiagonalelemente (/).</div>
+
+ <div><br>
+Damit lässt sich die <b>90°-Drehung,</b> die bei 2-koordinatigen Vektoren an die Stelle des Vektorprodukts tritt, so schreiben:</div>
+
+ <div><br>
+<img src='img/ve_24.gif'></div>
+
+ <div><br>
+Im 3x3-Fall kommen zur langen Diagonale die kurzen darüber und darunter dazu, die mit dem am weitest entfernten Element vervollständigt werden:</div>
+
+ <div><br>
+<img src='img/ve_25.gif'><img src='img/ve_26.gif' style='vertical-align:-29px;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe 8:</b> Ein Fachwerk aus starren Stäben bleibt in Ruhe, wenn Kräfte <span class='ol'>F</span><span class='vec'>`</span><sub>i</sub> so einwirken, dass bei beliebig gewählter Drehachse
+
+  <div class='in'><br>
+<img src='sym/sum.gif' style='vertical-align:-6px;'> <span class='ol'>F</span><span class='vec'>`</span><sub>i</sub> = <span class='ol'>o</span><span class='vec'>`</span> &nbsp; und &nbsp; <img src='sym/sum.gif' style='vertical-align:-6px;'> <span class='ol'>r</span><span class='vec'>`</span><sub>i</sub><span class='p44'>x</span><span class='ol'>F</span><span class='vec'>`</span><sub>i</sub> = <span class='ol'>o</span><span class='vec'>`</span> &nbsp; mit <span class='ol'>r</span><span class='vec'>`</span><sub>i</sub> = "Kraftarm" von Drehachse zum Angriffspunkt von <span class='ol'>F</span><span class='vec'>`</span><sub>i</sub></div>
+
+  <div><br>
+Bestimme damit die Auflagekräfte <span class='ol'>F</span><span class='vec'>`</span><sub>1</sub>, <span class='ol'>F</span><span class='vec'>`</span><sub>2</sub>, <span class='ol'>F</span><span class='vec'>`</span><sub>3</sub> in folgender Zeichnung:</div>
+
+  <div class='in'><br>
+<img src='img/ve_27.gif'></div></div>
+
+ <div class='in'><br>
+Ursprung sei der linke Auflagepunkt, x-Achse nach rechts, y-Achse nach oben, z-Achse (= Drehachse) aus der Zeichenebene heraus.</div>
+
+ <div class='in mt2'>
+<img src='img/ve_28.gif'></div>
+
+ <div class='in'><br>
+<img src='img/ve_29.gif'></div>
+
+ <div class='in'>
+<img src='img/ve_30.gif' class='mt1'> <img src='img/ve_31.gif' class='mt1'></div>
+
+ <div class='in'><br>
+Vektoren sind genau dann gleich, wenn ihre Koordinaten gleich sind. Aus obigen Vektorgleichungen folgen daher die Zahlengleichungen:</div>
+
+ <div class='in'><br>
+(1) F<sub>1</sub> – 2,5 = 0 <img src='sym/rarr2.svg' class='p66'> F<sub>1</sub> = 2,5 kN</div>
+
+ <div class='in mt1'>
+(2) F<sub>2</sub> + F<sub>3</sub> – 7,33 = 0</div>
+
+ <div class='in mt1'>
+(3) 7F<sub>3</sub> – 18,9 = 0 <img src='sym/rarr2.svg' class='p66'> F<sub>3</sub> = 2,7 kN <img src='sym/rarr2.svg' class='p66'> F<sub>2</sub> = 4,63 kN</div>
+
+ <div class='grau'><br>
+Warum spielt die Wahl der Drehachse keine Rolle?</div>
+
+ <div class='in grau'><br>
+<img src='sym/sum_g.gif' style='vertical-align:-6px;'> <span class='ws4'>(<span class='ol'>a</span><span class='vec'>`</span> + <span class='ol'>r</span><span class='vec'>`</span><sub>i</sub>) x <span class='ol'>F</span><span class='vec'>`</span><sub>i</sub></span> = <img src='sym/sum_g.gif' style='vertical-align:-6px;'> <span class='ws4'><span class='ol'>a</span><span class='vec'>`</span> x <span class='ol'>F</span><span class='vec'>`</span><sub>i</sub></span> + <img src='sym/sum_g.gif' style='vertical-align:-6px;'> <span class='ws4'><span class='ol'>r</span><span class='vec'>`</span><sub>i</sub> x <span class='ol'>F</span><span class='vec'>`</span><sub>i</sub></span> = <span class='ol'>a</span><span class='vec'>`</span> x <img src='sym/sum_g.gif' style='vertical-align:-6px;'> <span class='ol'>F</span><span class='vec'>`</span><sub>i</sub><img src='sym/slash3g.gif' style='position:relative; bottom:-6px; margin-left:-42px; margin-right:-4px;'> + <img src='sym/sum_g.gif' style='vertical-align:-6px;'> <span class='ws4'><span class='ol'>r</span><span class='vec'>`</span><sub>i</sub> x <span class='ol'>F</span><span class='vec'>`</span><sub>i</sub></span></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='E' class='box'>E</a> ABSTANDSBERECHNUNGEN</b></div>
+
+ <div class='in'><br><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/ve_32.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+     <div style='margin-bottom:5px;'>
+Vom Punkt P aus laufen wir auf kürzestem Weg, das sei in Richtung <span class='ol'>n</span><span class='vec'>`</span>, zur Geraden g[A<span class='p02'>,</span><span class='ol'>a</span><span class='vec'>`</span>]. Diesen Weg können wir so oder so berechnen, je nachdem, was einfacher ist:</div>
+
+     <div style='float:left; margin-top:12px;'><br>
+<span class='p02'>•</span> <b>d(P<span class='p02'>,</span>g)</b> <img src='sym/2arr1.gif' style='vertical-align:middle;'>&nbsp;</div>
+
+     <div><br>
+<b><span class='up'>|</span><span class='ol'>AP</span><span class='vec'>`</span><span class='p02'>·</span><span class='ol'>n</span><span class='vec'>`</span><sup>0</sup><span class='up'>|</span></b></div>
+
+     <div><br>
+<b><span class='up'>|</span><span class='ol'>AP</span><span class='vec'>`</span><span class='p22'>x</span><span class='ol'>a</span><span class='vec'>`</span><sup>0</sup><span class='up'>|</span></b></div>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b> Berechne den Abstand, den der Punkt P(3|–6) von der Geraden g[ A(–2|–4), B(5|2) ] hat.</div>
+
+ <div class='in'><br>
+<img src='img/ve_33.gif'></div>
+
+ <div class='in'><br>
+<img src='img/ve_34.gif'></div>
+
+ <div class='in'><br>
+<img src='img/ve_35.gif'></div>
+
+ <div class='in'><br>
+d(P<span class='p02'>,</span>g) = <div class='frac to1'><div class='num'><span class='up'>|</span><span class='ol'>AP</span><span class='vec'>`</span>·<span class='ol'>n</span><span class='vec'>`</span><span class='up'>|</span></div><div class='den to1'><span class='up'>|</span><span class='ol'>n</span><span class='vec'>`</span><span class='up'>|</span></div></div> = <div class='frac'><div class='num'>44</div><div class='den'>9,22</div></div> = 4,77</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 10:</b> Berechne den Abstand, den der Punkt P(–2|2|5) von der Geraden g[ A(0|–2|4), B(1|3|9) ] hat.</div>
+
+ <div class='in'><br>
+<img src='img/ve_36.gif'></div>
+
+ <div class='in'><br>
+<img src='img/ve_37.gif'></div>
+
+ <div class='in'><br>
+<img src='img/ve_38.gif'></div>
+
+ <div class='in'><br>
+d(P<span class='p02'>,</span>g) = <div class='frac to1'><div class='num'><span class='up'>|</span><span class='ol'>AP</span><span class='vec'>`</span><span class='p22'>x</span><span class='ol'>a</span><span class='vec'>`</span><span class='up'>|</span></div><div class='den to1'><span class='up'>|</span><span class='ol'>a</span><span class='vec'>`</span><span class='up'>|</span></div></div> = <div class='frac'><div class='num'>23,28</div><div class='den'>7,14</div></div> = 3,26</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 11:</b> Berechne den Abstand, den der Punkt P(–5|4|3) von der Ebene &epsilon;[ A(1|2|–6), B(3|2|1), C(0|3|–2) ] hat.</div>
+
+ <div class='in'><br>
+d(P<span class='p02'>,</span>&epsilon;) = d(P<span class='p02'>,</span>g'), wobei g' = Normalprojektion von g[A<span class='p02'>,</span>P] auf &epsilon;.</div>
+
+ <div class='in'><br>
+<img src='img/ve_39.gif'></div>
+
+ <div class='in' style='margin-top:12px;'>
+<img src='img/ve_40.gif'></div>
+
+ <div class='in'><br>
+d(P<span class='p02'>,</span>&epsilon;) = <div class='frac to1'><div class='num'><span class='up'>|</span><span class='ol'>AP</span><span class='vec'>`</span>·<span class='ol'>n</span><span class='vec'>`</span><span class='up'>|</span></div><div class='den to1'><span class='up'>|</span><span class='ol'>n</span><span class='vec'>`</span><span class='up'>|</span></div></div> = <div class='frac'><div class='num'>30</div><div class='den'>16,67</div></div> = 1,80</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='F' class='box'>F</a> GERADE/EBENE IN VEKTORFORM</b></div>
+
+ <div><br><br>
+<b><a name='F.1' class='box'>1</a> Gerade in Parameter- und Normalvektordarstellung</b></div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/ve_41.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+     <div>
+Mit einem Vektor <span class='ol'>a</span><span class='vec'>`</span>, der in der Geraden liegt ("Richtungsvektor"), und einem bekannten Geradenpunkt A können wir beliebige Geradenpunkte X so charakterisieren:
+     </div>
+     <div><br>
+• <b class='ol'>X</b><span class='vec'>`</span><b>(t)</b> = <b class='ol'>A</b><span class='vec'>`</span><b> + t<span class='ol'>a</span></b><span class='vec'>`</span>
+     </div>
+     <div><br>
+<b>Gerade in xy-Ebene:</b> Mit einem Vektor <span class='ol'>n</span><span class='vec'>`</span>, der normal auf die Gerade steht, und einem bekannten Geradenpunkt A können wir beliebige Geradenpunkte X(x<span class='p02'>,</span>y) auch dadurch charakterisieren, dass der Normalvektor und ein Vektor, der in der Geraden liegt, einen rechten Winkel einschließen:
+     </div>
+     <div><br>
+<span class='p02'>•</span> <b class='ol'>n</b><span class='vec'>`</span><b>·(<span class='ol'>X</span></b><span class='vec'>`</span><b> – <span class='ol'>A</span></b><span class='vec'>`</span><b>)</b> = <b>0</b>
+	   </div>
+     </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Dieses Skalarprodukt ausgerechnet führt zur Zahlengleichung</div>
+
+ <div class='in'><br>
+ax + by = c</div>
+
+ <div><br>
+Im Rückschluss folgt daraus, dass die Lösungsmenge einer linearen Gleichung in x und y eine Gerade in der xy-Ebene ist und die Koeffizienten einen Normalvektor dieser Geraden bilden. Falls b &ne; 0, können wir y freistellen und erhalten die Gleichung der linearen Funktion</div>
+
+ <div class='in'><br>
+y(x) = kx + d</div>
+
+ <div><br>
+Dabei ist d = y(0) und k die Steigung &Delta;y/&Delta;x.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 12:</b> Bestimme die Koordinatengleichung y = kx + d für die folgenden Geraden.
+
+  <div class='in'><br>
+<img src='img/ve_42.gif'></div></div>
+
+  <div class='in'><br>
+Eine Möglichkeit ist, in die Normalvektordarstellung zu wechseln und das Skalarprodukt auszurechnen:</div>
+
+ <div class='in'><br>
+<b>a)</b> <img src='img/ve_43.gif' style='vertical-align:-16px;'> = <span class='ws4'>3(x – 2) + 2(y – 1)</span> = 0 <img src='sym/rarr2.svg' class='p66'> y = –1,5 x + 4</div>
+
+ <div class='in mt2'>
+<b>b)</b> … <img src='sym/rarr2.svg' class='p66'> y = 3x – 5</div>
+
+ <div class='in'><br>
+<b>c)</b> … <img src='sym/rarr2.svg' class='p66'> y = –0,7x + 2,5</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 13:</b> Wandle die Koordinatengleichung folgender Geraden in eine Parameterdarstellung um.
+
+  <div class='in'><br>
+<b>a)</b> y = 2x + 3 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> y = x – 4 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> 3x + 5y = 10</div></div>
+
+  <div class='in'><br>
+Eine Möglichkeit ist, wie beim Zeichnen linearer Funktionen vorzugehen: Für <span class='ol'>A</span><span class='vec'>`</span> nehmen wir den Ortsvektor des Geradenpunkts auf der y-Achse und den Richtungsvektor liefert das Steigungsdreieck &Delta;x = 1 und &Delta;y = k:</div>
+
+ <div class='in'><br>
+<img src='img/ve_44.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='F.2' class='box'>2</a> Anwendung: In/Umkreis</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 14:</b> Gegeben ist das Dreieck ABC[ A(–10|2), B(14|–5), C(2|11) ]. Wo liegt der Inkreismittelpunkt?</div>
+
+ <div class='in'><br>
+Der Inkreis berührt das Dreieck innen an allen drei Seiten. Wir konzentrieren uns auf <i>zwei</i> Berührungen und erkennen, dass die Winkelhalbierende durch den Kreismittelpunkt geht. Wir brauchen also nur zwei Winkelhalbierende zu schneiden:</div>
+
+ <div class='in' style='float:left; margin-right:40px;'><br>
+<img src='img/ve_45.gif'></div>
+
+ <div style='margin-top:45px;'>
+w<sub>&alpha;</sub>: <span class='ol'>X</span><span class='vec'>`</span> = <span class='ol'>A</span><span class='vec'>`</span> + t<span class='up p10'>(</span><span class='ol'>AB</span><span class='vec'>`</span><sup class='p10'>0</sup> + <span class='ol'>AC</span><span class='vec'>`</span><sup class='p10'>0</sup><span class='up'>)</span><br><br>
+
+w<sub>&beta;</sub>: <span class='ol'>X</span><span class='vec'>`</span> = <span class='ol'>B</span><span class='vec'>`</span> + s<span class='up p10'>(</span><span class='ol'>BA</span><span class='vec'>`</span><sup class='p10'>0</sup> + <span class='ol'>BC</span><span class='vec'>`</span><sup class='p10'>0</sup><span class='up'>)</span><br><br>
+
+M<sub>i</sub> = w<sub>&alpha;</sub> <img src='sym/cap.gif'> w<sub>&beta;</sub></div>
+
+ <div style='clear:left;'></div>
+
+ <div class='in mt1'>
+<img src='img/ve_46.gif'></div>
+
+ <div class='in'><br>
+<img src='img/ve_47.gif'></div>
+
+ <div class='in'><br>
+<img src='img/ve_48.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/ve_49.gif'></div>
+
+ <div class='in'><br>
+Umgeschrieben in ein System von Zahlengleichungen:</div>
+
+ <div class='in' style='float:left; line-height:22px; margin-top:12px; margin-bottom:2px;'>
+(1) <span class='ws4'>–10 + 1,76t</span> = <span class='ws4'>14 – 1,56s</span> &nbsp; <span class='ll'>·</span>1,08<br>
+(2) <span class='ws4'>2 + 0,32t</span> = <span class='ws4'>–5 + 1,08s</span><span class='ll' style='margin-left:30px;'>·</span>1,56</div>
+
+ <div style='margin-top:22px;'>&nbsp;
+<img src='sym/add.gif'></div>
+
+ <div style='clear:left;'></div>
+
+ <div style='margin-top:2px; margin-left:39px; border-top:solid 1px; width:163px;'></div>
+
+ <div style='margin-left:39px; margin-top:5px;'>
+–7,68 + 2,4t = 7,32 <img src='sym/rarr2.svg' class='p66'> t = 6,25</div>
+
+ <div class='in'><br>
+<img src='img/ve_50.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 15:</b> Gegeben ist das Dreieck ABC[ A(–4|–2), B(9|1), C(5|7) ]. Wo liegt der Umkreismittelpunkt?</div>
+
+ <div class='in'><br>
+Der Umkreis berührt das Dreieck außen an allen drei Ecken. Wir konzentrieren uns auf <i>zwei</i> Berührungen und erkennen, dass die Mittelsenkrechte durch den Kreismittelpunkt geht. Wir brauchen also nur zwei Mittelsenkrechte zu schneiden:</div>
+
+ <div class='in mt2' style='float:left; margin-right:40px;'>
+<img src='img/ve_51.gif'></div>
+
+ <div style='margin-top:30px;'>
+m<sub>a</sub>: <span class='ol'>X</span><span class='vec'>`</span> = <div class='frac'><div class='num'><span class='ol'>B</span><span class='vec'>`</span><span class='p44'>+</span><span class='ol'>C</span><span class='vec'>`</span></div><div class='den'>2</div></div> + t<span class='ol p10'>BC</span><span class='vec'>`</span><span class='up to10' style='margin-left:3px; margin-right:-6px;'>'</span><span class='to1' style='font-size:11px;'>_</span><br><br>
+
+m<sub>b</sub>: <span class='ol'>X</span><span class='vec'>`</span> = <div class='frac'><div class='num'><span class='ol'>C</span><span class='vec'>`</span><span class='p44'>+</span><span class='ol'>A</span><span class='vec'>`</span></div><div class='den'>2</div></div> + s<span class='ol p10'>CA</span><span class='vec'>`</span><span class='up to10' style='margin-left:3px; margin-right:-6px;'>'</span><span class='to1' style='font-size:11px;'>_</span><br><br>
+
+M<sub>u</sub> = m<sub>a</sub> <img src='sym/cap.gif'> m<sub>b</sub></div>
+
+ <div style='clear:left;'></div>
+
+ <div class='in'><br>
+<img src='img/ve_52.gif'></div>
+
+ <div class='in'><br>
+Umgeschrieben in ein System von Zahlengleichungen:</div>
+
+ <div class='in' style='float:left; line-height:22px; margin-top:12px; margin-bottom:2px;'>
+(1) <span class='ws4'>7 – 6t</span> = <span class='ws4'>0,5 + 9s</span><br>
+(2) <span class='ws4'>4 – 4t</span> = <span class='ws4'>2,5 – 9s</span></div>
+
+ <div style='margin-top:22px;'>&nbsp;
+<img src='sym/add.gif'></div>
+
+ <div style='clear:left;'></div>
+
+ <div style='margin-top:2px; margin-left:39px; border-top:solid 1px; width:110px;'></div>
+
+ <div style='margin-left:39px; margin-top:5px;'>
+11 – 10t = 3 <img src='sym/rarr2.svg' class='p66'> t = 0,8</div>
+
+ <div class='in'><br>
+<img src='img/ve_53.gif'></div>
+
+ <div><br>
+<b>Frage:</b> Wie bestimmt man die Richtungsvektoren <span class='ol'>n</span><span class='vec'>`</span><sub>a</sub>, <span class='ol'>n</span><span class='vec'>`</span><sub>b</sub> der Mittelsenkrechten bei 3-koordinatigen Eckpunkten?</div>
+
+ <div class='in'><br>
+<span class='ol'>n</span><span class='vec'>`</span> = <span class='ol'>AB</span><span class='vec'>`</span><span class='p44'>x</span><span class='ol'>AC</span><span class='vec'>`</span> <img src='sym/rarr2.svg' class='p66'> <span class='ol'>n</span><span class='vec'>`</span><sub>a</sub> = <span class='ol'>n</span><span class='vec'>`</span><span class='p44'>x</span><span class='ol'>BC</span><span class='vec'>`</span>, <span class='ol'>n</span><span class='vec'>`</span><sub>b</sub> = <span class='ol'>n</span><span class='vec'>`</span><span class='p44'>x</span><span class='ol'>CA</span><span class='vec'>`</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='F.3' class='box'>3</a> Ebene in Parameter- und Normalvektordarstellung</b></div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/ve_54.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+     <div>
+Mit zwei linear unabhängigen Vektoren <span class='ol'>a</span><span class='vec'>`</span>, <span class='ol'>b</span><span class='vec'>`</span>, die in der Ebene liegen ("Spannvektoren"), und einem bekannten Ebenenpunkt A können wir beliebige Ebenenpunkte X so charakterisieren:
+     </div>
+     <div><br>
+<span class='p02'>•</span> <b class='ol'>X</b><span class='vec'>`</span><b>(t<span class='p02'>,</span>s)</b> = <b class='ol'>A</b><span class='vec'>`</span><b> + t<span class='ol'>a</span></b><span class='vec'>`</span><b> + s<span class='ol'>b</span></b><span class='vec'>`</span>
+     </div>
+     <div><br>
+<b>Ebene im xyz-Raum:</b> Mit einem Vektor <span class='ol'>n</span><span class='vec'>`</span>, der normal auf die Ebene steht, und einem bekannten Ebenenpunkt A können wir beliebige Ebenenpunkte X(x<span class='p02'>,</span>y<span class='p02'>,</span>z) auch dadurch charakterisieren, dass der Normalvektor und ein Vektor, der in der Ebene liegt, einen rechten Winkel einschließen:
+     </div>
+     <div><br>
+<span class='p02'>•</span> <b class='ol'>n</b><span class='vec'>`</span><b>·(<span class='ol'>X</span></b><span class='vec'>`</span><b> – <span class='ol'>A</span></b><span class='vec'>`</span><b>)</b> = <b>0</b>
+     </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Dieses Skalarprodukt ausgerechnet führt zur Zahlengleichung</div>
+
+ <div class='in'><br>
+ax + by + cz = d</div>
+
+ <div><br>
+Im Rückschluss folgt daraus, dass die Lösungsmenge einer linearen Gleichung in x, y, z eine Ebene im xyz-Raum ist und die Koeffizienten einen Normalvektor dieser Ebene bilden. Falls c &ne; 0, können wir z freistellen und erhalten die Gleichung der linearen Funktion</div>
+
+ <div class='in'><br>
+z(x<span class='p02'>,</span>y) = k<sub>1</sub>x + k<sub>2</sub>y + e</div>
+
+ <div><br>
+Dabei ist e = z(0<span class='p02'>,</span>0), k<sub>1</sub> die Steigung in x-Richtung und k<sub>2</sub> die Steigung in y-Richtung.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 16:</b> Stelle die Gleichung der Ebene &epsilon;[ A(3|–4|–2), B(2|4|1), C(5|0|1) ] wie oben beschrieben dar.</div>
+
+ <div class='in'><br>
+<b>Parameterdarstellung:</b></div>
+
+ <div class='in'><br>
+<img src='img/ve_55.gif'></div>
+
+ <div class='in'><br>
+<b>Normalvektordarstellung:</b></div>
+
+ <div class='in'><br>
+<img src='img/ve_56.gif'></div>
+
+ <div class='in'><br>
+<b>Implizite Koordinatengleichung:</b></div>
+
+ <div class='in'><br>
+<span class='ws4'>12(x – 3) + 9(y + 4) – 20(z + 2)</span> = 0</div>
+
+ <div class='in mt1'>
+12x + 9y – 20z = 40</div>
+
+ <div class='in'><br>
+<b>Explizite Koordinatengleichung:</b></div>
+
+ <div class='in'><br>
+–20z = –12x – 9y + 40 |:(–20)</div>
+
+ <div class='in mt1'>
+z = 0,6x + 0,45y – 2</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 17:</b> Der Punkt P(–2|16|–11) wird an der Ebene &epsilon;: 2x – 5y + 3z = –3 gespiegelt. Wo liegt der gespiegelte Punkt P'?</div>
+
+ <div class='in' style='float:left; margin-right:40px;'><br>
+<img src='img/ve_57.gif'></div>
+
+ <div style='margin-top:25px;'>
+<span class='ol'>n</span><span class='vec'>`</span> aus Koordinatengleichung von &epsilon; ablesen<br><br>
+
+g: <span class='ol'>X</span><span class='vec'>`</span> = <span class='ol'>P</span><span class='vec'>`</span> + t<span class='ol p10'>n</span><span class='vec'>`</span><br><br>
+
+S = g <img src='sym/cap.gif'> &epsilon;<br><br>
+
+<span class='ol'>P</span><span class='vec'>`</span>' = <span class='ol'>P</span><span class='vec'>`</span> + 2<span class='ol'>PS</span><span class='vec'>`</span></div>
+
+ <div style='clear:left;'></div>
+
+ <div class='in mt2'>
+<img src='img/ve_58.gif' style='vertical-align:-23px;'> &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; &epsilon;: <span class='ws4'>2(–2 + 2t) – 5(16 – 5t) + 3(–11 + 3t)</span> = –3 <img src='sym/rarr2.svg' class='p66'> t = 3 </div>
+
+ <div class='in mt2'>
+<img src='img/ve_59.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/ve_60.gif'></div>
+
+ </div></body>
+ </html>

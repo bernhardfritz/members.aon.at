@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Wahrscheinlichkeitsrechnung</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>XVI. WAHRSCHEINLICHKEITSRECHNUNG</b></div>
+
+ <div><br>
+<a href='16_wahrscheinlichkeit.html#A'>A. Elementare Kombinatorik</a><br>
+<a href='16_wahrscheinlichkeit.html#B'>B. Wahrscheinlichkeit und Häufigkeit</a><br>
+<a href='16_wahrscheinlichkeit.html#C'>C. Wahrscheinlichkeitsalgebra</a><br>
+<a href='16_wahrscheinlichkeit.html#D'>D. Bedingte Wahrsch. und Unabhängigkeit</a><br>
+<a href='16_wahrscheinlichkeit.html#E'>E. Zerlegungen und Baumdiagramme</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='16a_wahrscheinlichkeit.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> ELEMENTARE KOMBINATORIK</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Variationen (mit Wiederholung)</b></div>
+
+ <div><br>
+Eine <b>Variation</b> ist eine <b>Liste</b> mit k Positionen, wobei für jede Position dieselben n Einträge zur Verfügung stehen und zwar unabhängig davon, was in den anderen Positionen steht. Mengentheoretisch ist das ein k-Tupel der Produktmenge A<sup>k</sup> (mit A als Menge der n möglichen Einträge):</div>
+
+ <div><br>
+<span class='p02'>•</span> Anzahl aller <b>Variationen</b> = <b>n<sup>k</sup></b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Wie viel Möglichkeiten gibt es, um einen Fußball-Totoschein für 12 Spiele auszufüllen, wenn bei jedem Spiel eingetragen wird, ob die Heim- oder Gastmannschaft gewinnt oder unentschieden gespielt wird?</div>
+
+ <div class='in mt2'>
+<img src='img/wa_00.gif'></div>
+
+ <div><br>
+Den Listenbegriff können wir insoweit <b>verallgemeinern,</b> als nicht notwendig ist, dass für alle Positionen <i>dieselben</i> Einträge zur Verfügung stehen. Mengentheoretisch ist das dann ein k-Tupel der Produktmenge A<sub>1</sub><span class='p20'>x</span> ... <span class='p02'>x</span>A<sub>k</sub> (mit A<sub>i</sub> als Menge der n<sub>i</sub> möglichen Einträge für die i-te Position):</div>
+
+ <div class='in'><br>
+Anzahl aller solchen Listen = n<sub>1</sub>· ... ·n<sub>k</sub></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> Ein Auto gibt es in den Farben blau, grau, rot, silber und weiß. Heckspoiler, Klimaanlage und Schiebedach sind als Zusatzaustattung im Angebot. Wie viel Modelle muss ein Autohändler auf Lager haben, damit er jedem sein Wunschauto vorführen kann?</div>
+
+ <div class='in mt2'>
+<img src='img/wa_01.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.2' class='box'>2</a> Permutationen</b></div>
+
+ <div><br>
+Eine <b>Permutation</b> ist eine <b>Anordnung</b> von n verschiedenen Objekten in einer Reihe. Das sind n Möglichkeiten, um ein Objekt auszuwählen und auf die erste Position zu setzen. Für jede dieser Möglichkeiten eröffnen sich n<span class='p22'>–</span>1 weitere, um die zweite Position zu besetzen, usw.</div>
+
+ <div><br>
+<span class='p02'>•</span> Anzahl aller <b>Permutationen</b> = <b>n! :</b>= <b>n(n<span class='p22'>–</span>1)<span class='p22'>...</span>1</b> &nbsp; (0! <span class='ldf'>:</span>= 1)</div>
+
+ <div style='margin-top:5px; margin-left:224px;'>
+<img src='sym/uarr_g.gif'></div>
+ <div class='grau' style='margin-left:195px; font-size:11px;'>
+"n Fakultät"</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Ein Kleinbus mit 8 Sitzplätzen bringt ebensoviel Kinder zur Schule. Auf wie viel Arten können sie Platz nehmen?</div>
+
+ <div class='in'><br>
+Wir nummerieren die Plätze, stellen die Kinder hintereinander auf und setzen das erste auf Platz1, das zweite auf Platz2 usw. So gesehen geht es um die Anzahl der Möglichkeiten, 8 Kinder in einer Reihe anzuordnen:</div>
+
+ <div class='in'><br>
+8! = 40320</div>
+
+ <div class='grau'><br>
+Bem: Auch wenn sie jeden Tag eine andere Möglichkeit wählen, erleben sie den Tag nicht, an dem alle ausgeschöpft sind. (110 Jahre!)</div>
+
+ <div><br>
+<b>Anordnung mit Wiederholung:</b> Sind die anzuordnenden Objekte nicht alle verschieden, dann zerfallen sie in Gruppen gleicher Objekte. In einem ersten Schritt unterscheiden wir gleiche Objekte und schreiben alle Permutationen untereinander. Wenn wir dann die k Objekte einer Gruppe wieder identifizieren, verschmelzen jeweils k! Zeilen (die die Gruppenmitglieder an denselben Positionen haben und außerhalb davon gleich sind).</div>
+
+ <div><br>
+Am Beispiel einer 50-Cent- und zweier 1-Euro-Münzen:</div>
+
+ <div class='in mt2'>
+<img src='img/wa_02.gif'></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Ein Zug verkehrt mit 4 Zweite-Klasse-Wagen, 2 Erste-Klasse-Wagen und 1 Speisewagen. Wie viel verschiedene Wagenreihenfolgen gibt es, wenn Wagen derselben Klasse nicht unterschieden werden?</div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>(4 + 2 + 1)!</div><div class='den'>4!<span class='p22'>2!</span>1!</div></div> = 105</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.3' class='box'>3</a> Kombinationen</b></div>
+
+ <div><br>
+Eine <b>Kombination</b> ist eine ungeordnete <b>Auswahl</b> vom Umfang k aus n verschiedenen Objekten. Bezogen auf eine feste Reihenfolge der Elemente, entspricht jede Auswahl einer Anordnung von k Einsen (ausgewählt) und n<span class='p22'>–</span>k Nullen (nicht ausgewählt):</div>
+
+ <div><br>
+<span class='p02'>•</span> Anzahl aller <b>Kombinationen</b> = <img src='img/wa_03.gif' style='vertical-align:-14px;'></div>
+
+ <div style='margin-top:5px; margin-left:233px;'>
+<img src='sym/uarr_g.gif'></div>
+ <div class='grau' style='margin-left:210px; font-size:11px;'>
+"n über k"</div>
+
+ <div><br>
+Bem: Die "n über k" heißen auch Binomialkoeffizienten, weil</div>
+
+ <div class='in'><br>
+<img src='img/wa_04.gif'></div>
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 5:</b> Bei einem Schachturnier mit 15 Teilnehmern muss jeder einmal als Weiß und einmal als Schwarz gegen jeden anderen spielen. Wie viel Spiele sind auszutragen?</div>
+
+ <div class='in'><br>
+<img src='img/wa_05.gif'></div>
+
+ <div><br>
+<b>Auswahl mit Wiederholung:</b> Es geht um eine ungeordnete Auswahl vom Umfang k aus einem Pool, in dem n verschiedene Objekte und zu jedem davon ausreichend gleiche vorhanden sind. Um eine Auswahl zu kodieren, gehen wir die n Gruppen in einer festen Reihenfolge durch, notieren eine Eins für jedes ausgewählte Objekt und eine Null als Trennzeichen.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Fritzchen holt sich 6 Stück aus einer Packung mit Ananas-, Orangen- und Zitronenbonbons. Wie viel Möglichkeiten hat er?</div>
+
+ <div class='in'><br>
+<img src='img/wa_06.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> WAHRSCHEINLICHKEIT UND HÄUFIGKEIT</b></div>
+
+ <div><br><br>
+<b><a name='B.1' class='box'>1</a> Zufallsexperiment und Ereignisse</b></div>
+
+ <div><br>
+Bei gleichen Rahmenbedingungen hat ein <b>determiniertes Experiment</b> immer den gleichen Ausgang, ein <b>Zufallsexperiment</b> wie das Würfeln hat verschiedene Ausgänge. Wann Rahmenbedingungen als gleich gelten (und was als Ausgang gilt), bestimmt ein meist unausgesprochener Konsens. Die Chance für einen bestimmten Ausgang, realisiert zu werden, muss jedenfalls gleich bleiben ("Würfel haben kein Gedächtnis").</div>
+
+ <div><br>
+<b>Elementarereignisse</b> sind Ausgänge derart, dass bei jeder Experimentausführung genau einer davon eintritt und die <b>Ereignisse,</b> die von Interesse sind, als Vereinigung von Elementarereignissen darstellbar sind. Ereignisse A, B sind also Teilmengen vom <b>sicheren Ereignis &Omega;,</b> der Vereinigung aller Elementarereignisse, und bilden als solche eine Boole'sche Algebra mit den Operatoren:</div>
+
+ <div class='in'><br>
+Komplement: <span class='ol'>A</span> = Ereignis, dass A nicht eintritt <span class='grau'>(d.h. Ausgang des Experiments ist ein Elementarereignis, das nicht in A liegt)</span></div>
+
+ <div class='in mt1'>
+Durchschnitt: A <img src='sym/cap.gif'> B = Ereignis, dass A und B eintritt <span class='grau'>(d.h. Ausgang des Experiments ist ein Elementarereignis, das in A und B liegt)</span></div>
+
+ <div class='in mt1'>
+Vereinigung: A <img src='sym/cup.gif'> B = Ereignis, dass A oder B eintritt <span class='grau'>(d.h. Ausgang des Experiments ist ein Elementarereignis, das in A oder B liegt)</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.2' class='box'>2</a> Wahrscheinlichkeit nach Laplace</b></div>
+
+ <div><br>
+Im Folgenden geht es um Experimente mit nur endlich vielen Elementarereignissen. Wenn diese – etwa aus Symmetrieüberlegungen heraus – gleich wahrscheinlich sind, sprechen wir von einem <b>Laplace-Experiment</b> und definieren die <b>Wahrscheinlichkeit</b> eines Ereignisses A so:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>P(A) :</b>= <div class='frac'><div class='num'><b>|A|</b></div><div class='den'><b>|&Omega;|</b></div></div> = <div class='frac'><div class='num'>Anzahl für A günstiger Fälle</div><div class='den'>Anzahl möglicher Fälle</div></div></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Ein Würfel wird 2-mal geworfen. Wie groß ist die Wahrscheinlichkeit, dass die Augensumme zweistellig ist?</div>
+
+ <div class='in mt2'>
+<img src='img/wa_07.gif' style='float:left; margin-right:40px;'>
+
+ <div><br>
+Elementarereignisse = (gleich wahrscheinliche) 2-Tupel mit Zahlen 1-6<br><br>
+
+A = Ereignis, dass Augensumme zweistellig ist<br><br>
+
+P(A) = <div class='frac'><div class='num'>|A|</div><div class='den'>|&Omega;|</div></div> = <div class='frac'><div class='num'>6</div><div class='den'>36</div></div> = 0,17</div></div>
+
+ <div style='clear:both;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.3' class='box'>3</a> Gesetz der großen Zahlen</b></div>
+
+ <div><br>
+Wenn wir ein Zufallsexperiment unter gleichen Rahmenbedingungen mehrmals ausführen und mitzählen, wie oft ein Ereignis A eintritt, bekommen wir die <b>relative Häufigkeit</b> des Ereignisses A in dieser Versuchsreihe als:</div>
+
+ <div class='in'><br>
+h(A) <span class='ldf'>:</span>= <div class='frac'><div class='num'>wie oft A eingetreten ist</div><div class='den'>Anzahl der Versuche</div></div></div>
+
+ <div><br>
+Der Sinn der Wahrscheinlichkeit erschließt sich aus dem <b>Gesetz der großen Zahlen,</b> wonach mit zunehmendem Versuchsumfang</div>
+
+ <div class='in'><br>
+h(A) <sup style='position:relative; bottom:10px;'>f.s.</sup><img src='sym/rarr.svg' class='bo1 p22' style='margin-left:-17px;'> P(A).</div>
+
+ <div><br>
+Was "fast sicher" bedeuten soll, illustrieren wir am Münzwurf-Experiment und dem Ereignis A<span class='p44'>=</span>"<span class='p01'>Kopf</span>". Wir wählen ein &epsilon;<span class='p44'>&gt;</span>0 und stellen uns vor, dass sich das Universum bei jedem Wurf spaltet, wobei im einen "<span class='p01'>Kopf</span>" und im anderen "Zahl" eintritt. Nach n Würfen haben wir 2<sup>n</sup> Paralleluniversen und schauen, wie groß der Prozentsatz derer ist, in denen</div>
+
+ <div class='in'><br>
+|h(A) – P(A| &lt; &epsilon;.</div>
+
+ <div><br>
+Dieser Prozentsatz läuft mit zunehmendem n gegen 100% (je kleiner &epsilon; &gt; 0 gewählt wurde, umso langsamer, aber letztlich immer).</div>
+
+ <div><br>
+Beispiel: &epsilon; = 0,15</div>
+
+ <div class='in' style='margin-top:-13px;'>
+<img src='img/wa_08.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> WAHRSCHEINLICHKEITSALGEBRA</b></div>
+
+ <div><br>
+Wo keine Wahrscheinlichkeiten bekannt sind, müssen wir sie kombinatorisch bestimmen oder über Versuchsreihen schätzen. Darüber hinaus gibt es <b>Wahrscheinlichkeitsregeln,</b> die aus der Laplace-Definition folgen und es ermöglichen, aus bekannten Wahrscheinlichkeiten weitere zu berechnen:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Additionsregel: P(A <img src='sym/ccup.gif'> B)</b> = <b>P(A) + P(B) – P(A <img src='sym/ccap.gif'> B)</b></div>
+
+ <div><br>
+Beweis: |A <img src='sym/cup.gif'> B| = |A| + |B| – |A <img src='sym/cap.gif'> B| &nbsp; |:|&Omega;|</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Subtraktionsregel: P(A\B)</b> = <b>P(A) – P(A <img src='sym/ccap.gif'> B)</b></div>
+
+ <div><br>
+Beweis: |A\B| = |A| – |A <img src='sym/cap.gif'> B| &nbsp; |:|&Omega;|</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Komplementregel: P(<span class='ol'>A</span>)</b> = <b>1 – P(A)</b></div>
+
+ <div><br>
+Beweis: |<span class='ol'>A</span>| = |&Omega;| – |A| &nbsp; |:|&Omega;|</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b> Bei einer Produktionsserie von Elektromotoren haben sich Fehler eingeschlichen: Bei 5% der Motoren ist der Anker nicht in Ordnung, 9% haben defekte Bürsten und 2% haben beide Fehler. Wie groß ist die Wahrscheinlichkeit, dass ein zufällig ausgewählter Motor <b>a)</b> mindestens einen Fehler aufweist, <b>b)</b> nur defekte Bürsten hat, <b>c)</b> einen einwandfreien Anker hat?</div>
+
+ <div class='in'><br>
+A = Ereignis, dass Anker defekt<br>
+B = Ereignis, dass Bürsten defekt</div>
+
+ <div class='in'><br>
+Geg: P(A) = 0,05 &nbsp;&nbsp;&nbsp; P(B) = 0,09 &nbsp;&nbsp;&nbsp; P(A <img src='sym/cap.gif'> B) = 0,02</div>
+
+ <div class='in'><br>
+<b>a)</b> P(A <img src='sym/cup.gif'> B) = P(A) + P(B) –  P(A <img src='sym/cap.gif'> B) = 0,12</div>
+
+ <div class='in'><br>
+<b>b)</b> P(B\A) = P(B) –  P(A <img src='sym/cap.gif'> B) = 0,07</div>
+
+ <div class='in'><br>
+<b>c)</b> P(<span class='ol'>A</span>) = 1 – P(A) = 0,95</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> BEDINGTE WAHRSCHEINLICHKEIT UND UNABHÄNGIGKEIT</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Die bedingte Wahrscheinlichkeit</b></div>
+
+ <div><br>
+... bewertet die Wahrscheinlichkeit für ein Ereignis A mit dem Wissen (= unter der Bedingung), dass ein Ereignis B eintritt:</div>
+
+ <div><br>
+<img src='img/wa_09.gif'></div>
+
+ <div style='margin-top:-10px; margin-left:37px;'>
+<img src='sym/uarr_g.gif'></div>
+ <div class='grau' style='margin-left:20px; font-size:11px;'>
+"unter"</div>
+
+ <div><br>
+Für die (im Hinblick auf das Gesetz der großen Zahlen) zugehörige relative Häufigkeit von A heißt das, dass alle Versuche, bei denen B nicht eintritt, aus der Versuchsreihe gestrichen und mit dem Rest wie gehabt verfahren wird.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 10:</b> Ein Würfel wird geworfen und man erhält die Information, dass kein 6er gewürfelt wurde. Wie groß ist jetzt die Wahrscheinlichkeit, dass die Augenzahl gerade ist?</div>
+
+ <div class='in'><br>
+A = Ereignis, dass Augenzahl gerade ist = {2, 4, 6}<br>
+B = Ereignis, dass Augenzahl nicht 6 ist = {1, 2, 3, 4, 5}</div>
+
+ <div class='in'><br>
+P(A|B) = <div class='frac'><div class='num'>|A <img src='sym/cap.gif'> B|</div><div class='den'>|B|</div></div> = <div class='frac'><div class='num'>2</div><div class='den'>5</div></div> = 0,40</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> Die Multiplikationsregel</b></div>
+
+ <div><br>
+... ist die nach P(A<img src='sym/cap.gif' class='p22'>B) aufgelöste Definition der bedingten Wahrscheinlichkeit P(A|B) bzw. P(B|A):</div>
+
+ <div><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<span class='p02'>•</span> <b>P(A <img src='sym/ccap.gif'> B)</b>
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+<b>P(A|B)<span class='p20'>P(B)</span></b><br><br>
+<b>P(B|A)<span class='p20'>P(A)</span></b>
+    </td>
+   </tr>
+  </table></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 11:</b> Anton und Berta besuchen dieselbe Klasse. Anton fehlt mit einer Wahrscheinlichkeit von 20%, Berta mit einer Wahrscheinlichkeit von 15%. Die Wahrscheinlichkeit, dass Anton fehlt, wenn Berta fehlt, liegt bei 40%. Mit welcher Wahrscheinlichkeit sind beide anwesend?</div>
+
+ <div class='in'><br>
+A = Ereignis, dass Anton fehlt<br>
+B = Ereignis, dass Berta fehlt</div>
+
+ <div class='in'><br>
+Geg: P(A) = 0,20 &nbsp;&nbsp;&nbsp; P(B) = 0,15 &nbsp;&nbsp;&nbsp; P(A|B) = 0,40</div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> Wir berechnen zuerst das Ereignis, dass Anton oder Berta fehlt.</div>
+
+ <div class='in'><br>
+P(A <img src='sym/cup.gif'> B) = P(A) + P(B) – P(A <img src='sym/cap.gif'> B) = P(A) + P(B) – P(A|B)<span class='p20'>P</span>(B) = 0,29</div>
+
+ <div class='in'><br>
+<b>Schritt 2:</b> Das gesuchte Ereignis ist dann das Komplement davon.</div>
+
+ <div class='in'><br>
+P("beide anwesend") = 1 – 0,29 = 0,71</div>
+
+ <div><br>
+Bem: Wir können auch unmittelbar nach dem gesuchten Ereignis fragen und die De Morgan'schen Gesetze anwenden.</div>
+
+ <div class='in'><br>
+P(<span class='ol'>A</span> <img src='sym/cap.gif'> <span class='ol'>B</span>) = P(<span class='ol'>A &nbsp;&nbsp; <img src='sym/cup.gif' style='position:relative; margin-left:-15px; margin-right:5px;'>B</span>) = 1 – P(A <img src='sym/cup.gif'> B) = ...</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.3' class='box'>3</a> Unabhängige Ereignisse</b></div>
+
+ <div><br>
+Zwei Ereignisse heißen <b>unabhängig,</b> wenn das Wissen um das Eintreten des einen nichts an der Wahrscheinlichkeitsbewertung des anderen ändert, was dann automatisch auch in umgekehrter Richtung gilt:</div>
+
+ <div class='in'><br>
+P(A|B) = P(A) &nbsp;bzw.&nbsp; P(B|A) = P(B)</div>
+
+ <div><br>
+Die <b>Multiplikationsregel für unabhängige Ereignisse</b> lautet dementsprechend:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>P(A <img src='sym/ccap.gif'> B)</b> = <b>P(A)P(B)</b></div>
+
+ <div><br>
+Bem: Die Multiplikationsregel ist selbst ein Kriterium für Unabhängigkeit, d.h. die Unabhängigkeit mehrerer Ereignisse wird auch so definiert, dass für alle Durchschnitte die Wahrscheinlichkeit das Produkt der Einzelwahrscheinlichkeiten sein muss.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 12:</b> Ein Würfel wird 2-mal geworfen. A ist das Ereignis, dass die Augensumme zweistellig ist, und B das Ereignis, dass die erste Augenzahl <b>a)</b> 2-4, <b>b)</b> 3-5, <b>c)</b> 4-6 ist. Bestimme die bedingten Wahrscheinlichkeiten und beantworte, ob A und B unabhängig sind.</div>
+
+ <div class='in'><br>
+<img src='img/wa_10.gif'></div>
+
+ <div style='margin-top:10px; margin-left:35px;'>
+P(A|B) = <div class='frac'><div class='num'>1</div><div class='den'>18</div></div> &lt; P(A)<span style='margin-left:84px;'>P(A|B) =</span> <div class='frac'><div class='num'>3</div><div class='den'>18</div></div> = P(A)<span style='margin-left:84px;'>P(A|B) =</span> <div class='frac'><div class='num'>6</div><div class='den'>18</div></div> &gt; P(A)</div>
+
+ <div style='margin-top:10px; margin-left:35px;'>
+P(B|A) = <div class='frac'><div class='num'>1</div><div class='den'>6</div></div> &lt; P(B)<span style='margin-left:93px;'>P(B|A) =</span> <div class='frac'><div class='num'>3</div><div class='den'>6</div></div> = P(B)<span style='margin-left:93px;'>P(B|A) =</span> <div class='frac'><div class='num'>6</div><div class='den'>6</div></div> &gt; P(B)</div>
+
+ <div style='margin-top:10px; margin-left:34px;'>
+<img src='sym/rarr2.svg' class='p06'> A, B negativ gekoppelt
+ <span style='margin-left:30px;'>
+<img src='sym/rarr2.svg' class='p06'> A, B unabhängig</span>
+ <span style='margin-left:74px;'>
+<img src='sym/rarr2.svg' class='p06'> A, B positiv gekoppelt</span></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='E' class='box'>E</a> ZERLEGUNGEN UND BAUMDIAGRAMME</b></div>
+
+ <div><br><br>
+<b><a name='E.1' class='box'>1</a> Zerlegungen von &Omega;</b></div>
+
+ <div><br>
+Eine <b>Zerlegnung von &Omega;</b> sind Ereignisse, die sich nirgends überdecken und deren Vereinigung &Omega; ergibt. Die Elementarereignisse sind gewissermaßen die feinste Zerlegung, das andere Extrem ist eine Zerlegung in ein Ereignis und sein Gegenereignis.</div>
+
+ <div class='in mt2'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/wa_11.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+Bilden beispielsweise B<sub>1</sub>, B<sub>2</sub>, B<sub>3</sub> eine Zerlegung von &Omega;, dann folgt für ein beliebiges Ereignis A:<br><br>
+
+A = (A <img src='sym/cap.gif'> B<sub>1</sub>) <img src='sym/cup.gif'> (A <img src='sym/cap.gif'> B<sub>2</sub>) <img src='sym/cup.gif'> (A <img src='sym/cap.gif'> B<sub>3</sub>)<br><br>
+
+Der <b>Satz von der totalen Wahrscheinlichkeit</b> folgt daraus über Additions- und Multiplikationsregel:<br><br>
+
+<span class='p02'>•</span> P(A) = P(A|B<sub>1</sub>)<span class='p20'>P</span>(B<sub>1</sub>) + P(A|B<sub>2</sub>)<span class='p20'>P</span>(B<sub>2</sub>) + P(A|B<sub>3</sub>)<span class='p20'>P</span>(B<sub>3</sub>)
+    </td>
+   </tr>
+  </table>
+ </div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 13:</b> Für das Bürgermeisteramt gibt es 4 Kandidaten, deren Wahlchancen bei 30%, 25%, 10% und 35% liegen. Die Wahrscheinlichkeit, dass sie als Bürgermeister ein bestimmtes Projekt realisieren, liegt bei 40%, 20%, 80%, 60%. Mit welcher Wahrscheinlichkeit wird das Projekt realisiert?</div>
+
+ <div class='in'><br>
+A = Ereignis, dass das Projekt realisiert wird<br>
+B<sub>i</sub> = Ereignis, dass der i-te Kandidat Bürgermeister wird</div>
+
+ <div class='in'><br>
+Geg: P(B<sub>1</sub>) = 0,30 &nbsp;&nbsp;&nbsp; P(A|B<sub>1</sub>) = 0,40<br>
+ <span style='margin-left:36px;'>
+P(B<sub>2</sub>) = 0,25 &nbsp;&nbsp;&nbsp; P(A|B<sub>2</sub>) = 0,20</span><br>
+ <span style='margin-left:36px;'>
+P(B<sub>3</sub>) = 0,10 &nbsp;&nbsp;&nbsp; P(A|B<sub>3</sub>) = 0,80</span><br>
+ <span style='margin-left:36px;'>
+P(B<sub>4</sub>) = 0,35 &nbsp;&nbsp;&nbsp; P(A|B<sub>4</sub>) = 0,60</span></div>
+
+ <div class='in'><br>
+Ges: P(A) = P(A|B<sub>1</sub>)<span class='p20'>P</span>(B<sub>1</sub>) + P(A|B<sub>2</sub>)<span class='p20'>P</span>(B<sub>2</sub>) + P(A|B<sub>3</sub>)<span class='p20'>P</span>(B<sub>3</sub>) + P(A|B<sub>4</sub>)<span class='p20'>P</span>(B<sub>4</sub>) = 0,46</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.2' class='box'>2</a> Der Satz von Bayes</b></div>
+
+ <div><br>
+Der <b>Satz von Bayes</b> beantwortet in der obigen Situation die Frage nach den umgedrehten bedingten Wahrscheinlichkeiten:</div>
+
+ <div><br>
+<span class='p02'>•</span> P(B<sub>i</sub>|A) = <div class='frac'><div class='num'>P(B<sub>i</sub> <img src='sym/cap.gif'> A)</div><div class='den'>P(A)</div></div> = <div class='frac'><div class='num'>P(A|B<sub>i</sub>)<span class='p20'>P</span>(B<sub>i</sub>)</div><div class='den'>totale Wahrscheinlichkeit</div></div></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 14:</b> Ein Angestellter fährt in 50% aller Fälle mit dem Auto zur Arbeit, in 20% aller Fälle mit dem Bike und in 30% aller Fälle mit dem Citybus. Bei 14% aller Autofahrten, 9% aller Bikefahrten und 4% aller Citybusfahrten verspätet er sich. Wie groß ist die Wahrscheinlichkeit, dass er mit dem Auto gefahren ist, wenn er verspätet zur Arbeit kommt?</div>
+
+ <div class='in'><br>
+A = Ereignis, dass der Angestellte verspätet zur Arbeit kommt<br>
+B<sub>1</sub>, B<sub>2</sub>, B<sub>3</sub> = Ereignis, dass er mit dem Auto, Bike, Citybus fährt</div>
+
+ <div class='in'><br>
+Geg: P(B<sub>1</sub>) = 0,50 &nbsp;&nbsp;&nbsp; P(A|B<sub>1</sub>) = 0,14<br>
+ <span style='margin-left:36px;'>
+P(B<sub>2</sub>) = 0,20 &nbsp;&nbsp;&nbsp; P(A|B<sub>2</sub>) = 0,09</span><br>
+ <span style='margin-left:36px;'>
+P(B<sub>3</sub>) = 0,30 &nbsp;&nbsp;&nbsp; P(A|B<sub>3</sub>) = 0,04</span></div>
+
+ <div class='in'><br>
+Ges: P(B<sub>1</sub>|A) = <div class='frac'><div class='num'>P(B<sub>1</sub> <img src='sym/cap.gif'> A)</div><div class='den'>P(A)</div></div> = <div class='frac'><div class='num'>P(A|B<sub>1</sub>)<span class='p20'>P</span>(B<sub>1</sub>)</div><div class='den'>P(A)</div></div> = (<span class='to4'>*</span>)</div>
+
+ <div class='in'><br>
+Satz von der totalen Wahrscheinlichkeit: P(A) = P(A|B<sub>1</sub>)<span class='p20'>P</span>(B<sub>1</sub>) + P(A|B<sub>2</sub>)<span class='p20'>P</span>(B<sub>2</sub>) + P(A|B<sub>3</sub>)<span class='p20'>P</span>(B<sub>3</sub>) = 0,10</div>
+
+ <div class='in'><br>
+(<span class='to4'>*</span>) = <div class='frac'><div class='num'>0,14·0,50</div><div class='den'>0,10</div></div> = 0,70</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.3' class='box'>3</a> Baumdiagramme</b></div>
+
+ <div><br>
+Wenn wir über eine erste Zerlegung von &Omega; eine zweite legen, bilden die Schnittmengen eine neue, feinere Zerlegung. Zum Beispiel:</div>
+
+ <div class='in'><br>
+<img src='img/wa_12.gif'></div>
+
+ <div><br>
+Sobald die Zerlegungsteile so fein sind, dass wir ein Ereignis A damit zusammenbauen können, ist wie gehabt:</div>
+
+ <div class='in'><br>
+P(A) = P(1<sub>b</sub><img src='sym/cap.gif' class='p22'>2<sub>y</sub>) + P(1<sub>c</sub><img src='sym/cap.gif' class='p22'>2<sub>y</sub>) = P(2<sub>y</sub>|1<sub>b</sub>)<span class='p20'>P</span>(1<sub>b</sub>) + P(2<sub>y</sub>|1<sub>c</sub>)<span class='p20'>P</span>(1<sub>c</sub>)</div>
+
+ <div><br>
+Typischerweise tritt diese Situation beim <b>mehrstufigen Experiment</b> auf, wo jede Experimentstufe eine Zerlegung einbringt. Zur Veranschaulichung hat sich das <b>Baumdiagramm</b> bewährt, bei dem die Zerlegungsteile zu "Pfaden" werden und P(A) so berechnet wird, dass die Wahrscheinlichkeiten längs der zu A gehörigen Pfade multipliziert und die Ergebnisse addiert werden:</div>
+
+ <div class='in'><br>
+<img src='img/wa_13.gif'></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 15:</b> Eine Urne enthält 3 rote, 1 grüne und 4 blaue Kugeln. Zuerst wird eine Kugel gezogen und beiseite gelegt, dann eine zweite. Wie groß ist die Wahrscheinlichkeit, dass beide Kugeln dieselbe Farbe haben?</div>
+
+ <div class='in'><br>
+i<sub>r</sub>, i<sub>g</sub>, i<sub>b</sub> = Ereignis, dass i-ter Zug eine rote, grüne, blaue Kugel ergibt</div>
+
+ <div class='in' style='margin-top:24px;'>
+<img src='img/wa_14.gif'></div>
+
+ <div class='in'><br>
+P("gleichfarbig") = <div class='frac'><div class='num'>3</div><div class='den'>8</div></div><span class='p22'>·</span><div class='frac'><div class='num'>2</div><div class='den'>7</div></div> + <div class='frac'><div class='num'>4</div><div class='den'>8</div></div><span class='p22'>·</span><div class='frac'><div class='num'>3</div><div class='den'>7</div></div> = 0,32</div>
+
+ <div class='grau'><br>
+Weitere Lösungsvariante (kombinatorisch):</div>
+
+ <div class='in grau'><br>
+Wie nummerieren die Kugeln, sodass 1-3 = rot, 4 = grün, 5-8 = blau</div>
+
+ <div class='in grau'><br>
+Elementarereignisse = (gleich wahrscheinliche) 2-Tupel mit verschiedenen Zahlen 1-8</div>
+
+ <div class='in grau'><br>
+P("gleichfarbig") = <div class='frac'><div class='num'>3·2 + 4·3</div><div class='den'>8·7</div></div> = 0,32</div>
+
+ </div></body>
+ </html>

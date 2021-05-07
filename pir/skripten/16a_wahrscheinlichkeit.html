@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Wahrscheinlichkeitsrechnung</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>Anhang zu: WAHRSCHEINLICHKEITSRECHNUNG</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BINOMSCHER LEHRSATZ UND PASCAL'SCHES DREIECK?</b></div>
+
+ <div><br>
+Die n-te Potenz eines Binoms entspricht n Positionen, die alle mit diesem Binom besetzt und miteinander multipliziert werden:</div>
+
+ <div class='grau mt1'>
+<sub style='margin-left:95px;'>Pos 1</sub><sub style='margin-left:15px;'>Pos 2</sub><sub style='margin-left:34px;'>Pos n</sub></div>
+
+ <div style='margin-top:5px;'>
+<img src='sym/darr_g.gif' style='margin-left:105px;'><img src='sym/darr_g.gif' style='margin-left:39px;'><img src='sym/darr_g.gif' style='margin-left:58px;'></div>
+
+ <div class='in'>
+(x + y)<sup>n</sup> = (x + y)(x + y)<span class='p22'>...</span>(x + y)</div>
+
+ <div><br>
+Ausmultipliziert ist das die Summe aller Produkte, die von jeder Position entweder x oder y als Faktor beziehen. Das Produkt x<sup>n–k</sup>y<sup>k</sup> taucht in dieser Summe so oft auf, wie es Möglichkeiten gibt, aus n Positionen diejenigen auszwählen, die das y liefern. Also:</div>
+
+  <div class='in'><br>
+<img src='img/wa_a00.gif'></div>
+
+ <div><br>
+Wenn wir die bloßen Koeffizienten in Form zentrierter Zeilen für n = 0<span class='p02'>,</span>1<span class='p02'>,</span>2<span class='p02'>,</span>... untereinander schreiben, erhalten wir das "Pascal'sche Dreieck".</div>
+
+  <div class='in'><br>
+<img src='img/wa_a01.gif'></div>
+
+ <div><br>
+Am schnellsten geht das, indem wir zwei Schenkel aus 1en und dann die Summe benachbarter Zahlen zwischen sie in die Zeile darunter schreiben.</div>
+
+ <div class='in'><br>
+<b>Beweisvariante 1:</b> algebraisch</div>
+
+ <div class='in'><br>
+<img src='img/wa_a02.gif'></div>
+
+ <div class='in'><br>
+<b>Beweisvariante 2:</b> kombinatorisch</div>
+
+ <div class='in mt1'>
+<img src='img/wa_a03.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>AXIOMATISCHE WAHRSCHEINLICHKEITSRECHNUNG?</b></div>
+
+ <div><br>
+Im Skriptum haben wir die Wahrscheinlichkeitsregeln aus der Laplace-Definition gefolgert. Wir hätten auch von der Additionsregel für zwei sich <i>nicht überdeckende</i> Ereignisse ausgehen können:</div>
+
+ <div class='in'><br>
+P(A <img src='sym/cup.gif'> B) = P(A) + P(B)</div>
+
+ <div><br>
+Daraus folgt wegen</div>
+
+ <div class='in'><br>
+B = (B\A) <img src='sym/cup.gif'> (A <img src='sym/cap.gif'> B)</div>
+
+ <div><br>
+die Subtraktionsregel (mit der Komplementregel als Spezialfall) und wegen</div>
+
+ <div class='in'><br>
+A <img src='sym/cup.gif'> B = A <img src='sym/cup.gif'> (B\A)</div>
+
+ <div><br>
+die allgemeine Additionsregel.</div>
+
+ <div><br>
+In einem weiteren Schritt wird die Wahrscheinlichkeit soweit ihrer Bedeutung entkleidet und auf unendlich viele Elementarereignisse verallgemeinert, dass nur mehr eine abstrakte Wahrscheinlichkeitsalgebra bleibt: Ein <b>Wahrscheinlichkeitsmaß nach Kolmogorow</b> ist eine Funktion</div>
+
+ <div class='in'><br>
+P: {<span class='p22'>Ereignisse</span>} <img src='sym/rarr.svg' class='bo1'> [0, 1]</div>
+
+ <div><br>
+mit</div>
+
+ <div class='in'><br>
+P(&Omega;) = 1</div>
+
+ <div><br>
+und der Additionsregel für abzählbar viele Ereignisse A<sub>1</sub>, A<sub>2</sub> ..., die sich nirgends überdecken:</div>
+
+ <div class='in'><br>
+P(A<sub>1</sub> <img src='sym/cup.gif'> A<sub>2</sub> <img src='sym/cup.gif'> ...) = P(A<sub>1</sub>) + P(A<sub>2</sub>) + ...</div>
+
+ <div><br>
+Wenn &Omega; überabzählbar ist und <i>alle</i> Teilmengen von &Omega; als Ereignisse gelten, gibt es keine derartige Funktion. Daher reduziert man Ereignismengen auf sogenannte &sigma;-Algebren, die &Omega; enthalten und im Hinblick auf abzählbare Vereinigungen und Komplementbildung abgeschlossen sind.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>WAS IST A|B FÜR EIN EREIGNIS? REGELN DAZU?</b></div>
+
+ <div><br>
+Ein Ereignis A|B gibt es nicht, weil "|" keinen Mengenoperator bezeichnet, sondern als P(.|B) ein Wahrscheinlichkeitsmaß. Das Ereignis, um das es geht, ist A<img src='sym/cap.gif' class='p22'>B, das aber von P(.) und P(.|B) unterschiedlich bewertet wird:</div>
+
+ <div class='in'><br>
+P(A<img src='sym/cap.gif' class='p22'>B) = P(A<img src='sym/cap.gif' class='p22'>B|<span class='rot'>&Omega;<span class='p22'>=</span>100%</span>) <img src='sym/harr2.svg' class='p66'> P(A|B) = P(A<img src='sym/cap.gif' class='p22'>B|<span class='rot'>B<span class='p22'>=</span>100%</span>)</div>
+
+ <div><br>
+Da P(.|B) genauso ein Wahrscheinlichkeitsmaß ist wie P(.), gelten auch dieselben Regeln:</div>
+
+ <div class='in'><br>
+Additionsregel: P(A<sub>1</sub><img src='sym/cup.gif' class='p22'>A<sub>2</sub>|B) = P(A<sub>1</sub>|B) + P(A<sub>2</sub>|B) – P(A<sub>1</sub><img src='sym/cap.gif' class='p22'>A<sub>2</sub>|B)</div>
+
+ <div class='in'><br>
+Subtraktionsregel: P(A<sub>2</sub>\A<sub>1</sub>|B) = P(A<sub>2</sub>|B) – P(A<sub>1</sub><img src='sym/cap.gif' class='p22'>A<sub>2</sub>|B)</div>
+
+ <div class='in'><br>
+Komplementregel: P(<span class='ol'>A</span>|B) = 1 – P(A|B)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>STRUKTURELLE UNABHÄNGIGKEIT?</b></div>
+
+ <div><br>
+Ein <b>Zusammenschluss unabhängiger Experimente</b> liegt vor, wenn sich die Einzelexperimente nicht gegenseitig beeinflussen. Ereignisse, die zu verschiedenen Einzelexperimenten gehören und zu solchen des Gesamtexperiments werden, indem im Rahmen des Gesamtexperiments nur auf das Ergebnis des jeweiligen Einzelexperiments geschaut wird, behalten ihre Wahrscheinlichkeiten und sind unabhängig:</div>
+
+ <div class='in'><br>
+<img src='img/wa_a04.gif' style='float:left;'>
+
+ <div style='position:relative; right:90px; top:90px;'>
+P(A) = P(1<sub>a</sub>) = P(1<sub>a</sub>|2<sub>b</sub>)<br><br>
+P(B) = P(2<sub>b</sub>) = P(2<sub>b</sub>|1<sub>b</sub>)</div></div>
+
+ <div style='clear:both;'></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe:</b> Für einen gezinkten Würfel liegt die Wahrscheinlichkeit, dass bei 2-maligem Würfeln zumindest ein 6er gewürfelt wird, bei 36%. Wie groß ist die Wahrscheinlichkeit, bei nur einem Wurf einen 6er zu würfeln?</div>
+
+ <div class='in'><br>
+A = Ereignis, dass bei einem Einzelwurf ein 6er gewürfelt wird<br>
+i<sub>a</sub> = Ereignis, dass beim i-ten Wurf im Rahmen eines Doppelwurfs ein 6er gewürfelt wird</div>
+
+ <div class='in'><br>
+Geg: P(1<sub>a</sub> <img src='sym/cup.gif'> 2<sub>a</sub>) = 0,36</div>
+
+ <div class='in'><br>
+Ges: P(A) = P(1<sub>a</sub>) = P(2<sub>a</sub>) = p</div>
+
+ <div class='in'><br>
+P(1<sub>a</sub> <img src='sym/cup.gif'> 2<sub>a</sub>) = P(1<sub>a</sub>) + P(2<sub>a</sub>) – P(1<sub>a</sub> <img src='sym/cap.gif'> 2<sub>a</sub>) = P(1<sub>a</sub>) + P(2<sub>a</sub>) – P(1<sub>a</sub>)<span class='p20'>P</span>(2<sub>a</sub>)</div>
+
+ <div class='in'><br>
+p<sup>2</sup> – 2p + 0,36 = 0 <img src='sym/rarr2.svg' class='p66'> p<sub>1,2</sub> = <div class='frac to1'><div class='num'>2 ± <span class='r1t'>&radic;</span><span class='rad'>(–2)<sup>2</sup> – 4·0,36</span></div><div class='den'>2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17'>1,8 <img src='sym/flash.svg' class='to3'></span><span class='to17' style='margin-left:-35px;'>0,20</span></div>
+
+ <div class='grau'><br>
+Weitere Lösungsvariante:</div>
+
+ <div class='in'><br>
+<img src='img/wa_a05.gif'></div>
+
+ </div></body>
+ </html>

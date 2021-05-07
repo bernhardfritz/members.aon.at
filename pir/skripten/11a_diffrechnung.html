@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Differenzialrechnung</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>Anhang zu: DIFFERENZIALRECHNUNG</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>EULERSCHE ZAHL: KONTINUIERLICHE VERZINSUNG?</b></div>
+
+ <div><br>
+Der <i>nominelle</i> Jahreszinssatz sagt, dass die Zinsen m-mal im Jahr berechnet und kapitalisiert werden, jeweils mit dem Zinssatz:</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>i<sub>nom</div><div class='den'>m</div></div></div>
+
+ <div class='mt1'>
+Für m <img src='sym/rarr.svg' class='bo1'> &infin; ergibt das eine <i>kontinuierliche</i> Verzinsung, die sich nicht mehr mit Kapitalisierungszeitpunkten herumschlagen muss:</div>
+
+ <div class='in'><br>
+<img src='img/di_a00.gif'></div>
+
+ <div><br>
+Kontinuierliche Verzinsung können wir auch mit dem Prozentsatz i<sub>eff</sub> formulieren, um den das Kapital jährlich wächst:</div>
+
+ <div class='in'><br>
+y(t) = K<sub>0</sub>e<sup>i<sub style='font-size:0.9em; letter-spacing:-0.1em; vertical-align:1px; margin-right:1px;'>nom</sub>t</sup> = <span class='ws4'>K<sub>0</sub>(1 + i<sub>eff</sub>)<sup>t</sup></span> <img src='sym/rarr2.svg' class='p66'> e<sup>i<sub style='font-size:0.9em; letter-spacing:-0.1em; vertical-align:1px;'>nom</sub></sup> = 1<span class='ws4'> + i<sub>eff</sub></span></div>
+
+ <div><br>
+Im Skriptum haben wir die Exponentialfunktion an der Stelle 0 linearisiert (Aufgabe 3). Für Zinssätze, die typischerweise klein sind, heißt das:</div>
+
+ <div class='in'><br>
+e<sup>i<sub style='font-size:0.9em; letter-spacing:-0.1em; vertical-align:1px;'>nom</sub></sup> &asymp; <span class='ws4'>i<sub>nom</sub> + 1</span>, also i<sub>nom</sub> &asymp; i<sub>eff</sub></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>FUNKTIONIERT DAS NEWTON-VERFAHREN BEI JEDEM STARTWERT?</b></div>
+
+ <div><br>
+Nein. Im folgenden Beispiel funktioniert das Newton-Verfahren nur, wenn der Startwert in ±]a, b[ liegt. Liegt der Startwert bei ±b, dann pendelt das Newton-Verfahren. Liegt der Startwert weiter außen, dann läuft es gegen ±&infin;. </div>
+
+ <div class='in'><br>
+<img src='img/di_a01.gif'></div>
+
+ <div class='in' style='line-height:20px; margin-top:-38px;'>
+a = 0,090589470<br>
+b = 2,850106248</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>WIE UNTERSCHEIDET MAN PUNKTE MIT WAAGRECHTER TANGENTE?</b></div>
+
+ <div><br>
+Bei Punkten mit waagrechter Tangente (vgl. die Potenzfunktionen bei x = 0) differenzieren wir solange, bis f<sup class='p20'>(n)</sup>(x) &ne; 0:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+n gerade
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:4px 8px 0px;'>
+    </td>
+    <td>
+f<sup class='p20'>(n)</sup>(x) &lt; 0 <img src='sym/rarr2.svg' class='p22'> Hochpunkt<br><br>
+f<sup class='p20'>(n)</sup>(x) &gt; 0 <img src='sym/rarr2.svg' class='p22'> Tiefpunkt
+    </td>
+    <td width='40'>
+&nbsp;
+    </td>
+    <td>
+n ungerade
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:4px 8px 0px;'>
+    </td>
+    <td>
+f<sup class='p20'>(n)</sup>(x) &lt; 0 <img src='sym/rarr2.svg' class='p22'> LR-Sattelpunkt<br><br>
+f<sup class='p20'>(n)</sup>(x) &gt; 0 <img src='sym/rarr2.svg' class='p22'> RL-Sattelpunkt
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>HERLEITUNG DER KRÜMMUNGSFORMEL?</b></div>
+
+ <div class='in'><br><table cellpadding='0' cellspacing='0'><tr><td>
+<img src='img/di_a02.gif' style='margin-right:40px;'></td><td><div>
+<img src='img/di_a03.gif'></div>
+
+ <div>
+______________________</div>
+
+ <div style='margin-top:14px;'>
+<img src='img/di_a04.gif'></div></td></tr></table></div>
+
+ <div class='in' style='margin-top:25px;'>
+<img src='img/di_a05.gif'></div>
+
+ <div class='in' style='margin-top:25px;'>
+<img src='img/di_a06.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>VERALLGEMEINERTE KETTENREGEL?</b></div>
+
+ <div><br>
+Wir beschränken uns auf h: <img src='sym/setR.gif'><sup>2</sup> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'> (die weitere Verallgemeinerung ist dann offensichtlich). Die Funktion</div>
+
+ <div class='in'><br>
+h<span class='aft'>o</span>(f<span class='p02'>,</span>g): <img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'></div>
+
+ <div><br>
+sagt, dass wir die parametrisierte Kurve (f(t)<span class='p02'>,</span>g(t)) in der xy-Ebene durchlaufen, um die Werte aus dem Funktionsgebirge zu schneiden, das h(x<span class='p02'>,</span>y) über der xy-Ebene aufbaut. Um diese Funktion abzuleiten, lassen wir t um &Delta;t anwachsen, entfernen uns um (<span class='p02'>f</span>'(t)&Delta;t<span class='p02'>,</span>g'(t)&Delta;t) längs der Tangente vom ursprünglichen Kurvenpunkt, lesen den Wertezuwachs auf der Tangentialebene ab und setzen ihn zu &Delta;t ins Verhältnis:</div>
+
+ <div class='in'><br>
+<img src='img/di_a07.gif'></div>
+
+ <div><br>
+Bem: Die Konstantenregeln, eigentlich Spezialfälle der Summen- und Produktregel, reichen damit schon, um letztere herzuleiten.</div>
+
+ <div class='in'><br>
+<img src='img/di_a08.gif'></div>
+
+ <div>
+und</div>
+
+ <div class='in'><br>
+<img src='img/di_a09.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>FORTPFLANZUNG VON UNSICHERHEITEN?</b></div>
+
+ <div><br>
+Die Messergebnisse (X<span class='p02'>,</span>Y) sollen unabhängig voneinander und normalverteilt um den wahren Wert streuen. Die Kurven gleicher Wahrscheinlichkeit sind dann achsenparallele Ellipsen mit dem wahren Wert als Mittelpunkt. Wenn den Messergebnissen, die innerhalb einer solchen Ellipse liegen, in Summe die Wahrscheinlichkeit &gamma; zukommt, sprechen wir vom &gamma;-Zufallsstreubereich.</div>
+
+ <div><br>
+Dass ein Messergebnis im &gamma;-Zufallsstreubereich liegt, bedeutet, dass diesselbe Ellipse um das Messergebnis herum den wahren Wert "einfängt". Das Intervall vom kleinsten zum größten Wert, den ein Funktionsgebirge über dieser Ellipse annimmt, fängt dementsprechend den wahren Funktionswert ein. Um den Rechenaufwand in Grenzen zu halten, betrachten wir statt dem Funktionsgebirge dessen Tangentialebene im Messpunkt.</div>
+
+ <div><br>
+Kreis mit Radius a in y-Richtung skaliert, sodass a <img src='sym/rarr.svg' class='bo1'> b, ergibt Ellispe mit Halbachsen a (= &Delta;x) und b (= &Delta;y):</div>
+
+ <div class='in'><br>
+Kreis: x<sup>2</sup> + y<sup>2</sup> = a<sup>2</sup> <img src='sym/rarr2.svg' class='p66'> y = ±<span class='r1t'>&radic;</span><span class='rad'>a<sup>2</sup> – x<sup>2</sup></span> <img src='sym/rarr2.svg' class='p66'> Ellipse: y = ±<div class='frac p22'><div class='num'>b</div><div class='den'>a</div></div><span class='r1t'>&radic;</span><span class='rad'>a<sup>2</sup> – x<sup>2</sup></span></div>
+
+ <div><br>
+In welchem Punkt (x<span class='p02'>,</span>y) dieser Ellipse hat die Ebene z = k<sub>1</sub>x + k<sub>2</sub>y ihren größten Wert? Dort, wo die Höhenlinien der Ebene zugleich Tangenten an die Ellipse sind. Die Höhenlinien wiederum stehen normal auf den Gradientenvektor (k<sub>1</sub><span class='p02'>,</span>k<sub>2</sub>), also:</div>
+
+ <div class='in'><br>
+–<div class='frac p20'><div class='num'>k<sub>1</sub></div><div class='den'>k<sub>2</sub></div></div> = ±<div class='frac p22'><div class='num'>b</div><div class='den'>a</div></div><div class='frac p22'><div class='num'>1</div><div class='den'>2</div></div>(a<sup>2</sup> – x<sup>2</sup>)<sup style='position:relative; bottom:13px;'>–</sup><sup style='margin-left:2px; margin-right:2px;'><span style='position:relative; bottom:14px;'>1</span><span style='margin-left:-7px; text-decoration:overline;'>2</span></sup>(–2x) &nbsp; <span class='ll'>(.)<sup>2</sup></span></div>
+
+ <div class='in'><br>
+<div class='frac p04'><div class='num'>k<sub>1</sub><sup>2</sup></div><div class='den'>k<sub>2</sub><sup>2</sup></div></div>(a<sup>2</sup> – x<sup>2</sup>) = <div class='frac p02'><div class='num'>b<sup>2</sup></div><div class='den'>a<sup>2</sup></div></div>x<sup>2</sup></div>
+
+ <div class='in'><br>
+<div class='frac p04'><div class='num'>k<sub>1</sub><sup>2</sup></div><div class='den'>k<sub>2</sub><sup>2</sup></div></div>a<sup>2</sup> = <div class='frac p02'><div class='num'>k<sub>1</sub><sup>2</sup>a<sup>2</sup> + k<sub>2</sub><sup>2</sup>b<sup>2</sup></div><div class='den'>k<sub>2</sub><sup>2</sup>a<sup>2</sup></div></div>x<sup>2</sup></div>
+
+ <div class='in'><br>
+x<sup>2</sup> = <div class='frac'><div class='num'>k<sub>1</sub><sup>2</sup>a<sup>4</sup></div><div class='den'>k<sub>1</sub><sup>2</sup>a<sup>2</sup> + k<sub>2</sub><sup>2</sup>b<sup>2</sup></div></div></div>
+
+ <div class='in'><br>
+y<sup>2</sup> = <div class='frac p02'><div class='num'>b<sup>2</sup></div><div class='den'>a<sup>2</sup></div></div>(a<sup>2</sup> – x<sup>2</sup>) = b<sup>2</sup> – <div class='frac'><div class='num'>k<sub>1</sub><sup>2</sup>a<sup>2</sup>b<sup>2</sup></div><div class='den'>k<sub>1</sub><sup>2</sup>a<sup>2</sup> + k<sub>2</sub><sup>2</sup>b<sup>2</sup></div></div> = <div class='frac'><div class='num'>k<sub>2</sub><sup>2</sup>b<sup>4</sup></div><div class='den'>k<sub>1</sub><sup>2</sup>a<sup>2</sup> + k<sub>2</sub><sup>2</sup>b<sup>2</sup></div></div></div>
+
+ <div><br>
+Falls k<sub>1</sub>, k<sub>2</sub> dasselbe/verschiedene Vorzeichen haben, haben das auch x und y, also ist der größte Wert</div>
+
+ <div class='in'><br>
+z<sub>max</sub> = <div class='frac'><div class='num'>k<sub>1</sub><sup>2</sup>a<sup>2</sup> + k<sub>2</sub><sup>2</sup>b<sup>2</sup></div><div class='den to2'><span class='r1t'>&radic;</span><span class='rad'>k<sub>1</sub><sup>2</sup>a<sup>2</sup> + k<sub>2</sub><sup>2</sup>b<sup>2</sup></span></div></div> = <span class='r1t'>&radic;</span><span class='rad'>k<sub>1</sub><sup>2</sup>&Delta;x<sup>2</sup> + k<sub>2</sub><sup>2</sup>&Delta;y<sup>2</sup></span></div>
+
+ </div></body>
+ </html>

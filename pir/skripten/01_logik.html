@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Logik und Mengenlehre</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ <style type="text/css">
+.min {
+	font-size:10px;
+	margin-top:5px;
+	margin-bottom:-10px;
+}
+.oo {
+	border-top:1px solid;
+	padding-top:3px;
+}
+ </style>
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>I. LOGIK UND MENGENLEHRE</b></div>
+
+ <div><br>
+<a href='01_logik.html#A'>A. Definition logischer Operatoren</a><br>
+<a href='01_logik.html#B'>B. Eigenschaften logischer Operatoren</a><br>
+<a href='01_logik.html#C'>C. Mengen und Mengenoperatoren</a><br>
+<a href='01_logik.html#D'>D. Eigenschaften der Mengenoperatoren</a><br>
+<a href='01_logik.html#E'>E. Mächtigkeit und Produktmenge</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='01a_logik.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> DEFINITION LOGISCHER OPERATOREN</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> NICHT, UND, ODER</b></div>
+
+ <div><br>
+Ein <b>Operator</b> ist ein elementarer Rechenmechanismus, der auf mathematische Objekte – <b>Operanden</b> genannt – angewendet wird und als <b>Ergebnis</b> wieder ein mathematisches Objekt liefert. <b>Unäre</b> Operatoren haben einen Operanden, <b>binäre</b> Operatoren zwei usw.</div>
+
+ <div><br>
+Die einfachsten mathematischen Objekte sind die <b>Wahrheitswerte</b> "wahr" und "falsch" (abgekürzt als 1 und 0). <b>Logische Operatoren</b> sind solche, die auf Wahrheitswerte angewendet werden und einen solchen ergeben. Über <b>Wahrheitstafeln,</b> die alle Möglichkeiten durchgehen, die Operanden mit Werten zu belegen, können wir logische Operatoren definieren und ihre Eigenschaften nachweisen.</div>
+
+ <div><br>
+<span class='p02'>•</span> Der<b> NICHT-Operator</b> (Negation) dreht den Wahrheitswert um.<br><br>
+
+  <table class='in t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc bb'>
+<span class='ol'>a</span>
+    </td>
+    <td class='tc'>
+(Andere Schreibweise: <span class='p02'>&not;</span>a)
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<span class='p02'>•</span> Der <b>UND-Operator</b> (Konjunktion) ergibt wahr, wenn <i>alle</i> Operanden wahr sind, und sonst falsch.<br><br>
+
+  <table class='in t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc br bb'>
+b
+    </td>
+    <td class='tc bb'>
+a &and; b
+    </td>
+    <td class='tc'>
+(Merkhilfe: &and; wie <span class='rot'>A</span>ND)
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<span class='p02'>•</span> Der <b>ODER-Operator</b> (Disjunktion) ergibt wahr, wenn <i>mindestens ein</i> Operand wahr ist, und sonst falsch.<br><br>
+
+  <table class='in t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc br bb'>
+b
+    </td>
+    <td class='tc bb'>
+a &or; b
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.2' class='box'>2</a> Geschachtelte Operationen</b></div>
+
+ <div><br>
+Operationen können geschachtelt werden, indem wir an einer Stelle, wo eine 0 oder 1 als Operand erwartet wird, auch eine geklammerte Operation zulassen. Das bedeutet dann, dass das Ergebnis der geklammerten Operation der eigentliche Operand ist:</div>
+
+ <div class='in'><br>
+<span class='rot'>(0 &or; 1)</span> &and; 0 = <span class='rot'>1</span> &and; 0 = …</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Berechne über die Operatordefinitionen, ohne Schritte zu überspringen:
+
+  <div class='in'><br>
+<b>a)</b> 1 &and; (<span class='ol'>0</span> &or; 0) = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> (0 &and; <span class='ol'>1</span>) &and; (<span class='ol'>1 &and; 0</span> &or; 0) = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> <span class='oo'><span class='ol'>0</span> &or; 1</span> &or; (1 &and; <span class='ol'>1 &or; 0</span>) =</div></div>
+
+ <div class='in'><br>
+Achtung: Der NICHT-Überstrich hat Klammerfunktion, ist also erst dann auszuführen, wenn darunter nur mehr eine bloße 0 oder 1 steht!</div>
+
+ <div style='float:left;'>
+  <div class='in'><br>
+<b>a)</b> 1 &and; (<span class='ol'>0</span> &or; 0) =</div>
+
+  <div class='in'><br>
+1 &and; (1 &or; 0) =</div>
+
+  <div class='in'><br>
+1 &and; 1 =</div>
+
+  <div class='in'><br>
+1</div></div>
+
+ <div style='float:left; margin-left:45px;'>
+  <div class='in'><br>
+<b>b)</b> (0 &and; <span class='ol'>1</span>) &and; (<span class='ol'>1 &and; 0</span> &or; 0) =</div>
+
+  <div class='in'><br>
+(0 &and; 0) &and; (<span class='ol'>0</span> &or; 0) =</div>
+
+  <div class='in'><br>
+0 &and; (1 &or; 0) =</div>
+
+  <div class='in'><br>
+0 &and; 1 =</div>
+
+  <div class='in'><br>
+0</div></div>
+
+ <div style='float:left; margin-left:45px;'>
+  <div class='in'><br>
+<b>c)</b> <span class='oo'><span class='ol'>0</span> &or; 1</span> &or; (1 &and; <span class='ol'>1 &or; 0</span>) =</div>
+
+  <div class='in'><br>
+<span class='ol'>1 &or; 1</span> &or; (1 &and; <span class='ol'>1</span>) =</div>
+
+  <div class='in'><br>
+<span class='ol'>1</span> &or; (1 &and; 0) =</div>
+
+  <div class='in'><br>
+0 &or; 0 =</div>
+
+  <div class='in'><br>
+0</div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div style='clear:left;'><br>
+<b><a name='A.3' class='box'>3</a> Bindungsvereinbarungen</b></div>
+
+ <div><br>
+Bei fehlenden Klammern gibt es Vereinbarungen darüber, welcher Operator stärker in dem Sinn ist, dass er den strittigen Operanden an sich bindet. Wir werden diese Vereinbarungen im Folgenden <i>nicht</i> verwenden, müssen sie aber kennen, falls wir auf Angaben mit fehlenden Klammern stoßen.</div>
+
+ <div><br>
+<span class='aft p02'>o</span> Der unäre NICHT-Operator bindet stärker als die binären:</div>
+
+ <div class='in mt1'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+&not; <span class='rot'>a</span> &and; b
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+(<span class='p02'>&not;</span>a) &and; b <img src='sym/ok.svg' class='to3'><br><br>
+<span class='p02'>&not;</span>(a &and; b) <img src='sym/flash.svg' class='to3'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+<span class='aft p02'>o</span> Der UND-Operator bindet stärker als der ODER-Operator:</div>
+
+ <div class='in mt1'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+a &or; <span class='rot'>b</span> &and; c
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+(a &or; b) &and; c <img src='sym/flash.svg' class='to3'><br><br>
+a &or; (b &and; c) <img src='sym/ok.svg' class='to3'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+<span class='aft p02'>o</span> Bei gleichen Operatoren bindet der linke stärker als der rechte:</div>
+
+ <div class='in mt1'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+a &and; <span class='rot'>b</span> &and; c
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+(a &and; b) &and; c <img src='sym/ok.svg' class='to3'><br><br>
+a &and; (b &and; c) <img src='sym/flash.svg' class='to3'>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> EIGENSCHAFTEN LOGISCHER OPERATOREN</b></div>
+
+ <div><br><br>
+Für Rechnungen, die nur 0en und 1en enthalten, reichen die Operatordefinitionen, aber zusätzliche Eigenschaften können den Rechenweg abkürzen und ermöglichen erst das "Buchstabenrechnen".</div>
+
+ <div><br>
+<b><a name='B.1' class='box'>1</a> Assoziativgesetz</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> UND und ODER sind <b>assoziativ,</b> d.h. wir können die <b>Bindung ändern,</b> ohne dass sich das Ergebnis ändert.</div>
+
+ <div class='in'><br>
+<b>(a &and; b) &and; c</b> = <b>a &and; (b &and; c)</b> &nbsp; und &nbsp; <b>(a &or; b) &or; c</b> = <b>a &or; (b &or; c)</b></div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in' style='float:left; margin-right:40px;'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc br bb'>
+b
+    </td>
+    <td class='tc br bb'>
+c
+    </td>
+    <td class='tc br bb'>
+a &and; b
+    </td>
+    <td class='tc br bb cg'>
+(a &and; b) &and; c
+    </td>
+    <td class='tc br bb'>
+b &and; c
+    </td>
+    <td class='tc bb cg'>
+a &and; (b &and; c)
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br cg'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc cg'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br cg'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br cg'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc cg'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+  </table><br></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='in' style='float:left; width:370px;'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc br bb'>
+b
+    </td>
+    <td class='tc br bb'>
+c
+    </td>
+    <td class='tc br bb'>
+a &or; b
+    </td>
+    <td class='tc br bb cg'>
+(a &or; b) &or; c
+    </td>
+    <td class='tc br bb'>
+b &or; c
+    </td>
+    <td class='tc bb cg'>
+a &or; (b &or; c)
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+  </table><br></div>
+
+ <div style='clear:left;'></div>
+
+ <div>
+Bem: Angenommen mehrere UND bzw. mehrere ODER folgen ohne Klammern aufeinander. Zum Ersten klären die Bindungsvereinbarungen, wo die fehlenden Klammern sitzen. Zum Zweiten sagt das Assoziativgesetz, dass es im Hinblick auf das Endergebnis eine solche Klärung des Rechenwegs gar nicht braucht.</div>
+
+ <div class='grau'><br>
+Zum Dritten könnten wir UND/ODER auch für beliebig viele Operanden definieren, was dann ohne Zwischenergebnisse zum Endergebnis führt.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.2' class='box'>2</a> Kommutativgesetz</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> UND und ODER sind <b>kommutativ,</b> d.h. wir können die Operanden <b>vertauschen,</b> ohne dass sich das Ergebnis ändert.</div>
+
+ <div class='in'><br>
+<b>a &and; b</b> = <b>b &and; a</b> &nbsp; und &nbsp; <b>a &or; b</b> = <b>b &or; a</b></div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in'><br>
+In der Wahrheitstafel von UND bzw. ODER haben die 0-1-Zeile und die 1-0-Zeile dasselbe Ergebnis.</div>
+
+ <div><br>
+"Kompass"-Regel: Wenn ein Operator <b>kom</b>mutativ <b>p</b>lus <b>ass</b>oziativ ist, können wir bei Schachtelungen dieses Operators die Klammern weglassen, die Operanden beliebig umordnen und neu klammern, ohne dass sich das Ergebnis ändert.</div>
+
+ <div><br>
+Beispiel: Zeige, dass (a &and; b) &and; c = (a &and; c) &and; b</div>
+
+ <div class='in'><br>
+(a &and; b) &and; c =</div>
+
+ <div class='min grau'>
+Assoziativgesetz</div>
+
+ <div class='in'><br>
+a &and; (b &and; c) =</div>
+
+ <div class='min grau'>
+Kommutativgesetz</div>
+
+ <div class='in'><br>
+a &and; (c &and; b) =</div>
+
+ <div class='min grau'>
+Assoziativgesetz</div>
+
+ <div class='in'><br>
+(a &and; c) &and; b</div>
+
+ <div><br>
+<b><a name='B.3' class='box'>3</a> Distributivgesetz</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> UND und ODER sind zueinander <b>distributiv:</b> Statt mit UND/ODER an die jeweils andere Operation anzuknüpfen, können wir den äußeren Operator samt Operand auf die inneren Operanden <b>verteilen</b> und die Zwischenergebnisse mit dem verbleibenden Operator zusammenrechnen.</div>
+
+ <div class='in'><br>
+<img src='img/lo_00.gif'></div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in' style='float:left; margin-right:40px;'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc br bb'>
+b
+    </td>
+    <td class='tc br bb'>
+c
+    </td>
+    <td class='tc br bb'>
+a &and; b
+    </td>
+    <td class='tc br bb cg'>
+(a &and; b) &or; c
+    </td>
+    <td class='tc br bb'>
+a &or; c
+    </td>
+    <td class='tc br bb'>
+b &or; c
+    </td>
+    <td class='tc bb cg'>
+(a &or; c) &and; (b &or; c)
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+  </table><br></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='in'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc br bb'>
+b
+    </td>
+    <td class='tc br bb'>
+c
+    </td>
+    <td class='tc br bb'>
+a &or; b
+    </td>
+    <td class='tc br bb cg'>
+(a &or; b) &and; c
+    </td>
+    <td class='tc br bb'>
+a &and; c
+    </td>
+    <td class='tc br bb'>
+b &and; c
+    </td>
+    <td class='tc bb cg'>
+(a &and; c) &or; (b &and; c)
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br cg'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc cg'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br cg'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc cg'>
+1
+    </td>
+   </tr>
+  </table><br></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div>
+Bem: Das Verteilen ist nur die eine Richtung, das Distributivgesetz zu lesen. Die andere ist das Herausheben:</div>
+
+ <div class='in'><br>
+<img src='img/lo_01.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.4' class='box'>4</a> 1, 0, a, <span class='ol'>a</span> verknüpft mit a</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die Eins verhält sich beim UND <b>neutral,</b> die Null beim ODER, d.h. sie ergeben mit einem beliebigen Element zusammengerechnet ebendieses. Beim jeweils anderen Operator verhalten sie sich <b>absorbierend,</b> d.h. sie schlucken den zweiten Operanden.</div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in' style='position:relative; float:left;'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc br bb'>
+<b>1 &and; a</b> = <b>a</b>
+    </td>
+    <td class='tc bb'>
+<b>1 &or; a</b> = <b>1</b>
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1 &and; 0 = 0
+    </td>
+    <td class='tc'>
+1 &or; 0 = 1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1 &and; 1 = 1
+    </td>
+    <td class='tc'>
+1 &or; 1 = 1
+    </td>
+   </tr>
+  </table></div>
+
+ <div style='margin-left:45px; float:left;'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc br bb'>
+<b>0 &or; a</b> = <b>a</b>
+    </td>
+    <td class='tc bb'>
+<b>0 &and; a</b> = <b>0</b>
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0 &or; 0 = 0
+    </td>
+    <td class='tc'>
+0 &and; 0 = 0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0 &or; 1 = 1
+    </td>
+    <td class='tc'>
+0 &and; 1 = 0
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='in' style='clear:left;'><br>
+<span class='out'>•</span>
+UND und ODER sind <b>idempotent,</b> d.h. gleiche Elemente ergeben zusammengerechnet wieder dieses Element. Ein Element und seine Verneinung sind zueinander "kreuzweise" <b>invers,</b> d.h. sie ergeben zusammengerechnet das neutrale Element des jeweils anderen Operators.</div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in' style='position:relative; float:left;'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc br bb'>
+<b>a &and; a</b> = <b>a</b>
+    </td>
+    <td class='tc bb'>
+<b>a &or; a</b> = <b>a</b>
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0 &and; 0 = 0
+    </td>
+    <td class='tc'>
+0 &or; 0 = 0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1 &and; 1 = 1
+    </td>
+    <td class='tc'>
+1 &or; 1 = 1
+    </td>
+   </tr>
+  </table></div>
+
+ <div style='margin-left:45px; float:left;'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br bb'>
+a
+    </td>
+    <td class='tc br bb'>
+<span class='ol'>a</span>
+    </td>
+    <td class='tc br bb'>
+<b>a &and; <span class='ol'>a</span></b> = <b>0</b>
+    </td>
+    <td class='tc bb'>
+<b>a &or; <span class='ol'>a</span></b> = <b>1</b>
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0 &and; 1 = 0
+    </td>
+    <td class='tc'>
+0 &or; 1 = 1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1 &and; 0 = 0
+    </td>
+    <td class='tc'>
+1 &or; 0 = 1
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ --> <div style='clear:left;'></div>
+
+ <div><br>
+<b><a name='B.5' class='box'>5</a> Buchstabenrechnen</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> Vereinfache über die Operatoreigenschaften, ohne Schritte zu überspringen:
+
+  <div class='in'><br>
+<b>a)</b> (a &and; b) &and; <span class='ol'>a</span> = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> (a &or; b) &and; (<span class='ol'>a</span> &or; b) = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> (a &and; <span class='ol'>b</span>) &or; (b &and; b) =</div></div>
+
+ <div style='float:left;'>
+  <div class='in'><br>
+<b>a)</b> (a &and; b) &and; <span class='ol'>a</span> =</div>
+
+  <div class='min grau'>
+Kommutativgesetz</div>
+
+  <div class='in'><br>
+(b &and; a) &and; <span class='ol'>a</span> =</div>
+
+  <div class='min grau'>
+Assoziativgesetz</div>
+
+  <div class='in'><br>
+b &and; (a &and; <span class='ol'>a</span>) =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+b &and; 0 =</div>
+
+  <div class='min grau'>
+0 bei UND absorbierend</div>
+
+  <div class='in'><br>
+0</div></div>
+
+ <div style='float:left; margin-left:45px;'>
+  <div class='in'><br>
+<b>b)</b> (a &or; b) &and; (<span class='ol'>a</span> &or; b) =</div>
+
+  <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+  <div class='in'><br>
+(a &and; <span class='ol'>a</span>) &or; b =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+0 &or; b =</div>
+
+  <div class='min grau'>
+0 bei ODER neutral</div>
+
+  <div class='in'><br>
+b</div></div>
+
+ <div style='float:left; margin-left:45px;'>
+  <div class='in'><br>
+<b>c)</b> (a &and; <span class='ol'>b</span>) &or; (b &and; b) =</div>
+
+  <div class='min grau'>
+Idempotenz</div>
+
+  <div class='in'><br>
+(a &and; <span class='ol'>b</span>) &or; b =</div>
+
+  <div class='min grau'>
+Distributivgesetz (verteilen)</div>
+
+  <div class='in'><br>
+(a &or; b) &and; (<span class='ol'>b</span> &or; b) =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+<span class='one'>a &or; b</span> &and; 1 =</div>
+
+  <div class='min grau'>
+1 bei UND neutral</div>
+
+  <div class='in'><br>
+a &or; b</div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ --> <div style='clear:left;'></div>
+
+ <div><br>
+Das obige Einkringeln bedeutet, dass wir <b>abstrahieren</b> und einen Klammerausdruck als "ein Ding" ansehen. So können wir die Anwendbarkeit eines Gesetzes auch dann erkennen, wenn nicht nur Ein-Zeichen-Operanden vorliegen:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Forme so um, dass zuerst die UND und dann die ODER kommen ("disjunktive Normalform"):
+
+  <div class='in'><br>
+(a &or; b) &and; (c &or; d) =</div></div>
+
+ <div class='in'><br>
+(a &or; b) &and; <span class='one'>c &or; d</span> =</div>
+
+  <div class='min grau'>
+Distributivgesetz (verteilen)</div>
+
+ <div class='in'><br>
+<span class='up p01'>[</span>a &and; (c &or; d)<span class='up p10'>]</span> &or; <span class='up p01'>[</span>b &and; (c &or; d)<span class='up p10'>]</span> =</div>
+
+  <div class='min grau'>
+Distributivgesetz (verteilen)</div>
+
+ <div class='in'><br>
+<span class='up p01'>[</span>(a &and; c) &or; (a &and; d)<span class='up p10'>]</span> &or; <span class='up p01'>[</span>(b &and; c) &or; (b &and; d)<span class='up p10'>]</span></div>
+
+ <div><br>
+Das können wir uns als verallgemeinertes Distributivgesetz merken: <b>Jeder</b> Operand aus der ersten Klammer wird <b>mit jedem</b> Operanden der zweiten Klammer mit dem äußeren Operator zusammengerechnet und dann alle Zwischenergebnisse mit dem verbleibenden Operator.</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> MENGEN UND MENGENOPERATOREN</b></div>
+
+ <div><br><br>
+<b><a name='C.1' class='box'>1</a> Was ist eine Menge?</b></div>
+
+ <div><br>
+Eine <b>Menge A</b> wird durch eine Regel charakterisiert, die für jedes Objekt x sagt, ob es zur Menge gehört oder nicht:</div>
+
+ <div class='in'><br>
+A = { x | x erfüllt Regel }</div>
+
+ <div><br>
+Wenn x die angegebene Regel erfüllt, sprechen wir von einem <b>Element</b> der Menge und schreiben x <img src='sym/isin.gif'> A, andernfalls x <img src='sym/nisin.gif' style='vertical-align:-2px;'> A. Zwei Mengen sind <b>gleich,</b> wenn ihre Regeln für jedes Objekt dasselbe sagen (soll heißen, wenn sie die gleichen Elemente haben).</div>
+
+ <div><br>
+Eine aufzählende Regel wie</div>
+
+ <div class='in'><br>
+A = { x | (x<span class='p44'>=</span>1) &or; (x<span class='p44'>=</span>2) &or; (x<span class='p44'>=</span>3) }</div>
+
+ <div><br>
+kürzen wir so ab:</div>
+
+ <div class='in'><br>
+A = { 1, 2, 3 }</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Teilmenge</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Menge A heißt <b>Teilmenge</b> einer Menge B, kurz A <img src='sym/sube.gif'> B, wenn jedes Element von A auch Element von B ist. Wenn B neben den Elementen von A noch andere enthält und wir das betonen wollen, nennen wir A eine <b>echte Teilmenge</b> von B.</div>
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 4:</b> In welchen Fällen trifft A <img src='sym/sube.gif'> B zu, wenn A, B die Mengen der Flächenpartikel sind, die innerhalb der folgenden Kreise liegen?
+
+  <div class='in'><br>
+<img src='img/lo_02.gif'></div></div>
+
+  <div class='in'><br>
+<b>a)</b> A <img src='sym/sube.gif'> B <img src='sym/ok.svg' class='to3'> &nbsp;&nbsp;&nbsp;
+<b>b)</b> A <img src='sym/sube.gif'> B <img src='sym/flash.svg' class='to3'> &nbsp;&nbsp;&nbsp;
+<b>c)</b> A <img src='sym/sube.gif'> B <img src='sym/ok.svg' class='to3'> &nbsp;&nbsp;&nbsp;
+<b>d)</b> A <img src='sym/sube.gif'> B <img src='sym/flash.svg' class='to3'> &nbsp;&nbsp;&nbsp;
+<b>e)</b> A <img src='sym/sube.gif'> B <img src='sym/flash.svg' class='to3'></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>leere Menge &empty;</b> ist die Menge ohne Elemente. Sie ist Teilmenge jeder anderen Menge. Das Gegenstück dazu ist eine <b>Grundmenge G,</b> das ist ein "Rahmen", innerhalb dessen sich die betrachteten Mengen bewegen.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.3' class='box'>3</a> Mengenoperatoren</b></div>
+
+ <div class='mt2'>
+<span class='p02'>•</span> <b>Komplement <span class='ol'>A</span> :</b>= <b>{ x <img src='sym/iisin.gif'> G | x <img src='sym/nnisin.gif' style='vertical-align:-2px;'> A }</b></div>
+
+ <div class='in'><br>
+<img src='img/lo_03.gif'></div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Durchschnitt A <img src='sym/ccap.gif'> B :</b>= <b>{ x | (x <img src='sym/iisin.gif'> A) &and; (x <img src='sym/iisin.gif'> B) }</b></div>
+
+ <div class='in'><br>
+<img src='img/lo_04.gif'></div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Vereinigung A <img src='sym/ccup.gif'> B :</b>= <b>{ x | (x <img src='sym/iisin.gif'> A) &or; (x <img src='sym/iisin.gif'> B) }</b></div>
+
+ <div class='in'><br>
+<img src='img/lo_05.gif'></div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Differenz A\B :</b>= <b>{ x | (x <img src='sym/iisin.gif'> A) &and; (x <img src='sym/nnisin.gif' style='vertical-align:-2px;'> B) }</b></div>
+
+ <div style='margin-top:3px; margin-left:94px;'>
+<img src='sym/uarr_g.gif'></div>
+ <div class='grau' style='margin-left:78px; font-size:11px;'>
+"ohne"</div>
+
+ <div class='in'><br>
+<img src='img/lo_06.gif'></div>
+
+ <div><br>
+Bem: Komplemente sind nur spezielle Differenzen, nämlich solche zur Grundmenge.</div>
+
+ <div class='in mt1'>
+<span class='ol'>A</span> = G\A</div>
+
+ <div class='mt1'>
+Umgekehrt lassen sich innerhalb einer Grundmenge Differenzen durch Komplement und Durchschnitt ausdrücken.</div>
+
+ <div class='in mt1'>
+A\B = A <img src='sym/cap.gif'> <span class='ol'>B</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> A = {4, 5, 6}, B = {2, 4, 6, 8}, C = {2, 3, 5, 7}
+
+  <div class='in'><br>
+<b>a)</b> A <img src='sym/cap.gif'> B = &nbsp;&nbsp;&nbsp;
+<b>b)</b> A <img src='sym/cup.gif'> C = &nbsp;&nbsp;&nbsp;
+<b>c)</b> C<span class='p22'>\</span>(A <img src='sym/cup.gif'> B) =</div></div>
+
+ <div class='in'><br>
+<b>a)</b>  A <img src='sym/cap.gif'> B = { 4, 6 }</div>
+
+ <div class='in'><br>
+<b>b)</b> A <img src='sym/cup.gif'> C = { 2, 3, 4, 5, 6, 7 }</div>
+
+ <div class='in'><br>
+<b>c)</b> C<span class='p22'>\</span>(A <img src='sym/cup.gif'> B) = C<span class='p22'>\</span>{ 2, 4, 5, 6, 8 } = { 3, 7 }</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> EIGENSCHAFTEN DER MENGENOPERATOREN</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Boolesche Algebra</b></div>
+
+ <div><br>
+Hinsichtlich ihrer Eigenschaften entsprechen die Mengenoperatoren den logischen Operatoren wie folgt:</div>
+
+ <div class='in'><br>
+KOMPLEMENT <span class='up bo1'>&#x2259;</span> NICHT<br>
+DURCHSCHNITT <span class='up bo1'>&#x2259;</span> UND<br>
+VEREINIGUNG <span class='up bo1'>&#x2259;</span> ODER<br>
+GRUNDMENGE G <span class='up bo1'>&#x2259;</span> 1<br>
+LEERE MENGE &empty; <span class='up bo1'>&#x2259;</span> 0</div>
+
+ <div><br>
+Diese Rechenstruktur, losgelöst von einer konkreten Bedeutung der Operatoren/Operanden, heißt <b>boolesche Algebra.</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Beweise über die Regeln der booleschen Algebra (ohne auf die konkrete Bedeutung der Operatoren/Operanden zurückzugreifen):
+
+  <div class='in'><br>
+<b>a)</b> A <img src='sym/cup.gif'> (A <img src='sym/cap.gif'> B) = A &nbsp; und &nbsp; <b>b)</b>  A <img src='sym/cap.gif'> (A <img src='sym/cup.gif'> B) = A &nbsp; (<b>Absorptionsgesetz</b>)</div></div>
+
+ <div style='float:left;'>
+  <div class='in'><br>
+<b>a)</b> <span class='rot'>A</span> <img src='sym/cup.gif'> (A <img src='sym/cap.gif'> B) =</div>
+
+  <div class='min grau'>
+G bei DURCHSCHNITT neutral</div>
+
+  <div class='in'><br>
+<span class='rot'>(A <img src='sym/cap_r.gif'> G)</span> <img src='sym/cup.gif'> (A <img src='sym/cap.gif'> B) =</div>
+
+  <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+  <div class='in'><br>
+A <img src='sym/cap.gif'> (G <img src='sym/cup.gif'> B) =</div>
+
+  <div class='min grau'>
+G bei VEREINIGUNG absorbierend</div>
+
+  <div class='in'><br>
+A <img src='sym/cap.gif'> G =</div>
+
+  <div class='min grau'>
+G bei DURCHSCHNITT neutral</div>
+
+  <div class='in'><br>
+A</div></div>
+
+ <div style='float:left; margin-left:45px;'>
+  <div class='in'><br>
+<b>b)</b> <span class='rot'>A</span> <img src='sym/cap.gif'> (A <img src='sym/cup.gif'> B) =</div>
+
+  <div class='min grau'>
+&empty; bei VEREINIGUNG neutral</div>
+
+  <div class='in'><br>
+<span class='rot'>(A <img src='sym/cup_r.gif'> &empty;)</span> <img src='sym/cap.gif'> (A <img src='sym/cup.gif'> B) =</div>
+
+  <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+  <div class='in'><br>
+A <img src='sym/cup.gif'> (&empty; <img src='sym/cap.gif'> B) =</div>
+
+  <div class='min grau'>
+&empty; bei DURCHSCHNITT absorbierend</div>
+
+  <div class='in'><br>
+A <img src='sym/cup.gif'> &empty; =</div>
+
+  <div class='min grau'>
+&empty; bei VEREINIGUNG neutral</div>
+
+  <div class='in'><br>
+A</div></div>
+
+ <div class='grau' style='clear:left;'><br>
+Bem: Eigentlich könnten wir uns jede "Buchstabenrechnung" als eigenes Gesetz merken, es geht aber um die richtige Balance zwischen Merk- und Rechenaufwand.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> Venn-Diagramme</b></div>
+
+ <div><br>
+<b>Venn-Diagramme,</b> wie wir sie oben bereits verwendet haben, sind als Grafik vekleidete Wahrheitstafeln. Dabei fassen wir Flächenpartikel durch geschlossene Linien so zu Mengen zusammen, dass jede mögliche Beziehung eines Partikels zu den beteiligten Mengen durch einen bestimmten Bereich abgedeckt wird.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 7:</b> Beweise über Venn-Diagramme:
+
+  <div class='in'><br>
+<b>a)</b> <span class='ol'>A &nbsp;&nbsp; <img src='sym/cap.gif' style='position:relative; margin-left:-15px; margin-right:5px;'>B</span> = <span class='ol'>A</span> <img src='sym/cup.gif'> <span class='ol'>B</span> &nbsp; und &nbsp; <b>b)</b> <span class='ol'>A &nbsp;&nbsp; <img src='sym/cup.gif' style='position:relative; margin-left:-15px; margin-right:5px;'>B</span> = <span class='ol'>A</span> <img src='sym/cap.gif'> <span class='ol'>B</span> &nbsp; (<b>De Morgan'sche Gesetz</b>)</div></div>
+
+ <div class='in mt2'>
+<img src='img/lo_07.gif'></div>
+
+ <div class='in'><br>
+<img src='img/lo_08.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div style='clear:left;'><br><br>
+<b><a name='E' class='box'>E</a> MÄCHTIGKEIT UND PRODUKTMENGE</b></div>
+
+ <div><br><br>
+<b><a name='E.1' class='box'>1</a> Mächtigkeit</b></div>
+
+ <div><br>
+<span class='p02'>•</span> Die <b>Mächtigkeit</b> einer <i>endlichen</i> Menge A, kurz |A|, ist die Anzahl ihrer Elemente.</div>
+
+ <div><br>
+Beispiel:</div>
+
+ <div class='in'><br>
+A = { 5, 1, 3, 5, 2 } <img src='sym/rarr2.svg' class='p66'> |A| = 4</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Eine Klasse hat 30 Schüler. Davon haben 16 braune Augen, 19 braune Haare und 11 beides gleichzeitig. Bei wie viel Schülern sind weder Augen noch Haare braun? </div>
+
+ <div class='in'><br>
+<img src='img/lo_09.gif'></div>
+
+ <div class='in'><br>
+5 + 11 + 8 + x = 30 <img src='sym/rarr2.svg' class='p66'> x = 6</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.2' class='box'>2</a> Produktmenge</b></div>
+
+ <div><br>
+Ein <b>2-Tupel (x, y)</b> ist ein neues Objekt, das den alten Objekten x und y einen "Stempel aufdrückt" (nämlich ihre Position) und sie zusammenpackt.</div>
+
+ <div class='in'><br>
+Bsp: (4, 5) ≙ { 4<sub>1</sub>, 5<sub>2</sub> }</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Produktmenge A x B :</b>= <b>{ (x, y) | (x <img src='sym/iisin.gif'> A) &and; (y <img src='sym/iisin.gif'> B) }</b></div>
+
+ <div><br>
+Die Produktmenge A x B x C besteht dementsprechend aus 3-Tupeln usw.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b>  A = {1, 2}, B = {2, 3, 5}, C = {<img src='sym/op1.gif'>, <img src='sym/op2.gif'>}
+
+  <div class='in'><br>
+<b>a)</b> A x B = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> B x A = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> C<sup>2</sup> = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> A x B x C =</div></div>
+
+ <div class='in'><br>
+<b>a)</b> A x B = { (1,2), (1,3), (1,5), (2,2), (2,3), (2,5) }</div>
+
+ <div class='in'><br>
+<b>b)</b> B x A = { (2,1), (2,2), (3,1), (3,2), (5,1), (5,2) } <span class='grau'>&ne; A x B</span></div>
+
+ <div class='in'><br>
+<b>c)</b> C<sup>2</sup> = C x C = { (<img src='sym/op1.gif'>,<img src='sym/op1.gif'>), (<img src='sym/op1.gif'>,<img src='sym/op2.gif'>), (<img src='sym/op2.gif'>,<img src='sym/op1.gif'>), (<img src='sym/op2.gif'>,<img src='sym/op2.gif'>) }</div>
+
+ <div class='in'><br>
+<b>d)</b> A x B x C = { (1,2,<img src='sym/op1.gif'>), (1,2,<img src='sym/op2.gif'>), (1,3,<img src='sym/op1.gif'>), (1,3,<img src='sym/op2.gif'>), (1,5,<img src='sym/op1.gif'>), (1,5,<img src='sym/op2.gif'>), (2,2,<img src='sym/op1.gif'>), (2,2,<img src='sym/op2.gif'>), (2,3,<img src='sym/op1.gif'>), (2,3,<img src='sym/op2.gif'>), (2,5,<img src='sym/op1.gif'>), (2,5,<img src='sym/op2.gif'>) }</div>
+
+ <div><br>
+<b>Frage:</b> Wie mächtig ist die Produktmenge endlicher Mengen?</div>
+
+ <div class='in'><br>
+|A<span class='p22'>x</span>B| =|A|·|B|</div>
+
+ </div></body>
+ </html>

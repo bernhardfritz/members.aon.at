@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Verteilungen</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ <style type='text/css'>
+.sp {
+  margin-left:13px;
+}
+.lt {
+  position:relative;
+  top:1px;
+  margin-left:-8px;
+  margin-right:1px;
+  font-size:120%;
+}
+ </style>
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>XVII. VERTEILUNGEN</b></div>
+
+ <div><br>
+<a href='17_verteilungen.html#A'>A. Exkurs: Deskriptive Statistik</a><br>
+<a href='17_verteilungen.html#B'>B. Zufallsvariable</a><br>
+<a href='17_verteilungen.html#C'>C. Kennzahlen</a><br>
+<a href='17_verteilungen.html#D'>D. Spezielle Verteilungen</a><br>
+<a href='17_verteilungen.html#E'>E. Aufgaben zur Normalverteilung</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='17a_verteilungen.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> EXKURS: DESKRIPTIVE STATISTIK</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Häufigkeitsverteilung und Histogramm</b></div>
+
+ <div><br>
+Wir haben eine <b>Population</b> von Merkmalsträgern, wobei es um ein <b>quantitatives Merkmal</b> gehen soll, d.h. die Merkmalsausprägungen sind Zahlen. Beispielsweise ein Aquarium mit einer Population von 21 Zierfischen, für deren Merkmal "Größe" folgende Werte (in mm) gemessen werden:</div>
+
+ <div class='in'><br>
+16<span class='sp'>20</span><span class='sp'>23</span><span class='sp'>24</span><span class='sp'>26</span><span class='sp'>27</span><span class='sp'>28</span><span class='sp'>41</span><span class='sp'>13</span><span class='sp'>28</span><span class='sp'>19</span><span class='sp'>13</span><span class='sp'>20</span><span class='sp'>23</span><span class='sp'>27</span><span class='sp'>13</span><span class='sp'>23</span><span class='sp'>20</span><span class='sp'>23</span><span class='sp'>16</span><span class='sp'>19</span></div>
+
+ <div><br>
+In der <b>deskriptiven Statistik</b> geht es darum, solche Rohdaten zu komprimieren und zu veranschaulichen. Die <b>Häufigkeitsverteilung</b> fasst gleiche Merkmalsausprägungen zusammen und gibt ihre Anzahl als <b>absolute Häufigkeit</b> an, d.h. sie anonymisiert, ist aber ansonsten verlustfrei:</div>
+
+ <div style='margin-left:26px;'><br>
+<img src='img/vt_00.gif'></div>
+
+ <div><br>
+Eine verlustbehaftete Komprimierung ist das <b>Histogramm:</b> Dazu zerlegen wir die x-Achse in halboffene Intervalle, <b>Klassen</b> genannt, und darüber ziehen wir Rechtecke hoch, deren Fläche die Häufigkeit darstellt, mit der das Merkmal im jeweiligen Intervall liegt. Im Folgenden verwenden wir die <b>relative Häufigkeit,</b> das ist die absolute Häufigkeit als Prozentsatz der Population:</div>
+
+ <div class='in'><br>
+<img src='img/vt_01.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.2' class='box'>2</a> Median, Quartile und Boxplot</b></div>
+
+ <div><br>
+Die Komprimierung können wir noch weiter vorantreiben, bis hin zu "Kennzahlen":</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Wenn wir die Merkmalsausprägungen ansteigend anordnen und einen Teilungsstrich setzen, sodass gleich viele unter- und oberhalb davon liegen, ist der <b>Median</b> der Wert, auf dem der Teilungsstrich sitzt, bzw. das arithmetische Mittel der Werte, zwischen denen er sitzt. Das <b>untere/obere Quartil</b> ist der "Submedian" der Werte unter/oberhalb des Teilungsstrichs und der <b>Interquartilsabstand</b> ist ihr Abstand.</div>
+
+ <div><br>
+Achtung: Es gibt auch andere Quartildefinitionen! In der Praxis sind die Unterschiede bei größeren Datenmengen nicht relevant.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Bestimme Median, Quartile und Interquartilsabstand für das Einführungsbeispiel.</div>
+
+ <div class='in'><br>
+13<span class='sp'>13</span><span class='sp'>13</span><span class='sp'>16</span><span class='sp'>16</span><span class='sp'>19</span><span class='sp'>19</span><span class='sp'>20</span><span class='sp'>20</span><span class='sp'>20</span><span class='sp'>23</span><span class='sp'>23</span><span class='sp'>23</span><span class='sp'>23</span><span class='sp'>24</span><span class='sp'>26</span><span class='sp'>27</span><span class='sp'>27</span><span class='sp'>28</span><span class='sp'>28</span><span class='sp'>41</span></div>
+
+ <div>
+<span style='margin-left:153px;'>|</span>
+<span style='margin-left:152px;'>|</span>
+<span style='margin-left:152px;'>|</span></div>
+
+ <div class='in' style='margin-top:5px;'>
+<span style='margin-left:82px;'>Q<sub>1</sub> =</span> <div class='frac'><div class='num'>16+19</div><div class='den'>2</div></div> = 17,5 mm<span style='position:relative; bottom:10px; margin-left:20px; margin-right:39px;'>Median = 23 mm</span>Q<sub>3</sub> = <div class='frac'><div class='num'>26+27</div><div class='den'>2</div></div> = 26,5 mm</div>
+
+ <div class='in'><br>
+Q<sub>3</sub><span class='p44'>–</span>Q<sub>1</sub> = 26,5<span class='p44'>–</span>17,5 = 9 mm</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Der <b>Tukey-Boxplot</b> ist eine Box vom unteren zum oberen Quartil, innen mit dem Median als Querstrich. Außen fahren wir in beide Richtungen "Antennen" bis zum 1,5fachen Interquartilsabstand aus und ziehen sie dann ein, bis sie in einem tatsächlich beobachteten Wert enden. Noch weiter außen gelegene "Ausreißer" zeichnen wir separat ein:</div>
+
+ <div style='margin-left:47px;'><br>
+<img src='img/vt_02.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.3' class='box'>3</a> Populationsmittel und -varianz</b></div>
+
+ <div><br>
+X<sub>i</sub> sei die Ausprägung des Merkmals X beim i-ten von insgesamt n Merkmalsträgern und x<sub>j</sub> eine solche Ausprägung, der nach Zusammenfassung gleicher Ausprägungen die absolute Häufigkeit n<sub>j</sub> bzw. die relative Häufigkeit h(x<sub>j</sub>) zukommt. Median und Interqartilsabstand sind Kennzahlen für die Lage und Streuung der Merkmalsausprägungen, aber geläufiger sind in diesem Zusammenhang:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Das <b>Populationsmittel</b> ist das arithmetische Mittel aller Merkmalsausprägungen.</div>
+
+ <div class='in mt1'>
+&mu; <span class='ldf'>:</span>= <div class='frac to1'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>X<sub>i</sub> = <div class='frac to1'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div>x<sub>j</sub>n<sub>j</sub> =<div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div>x<sub>j</sub>h(x<sub>j</sub>)</div>
+
+ <div class='mt1'>
+Bem: Wenn wir jede Merkmalsausprägung als Einheitsgewicht auf der x-Achse stapeln (siehe Bild ganz oben), dann entspricht das Populationsmittel gerade dem Schwerpunkt. Ausreißer können das Populationsmittel – anders als den Median – deutlich verschieben.</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>Populationsvarianz</b> ist das Mittel aller Abweichungsquadrate vom Populationsmittel, die <b>-standardabweichung</b> ist die Wurzel daraus.</div>
+
+ <div class='in mt1'>
+&sigma;<sup>2</sup> <span class='ldf'>:</span>= <div class='frac to1'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>(X<sub>i</sub><span class='p44'>–</span>&mu;)<sup>2</sup> = <div class='frac to1'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div>(x<sub>j</sub><span class='p44'>–</span>&mu;)<sup class='p01'>2</sup>n<sub>j</sub> =<div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div>(x<sub>j</sub><span class='p44'>–</span>&mu;)<sup class='p01'>2</sup>h(x<sub>j</sub>)</div>
+
+ <div class='mt1'>
+Bem: Die Quadrate verhindern, dass sich Abweichungen in entgegengesetzte Richtungen aufheben. Gegenüber Beträgen haben sie den Vorteil, dass sich damit "glatter" rechnet, aber den Nachteil, dass sich die Einheit ändert – daher die Standardabweichung.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> Bestimme Populationsmittel, -varianz und -standardabweichung für das Einführungsbeispiel.</div>
+
+ <div class='in'><br>
+&mu; = 13<div class='frac p40'><div class='num'>3</div><div class='den'>21</div></div> + 16<div class='frac p40'><div class='num'>2</div><div class='den'>21</div></div> + … = 22 mm</div>
+
+ <div class='in'><br>
+&sigma;<sup>2</sup> = (13<span class='p44'>–</span>22)<sup>2</sup><div class='frac p40'><div class='num'>3</div><div class='den'>21</div></div> + (16<span class='p44'>–</span>22)<sup>2</sup><div class='frac p40'><div class='num'>2</div><div class='den'>21</div></div> + … = 40,57 mm<sup>2</sup></div>
+
+ <div class='in'><br>
+&sigma; = <span class='r1t'>&radic;</span><span class='rad'>40,57</span> = 6,37 mm</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> ZUFALLSVARIABLE</b></div>
+
+ <div><br><br>
+In der <b>mathematischen Statistik</b> werden wir mit Hilfe von Stichproben auf die Verteilung von Merkmalen in großen Populationen schließen (wo das Erfassen aller Merkmalsträger zu aufwendig wäre). Die Idee dahinter ist, dass die zufällige Auswahl eines Merkmalsträgers ein Zufallsexperiment ist, bei dem die Wahrscheinlichkeit für eine bestimmte Merkmalsausprägung gerade deren relativer Häufigkeit in der Population entspricht.</div>
+
+ <div><br>
+<b><a name='B.1' class='box'>1</a> Diskrete und stetige Zufallsvariable</b></div>
+
+ <div><br>
+Eine <b>Zufallsvariable</b> ist eine Funktion bzw. das Zufallsexperiment mit "aufgesetzter" Funktion, die den Experimentausgängen Zahlen zuordnet. Wir unterscheiden Zufallsvariable danach, ob sich das Histogramm bei Verfeinerung der Klassen so oder so entwickelt:</div>
+
+ <div class='in'><br>
+<img src='img/vt_03.gif'></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine <b>diskrete</b> Zufallsvariable X: &Omega; <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'> nimmt <b>abzählbar</b> viele Werte x<sub>1</sub>, x<sub>2</sub><span class='p02'>,</span>… an und wird durch die <b>Wahrscheinlichkeitsfunktion</b></div>
+
+ <div class='in'><br>
+<span class='in'>f: {x<sub>1</sub>, x<sub>2</sub><span class='p02'>,</span>…} <img src='sym/rarr.svg' class='bo1'> [0, 1]</span></div>
+
+ <div class='in'><br>
+charakterisiert, die jedem Wert die Wahrscheinlichkeit zuordnet, mit der die Zufallsvariable diesen Wert annimmt:</div>
+
+ <div class='in'><br>
+<span class='in'>f(x) <span class='ldf'>:</span>= P(X<span class='p44'>=</span>x)</span></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine <b>stetige</b> Zufallsvariable X: &Omega; <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'> nimmt <b>überabzählbar</b> viele Werte an und  wird durch die (integrierbare) <b>Dichtefunktion</b></div>
+
+ <div class='in'><br>
+<span class='in'> f: <img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'><sup>+</sup></span></div>
+
+ <div class='in'><br>
+charakterisiert, deren Funktionskurve durch Verfeinerung der Histogramm-Klassen aus den Oberkanten der Rechtecke entsteht:</div>
+
+ <div class='in'><br>
+<span class='in'>f(x) <span class='ldf'>:</span>= <div class='lim'>lim<div class='sos'>&Delta;x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0</div></div><div class='frac'><div class='num'>P(x &le; X &le; x<span class='p44'>+</span>&Delta;x)</div><div class='den'>&Delta;x</div></div></span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.2' class='box'>2</a> Verteilungs- und Quantilfunktion</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>Verteilungsfunktion F(x)</b> einer Zufallsvariablen X gibt die Wahrscheinlichkeit an, dass X einen Wert kleiner/gleich x annimmt:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+F(x) <span class='ldf'>:</span>= P(X &le; x) =
+    </td>
+    <td>
+&nbsp;<img src='sym/lbr4.gif' style='position:relative; top:3px;'>&nbsp;
+    </td>
+    <td>
+     <div style='margin-top:-24px;'>
+ <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>x<span class='dn'>j</span>&le;x</div></div>f(x<sub>j</sub>),<span style='margin-left:9px;'>im diskreten Fall</span>
+     </div>
+     <div style='margin-top:18px; margin-left:6px;'>
+<span style='position:relative; top:24px; right:5px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:10px; font-size:11px;'>x</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'>&thinsp;f(t)<span class='p40'>dt</span>, im stetigen Fall
+   </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Damit lässt sich die Wahrscheinlichkeit, dass X einen Wert in einem bestimmten Bereich annimmt, so berechnen:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+P(x<sub>i</sub> &le; X &le; x<sub>j</sub>) =
+    </td>
+    <td>
+&nbsp;<img src='sym/lbr1.gif' style='position:relative; top:3px;'>&nbsp;
+    </td>
+    <td>
+     <div style='margin-bottom:9px;'>
+F(x<sub>j</sub>) – F(<span class='rot'>x<sub>i–1</sub></span>), im diskreten Fall bei ansteigend geordneten x<sub>1</sub><span class='p02'>,</span>x<sub>2</sub><span class='p02'>,</span>…
+     </div>
+     <div style='margin-bottom:2px;'>
+F(x<sub>j</sub>) – F(x<sub>i</sub>)<span style='margin-right:19px;'>,</span>im stetigen Fall
+   </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Das <b>&alpha;-Quantil x</b> = F<sup>–1</sup>(&alpha;) bzw. – falls so nicht existent – ein Teilungstrich auf der x-Achse, sodass P(X &le; x) &ge; &alpha; und P(X &ge; x) &ge; 1<span class='p44'>–</span>&alpha;.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Bestimme <b>a)</b> die Verteilungsfunktion F(x) und damit die Wahrscheinlichkeit P(2 &le; X &le; 8), <b>b)</b> die Quantilfunktion F<sup>–1</sup>(&alpha;) und damit das 0,90-Quantil einer stetigen Zufallsvariablen X mit Dichtefunktion
+
+  <div class='in mt1'>
+f(x) = <div class='frac'><div class='num'>1</div><div class='den'>x<sup>2</sup> + <span style='font-family:arial;'>&pi;</span><sup>2</sup></div></div></div></div>
+
+ <div class='in mt2'>
+<b>a)</b> F(x) = <span style='position:relative; top:24px; right:5px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:10px; font-size:11px;'>x</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'>&thinsp;f(t)<span class='p40'>dt</span> = <span style='position:relative; top:24px; right:5px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:10px; font-size:11px;'>x</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'>&thinsp;<div class='frac'><div class='num'>1</div><div class='den'>t<sup>2</sup> + <span style='font-family:arial;'>&pi;</span><sup>2</sup></div></div><span class='p40'>dt</span> = (<span class='to4'>*</span>)</div>
+
+ <div class='in mt1'><br>
+<img src='img/vt_04.gif'></div>
+
+ <div class='in mt1'>
+<img src='img/vt_05.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/vt_06.gif' style='vertical-align:-11px;'></div>
+
+ <div class='in'><br>
+<b>b)</b> <div class='frac p04'><div class='num'>1</div><div class='den'><span style='font-family:arial;'>&pi;</span></div></div>atan<div class='frac p40'><div class='num'>x</div><div class='den'><span style='font-family:arial;'>&pi;</span></div></div>	+ 0,5 = &alpha; <img src='sym/rarr2.svg' class='p66'> x = <span class='p02' style='font-family:arial;'>&pi;</span>tan(&alpha;<span class='p22'>–</span>0,5)<span style='font-family:arial;'>&pi;</span> = F<sup>–1</sup>(&alpha;)</div>
+
+ <div class='in'><br>
+F<sup>–1</sup>(0,9) = <span class='p02' style='font-family:arial;'>&pi;</span>tan(0,9<span class='p22'>–</span>0,5)<span style='font-family:arial;'>&pi;</span> = 9,67</div>
+
+ <div><br>
+<b><a name='B.3' class='box'>3</a> Mehrdimensionale Zufallsvariable</b></div>
+
+ <div><br>
+Eine <b>n-dimensionale Zufallsvariable</b> ordnet jedem Experimentausgang ein n-Tupel zu. Dessen Komponenten beziehen sich auf bestimme Aspekte des Experimentausgangs (etwa Größe X und Gewicht Y eines zufällig ausgewählten Objekts) und sind auch für sich gesehen Zufallsvariable, aber bei der mehrdimensionalen Zufallsvariable geht es um <b>gemeinsam beobachtete</b> Werte.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Ein gepunkteter Sektor belegt 30% einer Scheibe, ein schraffierter 40% und der Bereich, wo sich beide überdecken, <b>a)</b> 12%, <b>b)</b> 15%. Ein in der Scheibenmitte gelagerter Pfeil wird in Drehung versetzt. Sobald er wieder steht, wird geschaut, worauf er zeigt:<br><br>
+
+  <table cellpadding='0' cellspacing='0' class='in'>
+   <tr>
+    <td>
+X = gepunktet?
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+1 = ja<br><br>
+0 = nein
+    </td>
+    <td style='padding-left:50px;'>
+Y = schraffiert?
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+1 = ja<br><br>
+0 = nein
+    </td>
+   </tr>
+  </table><br>
+
+Illustriere die Wahrscheinlichkeitsverteilung von (X<span class='p02'>,</span>Y) über ein 3D-Histogramm und die von X<span class='p22'>+</span>Y über ein 2D-Histogramm.</div>
+
+ <div class='in'><br>
+<img src='img/vt_07.gif'></div>
+
+ <div class='in'><br>
+<img src='img/vt_08.gif'></div>
+
+ <div><br>
+Bei stetigen Zufallsvariablen (X<span class='p02'>,</span>Y) entsteht durch Verfeinerung der 3D-Histogramm-Klassen aus den Deckflächen der Quader das Funktionsgebirge der Dichtefunktion f(x<span class='p02'>,</span>y). Aus der Wahrscheinlichkeits/Dichtefunktion f(x<span class='p02'>,</span>y) können wir die sogenannten <b>Randverteilungen</b> herausrechnen, die sich ergeben würden, wenn wir nur x-Werte bzw. nur y-Werte beobachten:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+f<sub>1</sub>(x) =
+    </td>
+    <td>
+&nbsp;<img src='sym/lbr4.gif' style='position:relative; top:3px;'>&nbsp;
+    </td>
+    <td>
+     <div style='margin-top:-24px;'>
+ <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div>f(x, y<sub>j</sub>),<span style='margin-left:16px;'>im diskreten Fall</span>
+     </div>
+     <div style='margin-top:18px; margin-left:4px;'>
+<span style='position:relative; top:24px; right:1px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:8px; font-size:11px;'>&infin;</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'>&thinsp;f(x<span class='p02'>,</span>y)<span class='p40'>dy</span>, im stetigen Fall
+   </div>
+    </td>
+    <td>
+&nbsp;&nbsp; bzw. &nbsp; f<sub>2</sub>(y) =
+    </td>
+    <td>
+&nbsp;<img src='sym/lbr4.gif' style='position:relative; top:3px;'>&nbsp;
+    </td>
+    <td>
+     <div style='margin-top:-24px;'>
+ <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div>f(x<sub>j</sub>, y),<span style='margin-left:17px;'>im diskreten Fall</span>
+     </div>
+     <div style='margin-top:18px; margin-left:4px;'>
+<span style='position:relative; top:24px; right:1px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:8px; font-size:11px;'>&infin;</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'>&thinsp;f(x<span class='p02'>,</span>y)<span class='p40'>dx</span>, im stetigen Fall
+   </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.4' class='box'>4</a> Unabhängige Zufallsvariable</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die Komponenten X und Y einer Zufallsvariablen (X<span class='p02'>,</span>Y) heißen <b>unabhängig,</b> wenn X-Ereignisse (wo im Rahmen des Gesamtexperiments nur auf den x-Wert des Ausgangs geschaut wird) und Y-Ereignisse (wo …) immer unabhängig sind. Was gleichbedeutend damit ist, dass</div>
+
+ <div class='in'><br>
+f(x<span class='p02'>,</span>y) = f<sub>1</sub>(x)<span class='p20'>f</span><sub>2</sub>(y)</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> Übeprüfe, ob X und Y in Aufgabe 4 unabhängig sind.</div>
+
+ <div class='in'><br>
+<b>a)</b> X und Y sind unabhängig, weil</div>
+
+ <div class='in'><br>
+P(X<span class='p22'>=</span>0)P(Y<span class='p22'>=</span>0) = 0,70·0,60 = 0,42 = P(X<span class='p22'>=</span>0<span class='p02'>,</span>Y<span class='p22'>=</span>0)</div>
+
+ <div class='in grau'><br>
+Der Rest folgt dann automatisch, weil Ereignisse, die voneinander unabhängig sind, auch von den jeweiligen Gegenereignissen unabhängig sind:</div>
+
+ <div class='in grau'><br>
+P(X<span class='p22'>=</span>1)P(Y<span class='p22'>=</span>0) = 0,30·0,60 = 0,18 = P(X<span class='p22'>=</span>1<span class='p02'>,</span>Y<span class='p22'>=</span>0)<br>
+P(X<span class='p22'>=</span>0)P(Y<span class='p22'>=</span>1) = 0,70·0,40 = 0,28 = P(X<span class='p22'>=</span>0<span class='p02'>,</span>Y<span class='p22'>=</span>1)<br>
+P(X<span class='p22'>=</span>1)P(Y<span class='p22'>=</span>1) = 0,30·0,40 = 0,12 = P(X<span class='p22'>=</span>1<span class='p02'>,</span>Y<span class='p22'>=</span>1)</div>
+
+ <div class='in'><br>
+<b>b)</b> X und Y sind nicht unabhängig, weil</div>
+
+ <div class='in'><br>
+P(X<span class='p22'>=</span>0)P(Y<span class='p22'>=</span>0) = 0,42 &ne; 0,45 = P(X<span class='p22'>=</span>0, Y<span class='p22'>=</span>0).</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> KENNZAHLEN</b></div>
+
+ <div><br><br>
+Wir übernehmen die oben eingeführten Populationskennzahlen, indem wir "relative Häufigkeit" durch "Wahrscheinlichkeit" ersetzen.</div>
+
+ <div><br>
+<b><a name='C.1' class='box'>1</a> Erwartungswert</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Der <b>Erwartungswert</b> einer Zufallsvariablen X ist die Summe der mit ihrer Wahrscheinlichkeit gewichteten x-Werte.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<b>E(X)</b> = <b>&mu; :</b>=
+    </td>
+    <td>
+&nbsp;<img src='sym/llbr4.gif' style='position:relative; top:3px;'>&nbsp;
+    </td>
+    <td>
+     <div style='margin-top:-24px;'>
+ <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/ssum.gif' class='p44'><div class='sos'><b>j</b></div></div><b>x<sub class='p02'>j</sub>f(x<sub>j</sub>),</b><span style='margin-left:9px;'>im diskreten Fall</span>
+     </div>
+     <div style='margin-top:18px; margin-left:3px;'>
+<span style='position:relative; top:24px; right:1px; font-size:10px;'>–<b>&infin;</b></span><span style='position:relative; bottom:25px; right:8px; font-size:10px;'><b>&infin;</b></span><img src='sym/iint.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'>&nbsp;<b>x<span class='p10'>f</span>(x)<span class='p40'>dx</span>,</b> im stetigen Fall
+   </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Wenn wir eine Zufallsvariable X über eine Funktion h: <img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'> <b>weiterverarbeiten,</b> ist das Ganze wieder eine Zufallsvariable mit</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+E(h<span class='aft'>o</span>X) =
+    </td>
+    <td>
+&nbsp;<img src='sym/lbr4.gif' style='position:relative; top:3px;'>&nbsp;
+    </td>
+    <td>
+     <div style='margin-top:-24px;'>
+ <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div>h(x<sub>j</sub>)<span class='p10'>f</span>(x<sub>j</sub>),<span style='margin-left:15px;'>im diskreten Fall</span>
+     </div>
+     <div style='margin-top:18px; margin-left:4px;'>
+<span style='position:relative; top:24px; right:1px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:8px; font-size:11px;'>&infin;</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'>&thinsp;h(x)<span class='p10'>f</span>(x)<span class='p40'>dx</span>, im stetigen Fall
+   </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Warum?</div>
+
+ <div class='in mt1'>
+<img src='img/vt_09.gif' style='float:left; margin-right:10px;'>
+
+ <div style='float:left; margin-top:65px;'>
+y<sub>k</sub>P(h<span class='aft'>o</span>X<span class='p22'>=</span>y<sub>k</sub>) = y<sub>k</sub><span class='up'>[</span>f(x<sub>i</sub>) + f(x<sub>j</sub>)<span class='up'>]</span> = h(x<sub>i</sub>)f(x<sub>i</sub>) + h(x<sub>j</sub>)f(x<sub>j</sub>)</div>
+
+ <div style='clear:left;'></div></div>
+
+ <div><br>
+Analog, wenn wir die Komponenten X, Y einer Zufallsvariablen (X, Y) über eine Funktion h: <img src='sym/setR.gif'><span class='p22'>x</span><img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'> <b>zusammenrechnen:</b></div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+E<span class='up'>[</span>h<span class='aft'>o</span>(X<span class='p02'>,</span>Y)<span class='up'>]</span> =
+    </td>
+    <td>
+&nbsp;<img src='sym/lbr4.gif' style='position:relative; top:3px;'>&nbsp;
+    </td>
+    <td>
+     <div style='margin-top:-24px;'>
+<div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div><div class='sum' style='margin-left:-3px;'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>k</div></div>h(x<sub>j</sub><span class='p02'>,</span>y<sub>k</sub>)<span class='p10'>f</span>(x<sub>j</sub><span class='p02'>,</span>y<sub>k</sub>)<span style='margin-right:16px;'>,</span>im diskreten Fall
+     </div>
+     <div style='margin-top:18px; margin-left:4px;'>
+<span style='position:relative; top:24px; right:2px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:8px; font-size:11px;'>&infin;</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'><span style='position:relative; top:24px; right:0px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:8px; font-size:11px;'>&infin;</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'>&thinsp;h(x<span class='p02'>,</span>y)<span class='p10'>f</span>(x<span class='p02'>,</span>y)<span class='p40'>dydx</span>, im stetigen Fall
+   </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Die folgenden Eigenschaften des Erwartungswerts gelten für diskrete und stetige Zufallsvariable, wir leiten sie aber nur im letzten Fall her:</div>
+
+ <div><br>
+<span class='p02'>•</span> <img src='img/vt_10.gif' style='vertical-align:-55px;'></div>
+
+ <div class='mt1'><br>
+<span class='p02'>•</span> <img src='img/vt_11.gif' style='vertical-align:-55px;'></div>
+
+ <div class='mt1'><br>
+<span class='p02'>•</span> X, Y unabhängig <img src='sym/rarr2.svg' class='p66'> <img src='img/vt_12.gif' style='vertical-align:-55px;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Varianz und Standardabweichung</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>Varianz</b> einer Zufallsvariablen X ist der Erwartungswert der Zufallsvariablen (X<span class='p44'>–</span>&mu;)<sup>2</sup>, die <b>Standardabweichung</b> ist die Wurzel daraus.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<b>Var(X)</b> = <b>&sigma;<sup>2</sup> :</b>= <b class='ws4'>E<span class='up'>[</span>(X – &mu;)<sup>2</sup><span class='up'>]</span></b> =
+    </td>
+    <td>
+&nbsp;<img src='sym/lbr4.gif' style='position:relative; top:3px;'>&nbsp;
+    </td>
+    <td>
+     <div style='margin-top:-24px;'>
+<div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div>(x<sub>j</sub><span class='p44'>–</span>&mu;)<sup class='p11'>2</sup>f(x<sub>j</sub>),<span style='margin-left:13px;'>im diskreten Fall</span>
+     </div>
+     <div style='margin-top:18px; margin-left:3px;'>
+<span style='position:relative; top:24px; right:1px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:8px; font-size:11px;'>&infin;</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'>&thinsp;(x<span class='p44'>–</span>&mu;)<sup class='p11'>2</sup>f(x)<span class='p40'>dx</span>, im stetigen Fall
+   </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='mt1'>
+Eigenschaften der Varianz:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b class='ws4'>Var(a + bX)</b> = <span class='ws4'>E<span class='up'>[</span>(a<span class='up' style='position:relative; top:1px; margin-left:-7px'>/</span> + bX – a<span class='up' style='position:relative; top:1px; margin-left:-7px'>/</span> – b&mu;)<sup>2</sup><span class='up'>]</span></span> = <span class='ws4'>b<sup class='p01'>2</sup>E<span class='up'>[</span>(X – &mu;)<sup>2</sup><span class='up'>]</span></span> = <b>b<sup class='p01'>2</sup>Var(X)</b></div>
+
+ <div class='in' style='line-height:34px; margin-top:8px;'>
+<span class='out'>•</span> X, Y unabhängig <img src='sym/rarr2.svg' class='p66'> <b class='ws4'>Var(X + Y)</b> = <span class='ws4'>E<span class='up'>[</span>(X + Y – &mu;<sub>x</sub> – &mu;<sub>y</sub>)<sup>2</sup><span class='up'>]</span></span> = <span class='ws4'>E<span class='up'>[</span>(X – &mu;<sub>x</sub>)<sup>2</sup><span class='up'>]</span> + 2E<span class='up'>[</span><span class='rot'>(X – &mu;<sub>x</sub>)(Y – &mu;<sub>y</sub>)</span><span class='up'>]</span> + E<span class='up'>[</span>(Y – &mu;<sub>y</sub>)<sup>2</sup><span class='up'>]</span></span> = <b class='ws4'>Var(X) + Var(Y)</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.3' class='box'>3</a> Kovarianz und Korrelation</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>Kovarianz</b> einer zweidimensionalen Zufallsvariablen (X, Y) ist der Erwartungswert der Zufallsvariablen <span class='rot ws4'>(X – &mu;<sub>x</sub>)(Y – &mu;<sub>y</sub>).</span></div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<b>Cov(X, Y)</b> = <b>&sigma;<sub>xy</sub> :</b>= <b>E<span class='up'>[</span>(X<span class='p22'>–</span>&mu;<sub>x</sub>)(Y<span class='p22'>–</span>&mu;<sub>y</sub>)<span class='up'>]</span></b> =
+    </td>
+    <td>
+&nbsp;<img src='sym/lbr4.gif' style='position:relative; top:3px;'>&nbsp;
+    </td>
+    <td>
+     <div style='margin-top:-24px;'>
+<div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div><div class='sum' style='margin-left:-3px;'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>k</div></div>(x<sub>j</sub><span class='p44'>–</span>&mu;<sub>x</sub>)(y<sub>k</sub><span class='p44'>–</span>&mu;<sub>y</sub>)<span class='p10'>f</span>(x<sub>j</sub><span class='p02'>,</span>y<sub>k</sub>)<span style='margin-right:13px;'>,</span>im diskr. Fall
+     </div>
+     <div style='margin-top:18px; margin-left:2px;'>
+<span style='position:relative; top:24px; right:2px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:8px; font-size:11px;'>&infin;</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'><span style='position:relative; top:24px; right:0px; font-size:11px;'>–&infin;</span><span style='position:relative; bottom:25px; right:8px; font-size:11px;'>&infin;</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-23px;'>&thinsp;(x<span class='p44'>–</span>&mu;<sub>x</sub>)(y<span class='p44'>–</span>&mu;<sub>y</sub>)<span class='p10'>f</span>(x<span class='p02'>,</span>y)<span class='p40'>dydx</span>, im stet. Fall
+   </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Was Kovarianz bedeutet, machen wir uns über folgende Bilder klar, in denen die Wahrscheinlichkeit als Punktedichte dargestellt ist:</div>
+
+ <div class='in'><br>
+<img src='img/vt_13.gif'></div>
+
+ <div><br>
+Bei <b>positiver</b> Kovarianz haben wir die Tendenz, kleine x-Werte gemeinsam mit kleinen y-Werten zu beobachten und große x-Werte gemeinsam mit großen y-Werten. Bei <b>negativer</b> Kovarianz ist es andersrum. In Bild c) verschwindet die Kovarianz.</div>
+
+ <div><br>
+Der Betrag der Kovarianz ist umso größer, je mehr die Punktewolke einem Geradenstück ähnelt und je "medianer" und ausgedehnter dieses ist. Wenn wir Letzteres herausrechnen, bleibt ein Maß für die Stärke des <i>linearen</i> Zusammenhangs von X und Y:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Der <b>Korrelationskoeffizient</b> einer zweidimensionalen Zufallsvariablen (X, Y) ist die auf den Wertebereich [–1, 1] normierte Kovarianz.</div>
+
+ <div class='in'><br>
+<b>&rho; :</b>= <div class='frac'><div class='num'><b>&sigma;<sub>xy</sub></b></div><div class='den'><b>&sigma;<sub>x</sub>&sigma;<sub>y</sub></b></div></div></div>
+
+ <div><br>
+Bei &rho; = 0 heißen X und Y <b>unkorreliert,</b> was bedeutet, dass die Punktewolke in ihrer Gesamtheit weder steigende noch fallende Tendenz hat. Diese nimmt zu, je mehr sich &rho; den Extremen ±1 nähert, wo die Punktewolke ihre Flächigkeit verliert und auf einer steigenden/fallenden Geraden liegt.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.4' class='box'>4</a> Lineare Regression</b></div>
+
+ <div><br>
+Der Korrelationskoeffizient sagt nur, wie stark die Punktewolke einer Geraden ähnelt, aber nicht welcher. Dafür suchen wir unter allen Geraden</div>
+
+ <div class='in'><br>
+Y(X) = &alpha; + &beta;X</div>
+
+ <div><br>
+die <b>Regressionsgerade von Y auf X,</b> das ist diejenige, für die die vertikalen Abweichungsquadrate <b><span class='up'>[</span>Y<span class='p44'>–</span>Y(X)<span class='up'>]</span><sup>2</sup> minimal</b> sind.</div>
+
+ <div class='in mt2'>
+<img src='img/vt_14.gif'></div>
+
+ <div><br>
+Soll heißen, unter allen Zufallsvariablen</div>
+
+ <div class='in'><br>
+<span class='ws4'>(Y – &alpha; – &beta;X)<sup>2</sup></span> =</div>
+
+ <div class='in'><br>
+<span class='ws4'><span class='up'>[</span>(Y – &mu;<sub>y</sub>) – &beta;(X – &mu;<sub>x</sub>) + (&mu;<sub>y</sub> – &beta;&mu;<sub>x</sub> – &alpha;)<span class='up'>]</span><sup>2</sup></span> =</div>
+
+ <div class='in' style='line-height:34px; margin-top:8px;'>
+<span class='ws4'>(Y – &mu;<sub>y</sub>)<sup>2</sup> + &beta;<sup>2</sup>(X – &mu;<sub>x</sub>)<sup>2</sup> + (&mu;<sub>y</sub> – &beta;&mu;<sub>x</sub> – &alpha;)<sup>2</sup> – 2&beta;(X – &mu;<sub>x</sub>)(Y – &mu;<sub>y</sub>) + 2(Y – &mu;<sub>y</sub>)(&mu;<sub>y</sub> – &beta;&mu;<sub>x</sub> – &alpha;) – 2&beta;(X – &mu;<sub>x</sub>)(&mu;<sub>y</sub> – &beta;&mu;<sub>x</sub> – &alpha;)</span></div>
+
+ <div class='mt1'>
+suchen wir diejenige mit dem kleinsten Erwartungswert:</div>
+
+ <div class='in'><br>
+<span class='ws4'>E<span class='up'>[</span>(Y – &alpha; – &beta;X)<sup>2</sup><span class='up'>]</span></span> = <span class='ws4'>&sigma;<sub>y</sub><sup>2</sup> + &beta;<sup>2</sup>&sigma;<sub>x</sub><sup>2</sup> + (&mu;<sub>y</sub> – &beta;&mu;<sub>x</sub> – &alpha;)<sup>2</sup> – 2&beta;&sigma;<sub>xy</sub></span> = min!</div>
+
+ <div class='in'><br>
+(1) <div class='frac'><div class='num'>&part;(…)</div><div class='den'>&part;&alpha;</div></div> = 2(&mu;<sub>y</sub> – &beta;&mu;<sub>x</sub> – &alpha;)(–1) = 0</div>
+
+ <div class='in mt1'>
+(2) <div class='frac'><div class='num'>&part;(…)</div><div class='den'>&part;&beta;</div></div> = <span class='ws4'>2&beta;&sigma;<sub>x</sub><sup>2</sup> + 2(&mu;<sub>y</sub> – &beta;&mu;<sub>x</sub> – &alpha;)(–&mu;<sub>x</sub>) – 2&sigma;<sub>xy</sub></span> = 0</div>
+
+  <div><br>
+Laut (1) geht die Gerade durch (&mu;<sub>x</sub>, &mu;<sub>y</sub>) und verschwindet der mittlere Summand in (2). Das ergibt die Steigung</div>
+
+ <div class='in'><br>
+<b>&beta;<sub>y(x)</sub></b> = <div class='frac'><div class='num'><b>&sigma;<sub>xy</sub></b></div><div class='den'><b>&sigma;<sub>x</sub><sup>2</sup></b></div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Gegeben sind die Punkte (1|5), (3|2), (8|1) im kartesischen Koordinatensystem. <b>a)</b> Bestimme diejenige (Ausgleichs)Gerade, bei der die Summe ihrer vertikalen Abstandsquadrate zu den gegebenen Punkten minimal ist. <b>b)</b> Betrachte die gegebenen Punkte als Population und benutze obige Formeln für (X<span class='p02'>,</span>Y) = Koordinaten eines zufällig  aus dieser Population ausgewählten Punktes.</div>
+
+ <div class='in'><br>
+<b>a)</b> y(x) = a<span class='p44'>+</span>bx</div>
+
+ <div class='in'><br>
+q(a<span class='p02'>,</span>b) = <span class='ws4'><span class='up'>[</span>5 – y(1)<span class='up'>]</span><sup>2</sup> + <span class='ws4'><span class='up'>[</span>2 – y(3)<span class='up'>]</span><sup>2</sup> + <span class='ws4'><span class='up'>[</span>1 – y(8)<span class='up'>]</span><sup>2</sup></span> = <span class='ws4'>(5 – a – b)<sup>2</sup> + (2 – a – 3b)<sup>2</sup> + (1 – a – 8b)<sup>2</sup></span></div>
+
+ <div class='in'><br>
+(1) <div class='frac'><div class='num'>&part;q</div><div class='den'>&part;a</div></div> = <span class='ws4'>2<span class='lt'>/</span>(5 – a – b)(–1) + 2<span class='lt'>/</span>(2 – a – 3b)(–1) + 2<span class='lt'>/</span>(1 – a – 8b)(–1)</span> = 0</div>
+
+ <div class='in mt1'>
+(2) <div class='frac'><div class='num'>&part;q</div><div class='den'>&part;b</div></div> = <span class='ws4'>2<span class='lt'>/</span>(5 – a – b)(–1) + 2<span class='lt'>/</span>(2 – a – 3b)(–3) + 2<span class='lt'>/</span>(1 – a – 8b)(–8)</span> = 0</div>
+
+ <div class='in' style='float:left;'><br>
+  <div>
+(1) <span class='ws4'>3a + 12b</span> = 8</div>
+
+ <div class='mt1'>
+(2) <span class='ws4'>12a + 74b</span> = 19</div>
+</div>
+
+ <div style='margin-top:4px;'><br>
+<img src='sym/rbr1.gif' style='margin-left:7px; vertical-align:middle;'> a = 4,<span class='ol'>6</span>, b = –0,5</div>
+
+ <div class='in mt1'><br>
+<img src='img/vt_15.gif'></div>
+
+ <div class='in mt2'>
+<b>b)</b> Y(X) = &alpha;<span class='p44'>+</span>&beta;X</div>
+
+ <div class='in mt1'>
+&mu;<sub>x</sub> = <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div><span class='ws4'>x<sub class='p01'>j</sub>f<sub>1</sub>(x<sub>j</sub>)</span> = <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>x<sub>i</sub> = <div class='frac p04'><div class='num'>1</div><div class='den'>3</div></div>12 = 4</div>
+
+ <div class='in mt1'>
+&mu;<sub>y</sub> = <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div><span class='ws4'>y<sub class='p01'>j</sub>f<sub>2</sub>y<sub>j</sub>)</span> = <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>y<sub>i</sub> = <div class='frac p04'><div class='num'>1</div><div class='den'>3</div></div>8 = 2,<span class='ol'>6</span></div>
+
+ <div class='in mt1'>
+&sigma;<sub>x</sub><sup>2</sup> = <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div><span class='ws4'>(x<sub>j</sub> – &mu;<sub>x</sub>)<sup class='p01'>2</sup>f<sub>1</sub>(x<sub>j</sub>)</span> = <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div><span class='ws4'>(x<sub>i</sub> – &mu;<sub>x</sub>)<sup>2</sup></span> = <div class='frac p04'><div class='num'>1</div><div class='den'>3</div></div>26</div>
+
+ <div class='in mt1'>
+&sigma;<sub>y</sub><sup>2</sup> = <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div><span class='ws4'>(y<sub>j</sub> – &mu;<sub>y</sub>)<sup class='p01'>2</sup>f<sub>2</sub>(y<sub>j</sub>)</span> = <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div><span class='ws4'>(y<sub>i</sub> – &mu;<sub>y</sub>)<sup>2</sup></span> = <div class='frac p04'><div class='num'>1</div><div class='den'>3</div></div>8,<span class='ol'>6</span></div>
+
+ <div class='in mt1'>
+&sigma;<sub>xy</sub> = <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>j</div></div><div class='sum' style='margin-left:-3px;'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>k</div></div><span class='ws4'>(x<sub>j</sub> – &mu;<sub>x</sub>)(y<sub>k</sub> – &mu;<sub>y</sub><span class='p01'>)</span>f(x<sub>j</sub><span class='p02'>,</span>y<sub>k</sub>)</span> = <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div><span class='ws4'>(x<sub>i</sub> – &mu;<sub>x</sub>)(y<sub>i</sub> – &mu;<sub>y</sub>)</span> = <div class='frac p04'><div class='num'>1</div><div class='den'>3</div></div>(–13)</div>
+
+ <div class='in'><br>
+&beta; = <div class='frac'><div class='num'>&sigma;<sub>xy</sub></div><div class='den'>&sigma;<sub>x</sub><sup>2</sup></div></div> = –0,5 <img src='sym/rarr2.svg' class='p66'> &alpha; = <span class='ws4'>&mu;<sub>y</sub> – &beta;&mu;<sub>x</sub></span> = 4,<span class='ol'>6</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Analog zur Regression von Y auf X ist unter allen Geraden</div>
+
+ <div class='in'><br>
+X(Y) = <div class='frac'><div class='num'>Y – &alpha;</div><div class='den'>&beta;</div></div></div>
+
+ <div><br>
+die <b>Regressionsgerade von X auf Y</b> diejenige, für die die horizontalen Abweichungsquadrate <span class='up'>[</span>X<span class='p44'>–</span>X(Y)<span class='up'>]</span><sup>2</sup> minimal sind.</div>
+
+ <div><br>
+Auch diese Gerade geht durch (&mu;<sub>x</sub>, &mu;<sub>y</sub>). Sie hat die Steigung</div>
+
+ <div class='in'><br>
+&beta;<sub>x(y)</sub> = <div class='frac to1'><div class='num'>&sigma;<sub>y</sub><sup>2</sup></div><div class='den'>&sigma;<sub>xy</sub></div></div></div>
+
+ <div><br>
+Je mehr die Punktewolke einer Geraden ähnelt, umso geschlossener ist die "Schere" der beiden Regressionsgeraden. Ein Maß dafür ist</div>
+
+ <div class='in'><br>
+<div class='frac to1'><div class='num'>&beta;<sub>y(x)</sub></div><div class='den'>&beta;<sub>x(y)</sub></div></div> = <div class='frac to1'><div class='num'>&sigma;<sub>xy</sub><sup>2</sup></div><div class='den'>&sigma;<sub>x</sub><sup>2</sup>&sigma;<sub>y</sub><sup>2</sup></div></div> = <b>&rho;<sup>2</sup></b> =<b>: Bestimmtheitsmaß</b> (0 <img src='sym/larr.svg' class='bo1'> schlecht, gut <img src='sym/rarr.svg' class='bo1'> 1)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 7:</b> Wie groß ist das Bestimmtheitsmaß in der vorigen Aufgabe?</div>
+
+ <div class='in'><br>
+&rho;<sup>2</sup> = <div class='to1 frac'><div class='num'>&sigma;<sub>xy</sub><sup>2</sup></div><div class='den'>&sigma;<sub>x</sub><sup>2</sup>&sigma;<sub>y</sub><sup>2</sup></div></div> = 0,75</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> SPEZIELLE VERTEILUNGEN</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Binomialverteilung</b></div>
+
+ <div><br>
+Wir haben ein Gesamtexperiment, bei dem dasselbe Einzelexperiment <b>unabhängig voneinander</b> n-mal ausgeführt wird, und uns interessiert, wie oft dabei ein bestimmtes Ereignis A eintritt. Ausgehend von einer auf das Einzelexperiment aufsetzenden Zufallsvariablen</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+X<span class='poi'>·</span> = A eingetreten?
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+1 = ja (Wahrscheinlichkeit p)<br><br>
+0 = nein (Wahrscheinlichkeit q)
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+bzw. den unabhängigen X<span class='poi'>·</span><sub>i</sub>, die auf das Gesamtexperiment aufsetzen und den X<span class='poi'>·</span>-Wert der i-ten Ausführung annehmen, heißt das:</div>
+
+ <div class='in'><br>
+X = X<span class='poi'>·</span><sub>1</sub> + … + X<span class='poi'>·</span><sub>n</sub> (wie oft A eintritt) =<span class='rdf'>:</span> <b>n-p-binomialverteilt</b></div>
+
+ <div><br>
+Ein Baumdiagramm des Gesamtexperiments hat n-teilige Pfade aus p-Zweigen und q-Zweigen. Das Ereignis X<span class='p44'>=</span>k besteht aus soviel Pfaden, wie es Möglichkeiten gibt, k Positionen aus n auszuwählen, um sie zu p-Zweigen zu machen (den Rest bilden dann q-Zweige):</div>
+
+ <div><br>
+<img src='img/vt_16.gif'></div>
+
+ <div><br>
+<b>Erwartungswert und Varianz</b> der Binomialverteilung:</div>
+
+ <div class='in'><br>
+E(X<span class='poi'>·</span>) = 0·q + 1·p = p <img src='sym/rarr2.svg' class='p66'> E(X) = E(X<span class='poi'>·</span><sub>1</sub>) + … + E(X<span class='poi'>·</span><sub>n</sub>) = np</div>
+
+ <div class='in'><br>
+Var(X<span class='poi'>·</span>) = (0<span class='p22'>–</span>p)<sup>2</sup>q + (1<span class='p22'>–</span>p)<sup>2</sup>p = p<sup>2</sup>q + q<sup>2</sup>p = pq <img src='sym/rarr2.svg' class='p66'> Var(X) = Var(X<span class='poi'>·</span><sub>1</sub>) + … + Var(X<span class='poi'>·</span><sub>n</sub>) = npq</div>
+
+ <div style='margin-top:3px; margin-left:410px;'>
+<img src='sym/uarr_g.gif'></div>
+
+ <div class='grau' style='font-size:11px; margin-left:375px;'>
+X<sub>i</sub> unabhängig</div>
+
+ <div><br>
+Bem: Somit hat die relative Häufigkeit h(A) = X/n als Zufallsvariable den Erwartungswert p und die Varianz pq/n, die mit zunehmendem n gegen 0 läuft. Das ist nichts anderes als das Gesetz der großen Zahlen in neuem Gewand.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Ein Spieler wettet gegen die Bank, dass er mit 2 Würfeln eine zweistellige Augenzahl wirft. Falls er gewinnt, wird der vierfache Einsatz ausbezahlt und der Einsatz rückerstattet. Gespielt wird 25-mal. <b>a)</b> Wie groß ist die Wahrscheinlichkeit, dass er mindestens 3-mal gewinnt? <b>b)</b> Wie groß ist der Erwartungswert der Spielerbilanz, wenn der Einsatz 1 EUR beträgt?</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+X<span class='poi'>·</span> = Augenzahl zweistellig?
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+1 = ja (Wahrscheinlichkeit p)<br><br>
+0 = nein (Wahrscheinlichkeit q)
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+p = <div class='frac'><div class='num'>|{(4,6), (5,5), (5,6), (6,4), (6,5), (6,6)}|</div><div class='den'>|{(1,1), … (6,6)}|</div></div> = <div class='frac'><div class='num'>6</div><div class='den'>36</div></div> = <div class='frac'><div class='num'>1</div><div class='den'>6</div></div></div>
+
+ <div class='in'><br>
+<b>a)</b> X = X<span class='poi'>·</span><sub>1</sub> + … + X<span class='poi'>·</span><sub>25</sub> (Anzahl gewonnener Wetten) = binomialverteilt</div>
+
+ <div class='in mt2'>
+<img src='img/vt_17.gif'></div>
+
+ <div class='in'><br>
+<b>b)</b> E(<span class='ws4'>5X – 25</span>) = <span class='ws4'>5E(X) – 25</span> = 5·25<div class='frac p40'><div class='num'>1</div><div class='den'>6</div></div> – 25 = –4,17 EUR</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> Standardnormalverteilung</b></div>
+
+ <div><br>
+Eine <b>Zufallsvariable X standardisieren</b> heißt, den Erwartungswert subtrahieren und anschließend durch die Standardabweichung dividieren. Das Ganze ist dann wieder eine Zufallsvariable mit Erwartungswert 0 und Standardabweichung 1. Für den n-maligen Münzwurf und das binomialverteilte X = "Anzahl Kopf" schaut das so aus:</div>
+
+ <div class='in'><br>
+<img src='img/vt_18.gif'></div>
+
+ <div class='in'><br>
+<img src='img/vt_19.gif'></div>
+
+ <div><br>
+Mit zunehmendem n rücken die Werte der Zufallsvariablen auf der x-Achse immer näher zusammen und die Oberkanten der Rechtecke laufen gegen die Gauß'sche Glockenkurve, wie die Dichtefunktion der <b>Standardnormalverteilung N(0<span class='p04'>;</span>1)</b> heißt:</div>
+
+ <div class='in'><br>
+<img src='img/vt_20.gif'></div>
+
+ <div class='mt2'>
+<b>Zentraler Grenzwertsatz:</b> Dass wir auf dem Weg zur Standardnormalverteilung vom einfachsten aller Zufallsexperimente ausgegangen sind, ist bei näherer Betrachtung nicht entscheidend, da die standardisierte Summe <i>jeder</i> Verteilung mit zunehmender Summandenzahl dorthin läuft.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.3' class='box'>3</a> Allgemeine Normalverteilung</b></div>
+
+ <div><br>
+Die Standardnormalverteilung ist erst der Rohstoff, der durch Skalieren/Verschieben so verallgemeinert wird, dass er reale Situationen widerspiegelt (nicht anders wie bei den elementaren Funktionen e<sup>x</sup> und sinx).</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Z</b> = <b>N(0<span class='p04'>;</span>1)</b> <img src='sym/rarr2.svg' class='p66'> <b>X</b> = <b>&mu; + &sigma;Z</b> =<b>: N(&mu;<span class='p04'>;</span>&sigma;) verteilt</b> mit E(X) = &mu; und Var(X) = &sigma;<sup>2</sup></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b> Ergänze die folgende Glockenkurve durch eine weitere, bei der &mu; und &sigma; größer sind.<br><br>
+
+<img src='img/vt_21.gif' class='in'></div>
+
+ <div class='in'><br>
+Größeres &mu; bedeutet, dass die Glocke nach rechts wandert. Größeres &sigma;, dass die Flanken flacher sind und die Haube tiefer liegt, da die Fläche unter Dichtefunktionen immer 1 ist.</div>
+
+ <div class='in'><br>
+<img src='img/vt_22.gif'></div>
+
+ <div class='mt2'>
+Normalverteilungen <b>bleiben normalverteilt,</b> wenn sie linear transformiert oder summiert werden:</div>
+
+ <div><br>
+<span class='p02'>•</span> X = N(&mu;<span class='p02'>;</span>&sigma;) verteilt <img src='sym/rarr2.svg' class='p66'> a + bX = N(a<span class='p22'>+</span>b&mu;<span class='p02'>;</span>|b|&sigma;) verteilt</div>
+
+ <div><br>
+<span class='p02'>•</span> X<sub>i</sub> = N(&mu;<sub>i</sub><span class='p02'>;</span>&sigma;<sub>i</sub>) verteilt und unabhängig <img src='sym/rarr2.svg' class='p66'> X<sub>1</sub> + X<sub>2</sub> = N(&mu;<sub>1</sub><span class='p22'>+</span>&mu;<sub>2</sub><span class='p02'>;</span><span class='r1t'>&radic;</span><span class='rad'>&sigma;<sub>1</sub><sup>2</sup><span class='p22'>+</span>&sigma;<sub>2</sub><sup>2</sup></span>) verteilt</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='E' class='box'>E</a> AUFGABEN ZUR NORMALVERTEILUNG</b></div>
+
+ <div><br><br>
+<b><a name='E.1' class='box'>1</a> Wahrscheinlichkeiten, Quantile</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 10:</b> Der in einer Tablette enthaltene Wirkstoff ist normalverteilt mit &mu; = 25 mg und &sigma; = 1,5 mg. Wie groß ist die Wahrscheinlichkeit, dass eine Tablette <b>a)</b> zwischen 25,9 mg und 28 mg, <b>b)</b> mehr als 23,8 mg Wirkstoff enthält? <b>c)</b> Wie groß ist &delta;, wenn in 80% aller Fälle die Wirkstoffmenge im Bereich &mu; ± &delta; liegt?</div>
+
+ <div class='in'><br>
+X = Wirkstoffmenge in mg/Tablette = N(25<span class='p02'>;</span>1,5) verteilt</div>
+
+ <div class='in mt2'>
+<img src='img/vt_23.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/vt_24.gif'></div>
+
+ <div class='in mt1'><br>
+<img src='img/vt_25.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+  <div><br>
+<b><a name='E.2' class='box'>2</a> Lineartransformation, Summe</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 11:</b> Der jährliche Stromverbrauch von Haushalt1 ist normalverteilt mit &mu;<sub>1</sub> = 1680 kWh und &sigma;<sub>1</sub> = 100 kWh, der Grundpreis ist 75 EUR pro Jahr, der Arbeitspreis 0,20 EUR pro kWh. Für Haushalt2 gilt: &mu;<sub>2</sub> = 1650 kWh, &sigma;<sub>2</sub> = 150 kWh, Grundpreis = 120 EUR, Arbeitspreis = 0,18 EUR. Wie groß ist die Wahrscheinlichkeit, dass die Stromkosten eines Jahres für Haushalt1 geringer sind als für Haushalt2?</div>
+
+ <div class='in'><br>
+X<sub>1</sub> = Stromverbrauch1 in kWh/Jahr = N(1680<span class='p02'>;</span>100) verteilt</div>
+
+ <div class='in mt1'>
+X<sub>2</sub> = Stromverbrauch2 in kWh/Jahr = N(1650<span class='p02'>;</span>150) verteilt</div>
+
+ <div class='in mt1'>
+Y<sub>1</sub> = Stromkosten1 in EUR/Jahr = 75 + 0,20X<sub>1</sub> = N(75<span class='p22'>+</span>0,20&mu;<sub>1</sub> <span class='grau'>= 411</span>; 0,20&sigma;<sub>1</sub><span class='grau'> = 20</span>) verteilt</div>
+
+ <div class='in mt1'>
+Y<sub>2</sub> = Stromkosten2 in EUR/Jahr = 120 + 0,18X<sub>2</sub> = N(120<span class='p22'>+</span>0,18&mu;<sub>2</sub> <span class='grau'>= 417</span>; 0,18&sigma;<sub>2</sub> <span class='grau'>=27</span>) verteilt</div>
+
+ <div class='in mt1'>
+Z = Y<sub>1</sub> – Y<sub>2</sub> = Y<sub>1</sub> + (–1)Y<sub>2</sub> =  N(411<span class='p22'>+</span>(–1)417 <span class='grau'>= –6</span>; <span class='r1t'>&radic;</span><span class='rad'>20<sup>2</sup><span class='p22'>+</span>27<sup>2</sup></span> <span class='grau'>= 33,6</spaN>) verteilt</div>
+
+ <div class='in mt2'>
+P(–&infin; &lt; Z &lt; 0) = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+–&infin; &lt; <div class='frac to1'><div class='num'>Z – (–6)</div><div class='den'>33,6</div></div> &lt; <div class='frac to1'><div class='num'>0 – (–6)</div><div class='den'>33,6</div></div></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= &Phi;(0,18) – &Phi;(–&infin;) = 0,57
+ </div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+  <div><br>
+<b><a name='E.3' class='box'>3</a> Approximation der Binomialverteilung</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 12:</b> Die Wahrscheinlichkeit, dass eine Muschel mit eingeimpftem Nukleus eine Perle produziert, liegt bei 10%. Bestimme näherungsweise über die Normalverteilung die Anzahl der Muscheln, aus denen man mit 95% Wahrscheinlichkeit mehr als 20 Perlen gewinnt.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+X<span class='poi'>·</span> = Perle?
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+1 = ja (Wahrscheinlichkeit p = 0,10)<br><br>
+0 = nein (Wahrscheinlichkeit q = 0,90)
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+X = X<span class='poi'>·</span><sub>1</sub> + … + X<span class='poi'>·</span><sub>n</sub> (Anzahl Perlen) = n-p-binomialverteilt &asymp; N(np<span class='p02'>;</span><span class='r1t'>&radic;</span><span class='rad'>npq</span>) verteilt</div>
+
+ <div class='in mt2'>
+0,95 = P(20 &lt; X &lt; &infin;) = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+<div class='frac to2'><div class='num'>20 – 0,1n</div><div class='den to1'>0,3<span class='r1t'>&radic;</span><span class='rad'>n</span></div></div> &lt; <div class='frac to2'><div class='num'>X – 0,1n</div><div class='den to1'>0,3<span class='r1t'>&radic;</span><span class='rad'>n</span></div></div> &lt; &infin;</div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= &Phi;(&infin;) – &Phi;
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+<div class='frac to2'><div class='num'>20 – 0,1n</div><div class='den to1'>0,3<span class='r1t'>&radic;</span><span class='rad'>n</span></div></div></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+ </div>
+
+ <div class='in mt2'>
+&Phi;
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+<div class='frac to2'><div class='num'>20 – 0,1n</div><div class='den to1'>0,3<span class='r1t'>&radic;</span><span class='rad'>n</span></div></div></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= 0,05 &nbsp; <span class='ll up'></span>&Phi;<sup>–1</sup>(.)
+ </div>
+
+ <div class='in'><br>
+<div class='frac to1'><div class='num'>20 – 0,1n</div><div class='den to2'>0,3<span class='r1t'>&radic;</span><span class='rad'>n</span></div></div> = –1,645 &nbsp; <span class='ll up' style='margin-left:14px;'></span>u = <span class='r1t'>&radic;</span><span class='rad'>n</span></div>
+
+ <div class='in mt1'>
+<span class='ws4'>0,1u<sup>2</sup> – 0,4935u – 20</span> = 0 <img src='sym/rarr2.svg' class='p66'> u<sub>1,2</sub> = <div class='frac'><div class='num'>0,4935 ± <span class='r1t'>&radic;</span><span class='rad'>(–0,4935)<sup>2</sup> – 4·0,1·(–20)</span></div><div class='den'>2·0,1</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='to17'>–11,89 <img src='sym/flash.svg' class='to3'></span><span class='bo17' style='margin-left:-56px;'>16,82</span></div>
+
+ <div class='in mt1'>
+n = u<sup>2</sup> = 283</div>
+
+ <div><br>
+Genaugenommen ist diese Approximation erst ab einem Stichprobenumfang mit <b>npq</b> &ge; <b>9</b> zulässig: 283·0,10·0,90 = 25,5 <img src='sym/ok.svg' class='to3'></div>
+
+ <!-- pbinom(&infin;, 286, 0.1) – pbinom(20, 286, 0.1) = 0,95 -->
+
+ </div></body>
+ </html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Integralrechnung</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>Anhang zu: INTEGRALRECHNUNG</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BEWEIS: INTEGRATION DURCH SUBSTITUTION</b></div>
+
+ <div class='in'><br>
+<img src='sym/int.gif' style='vertical-align:-12px;'><span class='p01'>f</span>(g(x))<span class='p40'>dx</span> = <img src='sym/int.gif' style='vertical-align:-12px;'>f(u)<div class='frac p40'><div class='num'>du</div><div class='den'>u'</div></div> &nbsp; <span style='font-size:150%; vertical-align:-5px;' class='ll'>&thinsp;</span><div class='frac p04'><div class='num'>d</div><div class='den'>dx</div></div>(.)</div>
+
+ <div><br>
+Wir zerlegen die x-Achse in Bereiche, über denen g umkehrbar ist, und g<sup>–1</sup> sei dann die Umkehrfunktion im jeweiligen Bereich:</div>
+
+ <div class='in'><br>
+<div class='frac p04'><div class='num'>d</div><div class='den'>dx</div></div><img src='sym/int.gif' style='vertical-align:-12px;'><span class='p01'>f</span>(g(x))<span class='p40'>dx</span> = <div class='frac p04'><div class='num'>d</div><div class='den'>du</div></div><img src='sym/int.gif' style='vertical-align:-12px;'><div class='frac p40'><div class='num'>f(u)</div><div class='den'>g'(g<sup>–1</sup>(u))</div></div> du<span class='p22'>·</span><div class='frac'><div class='num'>du</div><div class='den'>x</div></div></div>
+
+ <div class='in'><br>
+f(g(x)) = <div class='frac'><div class='num'>f(g(x))</div><div class='den'>g'(x)</div></div><span class='p22'>·</span>g'(x) <img src='sym/ok.svg' class='to3'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>ERGÄNZUNG ZU AUFGABE 2:</b></div>
+
+ <div><br>
+Nicht immer springt einem der zu substituierende Teilausdruck ins Auge, mitunter führen auch verschiedene Wege zum Ziel:</div>
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe: b)</b> <img src='sym/int.gif' style='vertical-align:-12px;'>tanx<span class='p40'>dx</span> = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> <img src='sym/int.gif' style='vertical-align:-12px;'><div class='frac p20'><div class='num'>e<sup>2x</sup></div><div class='den'>e<sup>x</sup> + 1</div></div> dx =</div>
+
+ <div class='in'><br>
+<img src='img/in_a00.gif' style='vertical-align:-35px;'> <img src='img/in_a01.gif'></div>
+
+ <div class='in mt1'><br>
+<img src='img/in_a02.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>PBZ: QUADRATISCHE NENNER ZUR POTENZ</b></div>
+
+ <div><br>
+Bei der Partialbruchzerlegung stoßen wir auch auf folgende Summanden, die ein quadratisches, im Rellen nicht faktorisierbares Polynom enthalten:</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>Ax + B</div><div class='den'>(x<sup>2</sup> + bx + c)<sup>n</sup></div></div></div>
+
+ <div><br>
+Um diesen Term zu integrieren, gehen wir wie im Skriptum vor (Aufgabe 5) und erhalten:</div>
+
+ <div class='in mt1'>
+C<div class='frac p40'><div class='num'>u</div><div class='den'>(u<sup>2</sup> + 1)<sup>n</sup></div></div> + D<div class='frac p40'><div class='num'>1</div><div class='den'>(u<sup>2</sup> + 1)<sup>n</sup></div></div></div>
+
+ <div><br>
+Die Integration des ersten Teils ist klar, beim zweiten gehen wir so vor:</div>
+
+ <div class='in'><br>
+<img src='img/in_a03.gif'></div>
+
+ <div><br>
+Das schaut jetzt nach einer Verschlechterung aus, aber wenn wir den letzen Teil abspalten und freistellen, erhalten wir die Rekursionsformel:</div>
+
+ <div class='in'><br>
+<img src='img/in_a04.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>ERGÄNZUNG ZU AUFGABE 5:</b></div>
+
+ <div><br>
+Bei einem quadratischen Nenner, der nicht in reelle Linearfaktoren zerfällt, kann man auch die komplexen Linearfaktoren zur Partialbruchzerlegung nützen (was aber keinen Vorteil gegenüber der im Skriptum verwendeten Methode bringt):</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe:</b> <img src='sym/int.gif' style='vertical-align:-12px;'><div class='frac p20'><div class='num'>x – 9</div><div class='den'>x<sup>2</sup> – 2x + 5</div></div> dx = (<span class='to4'>*</span>)</div>
+
+ <div class='in'><br>
+x<sup>2</sup> – 2x + 5 = 0 <img src='sym/rarr2.svg' class='p66'> x<sub>1,2</sub> = <div class='frac to1'><div class='num'>2 ± <span class='r1t'>&radic;</span><span class='rad'>(–2)<sup>2</sup> – 4·5</span></div><div class='den'>2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17 ws4'>1 + 2j</span><span class='to17 ws4' style='margin-left:-37px;'>1 – 2j</span></div>
+
+ <div class='in mt2'>
+<div class='frac'><div class='num'>x – 9</div><div class='den'>x<sup>2</sup> – 2x + 5</div></div> = <div class='frac'><div class='num'>A + jB</div><div class='den'>x – 1 – 2j</div></div> + <div class='frac'><div class='num'>C + jD</div><div class='den'>x – 1 + 2j</div></div> = <div class='frac'><div class='num'>(A + jB)(x – 1 + 2j) + (C + jD)(x – 1 – 2j)</div><div class='den'>(x – 1 – 2j)(x – 1 + 2j)</div></div></div>
+
+ <div class='in'><br>
+x = 1 + 2j: –8 + 2j = (A + jB)4j = –4B + j4A <img src='sym/rarr2.svg' class='p66'> A = 0,5, B = 2</div>
+
+ <div class='in'><br>
+x = 1 – 2j: –8 – 2j = (C + jD)(–4j) = 4D – j4C <img src='sym/rarr2.svg' class='p66'> C = 0,5, D = –2</div>
+
+ <div class='in'><br>
+Für x <img src='sym/isin.gif'> <img src='sym/setR.gif'> gilt somit:</div>
+
+ <div class='in mt2'>
+<img src='img/in_a05.gif'></div>
+
+ <div class='in mt1'>
+(0,5 + 2j)(lnr + j&phi;) + (0,5 – 2j)(lnr – j&phi;) = lnr – 4&phi; = ln<span class='r1t'>&radic;</span><span class='rad'>(x – 1)<sup>2</sup> + 4</span> – <span class='p02'>4</span>arctan<div class='frac p40'><div class='num'>-2</div><div class='den'>x – 1</div></div></div>
+
+ <div><br>
+Bem: Durch konstante Summanden kommen wir auf dasselbe Ergebnis wie im Skriptum (das keine Unstetigkeitsstelle bei x = 1 hat).</div>
+
+ <div class='in'><br>
+<img src='img/in_a06.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>GEWICHTETES ARITHMETISCHES MITTEL</b></div>
+
+ <div><br>
+Im Skriptum haben wir die lineare Interpolation als Beispiel strapaziert, hier ein weiteres:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe:</b> Ein Blechstück liegt in der xy-Ebene und besteht aus zwei Teilen. Die Flächeninhalte der Teile und ihre Schwerpunkte sind gegeben. Zeige, dass der Gesamtschwerpunkt das flächenmäßig gewichtete Mittel der Teilschwerpunkte ist.</div>
+
+ <div class='in'><br>
+Wir unterstellen, dass das Blechstück die Dichte &sigma; (in kg/m<sup>2</sup>) hat und die Schwerkraft normal auf die xy-Ebene wirkt. Genaugenommen wirkt die Schwerkraft auf die einzelnen Partikel, aber bei starren Körpern können wir so tun, als ob ihre Summe im Schwerpunkt angreift. Bezüglich einer Schwerelinie als Drehachse heben sich die durch die Schwerkraft erzeugten Drehmomente auf:</div>
+
+ <div class='in' style='float:left;'><br>
+<img src='img/in_a07.gif' style='margin-right:50px;'></div>
+
+ <div class='mt2'>
+<span class='ws4'>(x<sub>s</sub> – x<sub>1</sub>)</span>A<sub>1</sub class='p02'><span class='p01'>&sigma;</span>g<img src='sym/slash1.gif' style='position:relative; right:16px; top:2px; margin-right:-15px;'> = <span class='ws4'>(x<sub>2</sub> – x<sub>s</sub>)</span>A<sub class='p02'>2</sub><span class='p01'>&sigma;</span>g<img src='sym/slash1.gif' style='position:relative; right:16px; top:2px; margin-right:-15px;'></div>
+
+ <div><br>
+<span class='ws4'>x<sub>s</sub>A<sub>1</sub> + x<sub>s</sub>A<sub>2</sub></span> = <span class='ws4'>x<sub>1</sub>A<sub>1</sub> + x<sub>2</sub>A<sub>2</sub></span></div>
+
+ <div><br>
+x<sub>s</sub> = <div class='frac'><div class='num'>x<sub>1</sub>A<sub>1</sub> + x<sub>2</sub>A<sub>2</sub></div><div class='den'>A<sub>1</sub> + A<sub>2</sub></div></div>, y<sub>s</sub> analog</div>
+
+ <div style='clear:left;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BEWEIS: SIMPSON'SCHE REGEL</b></div>
+
+ <div class='in'><br>
+<img src='img/in_a08.gif'><br><br>
+<img src='img/in_a09.gif'><br><br>
+<img src='img/in_a10.gif'><br><br>
+<img src='img/in_a11.gif'></div>
+
+ <div><br>
+Bem: Für Polynome 3. Grades lässt sich die Regel genauso beweisen, für Polynome höheren Grades gilt sie nicht mehr.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>KEPLER'SCHE FASSREGEL?</b></div>
+
+ <div><br>
+Die Fläche zwischen f(x) und 0 &le; x &le; h rotiere um die x-Achse. Der entstehende Drehkörper hat bei x die Querschnittsfläche Q(x) und das Volumen</div>
+
+ <div class='in'><br>
+<img src='img/in_a12.gif'></div>
+
+ </div></body>
+ </html>

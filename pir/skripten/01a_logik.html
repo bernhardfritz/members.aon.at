@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Logik und Mengenlehre</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ <style type='text/css'>
+.bb4 {
+  border-bottom-style:solid;
+  padding-bottom:4px;
+  padding-right:3px;
+  padding-left:3px;
+}
+.pt4 {
+  position:relative;
+  top:4px;
+}
+.min {
+	font-size:10px;
+	margin-top:5px;
+	margin-bottom:-10px;
+}
+ </style>
+ </style>
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>Anhang zu: LOGIK UND MENGENLEHRE</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>WEITERE LOGISCHE OPERATOREN?</b></div>
+
+ <div><br>
+Über die Wahrheitstafel können wir jeden binären logischen Operator (aus 16 möglichen) so charakterisieren</div>
+
+ <div><br>
+  <table class='in t0'>
+   <tr>
+    <td class='tc br bb4'>
+a
+    </td>
+    <td class='tc br bb4'>
+b
+    </td>
+    <td class='tc bb4'>
+a OP b
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+x<sub>1</sub>
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+x<sub>2</sub>
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+x<sub>3</sub>
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+x<sub>4</sub>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+bzw. mit NICHT, UND, ODER zusammenbauen:</div>
+
+ <div class='in'><br>
+a OP b = <span class='up'>[</span>(<span class='ol'>a</span> &and; <span class='ol'>b</span>) &and; x<sub>1</sub><span class='up'>]</span> &or; <span class='up'>[</span>(<span class='ol'>a</span> &and; b) &and; x<sub>2</sub><span class='up'>]</span> &or; <span class='up'>[</span>(a &and; <span class='ol'>b</span>) &and; x<sub>3</sub><span class='up'>]</span> &or; <span class='up'>[</span>(a &and; b) &and; x<sub>4</sub><span class='up'>]</span></div>
+
+ <div><br>
+Eigene Symbole/Sprechweisen gibt es inbesondere für:</div>
+
+ <div class='in'><br>
+a <img src='sym/rarr2.svg'> b <span class='ldf'>:</span>= <span class='ol'>a</span> &or; b &nbsp; … wenn a, dann b (Implikation)<br><br>
+
+a <img src='sym/harr2.svg'> b <span class='ldf'>:</span>= (<span class='ol'>a</span> &and; <span class='ol'>b</span>) &or; (a &and; b) &nbsp; … wenn und nur wenn a, dann b (Äquivalenz)<br><br>
+
+a <img src='sym/oplus.gif'> b <span class='ldf'>:</span>= (<span class='ol'>a</span> &and; b) &or; (a &and; <span class='ol'>b</span>) &nbsp; … entweder a oder b (e<span class='rot'>X</span>klusives <span class='rot'>O</span>de<span class='rot'>R</span>)</div>
+
+ <div><br>
+Beispiel:</div>
+
+<div class='in'><br>
+A heißt <i>Teilmenge</i> von B, wenn für alle x gilt: x <img src='sym/isin.gif'> A<img src='sym/rarr2.svg' class='p66'>x <img src='sym/isin.gif'> B. Warum ist jetzt die leere Menge Teilmenge jeder anderen Menge?</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BOOLESCHE ALGEBRA</b></div>
+
+ <div><br>
+Wenn wir – wie im Skriptum angesprochen – Operatoren/Operanden ihre konkrete Bedeutung nehmen, müssen wir ihre Eigenschaften als gegeben voraussetzen, weil sie nicht mehr nachprüfbar sind. In der <b>axiomatischen Mathematik</b> setzen wir so wenig Eigenschaften wie möglich (Axiome) voraus und leiten alle übrigen Regeln daraus ab.</div>
+
+ <div><br>
+Eine Menge A samt Operatoren <img src='sym/op2.gif'>, <img src='sym/op1.gif'>: A<span class='p22'>x</span>A <img src='sym/rarr.svg' class='bo1'> A heißt <b>boolesche Algebra,</b> wenn gilt:</div>
+
+ <div class='mt1'>
+(1) <img src='sym/op2.gif'> und <img src='sym/op1.gif'> sind kommutativ.</div>
+
+ <div class='mt1'>
+(2) <img src='sym/op2.gif'> und <img src='sym/op1.gif'> sind zueinander distributiv.</div>
+
+ <div class='mt1'>
+(3) Es gibt n<img src='sym/op2.gif' class='pt4'>, n<img src='sym/op1.gif' class='pt4'> <img src='sym/isin.gif'> A derart, dass für alle a <img src='sym/isin.gif'> A: a <img src='sym/op2.gif'> n<img src='sym/op2.gif' class='pt4'> = a (= n<img src='sym/op2.gif' class='pt4'> <img src='sym/op2.gif'> a) und a <img src='sym/op1.gif'> n<img src='sym/op1.gif' class='pt4'> = a (= n<img src='sym/op1.gif' class='pt4'> <img src='sym/op1.gif'> a)</div>
+
+ <div class='mt1'>
+(4) Zu jedem a <img src='sym/isin.gif'> A gibt es ein <span class='ol'>a</span> <img src='sym/isin.gif'> A derart, dass: a <img src='sym/op2.gif'> <span class='ol'>a</span> = n<img src='sym/op1.gif' class='pt4'> (= <span class='ol'>a</span> <img src='sym/op2.gif'> a) und a <img src='sym/op1.gif'> <span class='ol'>a</span> = n<img src='sym/op2.gif' class='pt4'> (= <span class='ol'>a</span> <img src='sym/op1.gif'> a)</div>
+
+ <div><br>
+Aus der Symmetrie der Axiome folgt, dass man in jeder daraus abgeleiteten Aussage nur <img src='sym/op2.gif'> <img src='sym/harr.svg' class='bo1'> <img src='sym/op1.gif'> und n<img src='sym/op2.gif' class='pt4'> <img src='sym/harr.svg' class='bo1'> n<img src='sym/op1.gif' class='pt4'> ersetzen muss, um eine "duale" Aussage zu erhalten, die ebenfalls wahr ist. Dass das neutrale Element eines Operators eindeutig ist, folgt daraus, dass zwei solche zusammengerechnet das eine und das andere ergeben müssen. Schwerer nachzuweisen ist die …</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b>Satz 1:</b> Eindeutigkeit des inversen Elements, d.h. jedes x <img src='sym/isin.gif'> A, das sich zu einem a <img src='sym/isin.gif'> A wie <span class='ol'>a</span> verhält, ist <span class='ol'>a</span>.</div>
+
+ <div class='in'><br>
+x =</div>
+
+ <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+ <div class='in'><br>
+x <img src='sym/op2.gif'> n<img src='sym/op2.gif' class='pt4'> =</div>
+
+ <div class='min grau'>
+Inverse Elemente</div>
+
+ <div class='in'><br>
+x <img src='sym/op2.gif'> (a <img src='sym/op1.gif'> <span class='ol'>a</span>) =</div>
+
+ <div class='min grau'>
+Distributivgesetz (verteilen)</div>
+
+ <div class='in'><br>
+(x <img src='sym/op2.gif'> a) <img src='sym/op1.gif'> (x <img src='sym/op2.gif'> <span class='ol'>a</span>) =</div>
+
+ <div class='min grau'>
+x verhält sich wie a<span style='position:relative; bottom:5px; margin-left:-7px;'>&ndash;</span></div>
+
+ <div class='in'><br>
+n<img src='sym/op1.gif' class='pt4'> <img src='sym/op1.gif'> (x <img src='sym/op2.gif'> <span class='ol'>a</span>) =</div>
+
+ <div class='min grau'>
+Inverse Elemente</div>
+
+ <div class='in'><br>
+(a <img src='sym/op2.gif'> <span class='ol'>a</span>) <img src='sym/op1.gif'> (x <img src='sym/op2.gif'> <span class='ol'>a</span>) =</div>
+
+ <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+ <div class='in'><br>
+(a <img src='sym/op1.gif'> x) <img src='sym/op2.gif'> <span class='ol'>a</span> =</div>
+
+ <div class='min grau'>
+x verhält sich wie a<span style='position:relative; bottom:5px; margin-left:-7px;'>&ndash;</span></div>
+
+ <div class='in'><br>
+n<img src='sym/op2.gif' class='pt4'> <img src='sym/op2.gif'> <span class='ol'>a</span> =</div>
+
+ <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+ <div class='in'><br>
+<span class='ol'>a</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div style='clear:both;'><br>
+<b>Satz 2:</b> Absorbierendes Verhalten der neutralen Elemente beim jeweils anderen Operator</div>
+
+ <div class='in'><br>
+a <img src='sym/op2.gif'> n<img src='sym/op1.gif' class='pt4'> =</div>
+
+ <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+ <div class='in'><br>
+(a <img src='sym/op2.gif'> n<img src='sym/op1.gif' class='pt4'>) <img src='sym/op1.gif'> n<img src='sym/op1.gif' class='pt4'> =</div>
+
+ <div class='min grau'>
+Inverse Elemente</div>
+
+ <div class='in'><br>
+(a <img src='sym/op2.gif'> n<img src='sym/op1.gif' class='pt4'>) <img src='sym/op1.gif'> (a <img src='sym/op2.gif'> <span class='ol'>a</span>) =</div>
+
+ <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+ <div class='in'><br>
+a <img src='sym/op2.gif'> (n<img src='sym/op1.gif' class='pt4'> <img src='sym/op1.gif'> <span class='ol'>a</span>) =</div>
+
+ <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+ <div class='in'><br>
+a <img src='sym/op2.gif'> <span class='ol'>a</span> =</div>
+
+ <div class='min grau'>
+Inverse Elemente</div>
+
+ <div class='in'><br>
+n<img src='sym/op1.gif' class='pt4'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div style='clear:both;'><br>
+<b>Satz 3:</b> Idempotenz</div>
+
+ <div class='in'><br>
+a <img src='sym/op2.gif'> a =</div>
+
+ <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+ <div class='in'><br>
+(a <img src='sym/op2.gif'> a) <img src='sym/op1.gif'> n<img src='sym/op1.gif' class='pt4'> =</div>
+
+ <div class='min grau'>
+Inverse Elemente</div>
+
+ <div class='in'><br>
+(a <img src='sym/op2.gif'> a) <img src='sym/op1.gif'> (a <img src='sym/op2.gif'> <span class='ol'>a</span>) =</div>
+
+ <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+ <div class='in'><br>
+a <img src='sym/op2.gif'> (a <img src='sym/op1.gif'> <span class='ol'>a</span>) =</div>
+
+ <div class='min grau'>
+Inverse Elemente</div>
+
+ <div class='in'><br>
+a <img src='sym/op2.gif'> n<img src='sym/op2.gif' class='pt4'> =</div>
+
+ <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+ <div class='in'><br>
+a</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div style='clear:both;'><br>
+<b>Satz 4:</b> Absorptionsgesetz</div>
+
+ <div class='in'><br>
+(a <img src='sym/op2.gif'> b) <img src='sym/op1.gif'> a =</div>
+
+ <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+ <div class='in'><br>
+(a <img src='sym/op2.gif'> b) <img src='sym/op1.gif'> (a <img src='sym/op2.gif'> n<img src='sym/op2.gif' class='pt4'>) =</div>
+
+ <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+ <div class='in'><br>
+a <img src='sym/op2.gif'> (b <img src='sym/op1.gif'> n<img src='sym/op2.gif' class='pt4'>) =</div>
+
+ <div class='min grau'>
+n mit absorbierendem Verhalten (Satz 2)</div>
+
+ <div class='in'><br>
+a <img src='sym/op2.gif'> n<img src='sym/op2.gif' class='pt4'> =</div>
+
+ <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+ <div class='in'><br>
+a</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div style='clear:both;'><br>
+<b>Satz 5:</b> Assoziativgesetz</div>
+
+ <div><br>
+Jedes x <img src='sym/isin.gif'> A ist im Hinblick auf ein a <img src='sym/isin.gif'> A in zwei Teile zerlegbar:</div>
+
+ <div class='in'><br>
+(a <img src='sym/op1.gif'> x) <img src='sym/op2.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> x) =</div>
+
+ <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+ <div class='in'><br>
+(a <img src='sym/op2.gif'> <span class='ol'>a</span>) <img src='sym/op1.gif'> x =</div>
+
+ <div class='min grau'>
+Inverse Elemente</div>
+
+ <div class='in'><br>
+n<img src='sym/op1.gif' class='pt4'> <img src='sym/op1.gif'> x =</div>
+
+ <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+ <div class='in'><br>
+x</div>
+
+ <div><br>
+Gleichheit im a-Teil:</div>
+
+ <div style='float:left;'>
+  <div class='in'><br>
+a <img src='sym/op1.gif'> [(a <img src='sym/op2.gif'> b) <img src='sym/op2.gif'> c] =</div>
+
+  <div class='min grau'>
+Distributivgesetz (verteilen)</div>
+
+  <div class='in'><br>
+[a <img src='sym/op1.gif'> (a <img src='sym/op2.gif'> b)] <img src='sym/op2.gif'> (a <img src='sym/op1.gif'> c) =</div>
+
+  <div class='min grau'>
+Absorptionsgesetz (Satz 4)</div>
+
+  <div class='in'><br>
+a <img src='sym/op2.gif'> (a <img src='sym/op1.gif'> c) =</div>
+
+  <div class='min grau'>
+Absorptionsgesetz (Satz 4)</div>
+
+  <div class='in'><br>
+a</div></div>
+
+ <div style='float:left; margin-left:132px;'>
+  <div class='in'><br>
+a <img src='sym/op1.gif'> [a <img src='sym/op2.gif'> (b <img src='sym/op2.gif'> c)] =</div>
+
+  <div class='min grau'>
+Absorptionsgesetz (Satz 4)</div>
+
+  <div class='in'><br>
+a</div></div>
+
+ <div style='clear:both;'><br>
+Gleichheit im <span class='ol'>a</span>-Teil:</div>
+
+ <div style='float:left;'>
+  <div class='in'><br>
+<span class='ol'>a</span> <img src='sym/op1.gif'> [(a <img src='sym/op2.gif'> b) <img src='sym/op2.gif'> c] =</div>
+
+  <div class='min grau'>
+Distributivgesetz (verteilen)</div>
+
+  <div class='in'><br>
+[<span class='ol'>a</span> <img src='sym/op1.gif'> (a <img src='sym/op2.gif'> b)] <img src='sym/op2.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> c) =</div>
+
+  <div class='min grau'>
+Distributivgesetz (verteilen)</div>
+
+  <div class='in'><br>
+[(<span class='ol'>a</span> <img src='sym/op1.gif'> a) <img src='sym/op2.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> b)] <img src='sym/op2.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> c) =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+[n<img src='sym/op2.gif' class='pt4'> <img src='sym/op2.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> b)] <img src='sym/op2.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> c) =</div>
+
+  <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+  <div class='in'><br>
+(<span class='ol'>a</span> <img src='sym/op1.gif'> b) <img src='sym/op2.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> c) =</div>
+
+  <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+  <div class='in'><br>
+<span class='ol'>a</span> <img src='sym/op1.gif'> (b <img src='sym/op2.gif'> c)</div></div>
+
+ <div style='float:left; margin-left:94px;'>
+  <div class='in'><br>
+<span class='ol'>a</span> <img src='sym/op1.gif'> [a <img src='sym/op2.gif'> (b <img src='sym/op2.gif'> c)] =</div>
+
+  <div class='min grau'>
+Distributivgesetz (verteilen)</div>
+
+  <div class='in'><br>
+(<span class='ol'>a</span> <img src='sym/op1.gif'> a) <img src='sym/op2.gif'> [<span class='ol'>a</span> <img src='sym/op1.gif'> (b <img src='sym/op2.gif'> c)] =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+n<img src='sym/op2.gif' class='pt4'> <img src='sym/op2.gif'> [<span class='ol'>a</span> <img src='sym/op1.gif'> (b <img src='sym/op2.gif'> c)] =</div>
+
+  <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+  <div class='in'><br>
+<span class='ol'>a</span> <img src='sym/op1.gif'> (b <img src='sym/op2.gif'> c)</div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div style='clear:both;'><br>
+<b>Satz 6:</b> De Morgan'sches Gesetz, d.h. <span class='ol'>a</span> <img src='sym/op1.gif'> <span class='ol'>b</span> ist inverses Element zu a <img src='sym/op2.gif'> b.</div>
+
+ <div style='float:left;'>
+  <div class='in'><br>
+(a <img src='sym/op2.gif'> b) <img src='sym/op2.gif'> [<span class='ol'>a</span> <img src='sym/op1.gif'> <span class='ol'>b</span>] =</div>
+
+  <div class='min grau'>
+Distributivgesetz (verteilen)</div>
+
+  <div class='in'><br>
+[(a <img src='sym/op2.gif'> b) <img src='sym/op2.gif'> <span class='ol'>a</span>] <img src='sym/op1.gif'> [(a <img src='sym/op2.gif'> b) <img src='sym/op2.gif'> <span class='ol'>b</span>] =</div>
+
+  <div class='min grau'>
+Kommutativgesetz</div>
+
+  <div class='in'><br>
+[(b <img src='sym/op2.gif'> a) <img src='sym/op2.gif'> <span class='ol'>a</span>] <img src='sym/op1.gif'> [(a <img src='sym/op2.gif'> b) <img src='sym/op2.gif'> <span class='ol'>b</span>] =</div>
+
+  <div class='min grau'>
+Assoziativgesetz (Satz 5)</div>
+
+  <div class='in'><br>
+[b <img src='sym/op2.gif'> (a <img src='sym/op2.gif'> <span class='ol'>a</span>)] <img src='sym/op1.gif'> [a <img src='sym/op2.gif'> (b <img src='sym/op2.gif'> <span class='ol'>b</span>)] =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+(b <img src='sym/op2.gif'> n<img src='sym/op1.gif' class='pt4'>) <img src='sym/op1.gif'> (a <img src='sym/op2.gif'> n<img src='sym/op1.gif' class='pt4'>) =</div>
+
+  <div class='min grau'>
+n mit absorbierendem Verhalten (Satz 2)</div>
+
+  <div class='in'><br>
+n<img src='sym/op1.gif' class='pt4'> <img src='sym/op1.gif'> n<img src='sym/op1.gif' class='pt4'> =</div>
+
+  <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+  <div class='in'><br>
+n<img src='sym/op2.gif' class='pt4'></div></div>
+
+ <div style='float:left; margin-left:80px;'>
+  <div class='in'><br>
+[a <img src='sym/op2.gif'> b] <img src='sym/op1.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> <span class='ol'>b</span>) =</div>
+
+  <div class='min grau'>
+Distributivgesetz (verteilen)</div>
+
+  <div class='in'><br>
+[a <img src='sym/op1.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> <span class='ol'>b</span>)] <img src='sym/op2.gif'> [b <img src='sym/op1.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> <span class='ol'>b</span>)] =</div>
+
+  <div class='min grau'>
+Kommutativgesetz</div>
+
+  <div class='in'><br>
+[a <img src='sym/op1.gif'> (<span class='ol'>a</span> <img src='sym/op1.gif'> <span class='ol'>b</span>)] <img src='sym/op2.gif'> [b <img src='sym/op1.gif'> (<span class='ol'>b</span> <img src='sym/op1.gif'> <span class='ol'>a</span>)] =</div>
+
+  <div class='min grau'>
+Assoziativgesetz (Satz 5)</div>
+
+  <div class='in'><br>
+[(a <img src='sym/op1.gif'> <span class='ol'>a</span>) <img src='sym/op1.gif'> <span class='ol'>b</span>] <img src='sym/op2.gif'> [(b <img src='sym/op1.gif'> <span class='ol'>b</span>) <img src='sym/op1.gif'> <span class='ol'>a</span>] =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+(n<img src='sym/op2.gif' class='pt4'> <img src='sym/op1.gif'> <span class='ol'>b</span>) <img src='sym/op2.gif'> (n<img src='sym/op2.gif' class='pt4'> <img src='sym/op1.gif'> <span class='ol'>a</span>) =</div>
+
+  <div class='min grau'>
+n mit absorbierendem Verhalten (Satz 2)</div>
+
+  <div class='in'><br>
+n<img src='sym/op2.gif' class='pt4'> <img src='sym/op2.gif'> n<img src='sym/op2.gif' class='pt4'> =</div>
+
+  <div class='min grau'>
+n mit neutralem Verhalten</div>
+
+  <div class='in'><br>
+n<img src='sym/op1.gif' class='pt4'></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div style='clear:both;'><br><br>
+<b>UNENDLICHE MÄCHTIGKEIT?</b></div>
+
+ <div><br>
+Zwei Mengen A und B heißen <b>gleichmächtig,</b> wenn es eine bijektive Abbildung A <img src='sym/rarr.svg' class='bo1'> B gibt (das ist eine Menge von Pfeilen derart, dass von jedem A-Element genau ein Pfeil wegführt und zu jedem B-Element genau ein Pfeil hinführt). A heißt <b>mächtiger</b> als B, wenn eine Teilmenge von A, aber nicht A selbst, gleichmächtig zu B ist.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div style='clear:both;'><br><br>
+<b>POTENZMENGE?</b></div>
+
+ <div><br>
+Die <b>Potenzmenge</b> einer Menge M ist die Menge all ihrer Teilmengen.</div>
+
+ <div class='in'><br>
+<img src='sym/pow.gif'>(M) <span class='ldf'>:</span>= { A | A <img src='sym/ssube.gif'> M }</div>
+
+ <div><br>
+Bei einer <i>endlichen</i> Menge M mit n Elementen können wir eine Teilmenge A durch Aufzählen ihrer Elemente charakterisieren. Im Hinblick auf die Frage nach der Mächtigkeit von <img src='sym/pow.gif'>(M) empfiehlt sich aber, die Elemente von M in einer festen Reihenfolge zu durchlaufen und mit 1 bzw. 0 anzugeben, ob sie zu A gehören oder nicht.</div>
+
+ <div class='grau' style='font-size:11px; margin-top:10px;'>
+<span style='margin-left:164px;'>1</span>
+<span style='margin-left:7px;'>2</span>
+<span style='margin-left:7px;'>3</span>
+<span style='margin-left:7px;'>4</span>
+<span style='margin-left:7px;'>5</span>
+<span style='margin-left:22px;'>n</span></div>
+
+ <div style='margin-top:3px;'>
+<img src='sym/darr_g.gif' style='margin-left:164px;'>
+<img src='sym/darr_g.gif' style='margin-left:6px;'>
+<img src='sym/darr_g.gif' style='margin-left:6px;'>
+<img src='sym/darr_g.gif' style='margin-left:6px;'>
+<img src='sym/darr_g.gif' style='margin-left:6px;'>
+<img src='sym/darr_g.gif' style='margin-left:21px;'></div>
+
+ <div class='in'>
+Bsp: A = {1, 3, 4} <img src='sym/corr.gif'> <span class='p02'>(</span>1, 0, 1, 1, 0,… 0<span class='p20'>)</span></div>
+
+ <div><br>
+Damit entspricht <img src='sym/pow.gif'>(M) der Menge aller n-Tupel aus 1en und 0en und …</div>
+
+ <div class='in'><br>
+|<img src='sym/pow.gif'>(M)| = |{0<span class='p02'>,</span>1}<sup>n</sup>| = 2<sup>n</sup></div>
+
+ <div><br>
+Bei einer <i>unendlichen</i> Menge M reduziert sich das auf die Aussage, dass <img src='sym/pow.gif'>(M) mächtiger als M ist.</div>
+
+ <div><br>
+Zum Beweis gehen wir davon aus, dass jedem x <img src='sym/isin.gif'> M ein  A <img src='sym/ssube.gif'> M zugeordnet wurde (x <img src='sym/farr.gif'> A), und folgern, dass es kein x <img src='sym/isin.gif'> M mit</div>
+
+ <div class='in'><br>
+x <img src='sym/farr.gif'> B <span class='ldf'>:</span>= { x <img src='sym/isin.gif'> M | (x <img src='sym/farr.gif'> A) &and; (x <img src='sym/nisin.gif' style='vertical-align:-2px;'> A) }</div>
+
+ <div><br>
+gibt, sonst hätten wir den Widerspruch, dass x <img src='sym/isin.gif'> B genau dann wahr ist, wenn x <img src='sym/nisin.gif' style='vertical-align:-2px;'> B wahr ist.</div>
+
+
+ </div></body>
+ </html>

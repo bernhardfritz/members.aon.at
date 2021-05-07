@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Relationen und Funktionen</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>Anhang zu: RELATIONEN UND FUNKTIONEN</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>ÄQUIVALENZRELATION?</b></div>
+
+ <div><br>
+Eine Relation R <img src='sym/sube.gif'> A<span class='p22'>x</span>A heißt <b>Äquivalenzrelation,</b> wenn sie reflexiv, symmetrisch und transitiv ist, d.h. für alle x, y, z <img src='sym/isin.gif'> A gilt:</div>
+
+ <div class='mt1'>
+- (x<span class='p02'>,</span>x) <img src='sym/isin.gif'> R</div>
+
+ <div class='mt1'>
+- (x<span class='p02'>,</span>y) <img src='sym/isin.gif'> R <img src='sym/rarr2.svg' class='p22'> (y<span class='p02'>,</span>x) <img src='sym/isin.gif'> R</div>
+
+ <div class='mt1'>
+- (x<span class='p02'>,</span>y) <img src='sym/isin.gif'> R und (y<span class='p02'>,</span>z) <img src='sym/isin.gif'> R <img src='sym/rarr2.svg' class='p22'> (x<span class='p02'>,</span>z) <img src='sym/isin.gif'> R</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>ÄQUIVALENZKLASSEN?</b></div>
+
+ <div><br>
+Wenn R <img src='sym/sube.gif'> A<span class='p22'>x</span>A Äquivalenzrelation und x <img src='sym/isin.gif'> A, verstehen wir unter der <b>Äquivalenzklasse von x</b> die Menge aller Elemente, die zu x in Relation stehen:</div>
+
+ <div class='in'><br>
+[x]<sub>R</sub> = { y <img src='sym/isin.gif'> A | (x<span class='p02'>,</span>y) <img src='sym/isin.gif'> R }.</div>
+
+ <div><br>
+Die Menge der Äquivalenzklassen</div>
+
+ <div class='in'><br>
+A<span class='p22'>/</span>R = { [x]<sub>R</sub> | x <img src='sym/isin.gif'> A }</div>
+
+ <div style='margin-top:3px; margin-left:25px;'>
+<img src='sym/uarr_g.gif'></div>
+ <div class='grau' style='margin-left:5px; font-size:11px;'>
+"modulo"</div>
+
+ <div><br>
+bildet eine <b>Zerlegung</b> von A, also ein System von Teilmengen, die sich nirgends überdecken und deren Vereinigung A ergibt. Umgekehrt entspricht jede Zerlegung einer Äquivalenzrelation (wobei die Relation darin besteht, in derselben Teilmenge zu liegen).</div>
+
+ <div><br>
+Beispiel: Bei der Erweiterung der Zahlenbereiche haben wir gleichwertige Operationen gebündelt, wobei die Gleichwertigkeit eine Äquivalenzrelation war und jedes dieser Bündel eine Äquivalenzklasse und neue Zahl.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe:</b> Für Tupel aus <img src='sym/setN.gif'><sup>2</sup> bedeute (x<sub>1</sub><span class='p02'>,</span>x<sub>2</sub>)<span class='p22'>R</span>(y<sub>1</sub><span class='p02'>,</span>y<sub>2</sub>), dass es ein n <img src='sym/isin.gif'> <img src='sym/setN.gif'> mit y<sub>1,2</sub> = x<sub>1,2</sub> + n oder y<sub>1,2</sub> = x<sub>1,2</sub> – n gibt.<br><br>
+
+<b>a)</b> Zeige, dass R <img src='sym/sube.gif'> <img src='sym/setN.gif'><sup>2</sup><span class='p22'>x</span><img src='sym/setN.gif'><sup>2</sup> eine Äquivalenzrelation ist, und <b>b)</b> stelle die Zerlegung von <img src='sym/setN.gif'><sup>2</sup> in Äquivalenzklassen grafisch dar.</div>
+
+ <div class='in'><br>
+<b>a)</b> Wo im Folgenden m oder n steht, sei auch Fall (i) miteingeschlossen, dass nichts dort steht:</div>
+
+ <div class='in'><br>
+reflexiv? n = 0</div>
+
+ <div class='in'><br>
+symmetrisch? y<sub>i</sub> = x<sub>i</sub> ± n <img src='sym/rarr2.svg' class='p66'> x<sub>i</sub> = y<sub>i</sub> <img src='sym/minplu.gif'> n</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+transitiv?
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+y<sub>i</sub> = x<sub>i</sub> ± m, z<sub>i</sub> = y<sub>i</sub> ± n <img src='sym/rarr2.svg' class='p66'> z<sub>i</sub> = x<sub>i</sub> ± (m<span class='p22'>+</span>n)<br><br>
+y<sub>i</sub> = x<sub>i</sub> ± m, z<sub>i</sub> = y<sub>i</sub> <img src='sym/minplu.gif'> n <img src='sym/rarr2.svg' class='p66'> z<sub>i</sub> = x<sub>i</sub> ± (m<span class='p22'>–</span>n) bzw. x<sub>i</sub> <img src='sym/minplu.gif'> (n<span class='p22'>–</span>m)
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+<b>b)</b></div>
+
+ <div class='in' style='margin-top:-13px;'>
+<img src='img/fu_a00.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>ORDNUNGSRELATION?</b></div>
+
+ <div><br>
+Eine Relation R <img src='sym/sube.gif'> A<span class='p22'>x</span>A heißt <b>Ordnungsrelation,</b> wenn sie sonst wie eine Äquivalenzrelation, aber antisymmetrisch ist, d.h. für alle x &ne; y <img src='sym/isin.gif'> A gilt:</div>
+
+ <div style='margin-top:8px;'>
+- (x<span class='p02'>,</span>y) <img src='sym/isin.gif'> R <img src='sym/rarr2.svg' class='p22'> (y<span class='p02'>,</span>x) <img src='sym/nisin.gif' style='vertical-align:-2px;'> R</div>
+
+ <div><br>
+Eine Ordnungsrelation heißt <b>vollständig,</b> wenn für alle x, y <img src='sym/isin.gif'> A gilt:</div>
+
+ <div style='margin-top:8px;'>
+- (x<span class='p02'>,</span>y) <img src='sym/isin.gif'> R oder (y<span class='p02'>,</span>x) <img src='sym/isin.gif'> R</div>
+
+ <div><br>
+Beispiele: "<img src='sym/sube.gif'>" ist eine Ordnung in <img src='sym/pow.gif'>(M), "&le;" ist eine vollständige Ordnung in <img src='sym/setR.gif'>.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BILDER UND URBILDER EINER FUNKTION?</b></div>
+
+ <div><br>
+Eine Funktion f: M <img src='sym/rarr.svg' class='bo1'> N erzeugt für ein A <img src='sym/sube.gif'> M das</div>
+
+ <div class='in'><br>
+<b>Bild</b> f(A) <span class='ldf'>:</span>= { f(x) | x <img src='sym/isin.gif'> A }</div>
+
+ <div><br>
+und für ein B <img src='sym/sube.gif'> N das</div>
+
+ <div class='in'><br>
+<b>Urbild</b> f<sup class='p20'>–1</sup>(B) <span class='ldf'>:</span>= { x | f(x) <img src='sym/isin.gif'> B }</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>NEBENEINANDERAUSFÜHRUNG?</b></div>
+
+ <div><br>
+Die <b>Nebeneinanderausführung (f<span class='p02'>,</span>g)</b> ist eine Funktion, die an jeder Stelle die dortigen Werte von f und g zu einem 2-Tupel zusammenpackt.</div>
+
+ <div class='in'><br>
+<img src='img/fu_a01.gif' style='margin-right:40px; vertical-align:middle;'>(f<span class='p02'>,</span>g): <img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'><span class='p44'>x</span><img src='sym/setR.gif'>, (x<span class='p02'>,</span>y) = <span class='p02'>(</span>f(t)<span class='p02'>,</span>g(t)<span class='p20'>)</span></div>
+
+ <div><br>
+Die unabhängige Variable heißt in diesem Zusammenhang <b>Parameter.</b> Wir haben sie mit t bezeichnet, was die Interpretation als Zeit nahelegen soll und den Funktionswert zu einem bewegten Punkt in der xy-Ebene macht, der eine sogenannte <b>parametrisierte Kurve</b> zeichnet.</div>
+
+ <div class='grau'><br>
+Bem: Der Graph von (f<span class='p02'>,</span>g) ist eine Kurve im txy-Raum. Die parametrisierte Kurve ist deren Projektion in die xy-Ebene.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe:</b> Zeichne die parametrisierte Kurve von (f<span class='p02'>,</span>g), wenn<br><br>
+
+ <span class='in'>
+f: <img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'>, t <img src='sym/farr.gif'> 1 – |t| &nbsp;&nbsp;&nbsp;&nbsp;
+g: <img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'>, t <img src='sym/farr.gif'> t</span></div>
+
+ <div class='in'><br>
+<img src='img/fu_a02.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>ARITHMETISCH VERKNÜPFTE FUNKTIONEN?</b></div>
+
+ <div><br>
+Im Skriptum haben wir die arithmetische Verknüpfung von Funktionen über die Funktionswerte definiert:</div>
+
+ <div class='in'><br>
+(f<span class='p22'>+</span>g)(x) = f(x)<span class='p22'>+</span>g(x), (f·g)(x) = f(x)·g(x), ... &nbsp; für alle x</div>
+
+ <div><br>
+Eine andere Möglichkeit ist, das als Hinter- und Nebeneinanderausführung von Funktionen aufzuziehen:</div>
+
+ <div class='in'><br>
+f<span class='p22'>+</span>g = add<span class='aft'>o</span>(f<span class='p02'>,</span>g), f·g = mul<span class='aft'>o</span>(f<span class='p02'>,</span>g), ...</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>SKALIERUNG "PARALLELER" FUNKTIONEN?</b></div>
+
+ <div><br>
+Wird eine Skalierung auf zwei Kurven angewandt, die sich nur durch eine Verschiebung unterscheiden, dann tun dies auch die skalierten Kurven.</div>
+
+ <div class='in'><br>
+<img src='img/fu_a03.gif'></div>
+
+ </div></body>
+ </html>

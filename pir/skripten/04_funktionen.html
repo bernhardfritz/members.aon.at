@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Relationen und Funktionen</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ <style type='text/css'>
+.tc, .tl, .tr {
+  padding-bottom:2px;
+}
+ </style>
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>IV. RELATIONEN UND FUNKTIONEN</b></div>
+
+ <div><br>
+<a href='04_funktionen.html#A'>A. Funktionen in der Mengenlehre</a><br>
+<a href='04_funktionen.html#B'>B. Termdefinierte Funktionen</a><br>
+<a href='04_funktionen.html#C'>C. Funktionen als Bausteine</a><br>
+<a href='04_funktionen.html#D'>D. Lineare Funktionen</a><br>
+<a href='04_funktionen.html#E'>E. Proportionalität</a><br>
+<a href='04_funktionen.html#F'>F. Lineare Systeme grafisch lösen</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='04a_funktionen.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> FUNKTIONEN IN DER MENGENLEHRE</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Kartesisches Koordinatensystem</b></div>
+
+ <div><br>
+Ein <b>kartesisches Koordinatensystem</b> hat Zahlengeraden als Achsen, die sich im Nullpunkt kreuzen und normal aufeinander stehen. Das 2-achsige Koordinatensystem spannt eine Ebene auf, das 3-achsige einen Raum, wobei die Punkte den reellen 2- bzw. 3-Tupeln entsprechen.</div>
+
+ <div><br>
+Beispiele: P(3|1), Q(–2|2), R(2|4|3)</div>
+
+ <div class='in mt2'>
+<img src='img/fu_00.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='A.2' class='box'>2</a> Was ist eine Relation?</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine <b>Relation R</b> von der Menge A zur Menge B ist eine Menge von "Beziehungspfeilen", die von A-Elementen zu B-Elementen führen.</div>
+
+ <div><br>
+Je nachdem, ob ein bestimmtes A-Element in Beziehung zu einem bestimmten B-Element steht oder nicht, sind sie entweder durch <i>einen</i> oder <i>keinen</i> Pfeil verbunden. Eine Relation von A zu B entspricht daher einer Teilmenge von A<span class='p22'>x</span>B und umgekehrt:</div>
+
+ <div class='in'><br>
+R = { (x<span class='p02'>,</span>y) <img src='sym/isin.gif'> A<span class='p22'>x</span>B | x steht in Relation R zu y, kurz xRy }</div>
+
+ <div><br>
+Genaugenommen ist das Tripel (A, B, R) die Relation und ihr Kernstück R der <b>Graph</b> der Relation, aber die Begriffe verschwimmen etwas.</div>
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 1:</b> Stelle die Relation R von A zu A als Teilmenge von A<span class='p44'>x</span>A aufzählend und im kartesischen Koordinatensystem dar.
+
+  <div class='in'><br>
+<img src='img/fu_01.gif' style='float:left; margin-right:30px;'>
+
+<b>c)</b> xRy = "x ist größer als y"<br><br>
+
+<b>d)</b> xRy = "x<span class='p22'>+</span>y ist Primzahl"<br><br><br></div></div>
+
+ <div class='in' style='clear:left;'><br>
+<b>a)</b> R = { (1,1), (2,2), (2,3), (3,1) }<br><br>
+
+<b>b)</b> R = { (1,2), (2,1), (3,2) }<br><br>
+
+<b>c)</b> R = { (2,1), (3,1), (3,2) }<br><br>
+
+<b>d)</b> R = { (1,1), (1,2), (2,1), (2,3), (3,2) }</div>
+
+ <div class='in' style='margin-top:25px;'>
+<img src='img/fu_02.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.3' class='box'>3</a> Was ist eine Funktion?</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine <b>Funktion (Abbildung) f</b> von der Definitionsmenge A zur Wertemenge B ordnet jedem A-Element genau ein B-Element zu.</div>
+
+ <div><br>
+Funktionen sind also Relationen derart, dass von jedem A-Element genau ein Pfeil wegführt. Wenn zu <i>jedem</i> B-Element Pfeile hinführen, heißt die Funktion <b>surjektiv.</b> Wenn <i>nie mehrere</i> Pfeile zum selben B-Element hinführen, <b>injektiv.</b> Wenn beides zutrifft, also zu jedem B-Element genau ein Pfeil hinführt, heißt die Funktion <b>bijektiv.</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> Klassifiziere folgende Funktionen im Hinblick auf injektiv, surjektiv, bijektiv:
+
+  <div class='in'><br>
+<img src='img/fu_03.gif'></div></div>
+
+ <div class='in'><br>
+<b>a)</b> surjektiv &nbsp;&nbsp;&nbsp;
+<b>b)</b> injektiv &nbsp;&nbsp;&nbsp;
+<b>c)</b> weder noch &nbsp;&nbsp;&nbsp;
+<b>d)</b> bijektiv</div>
+
+ <div><br>
+Üblicherweise schreiben wir Funktionen nicht als Relationen, sondern</div>
+
+ <div class='in'><br>
+f: A <img src='sym/rarr.svg' class='bo1'> B &nbsp; statt &nbsp; (A, B, f)</div>
+
+ <div><br>
+und</div>
+
+ <div class='in'><br>
+f(a) = b &nbsp; statt &nbsp; (a<span class='p02'>,</span>b) <img src='sym/isin.gif'> f</div>
+
+ <div><br>
+und sprechen vom</div>
+
+ <div class='in mt1'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<b>Funktionswert b</b>
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+an der <b>Stelle a</b><br><br>
+zum <b>Argument a</b>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Beispiel: Eine Funktion ist etwa der Fieberverlauf während eines Tages. Zu <i>jedem</i> Zeitpunkt hat der Körper <i>genau eine</i> Temperatur, nachdem er zu keinem Zeitpunkt ohne Temperatur ist oder gleichzeitig mehr als eine Temperatur hat. Wir sprechen hier von einer "empirischen" Funktion, da die Funktionswerte durch Messung ermittelt werden und nicht über ...</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> TERMDEFINIERTE FUNKTIONEN</b></div>
+
+ <div><br><br>
+<b><a name='B.1' class='box'>1</a> Reelle Funktionen in einer Variablen</b></div>
+
+ <div><br>
+Uns interessieren Funktionen, die auch historisch gesehen am Beginn standen, nämlich</div>
+
+ <div class='in'><br>
+f: <img src='sym/ssetR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/ssetR.gif'>, x <img src='sym/farr.gif'> f(x) = <b>Term in x</b></div>
+
+ <div><br>
+Den Term in x können wir uns als "Rechenwerk" in einer Klarsicht-Box mit einem Ein- und Ausgang vorstellen. Die am Eingang eingespeiste Zahl nimmt überall im Term den Platz von x ein und das Ergebnis der Rechnung kommt dann beim Ausgang heraus:</div>
+
+ <div class='in'><br>
+<img src='img/fu_04.gif'></div>
+
+ <div><br>
+So gesehen ist die Funktion die schwarz übermalte Box, die dadurch auf ihr Ein-Ausgabe-Verhalten reduziert wird (ohne dass es darauf ankommt, was im Inneren der Box abläuft):</div>
+
+ <div class='in'><br>
+<img src='img/fu_05.gif'></div>
+
+ <div><br>
+Wenn wir aus dem Term f(x) die Formel <span class='ws4'>y = f(x)</span> machen, sprechen wir von der <b>Funktionsgleichung.</b> So wie beim Term nicht dieser selbst, sondern sein Ein-Ausgabe-Verhalten "die Funktion" ist, ist es bei der Gleichung nicht diese selbst, sondern ihre Lösungsmenge.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Stelle den Graphen der folgenden Funktion im kartesischen Koordinatensystem dar.
+
+ <div class='in ws4'><br>
+f: <img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'>, y = 1 – |x|</div></div>
+
+ <div class='in'><br>
+Wir bilden eine "Wertetabelle" mit ausgewählten x-Zahlen in der linken Spalte und den dazu errechneten y-Zahlen in der rechten Spalte. Jede Zeile repräsentiert dann einen Punkt des Graphen in der xy-Ebene. Sobald der Kurvenverlauf offensichtlich wird, verbinden wir die Punkte:</div>
+
+ <div class='in'><br>
+<img src='img/fu_06.gif'></div>
+
+ <div><br>
+<b>Zusatzaufgabe:</b> Lies die Funktionswerte an den Stellen <b>a)</b> –1,5, <b>b)</b> 0,5, <b>c)</b> 4 aus obiger Zeichnung ab.</div>
+
+ <div class='in'><br>
+<b>a)</b> f(–1,5) = –0,5 &nbsp; &nbsp; &nbsp;
+<b>b)</b> f(0,5) = 0,5 &nbsp; &nbsp; &nbsp;
+<b>c)</b> f(4) = –3</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.2' class='box'>2</a> Reelle Funktionen in zwei Variablen</b></div>
+
+ <div class='in'><br>
+f: <img src='sym/setR.gif'><span class='p44'>x</span><img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'>, z = f(x<span class='p02'>,</span>y)</div>
+
+ <div><br>
+Der Graph im xyz-Raum, der dadurch ensteht, dass wir an jeder xy-Stelle den Funktionswert in z-Richtung auftragen, heißt <b>Funktionsgebirge.</b> Um ihn auf Papier zu veranschaulichen, können wir ein 3D-Gitternetz perspektivisch darstellen:</div>
+
+ <div class='in'><br>
+<img src='img/fu_07.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> FUNKTIONEN ALS BAUSTEINE</b></div>
+
+ <div><br><br>
+<b><a name='C.1' class='box'>1</a> Arithmetisch verknüpfte Funktionen</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> f, g Funktionen <img src='sym/rarr2.svg' class='p66'> <b>f<span class='p22'>+</span>g</b> ist die Funktion, die an jeder Stelle die dortigen Werte von f und g addiert (analog für die anderen Operatoren).</div>
+
+ <div class='in'><br>
+<img src='img/fu_08.gif'></div>
+
+ <div><br>
+Bei termdefinierten Funktionen rechnen wir einfach die Terme entsprechend zusammen:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Bestimme den Funktionsterm für <b>a)</b> f + g,  <b>a)</b> f·g, wenn
+
+  <div class='in'><br>
+f(x) = x – 1 &nbsp; und &nbsp; g(x) = x + 2</div></div>
+
+ <div class='in'><br>
+<b>a)</b> (f<span class='p44'>+</span>g)(x) = (x – 1) + (x + 2) = 2x + 1</div>
+
+ <div class='in'><br>
+<b>b)</b> (f·g)(x) = (x – 1)(x + 2) = x<sup>2</sup> + x – 2</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Hintereinanderausführung</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> f, g Funktionen <img src='sym/rarr2.svg' class='p66'> <b>f<span class='aft'>o</span>g</b> ("f nach g") ist die Funktion, die jedes Argument zuerst über g verarbeitet und dann das, was herauskommt, über f.</div>
+
+ <div class='in'><br>
+<img src='img/fu_09.gif'></div>
+
+ <div><br>
+Bei termdefinierten Funktionen ersetzen wir im nachfolgenden Term das x durch offene Klammern, in die wir dann den ersten Term schreiben:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> Bestimme den Funktionsterm für <b>a)</b> f<span class='aft'>o</span>g,  <b>a)</b> g<span class='aft'>o</span>f, wenn
+
+  <div class='in'><br>
+f(x) = x<sup>2</sup> – 2x &nbsp; und &nbsp; g(x) = x + 1</div></div>
+
+ <div class='in'><br>
+<b>a)</b> (f<span class='aft'>o</span>g)(x) = (&nbsp;)<sup>2</sup> – 2(&nbsp;) =  (x + 1)<sup>2</sup> – 2(x + 1) = x<sup>2</sup> + 2x + 1 – 2x – 2 = x<sup>2</sup> – 1</div>
+
+ <div class='in'><br>
+<b>b)</b> (g<span class='aft'>o</span>f)(x) = (&nbsp;) + 1 = (x<sup>2</sup> – 2x) + 1 = (x – 1)<sup>2</sup></div>
+
+ <div><br>
+Bem: Die Hintereinanderausführung ist also <i>nicht</i> kommutativ (aber assoziativ).</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.3' class='box'>3</a> Funktionskurven verschieben/skalieren</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Um eine Funktionskurve in x-Richtung um d Einheiten zu <b>verschieben,</b> ersetzen wir überall im Funktionsterm x durch x<span class='p44'>–</span>d (der neue Term hat dann an der Stelle x den Wert, den der alte Term bei x<span class='p44'>–</span>d hat). Dasselbe in y-Richtung erhalten wir, indem wir zum Funktionsterm d addieren.</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Um eine Funktionskurve in x-Richtung mit dem Faktor k zu <b>skalieren,</b> ersetzen wir überall im Funktionsterm x durch x/k. Dasselbe in y-Richtung erhalten wir, indem wir den Funktionsterm mit k multiplizieren. Eine Spiegelung an der Achse erreichen wir mit k = –1. </div>
+
+ <div><br>
+Merkhilfe: In x-Richtung wird der Term eingangsseitig und gegenläufig angepasst, in y-Richtung ausgangsseitig und gleichläufig.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Ändere die folgenden Funktionsterme, um ihre Kurven wie angegeben zu verschieben/skalieren:<br><br>
+
+<b style='margin-left:40px;'>a)</b> f(x) = <span class='ws4'>5 – x<sup>2</sup></span>
+<b style='margin-left:80px;'>b)</b> f(x) = <span class='ws4'>1 + <sup>3</sup><span class='r1t'>&radic;</span><span class='rad'>8x</span></span>
+<b style='margin-left:80px;'>c)</b> f(x) = <div class='frac'><div class='num'>2<sup>x</sup> – 6</div><div class='den'>x<sup>2</sup> + 1</div></div>
+
+<img src='img/fu_10.gif' class='in mt1'></div>
+
+ <div class='in'><br>
+<img src='img/fu_11.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.4' class='box'>4</a> Umkehrfunktionen</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>Umkehrfunktion f<sup class='p20'>–1</sup></b> macht wieder rückgängig, was die Originalfunktion f gemacht hat. Soll heißen, wenn wir Original- und Umkehrfunktion hintereinander ausführen (egal in welcher Reihenfolge), dann heben sich ihre Wirkungen auf:</div>
+
+ <div class='in'><br>
+(f<sup class='p20'>–1</sup><span class='aft'>o</span>f)(x) = x &nbsp; und &nbsp; (f<span class='aft'>o</span>f<sup class='p20'>–1</sup>)(x) = x</div>
+
+ <div><br>
+Die Funktion id: y = x ist das <b>neutrale Element</b> der Hintereinanderausführung. Ihre Funktionskurve ist die 45°-Gerade durch den Ursprung und heißt <b>erste Mediane.</b> So gesehen sind Umkehrfunktionen nichts anderes als die <b>inversen Elemente</b> der Hintereinanderausführung.</div>
+
+ <div><br>
+Grafisch erhalten wir die Umkehrfunktion, indem wir die Kurve der Originalfunktion an der ersten Mediane spiegeln. Rechentechnisch heißt das, dass wir in der Originalgleichung x und y tauschen und dann y freistellen, sodass x und y wieder ihre übliche Rolle als Argument und Funktionswert haben:</div>
+
+ <div class='in'><br>
+f: y = <span class='ws4'>2x + 5</span></div>
+
+ <div class='in'><br>
+f<sup class='p20'>–1</sup>: x = <span class='ws4'>2y + 5</span> &nbsp; <span class='ll p22'>–</span>5</div>
+
+ <div class='mt1' style='margin-left:46px;'>
+<span class='ws4'>x – 5</span> = 2y<span class='ll p02' style='margin-left:16px;'>:</span>2</div>
+
+ <div class='mt1' style='margin-left:46px;'>
+y = <div class='frac'><div class='num'>x – 5</div><div class='den'>2</div></div></div>
+
+ <div><br>
+Bem: Wenn die Buchstaben mit bestimmten Größen verknüpft sind, werden sie nicht getauscht!</div>
+
+ <div class='in'><br>
+<img src='img/fu_12.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> LINEARE FUNKTIONEN</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Was ist eine lineare Funktion?</b></div>
+
+ <div style='float:left; margin-right:40px;'><br><br>
+<img src='img/fu_13.gif'></div>
+
+ <div><br><br>
+Eine <b>lineare Funktion</b> ist dadurch charakterisiert, dass bei gleich weit auseinanderliegenden Stellen die <b>Differenzen</b> aufeinanderfolgender Werte konstant sind. Für x = 0, 1, 2, ... heißt das:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>y(x)</b> = <b><span class='p02'>k</span>x + d</b></div>
+
+ <div><br>
+Ausgedehnt auf x <img src='sym/isin.gif'> <img src='sym/setR.gif'> ergibt das eine Funktionskurve in Form einer <b>Geraden</b> mit d = y(0) und Steigung k. Diese wird über ein beliebig gewähltes "Steigungsdreieck" definiert, indem wir von einem Punkt der Geraden aus ein Stück in x-Richtung gehen und dann in y-Richtung, bis wir wieder auf der Geraden landen:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>Steigung :</b>= <div class='frac'><div class='num'>Vertikalzuwachs <b>&Delta;y</b></div><div class='den'>Horizontalzuwachs <b>&Delta;x</b></div></div></div>
+
+ <div><br>
+Um "auf die Schnelle" eine <b>Gerade zu zeichnen</b> oder umgekehrt aus der Zeichnung die Funktionsgleichung abzulesen, starten wir mit d = y(0), also dem Geradenpunkt auf der y-Achse, und gehen von dort &Delta;x = 1 nach rechts und dann &Delta;y = k nach oben/unten.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Lies die Funktionsgleichungen aus den folgenden Diagrammen ab:
+
+  <div class='in'><br>
+<img src='img/fu_14.gif'></div></div>
+
+ <div class='in'><br>
+<b>a)</b> y = <span class='ws4'>–0,5x + 1</span>	&nbsp;&nbsp;&nbsp;&nbsp; <b>b)</b> y = <span class='ws4'>10x – 20</span> &nbsp;&nbsp;&nbsp;&nbsp; <b>c)</b> y = 0,0<span class='ol'>6</span>x</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.2' class='box'>2</a> Gerade durch zwei Punkte</b></div>
+
+ <div><br>
+Die allgemeine Gleichung eines bestimmten Kurventyps enthält neben x und y weitere Buchstaben, <b>Parameter</b> genannt, über die sich Lage und Ausformung der Kurve einstellen lassen. Informationen (z.B. Kurvenpunkte) über eine konkrete Kurve dieses Typs setzen wir in die allgemeine Gleichung ein, um Zahlenwerte für die Parameter und damit die konkrete Gleichung zu erhalten:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b> Bestimme die Gleichung der linearen Funktion, deren Kurve durch die Punkte P<sub>1</sub>(1|2), P<sub>2</sub>(5|4) geht.</div>
+
+ <div class='in'><br>
+y(x) = kx + d</div>
+
+ <div class='in'><br>
+(1) <span class='ws4'>k·1 + d</span> = 2</div>
+ <div class='in mt1'>
+(2) <span class='ws4'>k·5 + d</span> = 4</div>
+
+ <div class='in' style='margin-top:10px;; border-top:solid 1px; width:97px;'></div>
+
+ <div class='in mt1'>
+(1)<span class='p22'>–</span>(2): –4k = –2 <img src='sym/rarr2.svg' class='p66'> k = 0,5</div>
+ <div class='in mt1'>
+<img src='sym/rarr.svg' class='bo1'> (1): <span class='ws4'>0,5·1 + d</span> = 2 <img src='sym/rarr2.svg' class='p66'> d = 1,5</div>
+
+ <div class='in'><br>
+y = <span class='ws4'>0,5x + 1,5</span></div>
+
+ <div><br>
+Bei Geraden können wir auch so vorgehen, dass wir zuerst die Steigung von P<sub>1</sub> nach P<sub>2</sub> bestimmen:</div>
+
+ <div><br>
+<img src='img/fu_15.gif' class='in' style='vertical-align:middle;''> &nbsp;k = <div class='frac'><div class='num'>y<sub>2</sub> – y<sub>1</sub></div><div class='den'>x<sub>2</sub> – x<sub>1</sub></div></div></div>
+
+ <div><br>
+Und dann die "Ursprungsgerade" mit dieser Steigung (y = kx) so verschieben, dass der im Ursprung gelegene Geradenpunkt in P<sub>1</sub> landet:</div>
+
+ <div><br>
+<img src='img/fu_16.gif' class='in' style='vertical-align:middle;''> &nbsp;y(x) = <span class='ws4'>k(x – x<sub>1</sub>) + y<sub>1</sub></span></div>
+
+ <div><br>
+Als Lösung der obigen Aufgabe:</div>
+
+ <div class='in'><br>
+k = <div class='frac'><div class='num'>4 – 2</div><div class='den'>5 – 1</div></div> = 0,5 <img src='sym/rarr2.svg' class='p66'> y = <span class='ws4'>0,5(x – 1) + 2</span> = <span class='ws4'>0,5x + 1,5</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.3' class='box'>3</a> Lineare Interpolation</b></div>
+
+ <div><br>
+Bei der <b>linearen Interpolation</b> (bzw. Extrapolation) sind nur ein paar Punkte einer Funktionskurve bekannt und der Kurvenverlauf dazwischen (bzw. darüber hinaus) wird geschätzt, indem benachbarte Punkte durch Geradenstücke verbunden werden.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 10:</b> Bestimme den Absatz bei einem Preis von 24,30 Euro über lineare Interpolation, wenn folgende Daten vorliegen:<br><br>
+
+  <table class='in t0' cellpadding='0'>
+   <tr>
+    <td class='tr br bb' style='padding:0px 18px 4px 8px;'>
+x (Preis in Euro)
+    </td>
+    <td class='tc br bb' style='padding:0px 8px 4px 8px;'>
+22,50
+    </td>
+    <td class='tc br bb' style='padding:0px 8px 4px 8px;'>
+22,90
+    </td>
+    <td class='tc br bb' style='padding:0px 8px 4px 8px;'>
+23,90
+    </td>
+    <td class='tc bb' style='padding:0px 8px 4px 8px;'>
+25,10
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br'>
+y (Absatz in Stück)
+    </td>
+    <td class='tc br'>
+658
+    </td>
+    <td class='tc br'>
+624
+    </td>
+    <td class='tc br'>
+567
+    </td>
+    <td class='tc'>
+510
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> Gerade durch P<sub>1</sub>(23,90|567), P<sub>2</sub>(25,10|510) legen</div>
+
+ <div class='in'><br>
+y(x) = kx + d</div>
+
+ <div class='in'><br>
+(1) <span class='ws4'>k·23,9 + d</span> = 567</div>
+ <div class='in mt1'>
+(2) <span class='ws4'>k·25,1 + d</span> = 510</div>
+
+ <div class='in' style='margin-top:10px;; border-top:solid 1px; width:133px;'></div>
+
+ <div class='in mt1'>
+(1)<span class='p22'>–</span>(2): –1,2k = 57 <img src='sym/rarr2.svg' class='p66'> k = –47,5</div>
+ <div class='in mt1'>
+<img src='sym/rarr.svg' class='bo1'> (1): <span class='ws4'>(–47,5)·23,9 + d</span> = 567 <img src='sym/rarr2.svg' class='p66'> d = 1702,25</div>
+
+ <div class='in'><br>
+<b>Schritt 2:</b> Funktionswert an der Stelle 24,3 berechnen</div>
+
+ <div class='in'><br>
+y(24,3) = <span class='ws4'>(–47,5)·24,3 + 1702,25</span> = 548</div>
+
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='E' class='box'>E</a> PROPORTIONALITÄT</b></div>
+
+ <div><br><br>
+<b><a name='E.1' class='box'>3</a> Direkte Proportionalität</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Zwei Größen x und y heißen <b>direkt proportional</b> (y &sim; x), wenn ihr <b>Verhältnis konstant</b> ist oder anders ausgedrückt: Wenn wir mit x auf das n-fache gehen, geht auch y auf das n-fache. Die Funktionskurven sind Ursprungsgeraden.</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>y</div><div class='den'>x</div></div> = k <img src='sym/rarr2.svg' class='p66'> y(x) = kx</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 11:</b> Ergänze die fehlenden Einträge, sodass x und y direkt proportional sind.<br><br>
+
+  <table class='in t0' cellpadding='0'>
+   <tr>
+    <td class='tr br bb'>
+x
+    </td>
+    <td class='tr br bb'>
+102
+    </td>
+    <td class='tr br bb'>
+    </td>
+    <td class='tr br bb'>
+194
+    </td>
+    <td class='tr bb'>
+218
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br'>
+y
+    </td>
+    <td class='tr br'>
+    </td>
+    <td class='tr br'>
+711
+    </td>
+    <td class='tr br'>
+873
+    </td>
+    <td class='tr'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in' style='float:left;'><br>
+<div class='frac'><div class='num'>y</div><div class='den'>x</div></div> = <div class='frac'><div class='num'>873</div><div class='den'>194</div></div> &nbsp; <img src='sym/rarr3.gif' style='vertical-align:-4px;'> &nbsp;</div>
+
+ <div class='in'><br>
+  <table class='t0' cellpadding='0'>
+   <tr>
+    <td class='tr br bb'>
+x
+    </td>
+    <td class='tr br bb'>
+102
+    </td>
+    <td class='tr br bb'>
+158
+    </td>
+    <td class='tr br bb'>
+194
+    </td>
+    <td class='tr bb'>
+218
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br'>
+y
+    </td>
+    <td class='tr br'>
+459
+    </td>
+    <td class='tr br'>
+711
+    </td>
+    <td class='tr br'>
+873
+    </td>
+    <td class='tr'>
+981
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe 12:</b> In 2,5 Stunden hebt eine Pumpe 3 m<sup>3</sup> Wasser. <b>a)</b> Bestimme die gehobene Wassermenge in Abhängigkeit von der Laufzeit der Pumpe. <b>b)</b> Wie viel m<sup>3</sup> werden in 4 Stunden gehoben?</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/fu_17.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+y(x) = Anzahl m<sup>3</sup>, die in x Stunden gehoben werden<br><br>
+
+<b>a)</b> Überlegung: doppelt soviel Zeit <img src='sym/rarr2.svg' class='p66'> doppelt soviel m<sup>3</sup> <img src='sym/rarr2.svg' class='p66'> direkte Proportionalität<br>
+
+<div class='frac mt1'><div class='num'>y</div><div class='den'>x</div></div> = <div class='frac'><div class='num'>3</div><div class='den'>2,5</div></div> &nbsp; <span class='ll'>·</span>x <img src='sym/rarr2.svg' class='p66'> y = 1,2x<br><br>
+
+<b>b)</b> y(4) = 1,2·4 = 4,8 m<sup>3</sup>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='E.2' class='box'>4</a> Indirekte Proportionalität</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Zwei Größen x und y heißen <b>indirekt proportional</b> (y &sim; 1/x), wenn ihr <b>Produkt konstant</b> ist oder anders ausgedrückt: Wenn wir mit x auf das n-fache gehen, geht y auf ein n-tel. Die Funktionskurven sind Hyperbeln, die sich asymptotisch den Achsen nähern.</div>
+
+ <div class='in mt1'>
+xy = k <img src='sym/rarr2.svg' class='p66'> y(x) = <div class='frac'><div class='num'>k</div><div class='den'>x</div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 13:</b> Ergänze die fehlenden Einträge, sodass x und y indirekt proportional sind.<br><br>
+
+  <table class='in t0' cellpadding='0'>
+   <tr>
+    <td class='tr br bb'>
+x
+    </td>
+    <td class='tr br bb'>
+14
+    </td>
+    <td class='tr br bb'>
+30
+    </td>
+    <td class='tr br bb'>
+    </td>
+    <td class='tr bb'>
+84
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br'>
+y
+    </td>
+    <td class='tr br'>
+    </td>
+    <td class='tr br'>
+42
+    </td>
+    <td class='tr br'>
+18
+    </td>
+    <td class='tr'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in' style='float:left; padding-top:11px;'><br>
+xy = 30·42 &nbsp; <img src='sym/rarr3.gif' style='vertical-align:-4px;'> &nbsp;</div>
+
+ <div class='in'><br>
+  <table class='t0' cellpadding='0'>
+   <tr>
+    <td class='tr br bb'>
+x
+    </td>
+    <td class='tr br bb'>
+14
+    </td>
+    <td class='tr br bb'>
+30
+    </td>
+    <td class='tr br bb'>
+70
+    </td>
+    <td class='tr bb'>
+84
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br'>
+y
+    </td>
+    <td class='tr br'>
+90
+    </td>
+    <td class='tr br'>
+42
+    </td>
+    <td class='tr br'>
+18
+    </td>
+    <td class='tr'>
+15
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 14:</b> 2 gleiche Pumpen füllen ein Becken in 3,75 Stunden. <b>a)</b> Bestimme die Füllzeit in Abhängigkeit von der Anzahl eingesetzter Pumpen. <b>b)</b> Wie lange brauchen 5 Pumpen, um das Becken zu füllen?</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/fu_18.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+y(x) = Anzahl Stunden, die x Pumpen zum Füllen des Beckens brauchen<br><br>
+
+<b>a)</b> Überlegung: doppelt soviel Pumpen <img src='sym/rarr2.svg' class='p66'> halbe Zeit <img src='sym/rarr2.svg' class='p66'> indirekte Proportionalität<br><br>
+
+xy = 2·3,75 &nbsp; <span class='ll'>:</span>x <img src='sym/rarr2.svg' class='p66'> y = <div class='frac'><div class='num'>7,5</div><div class='den'>x</div></div><br><br>
+
+<b>b)</b> y(5) = <div class='frac'><div class='num'>7,5</div><div class='den'>5</div></div> = 1,5 h
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='F' class='box'>G</a> LINEARE SYSTEME GRAFISCH LÖSEN</b></div>
+
+ <div><br><br>
+<b><a name='F.1' class='box'>1</a> Lineare Gleichungssyteme</b></div>
+
+ <div><br>
+Die Lösungsmenge einer Gleichung in x und y entspricht einer Kurve im kartesischen Koordinatensystem. Bei einem linearen 2x2-System sind das 2 Geraden. Wo sich die beiden schneiden, haben wir die Lösung des Systems, wobei <b>3 Fälle</b> möglich sind: Keine Lösung (verschiedene parallele Geraden), genau eine Lösung (kreuzende Geraden), unendlich viele Lösungen (identische Geraden).</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/fu_19.gif' style='margin-right:40px;'>
+    </td>
+    <td style='vertical-align:top; width:100%'>
+     <br><div class='bsp'>
+<b>Aufgabe 15:</b> Löse grafisch in <img src='sym/setR.gif'> x <img src='sym/setR.gif'>:
+
+      <div class='in'><br>
+(1) 3x + 4y = 16
+      </div>
+      <div class='in' style='margin-top:6px;'>
+(2) x – 2y = 2
+      </div>
+     </div>
+     <div class='in'><br>
+f<sub>1</sub>: y = –0,75x + 4<br><br>
+f<sub>2</sub>: y = 0,5x – 1<br><br>
+<img src='sym/larr2.svg' class='p06'> Geraden zeichnen
+     </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='F.2' class='box'>2</a> Lineare Ungleichungssyteme</b></div>
+
+ <div><br>
+Eine Ungleichung in x und y hat einen flächigen Lösungsbereich. Wenn wir statt dem Vergleichsoperator ein Gleichheitszeichen schreiben, erhalten wir die Randkurve. Bei einem linearen Ungleichungssystem sind das Geraden. Wo sich die von ihnen begrenzten Halbenenen überdecken, haben wir den Lösungsbereich des Systems.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/fu_20.gif' style='margin-right:40px;'>
+    </td>
+    <td style='vertical-align:top; width:100%'>
+     <br><div class='bsp'>
+<b>Aufgabe 16:</b> Löse grafisch in <img src='sym/setR.gif'> x <img src='sym/setR.gif'>:
+
+      <div class='in'><br>
+(1) x + y &le; 5
+      </div>
+      <div class='in' style='margin-top:6px;'>
+(2) x + 2y &ge; 3
+      </div>
+      <div class='in' style='margin-top:6px;'>
+(3) 3x – 2y &ge; 5
+      </div>
+     </div>
+     <div class='in'><br>
+(1) y &le; <span class='ws4'>–x + 5</span> (Rand f<sub>1</sub>: y = <span class='ws4'>–x + 5</span>)<br><br>
+(2) y &ge; <span class='ws4'>–0,5x + 1,5</span> (Rand f<sub>2</sub>: y = <span class='ws4'>–0,5x + 1,5</span>)<br><br>
+(3) y &le; <span class='ws4'>1,5x – 2,5</span> (Rand f<sub>3</sub>: y = <span class='ws4'>1,5x – 2,5</span>)<br><br>
+<img src='sym/larr2.svg' class='p06'> Geraden zeichnen
+     </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='F.3' class='box'>3</a> Anwendung: Lineare Optimierung</b></div>
+
+ <div><br>
+Es geht um die Stelle eines eckig berandeten xy-Bereichs, wo eine linear von x und y abhängige "Zielgröße" z ihren größten/kleinsten Wert hat. Da das Funktionsgebirge eine Ebene ist, sind die Nivaulinien parallele Geraden und wir brauchen nur zu schauen, wo diese den xy-Bereich berühren.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 17:</b> Weizen und Rüben werden auf 50 ha Ackerland angebaut, wobei höchstens die Hälfte für Rüben vorgesehen ist. Insgesamt stehen 800&nbsp;Arbeitsstunden zur Verfügung. Die Arbeitszeit beträgt 10 Stunden/ha bei Weizen und 25 Stunden/ha bei Rüben, der Gewinn 900,- Euro/ha bei Weizen und 1500,- Euro/ha bei Rüben. Wie viel ha müssen mit Weizen bzw. Rüben bebaut werden, damit der Gewinn maximal ist?</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/fu_21.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+x, y = Anzahl ha für Weizen, Rüben (&ge; 0)<br><br>
+Gewinn z = <span class='ws4'>900x + 1500y</span> = max!<br><br>
+(1) <span class='ws4'>x + y</span> &le; 50 <img src='sym/rarr2.svg' class='p66'> y &le; <span class='ws4'>–x + 50</span> (Rand f<sub>1</sub>: y = <span class='ws4'>–x + 50</span>)<br><br>
+(2) y &le; 25 (Rand f<sub>2</sub>: y = 25)<br><br>
+(3)  <span class='ws4'>10x + 25y</span> &le; 800 <img src='sym/rarr2.svg' class='p66'> y &le; <span class='ws4'>–0,4x + 32</span> (Rand f<sub>3</sub>: y = <span class='ws4'>–0,4x + 32</span>)<br><br>
+Niveaulinien c = <span class='ws4'>900x + 1500y</span> <img src='sym/rarr2.svg' class='p66'> y = <span class='rot'>–0,6</span><span class='ws4'>x + ...</span>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+f<sub>1</sub> <img src='sym/cap.gif'> f<sub>3</sub>: –x + 50 = –0,4x + 32 <img src='sym/rarr2.svg' class='p66'> x = 30 <img src='sym/rarr2.svg' class='p66'> y = –30 + 50 = 20</div>
+
+ <div class='grau'><br>
+Bem: Bei mehr als zwei Variablen werden solche Aufgaben nicht mehr grafisch, sondern numerisch über das sogenannte Simplex-Verfahren gelöst.</div>
+
+ </div></body>
+ </html>

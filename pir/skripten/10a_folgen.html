@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Folgen und Grenzprozesse</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>Anhang zu: FOLGEN UND GRENZPROZESSE</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>MEHRERE RENTEN/ZINSPERIODEN PRO JAHR?</b></div>
+
+ <div><br>
+Angenommen wir haben m Zinsperioden pro Jahr, in denen mit dem Faktor 1<span class='p44'>+</span>i<sub>m</sub> aufgezinst wird (wobei in der Regel nicht i<sub>m</sub>, sondern der <i>nominelle</i> Jahreszinssatz i<sub>nom</sub> = mi<sub>m</sub> angegeben ist). Bei der US-Methode zur Rentenberechnung nimmt man den dazu äquivalenten Aufzinsungsfaktor für eine Rentenperiode und macht diese zur Zinsperiode.</div>
+
+ <div><br>
+Zu verschiedenen Zinsperioden gehörige Aufzinsungsfaktoren heißen <i>äquivalent,</i> wenn sie in einem Zeitraum, der gemeinsames Vielfaches beider Zinsperioden ist, denselben Kapitalzuwachs bewirken. Die US-Methode ist also exakt, wenn die Zins- in der Rentenperiode enthalten ist. Falls es andersrum ist, haben wir eine Näherung oder wir interpretieren "m Zinsperioden pro Jahr" als Verschlüsselung für obige Vorgehensweise.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe:</b> Bestimme den Barwert von 60 nachschüssigen, monatlichen Raten in der Höhe von 220 Euro nach der <b>a)</b> US-Methode, <b>b)</b> Sparkonto-Methode, wenn i<sub>nom</sub> = 2% und der Zinszuschlag vierteljährlich erfolgt.</div>
+
+ <div class='in'><br>
+Zinssatz für die Zinsperiode: i<sub>4</sub> = <div class='frac'><div class='num'>i<sub>nom</sub></div><div class='den'>4</div> </div> = 0,005</div>
+
+ <div class='in'><br>
+<b>a)</b> Äquivalenten Aufzinsungsfaktor q für Rentenperiode bestimmen:</div>
+
+ <div class='in'><br>
+q<sup>3</sup> = 1,005 <img src='sym/rarr2.svg' class='p66'> q = 1,005<sup>1/3</sup></div>
+
+ <div class='in'><br>
+<span class='ws4'>a·<span class='up'>(</span>1,005<sup>1/3</sup><span class='up'>)</span><sup>60</sup> + (–220)<div class='frac p40'><div class='num'>1 – <span class='up'>(</span>1,005<sup>1/3</sup><span class='up'>)</span><sup>60</sup></div><div class='den'>1 – <span class='up'>(</span>1,005<sup>1/3</sup><span class='up'>)</span></div></div> + 0 = 0 <img src='sym/rarr2.svg' class='p66'> a = 12552,56 €</div>
+
+ <div class='in'><br>
+<b>b)</b> Raten innerhalb einer Zinsperionde zu Ersatzrate r<sub>e</sub> zusammenfassen:</div>
+
+ <div class='in'><br>
+<img src='img/fo_a00.gif'></div>
+
+ <div class='in'><br>
+<span class='ws4'>a·1,005<sup>20</sup> + (–661,1)<div class='frac p40'><div class='num'>1 – 1,005<sup>20</sup></div><div class='den'>1 – 1,005</div></div> + 0 = 0 <img src='sym/rarr2.svg' class='p66'> a = 12552,58 €</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BEWEIS: <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>(a<sub>n</sub><span class='p44'>+</span>b<sub>n</sub>) = <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>a<sub>n</sub> + <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>b<sub>n</sub></b></div>
+
+ <div class='in'><br>
+Da a<sub>n</sub> <img src='sym/rarr.svg' class='bo1'> a und b<sub>n</sub> <img src='sym/rarr.svg' class='bo1'> b, finden wir zu jedem &epsilon; &gt; 0 einen Index N, sodass für alle n &gt; N gilt:</div>
+
+ <div class='in mt1'>
+|a<sub>n</sub> – a| &lt; <div class='frac'><div class='num'>&epsilon;</div><div class='den'>2</div></div> &nbsp; und &nbsp; |b<sub>n</sub> – b| &lt; <div class='frac'><div class='num'>&epsilon;</div><div class='den'>2</div></div></div>
+
+ <div class='in mt1'>
+Damit gilt für alle n &gt; N auch:</div>
+
+ <div class='in mt1'>
+<span class='ws4'>|(a<sub>n</sub> + b<sub>n</sub>) – (a + b)|</span> = <span class='ws4'>|(a<sub>n</sub> – a) + (b<sub>n</sub> – b)|</span> &le; <span class='ws4'>|a<sub>n</sub> – a| + |b<sub>n</sub> – b|</span> &lt; <div class='frac'><div class='num'>&epsilon;</div><div class='den'>2</div></div> + <div class='frac'><div class='num'>&epsilon;</div><div class='den'>2</div></div> = &epsilon;</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BEWEIS: <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>(a<sub class='p02'>n</sub>b<sub>n</sub>) = <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>a<sub>n</sub><span class='p22'>·</span><div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>b<sub>n</sub></b></div>
+
+ <div class='in'><br>
+Da a<sub>n</sub> <img src='sym/rarr.svg' class='bo1'> a und b<sub>n</sub> <img src='sym/rarr.svg' class='bo1'> b, finden wir obere Schranken <span class='ws4'>a<sub>n</sub> &le; A</span>, <span class='ws4'>b<sub>n</sub> &le; B</span> und zu jedem &epsilon; &gt; 0 einen Index N, sodass für alle n &gt; N gilt:</div>
+
+ <div class='in mt1'>
+|a<sub>n</sub> – a| &lt; <div class='frac'><div class='num'>&epsilon;</div><div class='den'>2B</div></div> &nbsp; und &nbsp; |b<sub>n</sub> – b| &lt; <div class='frac'><div class='num'>&epsilon;</div><div class='den'>2A</div></div></div>
+
+ <div class='in mt1'>
+Damit gilt für alle n &gt; N auch:</div>
+
+ <div class='in mt1'>
+<img src='img/fo_a01.gif' style='vertical-align:-50px;'></div>
+
+ </div></body>
+ </html>

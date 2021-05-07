@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Zahlmengen und -operatoren</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>II. ZAHLENLEHRE</b></div>
+
+ <div><br>
+<a href='02_zahlen.html#A'>A. Natürliche Zahlen</a><br>
+<a href='02_zahlen.html#B'>B. Arithmetische Operatoren</a><br>
+<a href='02_zahlen.html#C'>C. Teilbarkeit und Primzahlen</a><br>
+<a href='02_zahlen.html#D'>D. Ganze Zahlen</a><br>
+<a href='02_zahlen.html#E'>E. Rationale Zahlen</a><br>
+<a href='02_zahlen.html#F'>F. Operatoreigenschaften</a><br>
+<a href='02_zahlen.html#G'>G. Reelle Zahlen</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='02a_zahlen.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> NATÜRLICHE ZAHLEN</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Zahlengerade und Ordnung</b></div>
+
+ <div><br>
+Die <b>natürlichen Zahlen</b> stellen wir uns auf einer <b>Zahlengeraden</b> als Skalenpunkte vor, die in gleichen Abständen rechts vom Nullpunkt weglaufen:</div>
+
+ <div class='in'><br>
+<img src='sym/setN.gif'> <span class='ldf'>:</span>= { 0, 1, 2, 3, ... } &nbsp; bzw. &nbsp; <img src='sym/setN.gif'>* <span class='ldf'>:</span>= { 1, 2, 3, ... }</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Zahl heißt <b>kleiner</b> als eine andere, wenn sie auf der Zahlengeraden links davon liegt, und <b>größer,</b> wenn sie rechts davon liegt. <b>Vergleichs&shy;operatoren</b> verknüpfen zwei Zahlen und ergeben einen Wahrheitswert wie folgt:</div>
+
+ <div><br>
+  <table class='in t0'>
+   <tr>
+    <td class='tc br bb' style='padding:0px 4px 4px;'>
+Vergleich
+    </td>
+    <td class='tl bb' style='padding:0px 8px 4px;'>
+ergibt wahr, falls
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+x &lt; y
+    </td>
+    <td class='tl'>
+x kleiner y
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+x &le; y
+    </td>
+    <td class='tl'>
+x kleiner/gleich y
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+x &gt; y
+    </td>
+    <td class='tl'>
+x größer y
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+x &ge; y
+    </td>
+    <td class='tl'>
+x größer/gleich y
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+x = y
+    </td>
+    <td class='tl'>
+x gleich y
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+x &ne; y
+    </td>
+    <td class='tl'>
+x ungleich y
+    </td>
+   </tr>
+  </table></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Wahr oder falsch?
+
+ <div class='in'><br>
+<b>a)</b> 1 &le; 3 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> 0 &gt; 1 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> 2 &lt; 2 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> 10 &ge; 10</div></div>
+
+ <div class='in'><br>
+<b>a)</b> wahr &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> falsch &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> falsch &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> wahr</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.2' class='box'>2</a> Dezimal- und Dualdarstellung</b></div>
+
+ <div><br>
+Jede Zahl hat nur einen <b>Wert</b> (= Position auf der Zahlengeraden), aber unterschiedliche Darstellungen. Dazu nehmen wir "Gewichte", um die Zahl aufzuwiegen. Bei der <b>Dezimaldarstellung</b> sind das 1<span class='p02'>,</span>10<span class='p02'>,</span>100,… (10er-Potenzen), bei der <b>Dualdarstellung</b> 1<span class='p02'>,</span>2<span class='p02'>,</span>4,… (2er-Potenzen).</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> Gib die Anzahl der Stunden einer Woche in <b>a)</b> Dezimaldarstellung, <b>b)</b> Dualdarstellung an.</div>
+
+ <div class='in'><br>
+<b>a)</b> <span class='rot'>1</span>·100 + <span class='rot'>6</span>·10 + <span class='rot'>8</span>·1 = <span class='rot'>168</span><sub>10</sub></div>
+
+ <div class='in'><br>
+<b>b)</b> <span class='rot'>1</span>·128 + <span class='rot'>0</span>·64 + <span class='rot'>1</span>·32 + <span class='rot'>0</span>·16 + <span class='rot'>1</span>·8 + <span class='rot'>0</span>·4 + <span class='rot'>0</span>·2 + <span class='rot'>0</span>·1 = <span class='rot'>10101000</span><sub>2</sub></div>
+
+ <div><br>
+Um zwei Dualzahlen zu addieren/subtrahieren, gehen wir wie bei Dezimalzahlen vor, d.h. wir schreiben die Zahlen rechtsbündig untereinander und rechnen stellenweise von rechts nach links:</div>
+
+ <div><br>
+Falls bei der <b>Addition</b> das Ergebnis über 1 hinausschießt, ziehen wir davon 2 ab und addieren dafür eine zusätzliche 1 bei der nächsten Stelle. Bei der <b>Subtraktion</b> schauen wir, wie viel von der unteren Stelle auf die obere fehlt. Allenfalls müssen wir zuvor die obere Stelle um 2 erhöhen, dafür subtrahieren wir dann eine zusätzliche 1 bei der nächsten Stelle.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Berechne <b>a)</b> 45<span class='p44'>+</span>38, <b>b)</b> 45<span class='p44'>–</span>38 in Dualdarstellung.</div>
+
+ <div class='in'><br>
+<img src='img/za_00.gif'></div>
+
+ <div><br>
+Indem wir Zahlen als Folge von Wahrheitswerten ansehen und das Zusammenrechnen von Zahlen auf logische Operationen zurückführen, könnten wir die Zahlenlehre aus der Logik heraus entwickeln. Wir steigen aber auf einer höheren Stufe ein und kehren zur Vorstellung zurück, dass eine Zahl (grch. arithmós) eine Position auf der Zahlengeraden ist:</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> ARITHMETISCHE OPERATOREN</b></div>
+
+ <div><br><br>
+<b><a name='B.1' class='box'>1</a> Grafische Addition und Multiplikation</b></div>
+
+ <div><br>
+Definition der <b>Addition</b> über zwei parallele Zahlengeraden mit gleicher Skala:</div>
+
+ <div class='in'><br>
+<img src='img/za_01.gif'></div>
+
+ <div><br>
+Definition der <b>Multiplikation</b> über zwei Zahlengeraden, die sich im Nullpunkt kreuzen:</div>
+
+ <div class='in'><br>
+<img src='img/za_02.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.2' class='box'>2</a> Operatorengebäude</b></div>
+
+ <div><br>
+Historisch gesehen gab es zuerst nur die Addition und die weiteren Operatoren (also auch die Multiplikation) wurden unter Rückgriff auf die bereits vorhandenen definiert. Zum einen durch <b>Wiederholung,</b> indem wir dieselbe Zahl mehrmals nehmen und denselben Operator dazwischensetzen. Zum anderen durch <b>Umkehrung,</b> indem wir das Ergebnis und einen Operanden der Originaloperation vorgegeben und nach dem anderen fragen.</div>
+
+ <div class='in'><br>
+<img src='img/za_03.gif'></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>x<span class='p44'>–</span>y :</b>= jene Zahl, die man zu y addieren muss, um x zu erhalten</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>x·y :</b>= Addition so vieler y's, wie x angibt (0·y <span class='ldf'>:</span>= <span class='blau'>0</span>)</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>x:y :</b>= jene Zahl, die man mit y multiplizieren muss, um x zu erhalten (= wie oft man y subtrahieren muss, um von x auf <span class='blau'>0</span> zu kommen)</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>y<sup>x</sup> :</b>= Multiplikation so vieler y's, wie x angibt (y<sup>0</sup> <span class='ldf'>:</span>= <span class='blau'>1</span>)</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b><sup style='margin-right:-1px;'>n</sup></b><span class='r2a'>&radic;</span><b class='rad'>x</b> <b>:</b>= jene (Grund)Zahl, auf die man n setzen muss, um x zu erhalten</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>log<sub>a</sub>x :</b>= jene (Hoch)Zahl, die man auf a setzen muss, um x zu erhalten (= wie oft man durch a dividieren muss, um von x auf <span class='blau'>1</span> zu kommen)</div>
+
+ <div class='grau'><br>
+Bem: Der zuerst- bzw. großgeschriebene Operand in der Umkehroperation ist immer das Ergebnis der Originaloperation.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Charakterisiere in Worten:
+
+ <div class='in'><br>
+<b>a)</b> 16<span class='p44'>–</span>9 &nbsp;&nbsp;&nbsp;
+<b>b)</b> 24:8 &nbsp;&nbsp;&nbsp;
+<b>c)</b> <sup>3</sup><span class='r1t'>&radic;</span><span class='rad'>125</span> &nbsp;&nbsp;&nbsp;
+<b>d)</b> log<sub>2</sub>16</div></div>
+
+ <div class='in'><br>
+<b>a)</b> 16<span class='p44'>–</span>9 = jene Zahl, die man zu 9 addieren muss, um 16 zu erhalten = 7</div>
+
+ <div class='in'><br>
+<b>b)</b> 24:8 = jene Zahl, die man mit 8 multiplizieren muss, um 24 zu erhalten = 3 (24<span class='p44'>–</span>8<span class='p44'>–</span>8<span class='p44'>–</span>8 = 0)</div>
+
+ <div class='in'><br>
+<b>c)</b> <sup>3</sup><span class='r1t'>&radic;</span><span class='rad'>125</span> = jene Zahl, auf die man 3 setzen muss, um 125 zu erhalten = 5</div>
+
+ <div class='in'><br>
+<b>d)</b> log<sub>2</sub>16 = jene Zahl, die man auf 2 setzen muss, um 16 zu erhalten = 4 (16:2:2:2:2 = 1)</div>
+
+ <div><br>
+Bezeichungen:
+</div>
+
+ <div class='in'><br>
+Summand + Summand = Summe</div>
+
+ <div class='in mt1'>
+Minuend <span class='grau'>(der zu Verkleinernde)</span> – Subtrahend <span class='grau'>(der Abzuziehende)</span> = Differenz</div>
+
+ <div class='in mt1'>
+Faktor · Faktor = Produkt</div>
+
+ <div class='in mt1'>
+Dividend <span class='grau'>(der zu Teilende)</span> : Divisor <span class='grau'>(der Teiler)</span> = Quotient</div>
+
+ <div class='in mt1'>
+Basis<sup class='p20'>Exponent</sup> <span class='grau'>(= Grundzahl<sup class='p20'>Hochzahl</sup>)</span> = Potenz</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.3' class='box'>3</a> Bindungsvereinbarungen</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Wo Klammern fehlen, bestimmt die Stufe der Operatoren die Bindung: <b>Hoch vor Punkt vor Strich.</b> Strich-Strich und Punkt-Punkt binden von links nach rechts, Hoch-Hoch von rechts nach links. Auch Vorzeichen werten wir als (unäre) Strichoperatoren, also etwa</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td class='ws4'>
+<span class='p02'>–</span>x + y
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td class='ws4'>
+(–x) + y <img src='sym/ok.svg' class='to3'><br><br>
+<span class='p02'>–</span>(x + y) <img src='sym/flash.svg' class='to3'>
+    </td>
+    <td>
+&nbsp;&nbsp;&nbsp;&nbsp; oder &nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td>
+–x<sup>n</sup>
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+(–x)<sup>n</sup> <img src='sym/flash.svg' class='to3'><br><br>
+<span class='p02'>–</span>(x<sup>n</sup>) <img src='sym/ok.svg' class='to3'>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> Ergänze fehlende Klammern so, wie es die Bindungsvereinbarungen vorschreiben:
+
+ <div class='in'><br>
+<b>a)</b> 7 – 4 – 2 + 1 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> 10:2·(1 + 2·3) &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> –2<sup>2</sup> – 5·2<sup>3</sup></div></div>
+
+ <div class='in'><br>
+<b>a)</b> 7 – 4 – 2 + 1 = <b>[</b><b>(</b>7 – 4<b>)</b> – 2<b>]</b> + 1<br><br>
+
+<b>b)</b> 10:2·(1 + 2·3) = <b>(</b>10:2<b>)</b>·[1 + <b>(</b>2·3<b>)</b>]<br><br>
+
+<b>c)</b> –2<sup>2</sup> – 5·2<sup>3</sup> = <b>[</b>–<b>(</b>2<sup>2</sup><b>)]</b> – <b>[</b>5·<b>(</b>2<sup>3</sup><b>)]</b></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> TEILBARKEIT UND PRIMZAHLEN</b></div>
+
+ <div><br><br>
+<b><a name='C.1' class='box'>1</a> Division mit Rest</b></div>
+
+ <div><br>
+Nicht jede Division "geht auf", wenn wir vom Dividenden aus in Divisorschritten zur 0 springen. Beispielsweise 7:3 = ???</div>
+
+ <div class='in'><br>
+<img src='img/za_04.gif'></div>
+
+ <div><br>
+Offenbar müssen wir schon vor 0 stoppen, um nicht darüber hinauszuschießen. Programmierern sind in dieser Situation <b>zwei Operatoren</b> geläufig:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>Ganzzahl-Division</b> sagt, wie oft vor dem Stopp gesprungen wurde, die <b>Modulo-Division,</b> wo dieser Stopp – der sogenannte <b>Rest</b> – liegt.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 6: a)</b> 4201 div 16 = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> 366952 mod 405 = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> 76734 mod 98</div>
+
+ <div class='in' style='float:left;'><br>
+<b>a)</b> 4201:16 = 262<br>
+<span style='padding-left:8px;'>&nbsp;</span><span style='border-bottom:1px solid;'>–32</span><br>
+<span style='padding-left:21px;'>100</span><br>
+<span style='padding-left:16px;'>&nbsp;</span><span style='border-bottom:1px solid;'>–96</span><br>
+<span style='padding-left:37px;'>41</span><br>
+<span style='padding-left:24px;'>&nbsp;</span><span style='border-bottom:1px solid;'>–32</span><br>
+<span style='padding-left:45px;'>9</span><br><br>
+4201 div 16 = 262</div>
+
+ <div style='float:left; margin-left:40px;'><br>
+<b>b)</b> 366952:405 = 906<br>
+<span style='padding-left:7px;'>&nbsp;</span><span style='border-bottom:1px solid;'>–3645</span><br>
+<span style='padding-left:36px;'>245</span><br>
+<span style='padding-left:31px;'>&nbsp;</span><span style='padding-left:8px; border-bottom:1px solid;'>–0</span><br>
+<span style='padding-left:36px;'>2452</span><br>
+<span style='padding-left:23px;'>&nbsp;</span><span style='border-bottom:1px solid;'>–2430</span><br>
+<span style='padding-left:52px;'>22</span><br><br>
+366952 mod 405 = 22</div>
+
+ <div style='float:left; margin-left:40px;'><br>
+<b>c)</b> 76734:98 = 783<br>
+<span style='padding-left:8px;'>&nbsp;</span><span style='border-bottom:1px solid;'>–686</span><br>
+<span style='padding-left:29px;'>813</span><br>
+<span style='padding-left:16px;'>&nbsp;</span><span style='border-bottom:1px solid;'>–784</span><br>
+<span style='padding-left:37px;'>294</span><br>
+<span style='padding-left:24px;'>&nbsp;</span><span style='border-bottom:1px solid;'>–294</span><br>
+<span style='padding-left:53px;'>0</span><br><br>
+76734 mod 98 = 0</div>
+
+ <div style='clear:left;'><br>
+<b>Frage:</b> Wie lässt sich der Dividend x rekonstruieren, wenn wir die Divisionsergebnisse (x div y), (x mod y) und den Divisor y kennen?</div>
+
+ <div class='in'><br>
+(x div y)<span class='p20'>y</span> + (x mod y) = x</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Teiler, Vielfache, Primzahlen</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Wenn bei einer Division kein Rest bleibt, nennen wir den Divisor einen <b>Teiler</b> und den Dividenden ein <b>Vielfaches</b> der jeweils anderen Zahl. Eine natürliche Zahl größer 1, die nur 1 und sich selbst als Teiler hat, heißt <b>Primzahl.</b></div>
+
+ <div class='in'><br>
+<img src='sym/setP.gif'> = { 2, 3, 5, 7, 11, 13<span class='p02'>,</span>... }</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Der <b>Hauptsatz der Arithmetik</b> sagt, dass jede natürliche Zahl größer 1 <i>eindeutig</i> in Primfaktoren zerlegbar ist. Dazu dividieren wir sie solange wie möglich durch die kleinste Primzahl, dann durch die nächstgrößere usw. bis 1 herauskommt.</div>
+
+ <div><br>
+Das hilft uns etwa, um den <b>größten gemeinsamen Teiler</b> oder das <b>kleinste gemeinsame Vielfache</b> mehrerer Zahlen zu bestimmen:</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 7:</b> Bestimme <b>a)</b> den ggT, <b>b)</b> das kgV von 540 und 200.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/za_05.gif' style='margin-right:40px;'>
+    </td>
+    <td style='vertical-align:top;'>
+<b>a)</b> ggT(540<span class='p02'>,</span>200) = 2<sup>2</sup>·5 = 20<br><br>
+<b>b)</b> kgV(540<span class='p02'>,</span>200) = 2<sup>3</sup>·3<sup>3</sup>·5<sup>2</sup> = 5400<br><br>
+<span class='grau'>Probe: ggT(x<span class='p02'>,</span>y)·kgV(x<span class='p02'>,</span>y) = xy</span>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> GANZE ZAHLEN</b></div>
+
+ <div><br><br>
+Das Problem, dass nicht alle Umkehroperationen ein Ergebnis haben, können wir auch angehen, indem wir neue Zahlen erfinden. In einer abstrakten Vorgehensweise machen wir die ergebnislosen Operationen selbst zu neuen Zahlen, wobei wir aber nicht für dasselbe Ergebnis verschiedene Zahlen erfinden dürfen.</div>
+
+ <div><br>
+<b><a name='D.1' class='box'>1</a> Erweiterung von <img src='sym/ssetN.gif'> auf <img src='sym/ssetZ.gif'></b></div>
+
+ <div><br>
+Bei der <b>Subtraktion natürlicher Zahlen</b> ändert sich das Ergebnis nicht, wenn wir bei beiden Operanden dieselbe Zahl addieren/subtrahieren. Derart gleichwertige Subtraktionen werden gebündelt und diese Bündel sind dann die <b>ganzen Zahlen:</b></div>
+
+ <div class='in'><br>
+<img src='img/za_06.gif'></div>
+
+ <div><br>
+Damit die "alten" Subtraktionen jetzt nicht zwei Ergebnisse haben, identifizieren wir die natürlichen Zahlen mit den entsprechenden Plus-Zahlen (<img src='sym/setN.gif'> <img src='sym/sube.gif'> <img src='sym/setZ.gif'>). Auf der Zahlengeraden laufen die neu hinzugekommenen Minus-Zahlen links vom Nullpunkt weg:</div>
+
+ <div class='in mt2'>
+<img src='img/za_07.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> Betrag, Addition, Multiplikation in <img src='sym/ssetZ.gif'></b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Der <b>Betrag</b> ist ein unärer Operator, der Zahlen von ihrem Vorzeichen befreit.</div>
+
+ <div class='in mt1'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+|x| <span class='ldf'>:</span>=
+    </td>
+    <td>
+<img src='sym/lbra.gif' style='margin:6px 6px 0px;'>
+    </td>
+    <td>
+x,<span style='margin-left:13px;'>x &ge; 0</span>
+     <div style='margin-top:7px;'>
+–x, x &lt; 0
+     </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 8: a)</b> |–4| = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> |15| = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> |0| = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> wahr oder falsch? |–3| &ne; –3</div>
+
+ <div class='in'><br>
+<b>a)</b> 4 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> 15 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> 0 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> wahr</div>
+
+ <div><br>
+Nach der Erweiterung des Zahlenbereichs müssen wir die Definition der arithmetischen Operatoren auf die neuen Zahlen ausdehnen. Dazu brauchen wir nur zu verlangen, dass die Eigenschaften der Operatoren erhalten bleiben sollen. Oder wir halten uns an die grafischen Operatordefinitionen, die sich automatisch auf die neuen Zahlen erstrecken:</div>
+
+ <div><br>
+<b>Addition:</b> (±2) + (±3) = ?</div>
+
+ <div><br>
+<span style='margin-left:44px;'>(+2) + (–3) = –1</span>
+<span style='margin-left:97px;'>(–2) + (+3) = +1</span>
+<span style='margin-left:99px;'>(–2) + (–3) = –5</span></div>
+
+ <div class='in'><br>
+<img src='img/za_08.gif'></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Bei gleichen Vorzeichen werden die Beträge addiert, bei ungleichen wird der kleinere Betrag vom größeren subtrahiert. Das Ergebnis bekommt das Vorzeichen der betragsgrößeren Zahl.</div>
+
+ <div><br>
+<b>Multiplikation:</b> (±2)(±3) = ?</div>
+
+ <div class='in'><br>
+<img src='img/za_09.gif'></div>
+
+ <div class='mt1'>
+<span style='margin-left:60px;'>(+2)(–3) = –6</span>
+<span style='margin-left:117px;'>(–2)(+3) = –6</span>
+<span style='margin-left:123px;'>(–2)(–3) = +6</span></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die Beträge werden multipliziert. Das Ergebnis bekommt bei gleichen Vorzeichen ein Plus, bei ungleichen ein Minus ("Vorzeichenregel").</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='E' class='box'>E</a> RATIONALE ZAHLEN</b></div>
+
+ <div><br><br>
+<b><a name='E.1' class='box'>1</a> Erweiterung von <img src='sym/ssetZ.gif'> auf <img src='sym/ssetQ.gif' style='position:relative; top:2px'></b></div>
+
+ <div><br>
+Bei der <b>Division ganzer Zahlen</b> ändert sich das Ergebnis nicht, wenn wir beide Operanden mit derselben Zahl &ne; 0 multiplizieren/dividieren. Derart gleichwertige Divisionen werden gebündelt und diese Bündel, ausgenommen die <b>Division durch Null,</b> sind dann die <b>rationalen Zahlen:</b></div>
+
+ <div class='in'><br>
+<img src='img/za_10.gif'></div>
+
+ <div><br>
+So dargestellt sprechen wir auch von <b>Bruchzahlen</b> mit dem <b>Zähler</b> über dem Bruchstrich und dem <b>Nenner</b> darunter. Damit die "alten" Divisionen jetzt nicht zwei Ergebnisse haben, identifizieren wir die ganzen Zahlen mit den entsprechenden 1tel-Brüchen (<img src='sym/setZ.gif'> <img src='sym/sube.gif'> <img src='sym/setQ.gif' style='position:relative; top:2px'>). Auf der Zahlengeraden finden wir Bruchzahlen so:</div>
+
+ <div class='in'><br>
+<img src='img/za_11.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.2' class='box'>2</a> Bruchrechenregeln</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Brüche behalten ihren Wert, wenn man sie <b>erweitert/kürzt,</b> d.h. Zähler und Nenner mit derselben Zahl multipliziert/dividiert.</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Brüche werden <b>addiert/subtrahiert,</b> indem man sie durch Erweitern auf gleiche Nenner bringt und die Zähler addiert/subtrahiert.</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Brüche werden <b>multipliziert,</b> indem man Zähler mit Zähler und Nenner mit Nenner multipliziert.</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Brüche werden <b>dividiert,</b> indem man den ersten mit dem Kehrwert des zweiten multipliziert (Kehrwert = Zähler <img src='sym/harr.svg' class='bo1'> Nenner).</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-top:8px; padding-bottom:8px;'>
+<b>Aufgabe 9:</b>
+
+<img src='img/za_12.gif' style='vertical-align:-32px;'></div>
+
+ <div class='in'><br>
+<img src='img/za_13.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/za_14.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/za_15.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='F' class='box'>F</a> OPERATOREIGENSCHAFTEN</b></div>
+
+ <div><br><br>
+<b><a name='F.1' class='box'>1</a> Eigenschaften der Addition/Subtraktion</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die Addition ist <b>assoziativ</b> und <b>kommutativ.</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Das neutrale Element der Addition ist <b>0,</b> durch <b>Vorzeichenwechsel</b> erhält man die inversen Elemente:</div>
+
+ <div class='in'><br>
+x + (–x) = 0</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Damit lässt sich jede <b>Subtraktion als Addition</b> schreiben und umgekehrt:</div>
+
+ <div class='in'><br>
+x <span class='rot'>–</span> y = x <span class='rot'>+</span> (–y) &nbsp; und &nbsp; x <span class='rot'>+</span> y = x <span class='rot'>–</span> (–y)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='F.2' class='box'>2</a> Eigenschaften der Multiplikation/Division</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die Multiplikation ist <b>assoziativ,</b> <b>kommutativ</b> und <b>distributiv zur Addition.</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Das neutrale Element der Multiplikation ist <b>1,</b> durch <b>Kehrwertbildung</b> erhält man die inversen Elemente:</div>
+
+ <div class='in mt1'>
+x·<div class='frac p20'><div class='num'>1</div><div class='den'>x</div></div> = 1</div>
+
+ <div class='in mt1'>
+<span class='out'>•</span> Damit lässt sich jede <b>Division als Multiplikation</b> schreiben und umgekehrt:</div>
+
+ <div class='in mt1'>
+x<span class='rot'>:</span>y = x<span class='rot'>·</span><div class='frac p20'><div class='num'>1</div><div class='den'>y</div></div> &nbsp; und &nbsp; x<span class='rot'>·</span>y = x<span class='rot'>:</span><div class='frac p10'><div class='num'>1</div><div class='den'>y</div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='F.3' class='box'>3</a> Potenzrechenregeln</b></div>
+
+ <div><br>
+<span class='p02'>•</span> Potenzen mit gleicher Basis werden multipliziert/dividiert, indem man die Exponenten addiert/subtrahiert.</div>
+
+ <div class='in'><br>
+<b>x<sup>m</sup>x<sup>n</sup></b> = <b>x<sup>m<span class='p11'>+</span>n</sup></b> &nbsp; und &nbsp; <div class='frac'><div class='num'><b>x<sup>m</sup></b></div><div class='den'><b>x<sup>n</sup></b></div></div> = <b>x<sup>m<span class='p11'>–</span>n</sup></b></div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> Eine Potenz wird potenziert, indem man die Exponenten multipliziert.</div>
+
+ <div class='in'><br>
+<b>(x<sup>m</sup>)<sup>n</sup></b> = <b>x<sup>mn</sup></b></div>
+
+ <div><br>
+<span class='p02'>•</span> Ein Produkt/Quotient wird potenziert, indem man den Exponenten auf beide Operanden verteilt.</div>
+
+ <div class='in' style='margin-bottom:10px;'>
+<b>(xy)<sup>n</sup></b> = <b>x<sup class='p02'>n</sup>y<sup>n</sup></b> &nbsp; und &nbsp; <img src='img/za_16.gif' style='position:relative; top:14px;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 10:</b> Berechne über die Potenzdefinition und überprüfe damit die Potenzrechenregeln:<br><br>
+
+<img src='img/za_17.gif' class='in'></div>
+
+ <div class='in'><br>
+<b>a)</b> x<sup>3</sup>·x<sup>2</sup> = (x·x·x)(x·x) = x·x·x·x·x = x<sup>5</sup></div>
+
+ <div class='in'><br>
+<img src='img/za_18.gif'></div>
+
+ <div class='in'><br>
+<b>c)</b> (x<sup>2</sup>)<sup>3</sup> = (x·x)(x·x)(x·x) = x·x·x·x·x·x = x<sup>6</sup></div>
+
+ <div class='in mt2'>
+<b>d)</b> (x·y)<sup>3</sup> = (x·y)(x·y)(x·y) = x·x·x·y·y·y = x<sup>3</sup>·y<sup>3</sup></div>
+
+ <div class='in mt2'>
+<img src='img/za_19.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='F.4' class='box'>4</a> Erweiterte Potenzdefinition</b></div>
+
+ <div><br>
+Wenn die Potenzrechenregeln erhalten bleiben sollen, gibt es nur eine Möglichkeit, die Potenzdefinition auf neue Exponenten zu erweitern:</div>
+
+ <div><br>
+<img src='img/za_20.gif'></div>
+
+ <div><br>
+<img src='img/za_21.gif'></div>
+
+ <div class='mt1'><br>
+<img src='img/za_22.gif'></div>
+
+ <div style='margin-top:-3px; margin-left:26px;'>
+<img src='sym/uarr_g.gif'></div>
+ <div class='grau' style='font-size:11px;'>
+durchgekürzt</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-top:17px;'>
+<b>Aufgabe 11:</b> <b>a)</b> 10<sup>0</sup> = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> 5<sup>–2</sup> = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> 9<sup class='dn'><span style='position:relative; bottom:13px; left:1px;'>1</span><span style='margin-left:-6px; text-decoration:overline;'>2</span></sup> = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> 8<sup class='dn'><span style='position:relative; bottom:13px; left:1px;'>2</span><span style='margin-left:-6px; text-decoration:overline;'>3</span></sup> =</div>
+
+ <div class='in'><br>
+<b>a)</b> 10<sup>0</sup> = 1 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> 5<sup>–2</sup> = <div class='frac'><div class='num'>1</div><div class='den'>5<sup>2</sup></div></div> = <div class='frac'><div class='num'>1</div><div class='den'>25</div></div> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> 9<sup class='dn'><span style='position:relative; bottom:13px; left:1px;'>1</span><span style='margin-left:-6px; text-decoration:overline;'>2</span></sup> = <span class='r1t'>&radic;</span><span class='rad'>9</span> = (±)3 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> 8<sup class='dn'><span style='position:relative; bottom:13px; left:1px;'>2</span><span style='margin-left:-6px; text-decoration:overline;'>3</span></sup> = <sup>3</sup><span class='r1t'>&radic;</span><span class='rad'>8<sup>2</sup></span> = <sup>3</sup><span class='r1t'>&radic;</span><span class='rad'>64</span> = 4</div>
+
+ <div style='margin-top:-5px; margin-left:358px;'>
+<img src='sym/uarr_g.gif'></div>
+ <div class='in grau' style='font-size:11px; margin-left:160px;'>
+innerhalb einer Rechnung steht die Quadratwurzel für die Plus-Zahl</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Effizientes Rechnen verlangt, dass wir uns neben der Definition auch das Ergebnis häufig vorkommender Rechenschritte merken. Beispielsweise, dass wir einen Faktor-mit-Exponent auf die andere Seite des Bruchstrichs schieben können, indem wir beim Exponenten das Vorzeichen wechseln:</div>
+
+ <div class='in'><br>
+<img src='img/za_23.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='G' class='box'>G</a> REELLE ZAHLEN</b></div>
+
+ <div><br><br>
+<b><a name='G.1' class='box'>1</a> Erweiterung von <img src='sym/ssetQ.gif' style='position:relative; top:2px'> auf <img src='sym/ssetR.gif'></b></div>
+
+ <div><br>
+Dass es keine rationale Zahl gibt, die etwa <span class='r1t'>&radic;</span><span class='rad'>2</span> ist, zeigen wir über einen <b>indirekten Beweis.</b> Dabei nehmen wir die Verneinung von dem an, was wir zeigen wollen, und folgern solange, bis wir auf etwas Falsches stoßen:</div>
+
+ <div class='in mt1'>
+Annahme: <span class='r1t'>&radic;</span><span class='rad'>2</span> = <div class='frac'><div class='num'>m</div><div class='den'>n</div></div> durchgekürzt mit m, n <img src='sym/isin.gif'> <img src='sym/setN.gif'></div>
+
+ <div class='in mt1'>
+<span class='r1t'>&radic;</span><span class='rad'>2</span> = <div class='frac'><div class='num'>m</div><div class='den'>n</div></div> &nbsp; <span class='ll'>(.)<sup>2</sup></span></div>
+
+ <div class='in mt1'>
+2 = <div class='frac'><div class='num'>m<sup>2</sup></div><div class='den'>n<sup>2</sup></div></div> &nbsp;&nbsp; <span class='ll'>·n<sup>2</sup></span></div>
+
+ <div class='in'><br>
+Wie sich leicht nachprüfen lässt, ist das Quadrat gerader Zahlen gerade und das Quadrat ungerader Zahlen ungerade, also:</div>
+
+ <div class='in'><br>
+2n<sup>2</sup> = m<sup>2</sup> <img src='sym/rarr2.svg' class='p66'> m<sup>2</sup> gerade <img src='sym/rarr2.svg' class='p66'> m gerade</div>
+
+ <div class='in'><br>
+ <div class='frac'><div class='num'>m</div><div class='den'>2</div></div> =<span class='rdf'>:</span> k <img src='sym/isin.gif'> <img src='sym/setN.gif'> <img src='sym/rarr2.svg' class='p66'> 2n<sup>2</sup> = 4k<sup>2</sup> &nbsp; <span class='ll'>:2</span></div>
+
+ <div class='in mt1'>
+n<sup>2</sup> = 2k<sup>2</sup> <img src='sym/rarr2.svg' class='p66'> n<sup>2</sup> gerade <img src='sym/rarr2.svg' class='p66'> n gerade = Widerspruch dazu, dass <div class='frac'><div class='num'>m</div><div class='den'>n</div></div> durchgekürzt ist</div>
+
+ <div><br>
+Was wir mit rationalen Zahlen sehr wohl können, ist, beliebig nahe an die <span class='r1t'>&radic;</span><span class='rad'>2</span> heranspringen. Etwa in Form einer dezimalen Sprungfolge, bei der wir soviel Einer, dann Zehntel usw. addieren, dass das jeweilige Quadrat gerade noch unter 2 bleibt. Gleichwertige Sprungfolgen in dem Sinn, dass der Abstand zwischen ihren n-ten Sprungstellen beliebig klein wird, werden gebündelt und diese Bündel sind dann die <b>reellen Zahlen:</b></div>
+
+ <div class='in'><br>
+<img src='img/za_24.gif'></div>
+
+ <div><br>
+So dargestellt sprechen wir auch von <b>Dezimalzahlen (mit Komma).</b> Dezimalzahlen, bei denen sich eine bestimmte Ziffernfolge endlos wiederholt, heißen <b>periodisch.</b> Das sind gerade die rationalen Zahlen (<img src='sym/setQ.gif' style='position:relative; top:2px'> <img src='sym/sube.gif'> <img src='sym/setR.gif'>).</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 12:</b> Stelle 2,4<span class='ol'>37</span> als Bruchzahl dar.</div>
+
+ <div class='in'><br>
+<img src='img/za_25.gif'></div>
+
+ <div style='margin-left:175px;'><br>
+x = <div class='frac'><div class='num'>241,3</div><div class='den'>99</div></div><sup style='bottom:18px;'>·10</sup><sub style='margin-left:-18px; top:14px;'>·10</sub> = <div class='frac'><div class='num'>2413</div><div class='den'>990</div></div></div>
+
+ <div class='grau'><br>
+Bem: Die arithmetischen Operatoren werden auf reelle Zahlen ausgedehnt, indem wir die rationalen Folgen dahinter gliedweise zusammenrechnen.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='G.2' class='box'>2</a> Gleitkommazahlen</b> </div>
+
+ <div><br>
+Bei der <b>Gleitkommadarstellung</b> wird eine Zehnerpotenz als Faktor angehängt, sodass die Ziffer vor dem Komma für diese Zehnerpotenz steht und nicht mehr für Einer (= Festkommadarstellung).</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 13:</b> Schreibe als Festkommzahl:
+
+ <div class='in'><br>
+<b>a)</b> 2,705·10<sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> 9,4·10<sup>–3</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> –1,59·10<sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> 3,226<span class='ol'>51</span>·10<sup>4</sup></div></div>
+
+ <div class='in'><br>
+<b>a)</b> 2,705·10<sup>2</sup> = 270,5 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> 9,4·10<sup>–3</sup> = 0,0094 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> –1,59·10<sup>1</sup> = –15,9 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> 3,226<span class='ol'>51</span>·10<sup>4</sup> = 32265,<span class='ol'>15</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Eine Gleitkommazahl heißt <b>normalisiert,</b> wenn das Komma hinter der ersten Ziffer &ne; 0 sitzt.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 14:</b> Schreibe als normalisierte Gleitkommazahl:
+
+ <div class='in'><br>
+<b>a)</b> 491100 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> –78,44 &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> 0,8<span class='ol'>3</span> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> –0,0006</div></div>
+
+ <div class='in'><br>
+<b>a)</b> 491100 = 4,911·10<sup>5</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> –78,44 = –7,844·10<sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> 0,8<span class='ol'>3</span> = 8,<span class='ol'>3</span>·10<sup>–1</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>d)</b> –0,0006 = –6·10<sup>–4</sup></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='G.3' class='box'>3</a> Runden</b> </div>
+
+ <div><br>
+Um auf eine bestimmte Zehnerpotenz zu <b>runden,</b> denken wir uns, dass die Vielfachen dieser Zehnerpotenz eine Skala auf der Zahlengeraden bilden. Zahlen auf Skalenpunkten bleiben wie sie sind, Zahlen dazwischen ersetzen wir durch den nächstgelegenen Skalenpunkt und im Fall, dass das nicht entscheidbar ist (weil die Zahl genau in der Mitte liegt), runden wir von 0 weg.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 15:</b> Runde auf
+
+ <div class='in'><br>
+<b>a)</b> 100tel: 7,395 &nbsp;&nbsp;&nbsp;
+<b>b)</b> 1000er: –18500 &nbsp;&nbsp;&nbsp;
+<b>c)</b> 10tel: –6,245 &nbsp;&nbsp;&nbsp;
+<b>d)</b> 10er: 203,9</div></div>
+
+ <div class='in'><br>
+<b>a)</b> 7,39<img src='sym/dotlin.gif' class='to3'>5 &asymp; 7,40 &nbsp;&nbsp;&nbsp;
+<b>b)</b> –18<img src='sym/dotlin.gif' class='to3'>500 &asymp; –19000 &nbsp;&nbsp;&nbsp;
+<b>c)</b> –6,2<img src='sym/dotlin.gif' class='to3'>45 &asymp; –6,2 &nbsp;&nbsp;&nbsp;
+<b>d)</b> 20<img src='sym/dotlin.gif' class='to3'>3,9 &asymp; 200</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='G.4' class='box'>4</a> Intervalle</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Ein <b>abgeschlossenes Intervall</b> ist ein zusammenhängender Teil der reellen Zahlengeraden mitsamt den beiden Endpunkten:</div>
+
+ <div class='in'><br>
+<b>[a, b] :</b>= <b>{ x <img src='sym/iisin.gif'> <img src='sym/ssetR.gif'> | a &le; x &le; b }</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Ein <b>offenes Intervall</b> ist ein zusammenhängender Teil der reellen Zahlengeraden ohne die beiden Endpunkte (die auch ±&infin; sein können):</div>
+
+ <div class='in'><br>
+<b>]a, b[ :</b>= <b>{ x <img src='sym/iisin.gif'> <img src='sym/ssetR.gif'> | a</b> &lt; <b>x</b> &lt; <b>b }</b></div>
+
+ <div><br>
+Intervalle, die auf einer Seite abgeschlossen und auf der anderen Seite offen sind, werden dementsprechend so geschrieben:</div>
+
+ <div class='in'><br>
+[a, b[ <span class='ldf'>:</span>= { x <img src='sym/isin.gif'> <img src='sym/setR.gif'> | a &le; x &lt; b } &nbsp; bzw. &nbsp; ]a, b] <span class='ldf'>:</span>= { x <img src='sym/isin.gif'> <img src='sym/setR.gif'> | a &lt; x &le; b }</div>
+
+ <div><br>
+Bem: Für (halb)offene Intervalle werden auch runde Klammern verwendet, also (a, b), [a, b) bzw. (a, b].</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 16:</b> Stelle <span class='rot'>A = [–1, 6],</span> <span class='blau'>B = ]–&infin;, –1[,</span> <span class='gruen'>C = ]2, 8]</span> auf der Zahlengeraden dar und bestimme
+
+ <div class='in'><br>
+<b>a)</b> A <img src='sym/cup.gif'> B = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> A <img src='sym/cap.gif'> C = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> <img src='sym/setR.gif'><span class='p22'>\</span>B =</div></div>
+
+ <div class='in'><br>
+<img src='img/za_26.gif'></div>
+
+ <div class='in'><br>
+<b>a)</b> A <img src='sym/cup.gif'> B = ]–&infin;, 6] &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> A <img src='sym/cap.gif'> C = ]2, 6] &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> <img src='sym/setR.gif'><span class='p22'>\</span>B = [–1, &infin;[</div>
+
+ </div></body>
+ </html>

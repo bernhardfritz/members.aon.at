@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Mathematische Statistik</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>Anhang zu: MATHEMATISCHE STATISTIK</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BEWEIS: Verschiebungssatz</b></div>
+
+ <div class='in mt2'>
+<img src='img/st_a00.gif'></div>
+
+ <div><br>
+Bei einer diskreten Zufallsvariablen X entspricht das folgender Formulierung, die genauso für stetige Zufallsvariable gilt:</div>
+
+ <div class='in'><br>
+Var(X) = E<span class='up'>(</span>X<sup>2</sup><span class='up'>)</span> – E(X)<sup>2</sup></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt1'><br>
+<b>BEWEIS: E(S<sup>2</sup>)</b> = <b>&sigma;<sup>2</sup></b></div>
+
+ <div class='in mt2'>
+<img src='img/st_a01.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt1'><br>
+<b>BEWEIS: Var(S<sup>2</sup>)</b> = <img src='img/st_a02.gif' style='vertical-align:-14px;'></div>
+
+ <div class='in mt2'>
+Y<sub>i</sub> = X<sub>i</sub><span class='p44'>–</span>&mu; unabhängig <img src='sym/rarr2.svg' class='p66'> E(Y<sub>i</sub>Y<sub class='p02'>j</sub>Y<sub class='p02'>k</sub>...) = E(Y<sub>i</sub>) E(Y<sub>j</sub>Y<sub class='p02'>k</sub>...) = 0, falls i &ne; j<span class='p02'>,</span>k<span class='p02'>,</span>...</div>
+
+ <div class='in mt2'>
+<img src='img/st_a03.gif'></div>
+
+ <div class='in'>
+_____</div>
+
+ <div class='in mt1'>
+<img src='img/st_a04.gif'></div>
+
+ <div class='in'><br>
+<img src='img/st_a05.gif'></div>
+
+ <div class='in' style='margin-top:49px;'>
+<img src='img/st_a06.gif' style='margin-top:-29px;'><img src='img/st_a07.gif' style='margin-top:-29px;'></div>
+
+ <div class='in'><br>
+<img src='img/st_a08.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/st_a09.gif'></div>
+
+ <div class='in'>
+_____</div>
+
+ <div class='in'><br>
+<img src='img/st_a10.gif'></div>
+
+ <div class='in'><br>
+<img src='img/st_a11.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt1'><br>
+<b>BEWEIS: X = N(&mu;<span class='p04'>;</span>&sigma;)</b> <img src='sym/rarr2.svg' class='p66'> <div class='frac to1 p04'><div class='num'><b>n – 1</b></div><div class='den'><b>&sigma;<sup>2</sup></b></div></div><b>S<sup>2</sup></b> = <b>&chi;<sup>2</sup><sub>n–1</sub></b></div>
+
+ <div class='in'><br>
+<img src='img/st_a12.gif'></div>
+
+ <div class='in mt1'>
+<img src='img/st_a13.gif'></div>
+
+ <div class='in mt1'>
+<img src='img/st_a14.gif'></div>
+
+ <div class='in mt1'>
+<img src='img/st_a15.gif'></div>
+
+ <div class='in mt1'>
+<img src='img/st_a16.gif'></div>
+
+ <div class='in mt1'>
+<img src='img/st_a17.gif'></div>
+
+ <div><br>
+Wenn wir die soeben gewonnene Rekursionsformel wiederholt auf die letzte Zeile anwenden, erhalten wir schlussendlich:</div>
+
+ <div class='in'><br>
+<img src='img/st_a18.gif'></div>
+
+ <div class='mt1'>
+Das Besondere an obigen Summanden ist ihre Unabhängigkeit: Der Summand mit dem neu hinzu hinzugekommenen X<sub>i</sub> schaut, wie weit dieses von <span class='ol'>X</span><sub class='nw'>(i–1)</sub> entfernt ist. Die vorhergehenden Summanden informieren dementsprechend nur über die Streuung von X<sub>1</sub>,... X<sub>i–1</sub>, was bei Normalverteilungen keinen Rückschluss auf die Lage von <span class='ol'>X</span><sub>(i–1)</sub> zulässt. Bleibt noch zu zeigen:</div>
+
+ <div class='in'><br>
+<img src='img/st_a19.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt1'><br>
+<b>BEWEIS: X = N(&mu;<span class='p02'>,</span>&sigma;)</b> <img src='sym/rarr2.svg' class='p66'> <div class='frac to2'><div class='num'><b><span class='ol'>X</span> – &mu;</b></div><div class='den to2'><b>S/</b><span class='r2a'>&radic;</span><b class='rad'>n</b></div></div> = <b>t<sub>n–1</sub></b></div>
+
+ <div class='in mt2'>
+<img src='img/st_a20.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>GÜTEFUNKTIONEN</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe:</b> Eine Strangpresse stellt Kupferrohre her, deren Länge normalverteilt mit &sigma; = 1,5 mm ist. Die Nullhypothese <b>a)</b> &mu; = 800 mm, <b>b)</b> &mu; &ge; 800 mm soll mit einer 25er-Stichprobe auf dem 5%-Niveau getestet werden. Bestimme die Gütefunktion, also die Power in Abhängigkeit von &mu;<sub>1</sub>.</div>
+
+ <div class='in'><br>
+X = Rohrlänge in cm = N(&mu;<span class='p02'>;</span>1,5). Wir gehen vor wie in Aufgabe 5 ...</div>
+
+ <div class='in'><br>
+<b>a)</b> <span class='ol'>x</span><sub>1</sub> = &mu;<sub>0</sub> + &Phi;<sup>–1</sup>(0,025)<div class='frac p40'><div class='num'>&sigma;</div><div class='den'><span class='r1t'>&radic;</span><span class='rad'>n</span></div></div> = 799,41 &nbsp;&nbsp;&nbsp; <span class='ol'>x</span><sub>2</sub> = &mu;<sub>0</sub> + &Phi;<sup>–1</sup>(0,975)<div class='frac p40'><div class='num'>&sigma;</div><div class='den'><span class='r1t'>&radic;</span><span class='rad'>n</span></div></div> = 800,59</div>
+
+ <div class='in'><br>
+<b>b)</b> <span class='ol'>x</span><sub>1</sub> = &mu;<sub>0</sub> + &Phi;<sup>–1</sup>(0,05)<div class='frac p40'><div class='num'>&sigma;</div><div class='den'><span class='r1t'>&radic;</span><span class='rad'>n</span></div></div> = 799,51 &nbsp;&nbsp;&nbsp; <span class='ol'>x</span><sub>2</sub> = &infin;</div>
+
+ <div class='in'><br>
+<img src='img/st_a21.gif'></div>
+
+ <div class='in'><br>
+<img src='img/st_a22.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>ERGÄNZUNG ZU AUFGABE 9:</b></div>
+
+ <div><br>
+Der Trick, unter der Wurzel pq durch <span class='ol'>X</span>(1<span class='p22'>–</span><span class='ol'>X</span>) abzuschätzen, macht aus der Umformung eine Kopfrechnung. Andernfalls hätten wir so zu rechnen:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe:</b> Bei einer Umfrage sprechen sich 162 von 600 zufällig ausgewählten Personen für eine bestimmte Partei aus. Bestimme näherungsweise über die Normalverteilung das beidseitig abgegrenzte 90%-Konfidenzintervall für den Stimmenanteil, den die Partei bei einer Wahl erzielen würde.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+X = Parteiwähler?
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+1 = ja (Wahrscheinlichkeit p)<br><br>
+0 = nein (Wahrscheinlichkeit q)
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+n<span class='ol'>X</span> = Anzahl Parteiwähler in Stichprobe vom Umfang n = binomialverteilt &asymp; N(np;<span class='p20 r1t'>&radic;</span><span class='rad'>npq</span>)</div>
+
+ <div class='in mt2'>
+<img src='img/st_a23.gif'></div>
+
+ <div class='in'><br>
+Wir suchen also alle p <img src='sym/isin.gif'> [0, 1], für die die schwarze Gerade zwischen der roten und blauen Kurve liegt:</div>
+
+ <div><br>
+<span style='margin-left:35px;'>Fall: <span class='rot'>c<sub>1</sub><span class='p22'>&lt;</span>0</span> und <span class='blau'>c<sub>2</sub><span class='p22'>&gt;</span>0</span></span>
+<span style='margin-left:65px;'>Fall: <span class='rot'>c<sub>1</sub><span class='p22'>&gt;</span>0</span> und <span class='blau'>c<sub>2</sub><span class='p22'>&gt;</span>0</span></span>
+<span style='margin-left:65px;'>Fall: <span class='rot'>c<sub>1</sub><span class='p22'>&lt;</span>0</span> und <span class='blau'>c<sub>2</sub><span class='p22'>&lt;</span>0</span></span></div>
+
+ <div class='in'>
+<img src='img/st_a24.gif'></div>
+
+ <div class='in'><br>
+Dazu schreiben wir die Ungleichungen als Gleichungen, quadrieren und lösen sie:</div>
+
+ <div class='in'><br>
+n<sup>2</sup><span class='ol'>X</span><sup>2</sup> – 2n<sup>2</sup><span class='ol'>X</span>p + n<sup>2</sup>p<sup>2</sup> = c<sup>2</sup>np – c<sup>2</sup>np<sup>2</sup> &nbsp; |:n</div>
+
+ <div class='in'><br>
+<img src='img/st_a25.gif'></div>
+
+ <div class='in mt1'>
+Wie oben illustriert kommt in allen Fällen (auch wenn wir es nur mit dem ersten zu tun haben) dasselbe heraus:</div>
+
+ <div class='in'><br>
+<img src='img/st_a26.gif'></div>
+
+ </div></body>
+ </html>

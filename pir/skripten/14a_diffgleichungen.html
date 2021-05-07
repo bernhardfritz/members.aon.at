@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Differenzialgleichungen</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>Anhang zu: DIFFERENZIALGLEICHUNGEN</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>VARIATION DER KONSTANTEN <img src='sym/rarr2.svg' class='p22'> PARTIKULÄRE/ALLGEMEINE LÖSUNG?</b></div>
+
+ <div><br>
+Der Ansatz à la homogene Lösung ist kein Ansatz, bei dem ein bestimmter Lösungstyp vermutet wird, sondern <i>jede </i> Funktion ist so darstellbar. Die Berücksichtigung der Integrationskonstanten ergibt daher die allgemeine Lösung. Am Beispiel der linearen DG 2. Ordnung:</div>
+
+ <div><br>
+Zu beliebigen (differenzierbaren) Funktionen y(x), y<sub>1</sub>(x), y<sub>2</sub>(x) mit y<sub>1</sub> <img src='sym/nsim.gif'> y<sub>2</sub> finden wir c<sub>1</sub>(x), c<sub>2</sub>(x), sodass:</div>
+
+ <div class='in'><br>
+(i) y = c<sub>1</sub>(x)y<sub>1</sub> + c<sub>2</sub>(x)y<sub>2</sub> &nbsp; mit c<sub>1</sub>'(x)y<sub>1</sub> + c<sub>2</sub>'(x)y<sub>2</sub> = 0</div>
+
+ <div><br>
+Zum Beweis differenzieren wir (i), erhalten</div>
+
+ <div class='in'><br>
+(ii) y' = c<sub>1</sub>(x)y<sub>1</sub>' + c<sub>2</sub>(x)y<sub>2</sub>'</div>
+
+ <div><br>
+und lösen (i) und (ii) über die Cramer'sche Regel auf:</div>
+
+ <div class='in'><br>
+c<sub>1</sub>(x) = <div class='frac'><div class='num'>yy<sub>2</sub>' – y'y<sub>2</sub></div><div class='den'>y<sub>1</sub>y<sub>2</sub>' – y<sub>1</sub>'y<sub>2</sub></div></div> &nbsp; und &nbsp; c<sub>2</sub>(x) = <div class='frac'><div class='num'>y<sub>1</sub>y' – y<sub>1</sub>'y</div><div class='den'>y<sub>1</sub>y<sub>2</sub>' – y<sub>1</sub>'y<sub>2</sub></div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>SINUSFÖRMIGE STÖRFUNKTION KOMPLEX GERECHNET?</b></div>
+
+ <div><br>
+Eine Störfunktion rsin&omega;t können wir als Imaginärteil von re<sup>j&omega;t</sup> ansehen und analog dazu die folgende reelle DG als Imaginärteil einer komplexen DG:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe:</b> Finde eine partikuläre Lösung der DG: y" + py' + qy = rsin&omega;t</div>
+
+ <div class='in'><br>
+Ansatz à la Störfunktion: <span class='uo'><span class='ui'>z</span></span><sub>p</sub> = <span class='uo'><span class='ui'>A</span></span>e<sup>j&omega;t</sup> &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; <span class='uo'><span class='ui'>z</span></span>" + p<span class='uo'><span class='ui'>z</span></span>' + q<span class='uo'><span class='ui'>z</span></span> = re<sup>j&omega;t</sup></div>
+
+ <div class='in'><br>
+-&omega;<sup>2</sup><span class='uo'><span class='ui'>A</span></span>e<sup>j&omega;t</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-22px; margin-right:2px;'> + j&omega;p<span class='uo'><span class='ui'>A</span></span>e<sup>j&omega;t</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-22px; margin-right:2px;'> + q<span class='uo'><span class='ui'>A</span></span>e<sup>j&omega;t</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-22px; margin-right:2px;'> = re<sup>j&omega;t</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-22px; margin-right:2px;'> <img src='sym/rarr2.svg' class='p66'> <span class='uo'><span class='ui'>A</span></span> = <div class='frac'><div class='num'>r</div><div class='den'>q – &omega;<sup>2</sup> + j&omega;p</div></div> = <div class='frac'><div class='num'>r(q – &omega;<sup>2</sup> – j&omega;p)</div><div class='den'>(q – &omega;<sup>2</sup>)<sup>2</sup> + (&omega;p)<sup>2</sup></div></div></div>
+
+ <div class='in'><br>
+<span class='uo'><span class='ui'>z</span></span><sub>p</sub> = (Re<span class='uo'><span class='ui'>A</span></span> + <span class='p02'>j</span>Im<span class='uo'><span class='ui'>A</span></span>)(cos&omega;t + jsin&omega;t) <img src='sym/rarr2.svg' class='p66'> y<sub>p</sub> = Im<span class='uo'><span class='ui'>z</span></span><sub>p</sub> = Im<span class='uo p01'><span class='ui'>A</span></span>cos&omega;t + Re<span class='uo p01'><span class='ui'>A</span></span>sin&omega;t</div>
+
+ </div></body>
+ </html>

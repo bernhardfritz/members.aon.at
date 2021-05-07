@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Quad-Exp-Log-Rechnung</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ <style type='text/css'>
+ .ctm {
+ 	font-size:80%;
+  margin-left:-8px;
+  position:relative;
+  bottom:5px;
+ }
+ .cts {
+ 	font-size:80%;
+  margin-left:-7px;
+  position:relative;
+  bottom:4px;
+ }
+ </style>
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>VII. QUAD-EXP-LOG-RECHNUNG</b></div>
+
+ <div><br>
+<a href='07_quadexplog.html#A'>A. Potenz- und Poylnomfunktion</a><br>
+<a href='07_quadexplog.html#B'>B. Quadratische Gleichungenen</a><br>
+<a href='07_quadexplog.html#C'>C. Exponentialfunktion</a><br>
+<a href='07_quadexplog.html#D'>D. Logarithmusfunktion/regeln</a><br>
+<a href='07_quadexplog.html#E'>E. Exp- und Log-Gleichungen</a><br>
+<a href='07_quadexplog.html#F'>F. Logarithmische Skalen</div>
+
+ <div style='margin-top:8px;'>
+<a href='07a_quadexplog.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> POTENZ- UND POLYNOMFUNKTION</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Gleichung und Kurve der Potenzfunktion</b></div>
+
+ <div><br>
+Die Potenzfunktion im engen Sinn schaut so aus:</div>
+
+ <div class='in'><br>
+y(x) = x<sup>b</sup></div>
+
+ <div><br>
+Die Potenzfunktion im weiten Sinn erhalten wir durch Skalierung in y-Richtung, womit sich auch die Skalierungen in x-Richtung nachbilden lassen:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>y(x)</b> = <b>ax<sup>b</sup></b></div>
+
+ <div><br>
+Für natürliche Exponenten n schauen die Funktionskurven wie folgt aus, abwechselnd <b>achsensymmetrisch</b> zur y-Achse und <b>punktsymmetrisch</b> zum Ursprung. Ausgehend davon nennen wir eine Funktion f ganz allgemein</div>
+
+ <div class='in'><br><table cellpadding='0' cellspacing='0'><tr><td width='300'>
+<img src='img/qu_00.gif'></td><td>
+<img src='img/qu_01.gif'></td></tr></table></div>
+
+ <div><br>
+Auch <b>x<sup>–n</sup> :</b>= <div class='frac'><div class='num'><b>1</b></div><div class='den'><b>x<sup>n</sup></b></div></div> ist eine gerade/ungerade Funktion, je nachdem, ob n gerade/ungerade.</div>
+
+ <div class='in mt1'><table cellpadding='0' cellspacing='0'><tr><td width='300'>
+<img src='img/qu_02.gif'></td><td>
+<img src='img/qu_03.gif'></td></tr></table></div>
+
+ <div class='in mt2'>
+<span class='out'>•</span> <b>x<sup><span style='position:relative; bottom:14px; left:1px;'>1</span><span style='margin-left:-7px; text-decoration:overline;'>n</span></sup> :</b>= <b><sup>n</sup></b><span class='r2a'>&radic;</span><b class='rad'>x</b> ist die Umkehrfunktion von x<sup>n</sup>, weil <sup>n</sup><span class='r1t'>&radic;</span><span class='rad'>x<sup>n</sup></span> = jene Zahl, auf die man n setzen muss, um x<sup>n</sup> zu erhalten = x.</div>
+
+ <div class='in mt2'>
+ 	<table cellpadding='0' cellspacing='0'>
+ 	 <tr>
+  	<td width='300'>
+<img src='img/qu_04.gif'>
+    </td>
+    <td>
+<img src='img/qu_05.gif'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Achtung: Wurzelfunktionen mit <b>geraden Exponenten</b> sind auf der negativen x-Achse nicht definiert und versagen dort auch als nachgeschaltete Umkehrfunktion (bzw. müssen nachjustiert werden).</div>
+
+ <div class='in'><br>
+ 	<table cellpadding='0' cellspacing='0'>
+ 	 <tr><td width='300'>
+    <table cellpadding='0' cellspacing='0'>
+     <tr>
+     	<td>
+<span class='r1t'>&radic;</span><span class='rad'>x<sup>2</sup></span>
+      </td>
+      <td>
+<img src='sym/2arr1.gif' style='margin:4px 8px 0px;'>
+      </td>
+      <td>
+<span style='margin-left:4px; margin-right:3px;'>x</span> &nbsp; ... falls x &ge; 0<br><br>
+–x &nbsp; ... falls x &lt; 0
+      </td>
+     </tr>
+    </table>
+   </td>
+   <td>
+<sup>3</sup><span class='r1t'>&radic;</span><span class='rad'>x<sup>3</sup></span> = x &nbsp; ... für alle x
+   </td>
+  </tr>
+ </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b><a name='A.2' class='box'>2</a> Polynom- und quadratische Funktion</b></div>
+
+ <div><br>
+Eine Polynomfunktion ist Summe von Potenzfunktionen mit natürlichen Exponenten, hat also ein Polynom als Funktionsterm:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>y(x)</b> = <b>a<sub>n</sub>x<sup>n</sup> + a<sub>n–1</sub>x<sup>n–1</sup> + ... + a<sub>0</sub></b></div>
+
+ <div><br>
+Die Polynomfunktion 1. Grades ist die <b>lineare Funktion,</b> die 2. Grades heißt <b>quadratische Funktion</b> usw. Erstere ist dadurch charakterisiert, dass bei gleich weit auseinanderliegenden Stellen die Differenzen aufeinanderfolgender Werte konstant sind, bei der quadratischen Funktion sind es die Differenzen der Differenzen usw.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Bei der quadratischen Interpolation wird der Kurvenverlauf durch 3 benachbarte Punkte durch eine quadratische Funktion approximiert. Bestimme die Gleichung der quadratischen Funktion, deren Kurve durch die Punkte P<sub>1</sub>(–1|5), P<sub>2</sub>(1|3), P<sub>3</sub>(2|–4) geht.</div>
+
+ <div class='in'><br>
+y(x) = <span class='ws4'>ax<sup>2</sup> + bx + c</span></div>
+
+ <div class='in'><br>
+(1) <span class='ws4'>a(–1)<sup>2</sup> + b(–1) + c</span> = 5</div>
+ <div class='in mt1'>
+(2) <span class='ws4'>a·1<sup>2</sup> + b·1 + c</span> = 3</div>
+ <div class='in mt1'>
+(3) <span class='ws4'>a·2<sup>2</sup> + b·2 + c</span> = –4</div>
+
+ <div class='in' style='margin-top:10px;; border-top:solid 1px; width:172px;'></div>
+
+ <div class='in mt1'>
+(1)<span class='p22'>–</span>(2): –2b = 2 <img src='sym/rarr2.svg' class='p66'> b = –1</div>
+ <div class='in mt1'>
+(1)<span class='p22'>–</span>(3): <span class='ws4'>–3a – 3b</span> = 9 <img src='sym/rarr2.svg' class='p66'> <span class='ws4'>–3a + 3</span> = 9 <img src='sym/rarr2.svg' class='p66'> a = –2</div>
+ <div class='in mt1'>
+<img src='sym/rarr.svg' class='bo1'> (1): <span class='ws4'>–2 + 1 + c</span> = 5 <img src='sym/rarr2.svg' class='p66'> c = 6</div>
+
+ <div class='in'><br>
+y = <span class='ws4'>–2x<sup>2</sup> – x + 6</div>
+
+ <div><br>
+Der <b>Kurvenverlauf</b> einer Polynomfunktion wird für x <img src='sym/rarr.svg' class='bo1'> ±&infin; durch die höchste Potenz bestimmt, dazwischen bewirken die anderen Potenzen Auf- und Abwärtsbewegungen, deren Anzahl durch den Grad des Polynoms beschränkt ist.</div>
+
+ <div><br>
+Beispiel: y = <span class='ws4'>x<sup>4</sup> – 1,5x<sup>3</sup> – 2x<sup>2</sup> + 3x + 0,5</span></div>
+
+ <div class='in'><br>
+<img src='img/qu_06.gif'></div>
+
+ <div><br>
+Durch Verschieben der Kurve in y-Richtung (= Änderung von a<sub>0</sub>) erkennen wir, dass eine <b>Gleichung n-ten Grades,</b> das ist die Frage nach den Nullstellen einer Polynomfunktion n-ten Grades, unterschiedlich viele, aber nicht mehr als n Lösungen haben kann.</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> QUADRATISCHE GLEICHUNGEN</b></div>
+
+ <div><br><br>
+<b><a name='B.1' class='box'>1</a> Kleine und große Lösungsformel</b></div>
+
+ <div class='in'><br>
+<b class='ws4'>ax<sup>2</sup> + bx + c</b> = <b>0</b> &nbsp; <span class='ll'>:a</span></div>
+
+ <div class='in'><br>
+<img src='img/qu_07.gif'></div>
+
+ <div><br>
+Wir addieren zu x eine feste, aber noch unbekannte Zahl d und nennen das Ergebnis x<span class='ctm'>^</span>, also x = x<span class='ctm'>^</span><span class='p44'>–</span>d:</div>
+
+ <div class='in'><br>
+<span class='ws4'><span class='p01'>(</span>x<span class='ctm'>^</span> – d)<sup>2</sup> + p(x<span class='ctm'>^</span> – d) + q</span> = 0</div>
+
+ <div class='in'><br>
+<span class='ws4'>x<span class='ctm'>^</span><sup>2</sup> – 2x<span class='ctm'>^</span>d + d<sup>2</sup> + px<span class='ctm'>^</span> – pd + q</span> = 0</div>
+
+ <div class='in'><br>
+<span class='ws4'>x<span class='ctm'>^</span><sup>2</sup> + (p – 2d)x<span class='ctm'>^</span> + d(d – p) + q</span> = 0</div>
+
+ <div><br>
+Jetzt wählen wir d = <div class='frac p02'><div class='num'>p</div><div class='den'>2</div></div>, sodass x<span class='ctm'>^</span> nur mehr einmal vorkommt:</div>
+
+ <div class='in mt1'>
+x<span class='ctm'>^</span><sup>2</sup> – <div class='frac'><div class='num'>p<sup>2</sup></div><div class='den'>4</div></div> + q = 0</div>
+
+ <div class='in mt1'>
+<img src='img/qu_08.gif'></div>
+
+ <div class='mt1'>
+<img src='img/qu_09.gif'></div>
+
+ <div><br>
+Der Ausdruck unter der Wurzel heißt <b>Diskriminante</b> und unterscheidet (lat. discriminare), wie viel Lösungen die quadratische Gleichung hat.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> Bestimme die Lösungsmenge in <img src='sym/setR.gif'>:
+
+  <div class='in'><br>
+<b>a)</b> x<sup>2</sup> – 6x + 8 = 0 &nbsp;&nbsp;&nbsp;
+<b>b)</b> x<sup>2</sup> – 6x + 9 = 0 &nbsp;&nbsp;&nbsp;
+<b>c)</b> x<sup>2</sup> – 6x + 10 = 0</div></div>
+
+ <div class='in'><br>
+ 	<table cellpadding='0' cellspacing='0'>
+ 	 <tr>
+ 	 	<td width='330'>
+<b>a)</b> x<sub>1,2</sub> = <div class='frac to1'><div class='num'>6 ± <span class='r1t'>&radic;</span><span class='rad'>(–6)<sup>2</sup> – 4·8</span></div><div class='den'>2</div></div> = <div class='frac to1'><div class='num'>6 ± 2</div><div class='den'>2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17'>2</span><span class='to17' style='margin-left:-8px;'>4</span><br><br>
+Diskriminante &gt; 0 <img src='sym/rarr2.svg' class='p66'> zwei Lösungen:<br><br>
+L = {2, 4}
+    </td>
+    <td>
+<img src='img/qu_10.gif' style='margin-right:40px;'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+ 	<table cellpadding='0' cellspacing='0'>
+ 	 <tr>
+ 	 	<td width='330'>
+<b>b)</b> x<sub>1,2</sub> = <div class='frac'><div class='num'>6 ± <span class='r1t'>&radic;</span><span class='rad'>(–6)<sup>2</sup> – 4·9</span></div><div class='den'>2</div></div> = <div class='frac'><div class='num'>6 ± 0</div><div class='den'>2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17'>3</span><span class='to17' style='margin-left:-8px;'>3</span><br><br>
+Diskriminante = 0 <img src='sym/rarr2.svg' class='p66'> eine Doppellösung:<br><br>
+L = {3}
+    </td>
+    <td>
+<img src='img/qu_11.gif' style='margin-right:40px;'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+ 	<table cellpadding='0' cellspacing='0'>
+ 	 <tr>
+ 	 	<td width='330'>
+<b>c)</b> x<sub>1,2</sub> = <div class='frac to1'><div class='num'>6 ± <span class='r1t'>&radic;</span><span class='rad'>(–6)<sup>2</sup> – 4·10</span></div><div class='den'>2</div></div> = <div class='frac to1'><div class='num'>6 ± <span class='r1t'>&radic;</span><span class='rad'>–4</span></div><div class='den'>2</div></div> <img src='sym/flash.svg' class='to3'><br><br>
+Diskriminante &lt; 0 <img src='sym/rarr2.svg' class='p66'> keine Lösung:<br><br>
+L = <img src='sym/empty.gif'>
+    </td>
+    <td>
+<img src='img/qu_12.gif' style='margin-right:40px;'>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Bestimme x für den folgenden Körper, sodass er eine Volumseinheit ergibt.
+
+  <div class='in'><br>
+<img src='img/qu_13.gif'></div></div>
+
+ <div class='in'><br>
+V = <span class='ws4'><span class='up p01'>[</span>h(x + 1) – 1<sup>2</sup><span class='up p11'>]</span>x</span> = 1 &nbsp; <span class='ll p02'>–</span>1</div>
+
+ <div class='in'><br>
+<img src='img/qu_14.gif' style='margin-left:-6px;'></div>
+
+ <div class='in'><br>
+Diskriminante = <span class='ws4'>h<sup>2</sup> – 2h + 1 + 4h</span> = <span class='ws4'>h<sup>2</sup> + 2h + 1</span> = <span class='ws4'>(h + 1)<sup>2</sup></span></div>
+
+ <div class='in mt2'>
+(<span class='to4'>*</span>) = <div class='frac'><div class='num'>– h + 1 ± (h + 1)</div><div class='den'>2h</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span style='position:relative; bottom:28px; left:3px;'>1</span><span style='position:relative; bottom:10px; right:4px; border-top:solid 1px;'>h</span><span class='to17' style='position:relative; bottom:17px; right:16px;'>–1 <img src='sym/flash.svg' class='to3'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='B.2' class='box'>2</a> Satz von Vieta</b></div>
+
+ <div><br>
+Was passiert, wenn wir ein Polynom mit Nullstelle x<sub>1</sub> durch (x<span class='p44'>–</span>x<sub>1</sub>) dividieren?</div>
+
+ <div class='in'><br>
+<span class='ws4'>(a<sub>n</sub>x<sup>n</sup> + ... + a<sub>0</sub>):(x – x<sub>1</sub>)</span> = <span class='ws4'>a<sub>n</sub>x<sup>n–1</sup> + ... + Zahl</span></div>
+
+ <div style='margin-left:30px;'>
+...</div>
+ <div style='margin-left:45px;'>
+...</div>
+ <div style='margin-left:60px;'>
+...</div>
+ <div style='margin-top:5px; margin-left:75px;'>
+Rest</div>
+
+ <div class='in'><br>
+Also: <img src='img/qu_15.gif' style='vertical-align:-39px;'></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Ein Polynom mit Nullstelle x<sub>1</sub> ist durch (x<span class='p44'>–</span>x<sub>1</sub>) <i>ohne Rest</i> dividierbar. Für ein quadratisches Polynom mit den Nullstellen x<sub>1,2</sub> heißt das:</div>
+
+ <div class='in'><br>
+<span class='ws4'>ax<sup>2</sup> + bx + c</span> = <span class='ws4'>a(x<sup>2</sup> + px + q)</span> = <span class='ws4'>a(x – x<sub>1</sub>)(x – x<sub>2</sub>)</span> &nbsp; mit &nbsp; <b>x<sub>1</sub><span class='p22'>+</span>x<sub>2</sub></b> = <b>–p</b> &nbsp; und &nbsp; <b>x<sub>1</sub>x<sub>2</sub></b> = <b>q</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Überprüfe die angegebene Lösung und bestimme damit die restlichen Lösungen:
+
+  <div class='in'><br>
+<b>a)</b> <span class='ws4'>x<sup>2</sup> – 12x + 27</span> = 0, x<sub>1</sub> = 3 &nbsp;&nbsp;&nbsp;
+<b>b)</b> <span class='ws4'>x<sup>3</sup> – 9x<sup>2</sup> – 76x + 480</span> = 0, x<sub>1</sub> = 5</div></div>
+
+ <div class='in'><br>
+<b>a)</b> <span class='ws4'>3<sup>2</sup> – 12·3 + 27</span> = 0 <img src='sym/ok.svg' class='to3'></div>
+
+ <div class='in'><br>
+Lösungsvariante 1: x<sub>1</sub><span class='p44'>+</span>x<sub>2</sub> = –(–12) <img src='sym/rarr2.svg' class='p66'> x<sub>2</sub> = 12<span class='p44'>–</span>x<sub>1</sub> = 9</div>
+
+ <div class='in'><br>
+Lösungsvariante 2: x<sub>1</sub>x<sub>2</sub> = 27 <img src='sym/rarr2.svg' class='p66'> x<sub>2</sub> = <div class='frac'><div class='num'>27</div><div class='den'>x<sub>1</sub></div></div> = 9</div>
+
+ <div class='in'><br>
+<b>b)</b> <span class='ws4'>5<sup>3</sup> – 9·5<sup>2</sup> – 76·5 + 480</span> = 0 <img src='sym/ok.svg' class='to3'></div>
+
+ <div class='in'><br>
+<img src='img/qu_16.gif'></div>
+
+ <div class='in'><br>
+Damit können wir die linke Seite faktorisieren und argumentieren, dass ein Produkt genau dann 0 ist, wenn ein Faktor 0 ist:</div>
+
+ <div class='in'><br>
+<span class='ws4'>(x<sup>2</sup> – 4x – 96)(x – 5)</span> = 0 <img src='sym/rarr2.svg' class='p66'> x<sub>2,3</sub> = <div class='frac to1'><div class='num'>4 ± <span class='r1t'>&radic;</span><span class='rad'>(–4)<sup>2</sup> – 4·(–96)</span></div><div class='den'>2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17'>12</span><span class='to17' style='margin-left:-16px;'>–8</span></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> EXPONENTIALFUNKTION</b></div>
+
+ <div><br><br>
+<b><a name='C.1' class='box'>1</a> Gleichung und Kurve der Exponentialfunktion</b></div>
+
+ <div><br>
+Die Exponentialfunktion im engen Sinn schaut so aus:</div>
+
+ <div class='in'><br>
+y(x) = e<sup>x</sup> &nbsp; mit <b>e :</b>= <b>2,71828... (Euler'sche Zahl)</b></div>
+
+ <div><br>
+Die Exponentialfunktion im weiten Sinn erhalten wir durch Skalierung in xy-Richtung:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>y(x)</b> = <b>ae<sup>±&lambda;x</sup></b> = <b>ab<sup>x</sup></b> &nbsp; mit &lambda; &gt; 0 und b = e<sup>±&lambda;</sup></div>
+
+ <div><br>
+Sie ist dadurch charakterisiert, dass bei gleich weit auseinanderliegenden Stellen die Verhältnisse aufeinanderfolgender Werte konstant sind oder anders ausgedrückt: Der nachfolgende Wert ist immer derselbe Prozentsatz vom vorhergehenden. Wir unterscheiden:</div>
+
+ <div><br>
+<b style='margin-left:34px;'>exponentielles Wachstum:</b>
+<b style='margin-left:204px;'>exponentieller Zerfall:</b></div>
+
+ <div class='in'><br>
+<img src='img/qu_17.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Exponentielle Annäherung</b></div>
+
+ <div><br>
+Von einer <b>exponentiellen Annäherung</b> mit fortschreitender Zeit t sprechen wir, wenn der Abstand von y(t) zum Endwert y<sub>&infin;</sub> exponentiell zerfällt:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b class='ws4'>|y(t) – y<sub>&infin;</sub>|</b> = <b class='ws4'>|y<sub>0</sub> – y<sub>&infin;</sub>|<span class='p10'>e</span><sup>–&lambda;t</sup></b></div>
+
+ <div><br>
+Statt der <b>Abklingkonstanten &lambda;,</b> die das Verhalten von e<sup>–t</sup> über [0<span class='p02'>,</span>1] auf [0<span class='p02'>,</span>1/&lambda;] skaliert, ist auch die <b>Zeitkonstante &tau; :</b>= <b>1/&lambda;</b> gebräuchlich. Das ist die Zeit, in welcher der Abstand zum Endwert um 63% schrumpft  (63% = e<sup>0</sup><span class='p44'>–</span>e<sup>–1</sup>).</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> Lies die Funktionsgleichung für die exponentielle Annäherung aus folgendem Diagramm ab:
+
+  <div class='in'><br>
+<img src='img/qu_18.gif'></div></div>
+
+ <div class='in mt1'><br>
+3,2 – y(t) = <span class='p01'>(3,2 – 0,5)</span>e<sup style='position:relative; bottom:13px;'>–</sup><sup style='margin-left:3px;'><span style='position:relative; bottom:14px;'>t</span><span style='margin-left:-6px; text-decoration:overline;'>2</span></sup></div>
+
+ <div class='in mt1'><br>
+y(t) = 3,2 –  <span class='p01'>2,7</span>e<sup style='position:relative; bottom:13px;'>–</sup><sup style='margin-left:3px;'><span style='position:relative; bottom:14px;'>t</span><span style='margin-left:-6px; text-decoration:overline;'>2</span></sup></div>
+
+ <div class='in' style='clear:left;'></div>
+
+ <div><br>
+Bem: Der Kehrwert einer exponentiellen Annäherung an einen positiven, unteren Endwert ("Abkühlungskurve") heißt <i>logistisches Wachstum.</i></div>
+
+ <div class='in'><br>
+<img src='img/qu_19.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> LOGARITHMUSFUNKTION/REGELN</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Gleichung und Kurve der Logarithmusfunktion</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>y(x)</b> = <b>log<sub>b</sub>x</b> ist die Umkehrfunktion von b<sup>x</sup>, weil log<sub>b</sub>b<sup>x</sup> = jene Zahl, die man auf b setzen muss, um b<sup>x</sup> zu erhalten = x.</div>
+
+ <div class='in mt2'>
+<img src='img/qu_20.gif'></div>
+
+ <div><br>
+In der Mathematik sind Logarithmen zur Basis e (= Euler'sche Zahl) üblich, in der Technik zur Basis 10, abgekürzt:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>lnx :</b>= <b>log<sub>e</sub>x</b> = Logarithmusfunktion im engen Sinn (logarithmus naturalis)</div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b>lgx :</b>= <b>log<sub>10</sub>x</b></div>
+
+ <div><br>
+Die Logarithmusfunktion im weiten Sinn ist die Umkehrung der entsprechenden Exponentialfunktion:</div>
+
+ <div class='in'><br>
+f: y = ab<sup>x</sup> = a<span class='up'>(</span>e<sup>lnb</sup><span class='up'>)</span><sup>x</sup> = ae<sup>xlnb</sup></div>
+
+ <div class='in'><br>
+f<sup class='p20'>–1</sup>: x = ae<sup>ylnb</sup><span class='ll' style='margin-left:22px;'>:</span>a</div>
+
+ <div class='mt1' style='margin-left:46px;'>
+<div class='frac'><div class='num'>x</div><div class='den'>a</div></div> = e<sup>ylnb</sup><span class='ll' style='margin-left:28px;'>ln(.)</span></div>
+
+ <div class='mt1' style='margin-left:46px;'>
+ln<div class='frac p40'><div class='num'>x</div><div class='den'>a</div></div> = ylnb &nbsp; <span class='ll'>:</span>lnb</div>
+
+ <div class='mt1' style='margin-left:46px;'>
+y = <div class='frac p04'><div class='num'>1</div><div class='den'>lnb</div></div>ln<div class='frac p40'><div class='num'>x</div><div class='den'>a</div></div> &nbsp; <span class='grau'>(= in xy-Richtung skalierter lnx)</span></div>
+
+ <div><br>
+Für a = 1 folgt daraus:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>log<sub>b</sub>x</b> = <div class='frac'><div class='num'><b>lnx</b></div><div class='den'><b>lnb</b></div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> Logarithmusrechenregeln</b></div>
+
+ <div><br>
+Die Logarithmusrechenregeln sind Gegenstücke der Potenzrechenregeln und senken die Rechenstufe wie folgt:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>logxy</b> = <b>logx + logy</b></div>
+
+ <div><br>
+<span class='p02'>•</span> <b>log</b><div class='frac p40'><div class='num'><b>x</b></div><div class='den'><b>y</b></div></div> = <b>logx – logy</b></div>
+
+ <div><br>
+<span class='p02'>•</span> <b>logx<sup>r</sup></b> = <b><span class='p01'>r</span>logx</b></div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+   	<td>
+xy
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:4px 8px 0px;'>
+    </td>
+    <td>
+b<sup class='rot'>log<sub class='dn'>b</sub>xy</sup><br><br>
+b<sup>log<sub class='dn'>b</sub>x</sup>b<sup>log<sub class='dn'>b</sub>y</sup> = b<sup class='rot'>log<sub class='dn'>b</sub>x<span class='p22'>+</span>log<sub class='dn'>b</sub>y</sup>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+Der Rest geht genauso bzw. können wir bei n <img src='sym/isin.gif'> <img src='sym/setN.gif'>* auch so argumentieren:</div>
+
+ <div class='in'><br>
+logx<sup>n</sup> = log(x·<span class='p22'>…</span>·x) = logx + … + logx = <span class='p01'>n</span>logx</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Zerlege in mehrere Logarithmen bzw. fasse zu einem Logarithmus zusammen:
+
+  <div class='in'><br>
+<b>a)</b> ln<div class='frac p40'><div class='num'>x<sup>2</sup>y</div><div class='den'>x – 1</div></div> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> <span class='p02'>3</span>lgx – <div class='frac'><div class='num'>lg(x + y)</div><div class='den'>2</div></div></div></div>
+
+ <div class='in'><br>
+<b>a)</b> ln<div class='frac p40'><div class='num'>x<sup>2</sup>y</div><div class='den'>x – 1</div></div> = <span class='ws4'>ln(x<sup>2</sup>y) – ln(x – 1)</span> = <span class='ws4'>ln(x<sup>2</sup>) + lny – ln(x – 1)</span> = <span class='ws4'>2lnx + lny – ln(x – 1)</span></div>
+
+ <div class='in'><br>
+<b>b)</b> <span class='p02'>3</span>lgx – <div class='frac p04'><div class='num'>1</div><div class='den'>2</div></div>lg(x + y) = lgx<sup>3</sup> – lg(x + y)<sup><span style='position:relative; bottom:14px;'>1</span><span style='margin-left:-7px; text-decoration:overline;'>2</span></sup> = lg<div class='frac to2 p40'><div class='num'>x<sup>3</sup></div><div class='den to2'><span class='r1t'>&radic;</span><span class='rad'>x + y</span></div></div></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='E' class='box'>E</a> EXP- UND LOG-GLEICHUNGEN</b></div>
+
+ <div><br><br>
+<b><a name='E.1' class='box'>1</a> Rechentechnik</b></div>
+
+ <div><br>
+Bei <b>Exponentialgleichungen</b> steht die Variable im Exponenten, bei  <b>Logarithmusgleichungen</b> im Logarithmus. Zum Lösen, sofern das algebraisch überhaupt möglich ist, braucht es die jeweiligen Umkehrfunktionen und die zugehörigen Rechenregeln. Beim Logarithmus heißt es aufpassen, da er nur für positive Argumente definiert ist und in diesem Zusammenhang Scheinlösungen auftreten können:</div>
+
+ <div class='in'><br>
+<span class='p01'>2</span>lnx = 0 &nbsp; <span class='grau'>… L = {1}</span></div>
+
+ <div style='margin-top:10px; margin-bottom:10px; margin-left:25px;'>
+<img src='sym/d2arr.gif' style='vertical-align:-4px;'> ?</div>
+
+ <div class='in'>
+<span class='p01'>ln</span>x<sup>2</sup> = 0 &nbsp; <span class='grau'>… L = {–1, 1}</span></div>
+
+
+ <br><div class='bsp' style='padding-top:8px; padding-bottom:8px;'>
+<b>Aufgabe 7:</b> Löse nach t auf: <img src='img/qu_21.gif' style='vertical-align:-3px;'></div>
+
+ <div class='in'><br>
+Die gesuchte Variable kommt nur <i>einmal</i> vor, also bauen wir den sie einhüllenden Term in umgekehrter Reihenfolge ab:</div>
+
+ <div class='in'><br>
+<img src='img/qu_21.gif' style='vertical-align:-3px;'> &nbsp; <span class='ll'>:</span>U</div>
+
+ <div class='in'><br>
+<img src='img/qu_22.gif' style='vertical-align:-13px;'><span class='ll p02' style='margin-left:39px;'>–</span>1 &nbsp; <span class='ll'>·</span>(–1)</div>
+
+ <div class='in'><br>
+<img src='img/qu_23.gif' style='vertical-align:-13px;'><span class='ll' style='margin-left:39px;'>ln(.)</span> &nbsp; <span class='ll'>·</span>(–RC)</div>
+
+ <div class='in'><br>
+<img src='img/qu_24.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Bestimme die Lösungsmenge in <img src='sym/setR.gif'>: 4·3<sup>2x–1</sup> = 5·2<sup>x</sup> + 3<sup>2x</sup></div>
+
+ <div class='in'><br>
+Das Problem, dass der Logarithmus einer Summe nicht zerlegbar ist, umgehen wir durch Faktorisieren:</div>
+
+ <div class='in'><br>
+4·<span class='rot'>3<sup>2x</sup></span><sup>–1</sup> = 5·<span class='blau'>2<sup>x</sup></span> + <span class='rot'>3<sup>2x</sup></span> &nbsp; <span class='ll p02'>–</span>3<sup>2x</sup></div>
+
+ <div class='in mt1'>
+<span class='rot'>3<sup>2x</sup></span>(4·3<sup>–1</sup> – 1) = 5·<span class='blau'>2<sup>x</sup></span></div>
+
+ <div class='in mt1'>
+3<sup>2x</sup><div class='frac p40'><div class='num'>1</div><div class='den'>3</div></div> = 5·2<sup>x</sup><span class='ll' style='margin-left:72px;'>·</span>3</div>
+
+ <div class='in mt1'>
+3<sup>2x</sup> = 15·2<sup>x</sup><span class='ll' style='margin-left:75px;'>&thinsp;</span>ln(.)</div>
+
+ <div class='in mt1'>
+2xln3 = ln15 + xln2</div>
+
+ <div class='in mt1'>
+x(2ln3 – ln2) = ln15</div>
+
+ <div class='in mt1'>
+x = <div class='frac'><div class='num'>ln15</div><div class='den'>2ln3 – ln2</div></div> = 1,80</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b> Bestimme die Lösungsmenge in <img src='sym/setR.gif'>: 2<sup>2x+2</sup> – 129·2<sup>x–1</sup> + 8 = 0</div>
+
+ <div class='in'><br>
+Die Variable kommt immer im gleichen Kontext vor, also substituieren wir diesen durch eine neue Variable:</div>
+
+ <div class='in mt1' style='line-height:27px;'>
+2<sup>2x+2</sup> – 129·2<sup>x–1</sup> + 8 = 0<br>
+
+(<span class='rot'>2<sup>x</sup></span>)<sup class='p02'>2</sup>2<sup>2</sup> – 129·<span class='rot'>2<sup class='p02'>x</sup></span>2<sup>–1</sup> + 8 = 0<span style='margin-left:20px;'>|</span> u = 2<sup>x</sup><br>
+
+4u<sup>2</sup> – 64,5u + 8 = 0</div>
+
+ <div class='in'><br>
+<b>a)</b> u<sub>1,2</sub> = <div class='frac'><div class='num'>64,5 ± <span class='r1t'>&radic;</span><span class='rad'>(–64,5)<sup>2</sup> – 4·4·8</span></div><div class='den'>2·4</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17'>0,125</span><span class='to17' style='margin-left:-28px;'>16</span></div>
+
+ <div class='in mt2'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+  	<td width='250'>
+     <div>
+<b>Fall u<sub>1</sub>:</b> 2<sup>x</sup> = 0,125 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | ln(.)
+     </div>
+     <div style='margin-left:56px; margin-top:10px;'>
+x·ln2 = ln0,125
+     </div>
+     <div style='margin-left:56px; margin-top:8px;'>
+x<sub>1</sub> = <div class='frac'><div class='num'>ln0,125</div><div class='den'>ln2</div></div> = –3
+     </div>
+    </td>
+    <td>
+     <div>
+<b>Fall u<sub>2</sub>:</b> 2<sup>x</sup> = 16 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | ln(.)
+     </div>
+     <div style='margin-left:56px; margin-top:10px;'>
+x·ln2 = ln16
+     </div>
+     <div style='margin-left:56px; margin-top:8px;'>
+x<sub>2</sub> = <div class='frac'><div class='num'>ln16</div><div class='den'>ln2</div></div> = 4
+     </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 10:</b> Bestimme die Lösungsmenge in <img src='sym/setR.gif'>: 2ln(x – 4) – ln(x + 2) = 0,47</div>
+
+ <div class='in'><br>
+Wir fassen die Logarithmen zu einem einzigen Logarithmus zusammen und beseitigen ihn mit der Umkehrfunktion:</div>
+
+ <div class='in' style='margin-top:12px;'>
+2ln(x – 4) – ln(x + 2) = 0,47</div>
+
+ <div class='in' style='margin-top:12px;'>
+ln<div class='frac p40'><div class='num'>(x – 4)<sup>2</sup></div><div class='den'>x + 2</div></div> = 0,47<span class='ll' style='margin-left:20px;'>e<sup>(.)</sup></span></div>
+
+ <div class='in' style='margin-top:12px;'>
+<div class='frac'><div class='num'>x<sup>2</sup> – 8x + 16</div><div class='den'>x + 2</div></div> = 1,6 &nbsp; <span class='ll'>·</span>(x + 2)</div>
+
+ <div class='in' style='margin-top:12px;'>
+x<sup>2</sup> – 8x + 16 = 1,6x + 3,2</div>
+
+ <div class='in' style='margin-top:12px;'>
+x<sup>2</sup> – 9,6x + 12,8 = 0</div>
+
+ <div class='in mt2'>
+x<sub>1,2</sub> = <div class='frac to1'><div class='num'>9,6 ± <span class='r1t'>&radic;</span><span class='rad'>(–9,6)<sup>2</sup> – 4·12,8</span></div><div class='den'>2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17'>1,6</span><span class='to17' style='margin-left:-14px;'>8</span></div>
+
+ <div class='in' style='margin-top:15px;'>
+<span class='rot'>Einsetzprobe</span> <img src='sym/rarr2.svg' class='p66'> L = { 8 }</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.2' class='box'>2</a> Textaufgaben</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 11:</b> Jemand trinkt um 7:00 Uhr zwei Tassen Kaffee und um 13:00 Uhr eine weitere. Wie viel Tassen Kaffee entspricht das um 21:00 Uhr noch übrige Koffein, wenn seine Halbwertszeit bei 3,5 Stunden liegt?</div>
+
+ <div class='in'><br>
+y<sub>1</sub>(t<sub>1</sub>) = Koffein in Form von Tassen Kaffee nach t<sub>1</sub> Stunden seit 7:00 Uhr</div>
+
+ <div class='in' style='margin-top:27px;'>
+y<sub>1</sub>(t<sub>1</sub>) = 2·0,5<sup style='margin-left:3px;'><span style='position:relative; bottom:16px; left:8px;'>t<sub class='dn'>1</sub></span><span style='margin-left:-6px; text-decoration:overline;'>3,5</span></sup></div>
+
+ <div class='in'><br>
+7:00 bis 13:00 = 6 Std <img src='sym/rarr2.svg' class='p66'> y<sub>1</sub>(6) = 0,61 Tassen</div>
+
+ <div class='in'><br>
+y<sub>2</sub>(t<sub>2</sub>) = Koffein in Form von Tassen Kaffee nach t<sub>2</sub> Stunden seit 13:00 Uhr</div>
+
+ <div class='in' style='margin-top:27px;'>
+y<sub>2</sub>(t<sub>2</sub>) = 1,61·0,5<sup style='margin-left:3px;'><span style='position:relative; bottom:16px; left:8px;'>t<sub class='dn'>2</sub></span><span style='margin-left:-6px; text-decoration:overline;'>3,5</span></sup></div>
+
+ <div class='in'><br>
+13:00 bis 21:00 = 8 Std <img src='sym/rarr2.svg' class='p66'> y<sub>2</sub>(8) = 0,33 Tassen</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 12:</b> Frisch aus dem Kühlschrank liegt die Temperatur der Milch bei 8 °C, nach 20 Minuten bei 22,7 °C. Bestimme y(t), die Milchtemperatur in °C nach t Minuten, wenn sie sich exponentiell der Zimmertemperatur von 25 °C annähert.</div>
+
+ <div class='in'><br>
+Abstand zum Endwert zerfällt exponentiell: y<sub>&infin;</sub> – y(t) = (y<sub>&infin;</sub> – y<sub>0</sub>)e<sup>–&lambda;t</sup></div>
+
+ <div class='in'><br>
+25 – y(t) = (25 – 8)e<sup>–&lambda;t</sup> &nbsp; <span class='ll p02'>–</span>17e<sup>–&lambda;t</sup> &nbsp; <span class='ll p02'>+</span>y(t)</div>
+
+ <div class='in'><br>
+25 – 17e<sup>–&lambda;t</sup> = y(t)</div>
+
+ <div class='in'><br>
+Und &lambda; bestimmen wir so, dass y(20) = 22,7</div>
+
+ <div class='in'><br>
+25 – 17e<sup>–20&lambda;</sup> = 22,7 &nbsp; <span class='ll p02'>–</span>25 &nbsp; <span class='ll'>:(–17)</span></div>
+
+ <div class='in'><br>
+e<sup>–20&lambda;</sup> = 0,135 &nbsp; <span class='ll'>ln(.)</span> &nbsp; <span class='ll'>:(–20)</span></div>
+
+ <div class='in'><br>
+&lambda; = 0,1 <img src='sym/rarr2.svg' class='p66'> y(t) = 25 – 17e<sup>–0,1t</sup></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 13:</b> Der Schallintensitätspegel in dB wird aus der Schallintensität wie unten angegeben errechnet. Welchen Pegel ergeben zwei Maschinen mit 86 dB und 91 dB, wenn sie gleichzeitig laufen und sich dadurch die Schallintensitäten addieren?
+
+  <div class='in mt1'>
+L = <span class='p02'>10</span>lg<div class='frac p40'><div class='num'>I</div><div class='den'>I<sub>0</sub></div></div> &nbsp; (I<sub>0</sub> = gerade noch hörbare Schallintensität)</div></div>
+
+ <div class='in'><br>
+Wir stellen I frei, berechnen damit <span class='ws4'>I<sub>1</sub> + I<sub>2</sub></span> und setzen das Ergebnis wieder in die ursprüngliche Formel ein:</div>
+
+ <div class='in'><br>
+L = <span class='p02'>10</span>lg<div class='frac p40'><div class='num'>I</div><div class='den'>I<sub>0</sub></div></div> &nbsp; <span class='ll'>:10</span> &nbsp; <span class='ll'>10<sup>(.)</sup></span> &nbsp; <span class='ll'>·I<sub>0</sub></span></div>
+
+ <div class='in' style='margin-top:27px;'>
+I = I<sub>0</sub>10<sup><span style='position:relative; bottom:14px; left:4px;'>L</span><span style='margin-left:-6px; text-decoration:overline;'>10</span></sup></div>
+
+ <div class='in' style='margin-top:27px;'>
+<span class='ws4'>I<sub>1</sub> + I<sub>2</sub></span> = I<sub>0</sub>10<sup><span style='position:relative; bottom:14px; left:4px;'>86</span><span style='margin-left:-10px; text-decoration:overline;'>10</span></sup> +  I<sub>0</sub>10<sup><span style='position:relative; bottom:14px; left:4px;'>91</span><span style='margin-left:-10px; text-decoration:overline;'>10</span></sup> = I<sub>0</sub>1,657·10<sup>9</sup></div>
+
+ <div class='in mt2'>
+<img src='sym/rarr.svg' class='bo1'> L = 10<span class='p22'>lg</span>1,657·10<sup>9</sup> = 92,2 dB</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='F' class='box'>F</a> LOGARITHMISCHE SKALEN</b></div>
+
+ <div><br><br>
+Eine <b>logarithmische Skala</b> erhalten wir, indem wir die Position x auf der Zahlengeraden mit 10<sup>x</sup> beschriften. Auf einer solchen Skala können wir positive Zahlen <b>verschiedener Größenordnung</b> darstellen, ohne dass kleine Zahlen verschmelzen bzw. große außerhalb der Skala liegen.</div>
+
+ <div class='in mt1'><br>
+<img src='img/qu_25.gif'></div>
+
+ <div><br>
+Ein xy-Koordinatensystem mit ein/zwei logarithmisch skalierten Achsen heißt <b>logarithmisches Papier.</b> Die Kurve einer Funkion darauf können wir auch auf "normalem" Papier simulieren, indem wir den Funktionsterm ausgangsseitig logarithmieren bzw. eingangsseitig das Gegenteil machen:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 14:</b> Zeichne die angegbene Funktion mit x<span class='ctm'>^</span><span class='p22'><span class='ldf'>:</span>=</span>lgx und/oder y<span class='ctm'>^</span><span class='p22'><span class='ldf'>:</span>=</span>lgy auf normales Papier und ändere dann die Achsenbeschriftung auf
+
+  <div class='in'><br>
+<b>a)</b> y-logarithmisches Papier: y = <span class='p01'>0,5</span>e<sup>3x</sup> <span class='grau'>= Exponentialfunktion</span></div>
+
+  <div class='in mt1'>
+<b>b)</b> x-logarithmisches Papier: y = <span class='p01'>–</span>ln(0,2x) <span class='grau'>= Logarithmusfunktion</span></div>
+
+  <div class='in mt1'>
+<b>c)</b> xy-logarithmisches Papier: y = 2<span class='r1t'>&radic;</span><span class='rad'>x</span> <span class='grau'>= Potenzfunktion</span></div></div>
+
+ <div class='in'><br>
+<b>a)</b> y<span class='ctm'>^</span> = <span class='p01'>lg</span><span class='up'>(</span><span class='p01'>0,5</span>e<sup>3x</sup><span class='up'>)</span> = lg0,5 + <span class='p01'>3x</span>lge = –0,3 + 1,3x </div>
+
+ <div class='in'><br>
+<b>b)</b> y = <span class='p01'>–</span>ln(0,2·10<sup>x<span class='cts'>^</span></sup>) = <span class='p01'>–</span>ln0,2 – x<span class='ctm p01'>^</span>ln10 = 1,6  – 2,3x<span class='ctm'>^</span></div>
+
+ <div class='in'><br>
+<b>c)</b> y<span class='ctm'>^</span> = <span class='p01'>lg</span><span class='up'>[</span>2(10<sup>x<span class='cts'>^</span></sup>)<sup>0,5</sup><span class='up'>]</span> = lg<span class='up'>(</span>2·10<sup>0,5x<span class='cts'>^</span></sup><span class='up'>)</span> = lg2 + lg10<sup>0,5x<span class='cts'>^</span></sup> = 0,3 + <span class='p01'>0,5</span>x<span class='ctm'>^</span></div>
+
+ <div class='in' style='float:left; margin-top:27px; margin-right:40px;'>
+<b>a)</b> <img src='img/qu_26.gif' style='vertical-align:top; margin-left:-21px;'></div>
+
+ <div class='in' style='float:left; margin-top:27px; margin-right:40px;'>
+<b>b)</b> <img src='img/qu_27.gif' style='vertical-align:top; margin-top:14px; margin-left:-21px;'></div>
+
+ <div class='in' style='float:left; margin-top:27px;'>
+<b>c)</b> <img src='img/qu_28.gif' style='vertical-align:top; margin-left:-21px;'></div>
+
+ <div style='clear:left;'></div>
+
+ </div></body>
+ </html>

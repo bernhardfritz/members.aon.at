@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Reihen und Integraltrafos</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>Anhang zu: REIHEN UND INTEGRALTRAFOS</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>DIFF-INT-METHODEN BEI ZAHLENREIHEN?</b></div>
+
+ <div><br>
+Eine Funktion f: <img src='sym/setR.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'> mit c<sub>n</sub> = f(n) ist mitunter leichter zu untersuchen als die Folge der c<sub>n</sub>:</div>
+
+ <div><br>
+<b>Zu Aufgabe 2:</b></div> 
+
+ <div><br>
+Wenn f(x) für zunehmende x monoton gegen 0 läuft, haben das Integral von f(x) und die Summe der f(n) dasselbe Konvergenzverhalten:</div>
+
+  <div class='in'><br>
+<img src='img/re_a00.gif'></div>
+
+ <div><br>
+<b>Zu Aufgabe 3:</b></div> 
+
+ <div class='in mt1'>
+f(x) = <div class='frac'><div class='num'>x</div><div class='den'>x<sup>2</sup> + 1</div></div></div>
+
+ <div><br>
+Wenn f(x) monoton fallend ist, sind es auch die f(n):</div>
+
+ <div class='in'><br>
+<span class='p01'>f</span>'(x) = <div class='frac'><div class='num'>1·(x<sup>2</sup> + 1) – x·2x</div><div class='den'>(x<sup>2</sup> + 1)<sup>2</sup></div></div> = <div class='frac p02'><div class='num'>1 – x<sup>2</sup></div><div class='den'>(x<sup>2</sup> + 1)<sup>2</sup></div></div> &le; 0 für x &ge; 1</div>
+
+ <div><br>
+Wenn f(x) für zunehmende x gegen 0 läuft, tun dies auch die f(n):</div>
+
+ <div class='in mt1'>
+<div class='lim'>lim<div class='sos'>x&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div> f(x) = lim <div class='frac'><div class='num'>x</div><div class='den'>x<sup>2</sup> + 1</div></div> = lim <div class='frac'><div class='num'>1</div><div class='den'>2x</div></div> = <div class='frac'><div class='num'>1</div><div class='den'>&infin;</div></div> = 0</div>
+
+ <div style='margin-top:-5px; margin-left:162px;'>
+<img src='sym/uarr_g.gif'></div>
+ <div class='in grau' style='font-size:11px; margin-left:100px;'>
+Regel von de l'Hospitel</div>
+
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>UMORDNUNG VON REIHEN?</b></div>
+
+ <div><br>
+Die im Skriptum angesprochene Ausdehnung der "Kompass"-Regel ins Unendliche ist hinsichtlich des Kommutativ-Aspekts so zu verstehen:</div> 
+
+ <div class='mt1'>
+Ist <img src='sym/sum.gif' style='vertical-align:-7px;'>&thinsp;c<sub>n</sub> absolut konvergent und &sigma;: <img src='sym/setN.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setN.gif'> bijektiv, dann hat die umgeordnete Reihe <img src='sym/sum.gif' class='to7'>&thinsp;c<sub>&sigma;(n)</sub> denselben Grenzwert.</div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in mt2'>
+Da <img src='sym/sum.gif' style='vertical-align:-6px;'>&thinsp;|c<sub>n</sub>| Cauchy-Folge ist, finden wir zu jedem &epsilon; > 0 einen Index N, sodass für alle n &gt; N gilt:</div>
+
+ <div class='in' style='margin-top:30px; margin-bottom:28px;'>
+<span class='up' style='border-left:solid 1px;'>&nbsp;</span><img src='sym/sum.gif' style='vertical-align:-6px;'><sup style='position:relative; bottom:21px; margin-left:-13px;'>n</sup><sub style='position:relative; top:18px; margin-left:-12px; margin-right:4px;'>i=1</sub>|c<sub>i</sub>| – <img src='sym/sum.gif' style='vertical-align:-6px;'><sup style='position:relative; bottom:21px; margin-left:-12px;'>N</sup><sub style='position:relative; top:18px; margin-left:-14px; margin-right:4px;'>i=1</sub>|c<sub>i</sub>|<span class='up' style='border-right:solid 1px;'>&thinsp;</span> = |c<sub>N+1</sub>| + … + |c<sub>n</sub>| &lt; &epsilon;</div>
+
+ <div class='in'>
+Wählen wir jetzt M so groß, dass 1<span class='p02'>,</span>… N <img src='sym/isin.gif'> <span class='p02'>{</span>&sigma;(1)<span class='p02'>,</span>… &sigma;(M)<span class='p20'>}</span>, dann gilt für alle n &gt; M:</div>
+
+ <div class='in' style='margin-top:28px; margin-bottom:16px;'>
+<span class='up' style='border-left:solid 1px;'>&nbsp;</span><img src='sym/sum.gif' style='vertical-align:-6px;'><sup style='position:relative; bottom:19px; margin-left:-13px;'>n</sup><sub style='position:relative; top:18px; margin-left:-12px; margin-right:5px;'>i=1</sub>c<sub>&sigma;(i)</sub> – <img src='sym/sum.gif' style='vertical-align:-6px;'><sup style='position:relative; bottom:19px; margin-left:-13px;'>n</sup><sub style='position:relative; top:18px; margin-left:-12px; margin-right:5px;'>i=1</sub>c<sub>i</sub><span class='up' style='border-right:solid 1px;'>&thinsp;</span> &le; |c<sub>i<sub class='dn'>1</sub>&gt;N</sub>|<span class='p22'>+</span>|c<sub>i<sub class='dn'>2</sub>&gt;N</sub>|<span class='p22'>+</span>... &lt; &epsilon;</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>HERLEITUNG DER TAYLORREIHE?</b></div>
+
+ <div><br>
+Im Skriptum haben wir die Taylorkoeffizienten unter der Annahme hergeleitet, dass f(x) in eine Potenzreihe entwickelbar ist. Die folgende Herleitung geht tiefer und liefert auch das n-te Restglied (= Fehler, der durch Abbruch der Reihe nach der n-ten Potenz entsteht). Nachdem eine Potenzreihe im Inneren ihres Konvergenzbereichs beliebig oft differenzierbar ist, muss f(x) diese Eigenschaft mitbringen, die wir jetzt verwenden:</div>
+
+ <div class='in'><br>
+<img src='img/re_a01.gif'></div>
+
+ <div class='in'>
+Nach n partiellen Integrationen:</div>
+
+ <div class='in' style='margin-top:10px;'>
+<img src='img/re_a02.gif'></div>
+
+ <div><br>
+Bem: An der Taylorreihe verblüfft, dass jemand, der alle Ableitungen bei x = a kennt, den Kurvenverlauf über dem gesamten (Konvergenz)Bereich vorhersagen kann. Wieso können wir nicht die Kurve irgendwo nach x = a einfach anders fortsetzen? Antwort: Weil wir sie so fortsetzen müssen, dass sie <i>überall</i> beliebig oft differenzierbar bleibt!</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>LAGRANGE'SCHE RESTGLIEDFORM?</b></div>
+
+ <div><br>
+Zwischen a und x finden wir immer eine Stelle &xi;, sodass der Taylorkoeffizient a<sub>n+1</sub>, bei &xi; statt bei a berechnet, gleich dem Restglied R<sub>n</sub>(x) wird.</div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in'><br>
+Im Integrationsbereich sei k der kleinste und K der größte Wert von f<sup class='p20'>(n+1)</sup> und (x – u)<sup>n</sup> &ge; 0 (der Fall &le; 0 wird entsprechend bewiesen). Dann gilt:</div>
+
+ <div class='in'><br>
+<img src='img/re_a03.gif'></div>
+
+ <div class='in'><br>
+Da f<sup class='p20'>(n+1)</sup> zwischen den Stellen mit den Werten k und K – weil stetig – auch alle Zwischenwerte annimmt, gibt es ein &xi; zwischen a und x, sodass:</div>
+
+ <div class='in'><br>
+<img src='img/re_a04.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>FOURIERINTEGRALE?</b></div>
+
+ <div><br>
+Dass im Skriptum die Laplace-Transformation scheinbar zusammenhangslos auf Fourierreihen folgt, ist einem "missing link" geschuldet: Auch eine nichtperiodische Funktion f(t) können wir über einem <b>endlichen Intervall</b> in eine Fourierreihe entwicklen, indem wir so tun, als ob die Funktion außerhalb davon periodisch weiterläuft.</div>
+
+ <div class='in'><br>
+<img src='img/re_a05.gif'></div>
+
+ <div><br>
+Um die Funktion f(t) <b>überall</b> zu entwickeln, brauchen wir jetzt nur mehr das Intervall auszudehnen:</div>
+
+ <div class='in'><br>
+<img src='img/re_a06.gif'></div>
+
+ <div><br>
+Das Ergebnis heißt <b>Fourier-Integral</b> von f(t), und das, was darin als <span class='uo'><span class='ui'>F</span></span>(<span class='p20'></span>&omega;) abgekürzt wurde, <b>Fourier-Transformierte</b> von f(t):</div>
+
+ <div class='in'><br>
+<img src='img/re_a07.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>INTEGRALSATZ FÜR LAPLACE-TRANSFORMATIONEN?</b></div>
+
+ <div><br>
+Ableitungssatz: <img src='img/re_a08.gif' style='vertical-align:-50px;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>Ergänzung zu Aufgabe 12:</b></div>
+
+ <div><br>
+Eine weitere Lösungsvariante schaut so aus, dass wir – wie gehabt – die DG aufstellen und diese auf herkömmliche Art lösen:</div>
+
+ <br><div class='bsp' style='padding-bottom:16px;'>
+<b>Aufgabe:</b> Bestimme i(t) für die folgende Schaltung, wenn u(t) = <span class='p01'>149</span>sin120t V und u<sub>C</sub>(0) = 0.<br><br>
+
+<img src='img/re_a09.gif' class='in' style='float:left; margin-right:40px;'>
+ <div style='line-height:25px; margin-top:15px; margin-bottom:10px;'>
+R<sub>1</sub> = 800 &Omega;<br>
+R<sub>2</sub> = 500 &Omega;<br>
+C = 50 &mu;F</div></div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> DG aufstellen</div>
+
+ <div class='in mt1'>
+<span class='blau'>u<sub>R1</sub> + u<sub>C</sub> = u</span><span class='ll' style='margin-left:86px;'>&thinsp;</span><div class='frac p04'><div class='num'>d</div><div class='den'>dt</div></div>(.)</div>
+
+ <div class='in mt1'>
+u<sub>R1</sub>' + u<sub>C</sub>' = u'<span class='ll' style='margin-left:77px;'>&thinsp;</span>u<sub>R1</sub> = R<sub class='p02'>1</sub>i, i<sub>3</sub> = <span class='p02'>C</span>u<sub>C</sub>', <span class='rot'>i<sub>3</sub> = i<span class='p44'>–</span>i<sub>2</sub></span></div>
+
+ <div class='in mt1'>
+R<sub class='p02'>1</sub>i' + <div class='frac'><div class='num'>i – i<sub>2</sub></div><div class='den'>C</div></div> = u' <span class='ll' style='margin-left:66px;'>·</span>C &nbsp; <span class='ll'>&thinsp;</span>u<sub>R2</sub> = R<sub class='p02'>2</sub>i<sub>2</sub>, <span class='blau'>u<sub>R2</sub> = u<span class='p44'>–</span>u<sub>R1</sub></span></div>
+
+ <div class='in' style='margin-top:5px;'>
+<span class='p02'>R<sub>1</sub>C</span>i' + i – <div class='frac'><div class='num'>u – R<sub class='p02'>1</sub>i</div><div class='den'>R<sub>2</sub></div></div> = <span class='p02'>C</span>u' &nbsp; <span class='ll'>·</span>R<sub>2</sub></div>
+
+ <div class='in mt1'>
+R<sub>1</sub>R<sub class='p02'>2</sub>Ci' + <span class='p02'>(R<sub>1</sub><span class='p22'>+</span>R<sub>2</sub>)</span>i = u + <span class='p02'>R<sub>2</sub>C</span>u'</div>
+
+ <div class='in'><br>
+<span class='p02'>20</span>i' + <span class='p02'>1300</span>i = <span class='p02'>149</span>sin120t + <span class='p02'>447</span>cos120t &nbsp;|:20</div>
+
+ <div class='in'><br>i' + <span class='p02'>65</span>i = <span class='p02'>22,35</span>cos120t + <span class='p02'>7,45</span>sin120t</div>
+
+ <div class='in mt2'>
+<b>Schritt 2:</b> e<sup>&lambda;t</sup>-Ansatz &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; verkürzte DG</div>
+
+ <div class='in mt1'>
+&lambda;e<sup>&lambda;t</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-19px;'> + 65e<sup>&lambda;t</sup><img src='sym/slash.gif' style='position:relative; bottom:-4px; margin-left:-19px;'> = 0 <img src='sym/rarr2.svg' class='p66'> &lambda; = –65</div>
+
+ <div class='in'><br>
+y<sub>h</sub> = ce<sup>–65t</sup> &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div class='in'><br>
+<b>Schritt 3:</b> Ansatz à la Störfunktion</div>
+
+ <div class='in'><br>
+i<sub>p</sub> = Acos120t + Bsin120t &nbsp;<img src='sym/rarr.svg' class='bo1'>&nbsp; vollständige DG:</div>
+
+ <div class='in'><br>
+<span class='p02'>-120A</span>sin125t + <span class='p02'>120B</span>cos120t + <span class='p02'>65A</span>cos120t + <span class='p02'>65B</span>sin120t = <span class='p02'>22,35</span>cos120t + <span class='p02'>7,45</span>sin120t</div>
+
+  <div class='in'><br>
+<img src='img/re_a10.gif'></div>
+
+ <div class='in'><br>
+<b>Schritt 4:</b> Superpositionsgesetz</div>
+
+ <div class='in'><br>
+i = i<sub>p</sub> + i<sub>h</sub> = 0,03cos120t + 0,17sin120t + ce<sup>–65t</sup> &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'></div>
+
+ <div class='in mt2'>
+<b>Schritt 5:</b> Spezielle Lösung</div>
+
+ <div class='in'><br>
+u<sub>C</sub> = u – R<sub>1</sub>i = –24cos120t + 13sin120t – 800ce<sup>–65t</sup></div>
+
+ <div class='in'><br>
+u<sub>C</sub>(0) = –24 – 800c = 0 <img src='sym/rarr2.svg' class='p66'> c = –0,03</div>
+
+ <div class='in'><br>
+i = 0,03cos120t + 0,17sin120t – 0,03e<sup>–65t</sup></div>
+
+ </div></body>
+ </html>

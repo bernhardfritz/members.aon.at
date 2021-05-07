@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Reihen und Integraltrafos</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ <style type='text/css'>
+.pb5 {
+  border-bottom-style:solid;
+  padding-bottom:5px;
+}
+.pt5 {
+  padding-top:5px;
+}
+ </style>
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>XV. REIHEN UND INTEGRALTRAFOS</b></div>
+
+ <div><br>
+<a href='15_reihen.html#A'>A. Zahlenreihen</a><br>
+<a href='15_reihen.html#B'>B. Taylorreihen</a><br>
+<a href='15_reihen.html#C'>C. Fourierreihen</a><br>
+<a href='15_reihen.html#D'>D. Laplace-Transformation</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='15a_reihen.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> ZAHLENREIHEN</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Wiederholung</b></div>
+
+ <div><br>
+Cauchy-Folgen sind dadurch charakterisiert, dass sich die hinteren Folgenglieder <i>allen</i> nachfolgenden Gliedern beliebig nähern:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Folge (a<sub>n</sub>) heißt <b>Cauchy-Folge,</b> wenn es zu jedem &epsilon; &gt; 0 einen Index N gibt, sodass für alle n &gt; N gilt: |a<sub>n</sub> – a<sub>N</sub>| &lt; &epsilon;</div>
+
+ <div><br>
+Gleichbedeutend damit ist, dass es eine <i>reelle</i> Zahl a gibt, der sich die hinteren Folgenglieder beliebig nähern:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Zahl a heißt <b>Grenzwert</B> der Folge (a<sub>n</sub>), wenn es zu jedem &epsilon; &gt; 0 einen Index N gibt, sodass für alle n &gt; N gilt: |a<sub>n</sub> – a| &lt; &epsilon;</div>
+
+ <div><br>
+Wenn wir die Glieder einer vorgelegten Folge mit Plus verknüpfen, erhalten wir eine "Endlosrechnung", der wir erst noch einen Sinn geben müssen: Wir verstehen darunter die Folge der Teilsummen, <b>Reihe</b> genannt, und deren Grenzwert soll das "Ergebnis" der Endlosrechnung sein:</div>
+
+ <div class='in mt1'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=1</div></div>c<sub>n</sub>
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+(s<sub>1</sub>, s<sub>2</sub>, s<sub>3</sub>, …) &nbsp; mit s<sub>n</sub> = <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>c<sub>i</sub><br>
+<div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>s<sub>n</sub>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Bestimme die Teilsumme s<sub>n</sub> der folgenden Reihe und die Summe der Reihe:
+
+  <div class='in mt1'>
+<b style='margin-right:2px;'>a)</b> <div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=0</div></div>q<sup>n</sup>  (= geometrische Reihe) &nbsp;&nbsp;&nbsp;
+<b style='margin-right:2px;'>b)</b> <div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=1</div></div> <div class='frac'><div class='num'>1</div><div class='den'>n(n + 1)</div></div></div></div>
+
+ <div class='in mt1'>
+<b>a)</b> s<sub>n</sub> = <div class='sum'><div class='eos'>n–1</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=0</div></div>q<sup>i</sup></div>
+
+ <div class='in mt1' style='float:left; line-height:24px; margin-bottom:5px;'>
+s<sub>n</sub> = <span class='ws4'>q<sup>0</sup> +q<sup>1</sup> + … + q<sup>n–1</sup></span><br>
+s<sub>n</sub>q <span style='margin-right:22px;'>=</span><span class='ws4'> q<sup>1</sup> + … + q<sup>n–1</sup> + q<sup>n</sup></span></div>
+
+ <div class='mt1' style='padding-top:12px;'>&nbsp;
+<img src='sym/sub.gif'></div>
+
+ <div class='in' style='clear:left; border-top:solid 1px; width:185px;'></div>
+
+ <div class='in' style='margin-top:8px;'>
+(1<span class='p44'>–</span>q)s<sub>n</sub> = 1<span class='p44'>–</span>q<sup>n</sup> &nbsp; <span class='ll p01'>:(1<span class='p44'>–</span>q)</span></div>
+
+ <div class='in'><br>
+s<sub>n</sub> = <div class='frac'><div class='num'>1 – q<sup>n</sup></div><div class='den'>1 – q</div></div> <img src='sym/rarr2.svg' class='p66'> <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>s<sub>n</sub> = <div class='frac p01'><div class='num'>1</div><div class='den'>1 – q</div></div>, falls |q| &lt; 1 (sonst divergent)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='in mt1'>
+<b>b)</b> s<sub>n</sub> = <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div> <div class='frac'><div class='num'>1</div><div class='den'><span class='p01'>i</span>(i + 1)</div></div></div>
+
+ <div class='in mt1'>
+Partialbruchzerlegung:</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>1</div><div class='den'><span class='p01'>i</span>(i + 1)</div></div> = <div class='frac'><div class='num'>A</div><div class='den'>i</div></div>	+ <div class='frac'><div class='num'>B</div><div class='den'>i + 1</div></div> = <div class='frac'><div class='num'>A(i + 1) + Bi</div><div class='den'><span class='p01'>i</span>(i + 1)</div></div> <img src='sym/rarr2.svg' class='p66'> A = 1, B = –1</div>
+
+ <div class='in'><br>
+<img src='img/re_00.gif' style='vertical-align:-14px;'> <img src='sym/rarr2.svg' class='p66'> <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div>s<sub>n</sub> = 1</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.2' class='box'>2</a> Divergenzkriterium</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Reihe <img src='sym/sum.gif' style='vertical-align:-7px;'>&thinsp;c<sub>n</sub>, bei der die <b>c<sub>n</sub> nicht gegen 0</b> laufen, ist divergent.</div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in'><br>
+Falls die c<sub>n</sub> nicht gegen 0 laufen, gibt es ein &epsilon; &gt; 0 und unendlich viele n mit |c<sub>n</sub>| &ge; &epsilon;. Für jedes
+davon ist dann s<sub>n–1</sub> oder s<sub>n</sub> um mehr als &epsilon;/2 vom behaupteten Grenzwert entfernt, also gibt es keinen solchen.</div>
+
+ <div><br>
+Bem: Dass die c<sub>n</sub> gegen 0 laufen, ist also eine <i>notwendige</i> Bedingung für die Konvergenz der Reihe, aber nicht <i>hinreichend.</i></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> Zeige, dass <b>a)</b> die "harmonische Reihe"
+
+  <div class='in mt1'>
+<div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=1</div></div> <div class='frac'><div class='num'>1</div><div class='den'>n</div></div></div>
+
+  <div class='mt1'>
+gegen &infin; läuft, aber ihre Verallgemeinerung, <b>b)</b> die "p-Reihe"</div>
+
+  <div class='in mt1'>
+<div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=1</div></div> <div class='frac'><div class='num'>1</div><div class='den'>n<sup>p</sup></div></div></div>
+
+  <div class='mt1'>
+für p &gt; 1 konvergent ist.</div></div>
+
+ <div class='in'><br>
+<b style='position:relative; bottom:41px;'>a)</b> <img src='img/re_01.gif'></div>
+
+ <div class='in'><br>
+<b>b)</b> Für einen beliebigen Index N, der unmittelbar vor einer 2er-Potenz liegt, und alle n &gt; N gilt:</div>
+
+ <div class='in'><br>
+<img src='img/re_02.gif'></div>
+
+ <div class='in mt1'>
+Dass (s<sub>n</sub>) Cauchy-Folge ist, folgt dann, weil <div class='frac'><div class='num'>q<sup>i</sup></div><div class='den'>1 – q</div></div> mit zunehmendem i beliebig klein wird.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Bem: Wenn wir in der geometrischen Reihe q = 1/p setzen, erkennen wir Gemeinsamkeiten zur p-Reihe.</div>
+
+ <div class='in mt1'>
+<div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>&nbsp;</div></div><div class='frac to1'><div class='num'>1</div><div class='den'>p<sup>n</sup></div></div> &nbsp; versus &nbsp; <div class='sum'><div class='eos'>&nbsp;</div><img src='sym/sum.gif' class='p44'><div class='sos'>&nbsp;</div></div><div class='frac to1'><div class='num'>1</div><div class='den'>n<sup>p</sup></div></div></div>
+
+ <div class='mt1'>
+D.h. bei der geometrischen Reihe haben wir die Exponentialfunktion p<sup>x</sup> im Nenner, bei der p-Reihe die Potenzfunktion x<sup>p</sup>. Für p &gt; 1 bedeutet das <i>konvex</i> steigende Funktionskurven und Konvergenz der Reihe, bei p = 1 haben wir gerade Funktionskurven und Divergenz (darunter erst recht).</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.3' class='box'>3</a> Leibniz-Kriterium</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Reihe <img src='sym/sum.gif' style='vertical-align:-7px;'>&thinsp;c<sub>n</sub>, bei der die c<sub>n</sub> <b>alternierende Vorzeichen</b> haben und die <b>|c<sub>n</sub>| monoton gegen 0</b> laufen, ist konvergent.</div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in'><br>
+Aus dem gedämpften Auf- und Abschwingen der hinzukommenden Summanden folgt für einen beliebigen Index N und alle n &gt; N:</div>
+
+ <div class='in'><br>
+|s<sub>n</sub> – s<sub>N</sub>| &lt; |c<sub>N+1</sub>|</div>
+
+ <div class='in'><br>
+Dass (s<sub>n</sub>) Cauchy-Folge ist, folgt dann, weil |c<sub>N+1</sub>| mit zunehmendem N beliebig klein wird.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Zeige, dass die Reihe
+
+  <div class='in mt1'>
+<div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=1</div></div> (–1)<sup>n</sup><div class='frac p40'><div class='num'>n</div><div class='den'>n<sup>2</sup> + 1</div></div></div>
+
+  <div class='in mt1'>
+konvergent ist.</div></div>
+
+ <div class='in'><br>
+Wir zeigen, dass das Leibniz-Kriterium erfüllt ist:</div>
+
+ <div class='in'><br>
+<b>a)</b> Vorzeichen alternierend <img src='sym/ok.svg' class='to3'></div>
+
+ <div class='in'><br>
+<b>b)</b> |c<sub>n+1</sub>| &le;  |c<sub>n</sub>| ?</div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>n + 1</div><div class='den'>(n + 1)<sup>2</sup> + 1</div></div> &le; <div class='frac'><div class='num'>n</div><div class='den'>n<sup>2</sup> + 1</div></div></div>
+
+ <div class='in'><br>
+(n + 1)(n<sup>2</sup> + 1) &le; n(n<sup>2</sup> + 2n + 2)</div>
+
+ <div class='in'><br>
+n<sup>3</sup> + n + n<sup>2</sup> + 1 &le; n<sup>3</sup> + 2n<sup>2</sup> + 2n</div>
+
+ <div class='in'><br>
+1 &le; n<sup>2</sup> + n <img src='sym/ok.svg' class='to3'></div>
+
+ <div class='in'><br>
+<b>c)</b> |c<sub>n</sub>| <img src='sym/rarr.svg' class='bo1'> 0 ?</div>
+
+ <div class='in mt1'>
+<div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div> <div class='frac p02'><div class='num'>n</div><div class='den'>n<sup>2</sup> + 1</div></div><sub style='top:15px'>:n</sub><sup style='margin-left:-11px; bottom:15px'>:n</sup> = lim <div class='frac to10'><div class='num'>1</div><div class='den bo3'>n + <div class='frac dn bo2'><div class='num to2'>1</div><div class='den bo2'>n</div></div></div></div> = <div class='frac'><div class='num'>1</div><div class='den'>&infin;</div></div> = 0 <img src='sym/ok.svg' class='to3'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.4' class='box'>4</a> Vergleichskriterien</b></div>
+
+ <div class='in mt1'>
+<span class='out'>•</span> Reihen <img src='sym/sum.gif' style='vertical-align:-7px;'>&thinsp;b<sub>n</sub> und <img src='sym/sum.gif' class='to7'>&thinsp;c<sub>n</sub> mit positiven b<sub>n</sub>, c<sub>n</sub> heißen <b>Minorante</b> und <b>Majorante,</b> falls es einen Index N gibt, sodass  <b>b<sub>n</sub></b> &le; <b>c<sub>n</sub></b> für alle n &gt; N. In diesem Fall folgt aus der Konvergenz der Majorante bzw. der Divergenz der Minorante dasselbe für die andere Reihe.</div>
+
+ <div><br>
+Das ist klar, weil eine Reihe mit positiven Summanden entweder beschränkt und damit konvergent ist oder ins Unendliche läuft. Unempfindlicher gegenüber Details, die einen Kleiner-Größer-Vergleich "hakelig" machen können, ist die Folgerung:</div>
+
+ <div class='in mt1'>
+<span class='out'>•</span> Reihen <img src='sym/sum.gif' style='vertical-align:-7px;'>&thinsp;b<sub>n</sub> und <img src='sym/sum.gif' class='to7'>&thinsp;c<sub>n</sub> mit positiven b<sub>n</sub>, c<sub>n</sub> und <b>0</b> &lt;&thinsp;<div class='lim'><b>lim</b><div class='sos'><b>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</b></div></div><div class='frac p20'><div class='num'><b>b<sub>n</sub></b></div><div class='den'><b>c<sub>n</sub></b></div></div> &lt; <b>&infin;</b> heißen <b>asymptotisch proportional</b> und haben dasselbe Konvergenzverhalten.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in mt1'>
+Wir wählen q<sub>1,2</sub> mit 0<span class='p44'>&lt;</span>q<sub>1</sub><span class='p44'>&lt;</span>lim<div class='frac p40'><div class='num'>b<sub>n</sub></div><div class='den'>c<sub>n</sub></div></div><span class='p44'>&lt;</span>q<sub>2</sub> &lt; &infin;, dann finden wir einen Index N, sodass für alle n &gt; N gilt:</div>
+
+ <div class='in mt1' style='float:left; padding-top:25px;'>
+q<sub>1</sub> &le; <div class='frac'><div class='num'>b<sub>n</sub></div><div class='den'>c<sub>n</sub></div></div> &le; q<sub>2</sub></div>
+
+<img src='sym/2arr2.gif' style='float:left; margin-top:32px; margin-right:10px; margin-left:6px;'>
+
+ <div class='in'><br>
+q<sub class='p01'>1</sub>c<sub>n</sub> &le; b<sub>n</sub> &le; q<sub class='p01'>2</sub>c<sub>n</sub></div>
+
+ <div class='in' style='margin-top:25px;'>
+<div class='frac p04'><div class='num'>1</div><div class='den'>q<sub>2</sub></div></div>b<sub>n</sub> &le; c<sub>n</sub> &le; <div class='frac p04'><div class='num'>1</div><div class='den'>q<sub>1</sub></div></div>b<sub>n</sub></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-bottom:5px;'>
+<b>Aufgabe 4:</b> Bestimme das Konvergenzverhalten der Reihe
+
+  <div class='in mt1'>
+<img src='sym/sum.gif' class='to7'>&thinsp;b<sub>n</sub> = <div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=1</div></div> <div class='frac'><div class='num'>1</div><div class='den'>n|2n – 5|</div></div></div>
+
+  <div class='mt1'>
+durch Vergleich mit der Reihe</div>
+
+   <div class='in mt1'>
+<img src='sym/sum.gif' class='to7'>&thinsp;c<sub>n</sub> = <div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=1</div></div> <div class='frac'><div class='num'>1</div><div class='den'>n<sup>2</sup></div></div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='in'><br>
+<b>Lösungsvariante 1:</b> b<sub>n</sub> &le; c<sub>n</sub></div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>1</div><div class='den'>n|2n – 5|</div></div> &le; <div class='frac'><div class='num'>1</div><div class='den'>n<sup>2</sup></div></div> &nbsp; <span class='ll'>·</span>n<sup>2</sup><span class='ws4'>|2n – 5|</span></div>
+
+ <div class='in'><br>
+n &le; <span class='ws4'>|2n – 5|</span></div>
+
+ <div class='in'><br>
+Für n &ge; 3 ist das gleichbedeutend mit:</div>
+
+ <div class='in'><br>
+n &le; <span class='ws4'>2n – 5</span><span class='ll p02' style='margin-left:47px;'>–</span>2n &nbsp; <span class='ll'><span class='rot'>·(–1)</span></span></div>
+
+ <div class='in'><br>
+n <span class='rot'>&ge;</span> 5</div>
+
+ <div class='in'><br>
+Für n &ge; 5 ist also b<sub>n</sub> &le; c<sub>n</sub> und da <img src='sym/sum.gif' style='vertical-align:-6px;'>&thinsp;c<sub>n</sub> konvergent, ist auch <img src='sym/sum.gif' style='vertical-align:-6px;'>&thinsp;b<sub>n</sub> konvergent.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='in'><br>
+<b>Lösungsvariante 2:</b> b<sub>n</sub> &sim; c<sub>n</sub></div>
+
+ <div class='in mt2'>
+<img src='img/re_03.gif'></div>
+
+ <div class='in mt1'>
+Da 0 &lt; <div class='frac'><div class='num'>1</div><div class='den'>2</div></div> &lt; &infin; und <img src='sym/sum.gif' style='vertical-align:-6px;'>&thinsp;c<sub>n</sub> konvergent, ist auch <img src='sym/sum.gif' style='vertical-align:-6px;'>&thinsp;b<sub>n</sub> konvergent.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.5' class='box'>5</a> Quotientenkriterium</b></div>
+
+ <div class='in mt1'>
+<span class='out'>•</span> Eine Reihe <img src='sym/sum.gif' class='to7'>&thinsp;c<sub>n</sub> mit positiven c<sub>n</sub> und <div class='lim'><b>lim</b><div class='sos'><b>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</b></div></div><div class='frac'><div class='num'><b>c<sub>n+1</sub></b></div><div class='den'><b>c<sub>n</sub></b></div></div> &lt; <b>1</b> ist konvergent.</div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in mt1'>
+Wir wählen ein q mit <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div><div class='frac'><div class='num'>c<sub>n+1</sub></div><div class='den'>c<sub>n</sub></div></div> &lt; q &lt; 1, dann finden wir einen Index N, sodass für alle n &gt; N gilt:</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>c<sub>n+1</sub></div><div class='den'>c<sub>n</sub></div></div> &lt; q <img src='sym/rarr2.svg' class='p66'> c<sub>n+1</sub> &lt; c<sub>n</sub>q</div>
+
+ <div class='in mt1'>
+<div class='frac'><div class='num'>c<sub>n+2</sub></div><div class='den'>c<sub>n+1</sub></div></div> &lt; q <img src='sym/rarr2.svg' class='p66'> c<sub>n+2</sub> &lt; c<sub>n</sub>q<sup>2</sup></div>
+
+ <div class='in mt1'>
+···</div>
+
+ <div class='in mt1'>
+Daraus folgt zum einen, dass die c<sub>n</sub> gegen 0 laufen, und zum anderen, dass</div>
+
+ <div class='in mt1'>
+|s<sub>n</sub> – s<sub>N</sub>| &lt; c<sub>N+1</sub> + c<sub>N+1</sub>q + c<sub>N+1</sub>q<sup>2</sup> + … = <div class='frac'><div class='num'>c<sub>N+1</sub></div><div class='den'>1 – q</div></div></div>
+
+ <div><br>
+Bem: <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div><div class='frac'><div class='num'>c<sub>n+1</sub></div><div class='den'>c<sub>n</sub></div></div> = 1 lässt offen, ob <img src='sym/sum.gif' style='vertical-align:-6px;'>&thinsp;c<sub>n</sub> konvergent/divergent, <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div><div class='frac'><div class='num'>c<sub>n+1</sub></div><div class='den'>c<sub>n</sub></div></div> &gt; 1 bedeutet Divergenz.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-bottom:5px;'>
+<b>Aufgabe 5:</b> Untersuche das Konvergenzverhalten der folgenden Reihen mit dem Quotientenkriterium:
+
+  <div class='in mt1'>
+<b>a)</b> <div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=1</div></div> <div class='frac'><div class='num'>n<span class='p22'>+</span>1</div><div class='den'>2<sup>n</sup></div></div> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> <div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=1</div></div> <div class='frac'><div class='num'>2<sup>n</sup></div><div class='den'>(n<span class='p22'>+</span>1)!</div></div> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> <div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=1</div></div> <div class='frac'><div class='num'>(2n)!</div><div class='den'>n!<sup>2</sup></div></div></div></div>
+
+ <div class='in'><br>
+<img src='img/re_04.gif' style='vertical-align:-33px;'> <img src='sym/rarr2.svg' class='p66'> konvergente Reihe</div>
+
+ <div class='in'><br>
+<img src='img/re_05.gif' style='vertical-align:-36px;'> <img src='sym/rarr2.svg' class='p66'> konvergente Reihe</div>
+
+ <div class='in' style='line-height:34px; margin-top:17px;'>
+<img src='img/re_06.gif' style='vertical-align:-34px;'> <img src='sym/rarr2.svg' class='p66'> divergente Reihe</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.6' class='box'>6</a> Absolute Konvergenz</b></div>
+
+ <div class='in mt1'>
+<span class='out'>•</span> Eine Reihe <img src='sym/sum.gif' class='to7'>&thinsp;c<sub>n</sub> heißt <b>absolut konvergent,</b> wenn <img src='sym/sum.gif' class='to7'>&thinsp;|c<sub>n</sub>| konvergent ist.</div>
+
+ <div><br>
+Absolut konvergente Reihen sind – wie man unschwer erkennt – konvergent. Dass der Umkehrschluss nicht gilt, zeigt die alternierende harmonische Reihe. Die Bedeutung absoluter Konvergenz liegt zum einen im leichteren Nachweis, da die Kriterien für Reihen mit positiven Summanden anwendbar sind, zum anderen in der Ausweitung der "Kompass"-Regel ins Unendliche:</div>
+
+ <div><br>
+Sind die c<sub>n</sub> selbst Summen, dann können wir deren Klammern weglassen, die Summanden beliebig umordnen und zu neuen c<sub>n</sub> klammern, ohne dass sich an der Konvergenz und dem Grenzwert etwas ändert.</div>
+
+ <div><br>
+Bei bedingter (= nichtabsoluter) Konvergenz läuft die Reihe der Plus-Summanden gegen +&infin; und die der Minus-Summanden gegen –&infin; (wäre genau eine beschränkt, wäre die Originalreihe divergent, wären beide beschränkt, wäre die Originalreihe absolut konvergent). Offensichtlich können wir bei bedingter Konvergenz die Summanden immer so umordnen, dass jeder beliebige Grenzwert oder überhaupt Divergenz herauskommt.</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> TAYLORREIHEN</b></div>
+
+ <div><br><br>
+<b><a name='B.1' class='box'>1</a> Was ist eine Funktionenreihe?</b></div>
+
+ <div><br>
+Eine <b>Funktionenreihe</b> ist eine Reihe, bei der die Summanden Funktionen sind:</div>
+
+ <div class='in mt1'>
+<img src='sym/sum.gif' class='to7'>&thinsp;f<sub>n</sub> = f ???</div>
+
+ <div><br>
+Für den Grenzwert von Funktionenfolgen brauchen wir so etwas wie den Abstand zweier Funktionen, beispielsweise indem wir an jeder Stelle den Abstand der Funktionswerte bestimmen und den größten davon nehmen. Konvergenz in diesem Sinn heißt <b>gleichmäßige Konvergenz</b> und ist schärfer als <b>punktweise Konvergenz,</b> bei der es darum geht, dass an jeder Stelle die Werte von f<sub>1</sub>, f<sub>2</sub>, f<sub>3</sub>,… gegen den Wert von f laufen.</div>
+
+ <div><br>
+Die Bedeutung gleichmäßiger Konvergenz liegt unter anderem darin, dass Limes und Diff-Int-Operatoren vertauschbar sind:</div>
+
+ <div class='in'><br>
+f<sub>n</sub>' konvergieren gleichmäßig <img src='sym/rarr2.svg' class='p66'> <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div> f<sub>n</sub>'(x) = <span class='p01'>f</span>'(x)</div>
+
+ <div class='mt1'>
+und</div>
+
+ <div class='in mt1'>
+f<sub>n</sub> konvergieren gleichmäßig <img src='sym/rarr2.svg' class='p66'> <div class='lim'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div><img src='sym/int.gif' style='vertical-align:-12px; margin-left:2px;'>f<sub>n</sub>(x)<span class='p20'>dx</span> = <img src='sym/int.gif' style='vertical-align:-12px;'>f(x)<span class='p20'>dx</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.2' class='box'>2</a> Taylorreihen-Entwicklung</b></div>
+ <div class='in'><br>
+<span class='out'>•</span>
+Eine <b>Potenzreihe</b> ist eine Reihe, bei der die Summanden Potenzfunktionen sind. Die Entwicklung einer vorgegebenen Funktion f(x) an der Stelle 0 in eine solche Reihe, auch <b>Taylorreihe</b> genannt, geht so:</div>
+
+ <div class='in mt1'>
+<b>f(x)</b> = <div class='sum'><div class='eos'><b>&infin;</b></div><img src='sym/ssum.gif' class='p44'><div class='sos'><b>n=0</b></div></div><b>a<sub class='p01'>n</sub>x<sup>n</sup></b> &nbsp; mit a<sub>n</sub> = <div class='frac'><div class='num'>f<sup class='p20'>(n)</sup>(0)</div><div class='den'>n!</div></div></div>
+
+ <div class='mt1'>
+Beweis:</div>
+
+ <div class='in mt1'>
+f(x) = a<sub>0</sub> + a<sub>1</sub>x<sup>1</sup> + a<sub>2</sub>x<sup>2</sup> + ... <img src='sym/rarr2.svg' class='p66'> <div class='frac'><div class='num'>f(0)</div><div class='den'>0!</div></div> = a<sub>0</sub></div>
+
+ <div class='in mt1'>
+<span class='p02'>f</span>'(x) = <span class='p02'>1</span>a<sub>1</sub> + <span class='p02'>2</span>a<sub>2</sub>x<sup>1</sup> + <span class='p02'>3</span>a<sub>3</sub>x<sup>2</sup> + ... <img src='sym/rarr2.svg' class='p66'> <div class='frac'><div class='num'>f(0)</div><div class='den'>1!</div></div> = a<sub>1</sub></div>
+
+ <div class='in mt1'>
+<span class='p02'>f</span>"(x) = 2·<span class='p02'>1</span>a<sub>2</sub> + 3·<span class='p02'>2</span>a<sub>3</sub>x<sup>1</sup> + 4·<span class='p02'>3</span>a<sub>4</sub>x<sup>2</sup> + ... <img src='sym/rarr2.svg' class='p66'> <div class='frac'><div class='num'>f(0)</div><div class='den'>2!</div></div> = a<sub>2</sub></div>
+
+ <div class='in' style='margin-top:5px;'>
+...</div>
+
+ <div><br>
+Bem: Die Potenzreihenentwicklung an der Stelle a verwendet die dortigen Ableitungen und die Potenzen von (x<span class='p44'>–</span>a) anstelle von x.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe 6:</b> Approximiere f(x) an der Stelle 0 durch das Taylorpolynom 2. Grades, das ist die nach x<sup>2</sup> abgebrochene Taylorreihe:
+
+  <div class='in mt1'>
+f(x) = <div class='frac'><div class='num'>e<sup>2x</sup></div><div class='den'>1 + 2x</div></div></div></div>
+
+ <div class='in'><br>
+f<span class='p20'>'</span>(x) = <div class='frac'><div class='num'>e<sup>2x</sup>2(1 + 2x) – e<sup>2x</sup>2</div><div class='den'>(1 + 2x)<sup>2</sup></div></div> = <div class='frac'><div class='num'>4xe<sup>2x</sup></div><div class='den'>(1 + 2x)<sup>2</sup></div></div> <img src='sym/rarr2.svg' class='p66'> f<span class='p20'>'</span>(0) = 0</div>
+
+ <div class='in'><br>
+f<span class='p20'>"</span>(x) = <div class='frac'><div class='num'>(4e<sup>2x</sup> + 4xe<sup>2x</sup>2)(1 + 2x)<sup>2</sup> – 4xe<sup>2x</sup>2(1 + 2x)2</div><div class='den'>(1 + 2x)<sup>4</sup></div></div> = <div class='frac'><div class='num'>4(1 + 4x<sup>2</sup>)e<sup>2x</sup></div><div class='den'>(1 + 2x)<sup>3</sup></div></div> <img src='sym/rarr2.svg' class='p66'> f<span class='p20'>"</span>(0) = 4</div>
+
+ <div class='in'><br>
+Taylorpolynom 2. Grades: g(x) = <div class='frac p04'><div class='num'>1</div><div class='den'>0!</div></div>x<sup>0</sup> + <div class='frac p04'><div class='num'>0</div><div class='den'>1!</div></div>x<sup>1</sup> + <div class='frac p04'><div class='num'>4</div><div class='den'>2!</div></div>x<sup>2</sup> = 1 + 2x<sup>2</sup></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.3' class='box'>3</a> Konvergenz und Rechentricks</b></div>
+
+ <div><br>
+Die Potenzreihen-Entwicklung an einer Stelle konvergiert von dort ausgehend innerhalb eines bestimmten Radius absolut, wobei die Geschwindigkeit zum Rand hin abnimmt. Am Rand haben wir je nach Fall Konvergenz oder Divergenz und außerhalb davon Divergenz.</div>
+
+  <div class='in mt2'>
+<img src='img/re_07.gif'></div>
+
+ <div><br>
+Um den <b>Konvergenzradius r</b> zu bestimmen, verwenden wir das Quotientenkriterium:</div>
+
+ <div class='in'><br>
+r = <div class='lim p04'>lim<div class='sos'>n&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>&infin;</div></div><div class='frac abs p44'><div class='num'>a<sub>n</sub></div><div class='den'>a<sub>n+1</sub></div></div>
+</div>
+
+ <div class='mt1'>
+Beweis:</div>
+
+ <div class='in'><br>
+<img src='img/re_08.gif'></div>
+
+ <div><br>
+Anstelle der oft mühsamen Koeffizientenformel können wir auch eine bekannte Taylorreihenentwicklung</div>
+
+ <div class='in mt1'>
+g(x) = <div class='sum'><div class='eos'>&infin;</div><img src='sym/sum.gif' class='p44'><div class='sos'>n=0</div></div>a<sub>n</sub>x<sup>n</sup></div>
+
+ <div class='mt1'>
+nützen, um etwa</div>
+
+ <div class='in'><br>
+f(x) = g<span class='up'>(</span>ax<sup>m</sup><span class='up'>)</span>, ax<sup class='p01'>m</sup>g(x), g'(x), <img src='sym/int.gif' style='vertical-align:-12px;'>g(x)<span class='p20'>dx</span>, …</div>
+
+ <div><br>
+in eine Taylorreihe zu entwickeln, da diese Operationen den Potenzreihencharakter und den Konvergenzradius erhalten – außer im ersten Fall, wo das eingangsseitige Anwenden einer Funktion auf x zur Folge hat, dass wir auf den Konvergenzradius die Umkehrfunktion anwenden müssen:</div>
+
+ <div class='in'><br>
+ax<sup>m</sup> = ±r<sub>g</sub> <img src='sym/rarr2.svg' class='p66'> |x| = <img src='img/re_09.gif' style='vertical-align:-13px;'> = r<sub>f</sub></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 7:</b> Entwickle die Funktion f(x) an der Stelle 0 in eine Taylorreihe und bestimme ihren Konvergenzradius:
+
+ <div class='in'><br>
+<b>a)</b> f(x) = e<sup>x</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> f(x) = cosx &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> f(x) = <span class='ws4'>(1 + x)<sup>r</sup></span></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='in'><br>
+  <table class='t0' cellpadding='2'>
+   <tr>
+    <td rowspan='3' style='vertical-align:top;'>
+<b>a)&nbsp;</b>
+  </td>
+    <td class='tr br bb'>
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>0
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>1
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>2
+    </td>
+    <td class='tc bb'>
+...
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br bb' style='padding-top:4px;'>
+f<sup class='p20'>(n)</sup>(x)
+    </td>
+    <td class='tc br bb'>
+e<sup>x</sup>
+    </td>
+    <td class='tc br bb'>
+e<sup>x</sup>
+    </td>
+    <td class='tc br bb'>
+e<sup>x</sup>
+    </td>
+    <td class='tc bb'>
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br' style='padding-top:4px;'>
+f<sup class='p20'>(n)</sup>(0)
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in mt1'>
+<img src='img/re_10.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='in'><br>
+  <table class='t0' cellpadding='2'>
+   <tr>
+    <td rowspan='3' style='vertical-align:top;'>
+<b>b)&nbsp;</b>
+  </td>
+    <td class='tr br bb'>
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>0
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>1
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>2
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>3
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>4
+    </td>
+    <td class='tc bb'>
+...
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br bb' style='padding-top:4px;'>
+f<sup class='p20'>(n)</sup>(x)
+    </td>
+    <td class='tc br bb'>
+cosx
+    </td>
+    <td class='tc br bb'>
+–sinx
+    </td>
+    <td class='tc br bb'>
+–cosx
+    </td>
+    <td class='tc br bb'>
+sinx
+    </td>
+    <td class='tc br bb'>
+cosx
+    </td>
+    <td class='tc bb'>
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br' style='padding-top:4px;'>
+f<sup class='p20'>(n)</sup>(0)
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+–1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in mt2'>
+<img src='img/re_11.gif'></div>
+
+ <div class='in'><br>
+Weil jeder zweite Koeffizient 0 ist (was das Quotientenkriterium aushebelt), bestimmen wir den Konvergenzradius über die Ersatzreihe:</div>
+
+ <div class='in'><br>
+<img src='img/re_12.gif'></div>
+
+ <div class='in mt1'>
+f(x) = g(x<sup>2</sup>) <img src='sym/rarr2.svg' class='p66'> r<sub class='p10'>f</suB> = <span class='r1t'>&radic;</span><span class='rad'>r<sub>g</sub></span> = &infin;</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='in mt2'>
+  <table class='t0' cellpadding='2'>
+   <tr>
+    <td rowspan='3' style='vertical-align:top;'>
+<b>c)&nbsp;</b>
+  </td>
+    <td class='tr br bb'>
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>0
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>1
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>2
+    </td>
+    <td class='tc bb'>
+...
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br bb' style='padding-top:4px;'>
+f<sup class='p20'>(n)</sup>(x)
+    </td>
+    <td class='tc br bb ws4'>
+(1 + x)<sup>r</sup>
+    </td>
+    <td class='tc br bb ws4'>
+r(1 + x)<sup>r–1</sup>
+    </td>
+    <td class='tc br bb ws4'>
+r(r – 1)(1 + x)<sup>r–2</sup>
+    </td>
+    <td class='tc bb'>
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br' style='padding-top:4px;'>
+f<sup class='p20'>(n)</sup>(0)
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+r
+    </td>
+    <td class='tc br ws4'>
+r(r – 1)
+    </td>
+    <td class='tc'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in mt2'>
+<img src='img/re_13.gif'></div>
+
+ <div class='in'><br>
+Für r = 0, 1, 2, … bricht die Reihe ab (binomischer Lehrsatz) und gilt dementsprechend für alle x, ansonsten:</div>
+
+ <div class='in mt2'>
+<img src='img/re_14.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> FOURIERREIHEN</b></div>
+
+ <div><br><br>
+<b><a name='C.1' class='box'>1</a> Fourierreihen-Entwicklung</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span>
+Eine <b>trigonometrische Reihe</b> überlagert sinusförmige Wechselgrößen, deren Freqenzen die Vielfachen einer Grundfrequenz sind. Die Entwicklung einer vorgegebenen T-periodischen Funktion f(t) in eine solche Reihe, auch <b>Fourierreihe</b> genannt, geht so:</div>
+
+ <div class='in'>
+ 	<div style='float:left; margin-top:18px;'>
+<b>f(x)</b> = <div class='frac'><div class='num'><b>a<sub>0</sub></b></div><div class='den'><b>2</b></div></div> + <div class='sum'><div class='eos'><b>&infin;</b></div><img src='sym/ssum.gif' class='p44'><div class='sos'><b>n=1</b></div></div> <b>(a<sub>n</sub>cos<span class='p10'>n&omega;t</span><span class='p44'>+</span>b<sub>n</sub>sin<span class='p10'>n&omega;t</span>)</b></div>
+
+ <div><br>
+&nbsp;&nbsp; <img src='img/re_15.gif'></div></div>
+
+ <div class='mt1'>
+Sinusförmige Wechselgrößen entsprechen dem Imaginärteil eines sich drehenden Zeigers. Diesen Imaginärteil können wir auch berechnen, indem wir den Zeiger mit dem an der imaginären Achse gespiegelten Zeiger (&phi; <img src='sym/rarr.svg' class='bo1'> <span style='font-family:arial;'>&pi;</span><span class='p44'>–</span>&phi;) mitteln und das Ergebnis auf die reelle Achse drehen:</div>
+
+ <div class='in'><br>
+<img src='img/re_16.gif' style='margin-bottom:17px;'>&thinsp;<img src='img/re_17.gif' style='vertical-align:37px;'></div>
+
+ <div style='margin-top:-10px;'>
+Beweis:</div>
+
+ <div class='in mt1'>
+<img src='img/re_18.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/re_19.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/re_20.gif'></div>
+
+ <div class='in mt1'>
+<span class='uo'><span class='ui'>c</span></span><sub>n</sub> = <div class='frac'><div class='num'>1</div><div class='den'>T</div></div> <span style='position:relative; top:24px; right:2px; font-size:11px;'>0</span><span style='position:relative; bottom:25px; right:5px; font-size:11px;'>T</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-17px;'>f(t)e<sup>–jn&omega;t</sup>&thinsp;dt</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt1'><br>
+<b><a name='C.2' class='box'>2</a> Konvergenz und Rechentricks</b></div>
+
+ <div><br>
+<b>Konvergenzbedingung von Dirichlet:</b> Wenn die Periode in endlich viele Teilintervalle zerfällt, in denen f(t) stetig und monoton ist, und wenn an den Intervallgrenzen die einseitigen Grenzwerte existieren, dann konvergiert die Fourierreihe für alle t gegen f(t) bzw. das Grenzwertmittel.</div>
+
+ <div><br>
+Wenn <b>f(t) gerade</b> ist, bleiben nur die a<sub>n</sub> vom Kosinus. Wenn <b>f(t) ungerade</b> ist, bleiben nur die b<sub>n</sub> vom Sinus. Wenn <b>f(t) alternierend</b> ist, also die zweite Periodenhälfte durch Verschieben und x-Achsen-Spiegelung der ersten entsteht, bleiben nur die a<sub>n</sub> und b<sub>n</sub> mit ungeraden Indizes.</div>
+
+ <div><br>
+Die so verbleibenden a<sub>n</sub>, b<sub>n</sub> (und nur diese!) können wir auch berechnen, indem wir von 0 bis T/2 integrieren und das Ergebnis verdoppeln bzw. – falls gerade/ungerade und alternierend zusammenfallen – von 0 bis T/4 und das Ergebnis vervierfachen.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Entwickle das folgende Spannungssignal u(t) in eine Fourierreihe
+
+  <div class='in'><br>
+<img src='img/re_21.gif'></div></div>
+
+ <div class='in'><br>
+u(t) = ungerade und alternierend <img src='sym/rarr2.svg' class='p66'>es verbleiben nur b<sub>n</sub> mit ungeraden n und für diese gilt:</div>
+
+ <div class='in'><br>
+<img src='img/re_22.gif'></div>
+
+ <div class='in'><br>
+<img src='img/re_23.gif'></div>
+
+ <div class='in'><br>
+<img src='img/re_24.gif' style='margin-bottom:25px;'> <img src='img/re_25.gif' style='margin-bottom:25px; vertical-align:-29px;'></div>
+
+ <div class='in'>
+<img src='img/re_26.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b>Zusatzaufgabe 1:</b> Überprüfe am Beispiel <b>a)</b> &delta; = T/6, <b>b)</b> &delta; = 0 die Aussage, dass je steiler die Flanken, umso mehr Oberschwingungen relevant sind.</div>
+
+ <div class='in'><br>
+  <table class='t0' cellpadding='2'>
+   <tr>
+    <td rowspan='3' style='vertical-align:top;'>
+<b>a)&nbsp;</b>
+  </td>
+    <td class='tr br bb'>
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>1
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>3
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>5
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>7
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>9
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>11
+    </td>
+    <td class='tc br bb'>
+n<span class='p22'>=</span>13
+    </td>
+    <td class='tc bb'>
+…
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br' style='padding-top:4px;'>
+sin<span class='p10'>n&omega;&delta;</span>
+    </td>
+    <td class='tc br'>
+<div class='frac to2'><div class='num'><span class='r1t'>&radic;</span><span class='rad'>3</span></div><div class='den'>2</div></div>
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+<span class='to1 p02'>–</span><div class='frac to2'><div class='num'><span class='r1t'>&radic;</span><span class='rad'>3</span></div><div class='den'>2</div></div>
+    </td>
+    <td class='tc br'>
+<div class='frac to2'><div class='num'><span class='r1t'>&radic;</span><span class='rad'>3</span></div><div class='den'>2</div></div>
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+<span class='to1 p02'>–</span><div class='frac to2'><div class='num'><span class='r1t'>&radic;</span><span class='rad'>3</span></div><div class='den'>2</div></div>
+    </td>
+    <td class='tc br'>
+<div class='frac to2'><div class='num'><span class='r1t'>&radic;</span><span class='rad'>3</span></div><div class='den'>2</div></div>
+    </td>
+    <td class='tc'>
+…
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in mt2'>
+<img src='img/re_27.gif'></div>
+
+ <div class='in'><br>
+<b>b)</b> <div class='lim'>lim<div class='sos'>&delta;&mdash;<span style='margin-left:-5px;'>&rsaquo;</span>0</div></div><div class='frac p20'><div class='num'>sin<span class='p10'>n&omega;&delta;</span></div><div class='den'>n&omega;&delta;</div></div> = 1</div>
+
+ <div class='in mt2'>
+<img src='img/re_28.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b>Zusatzaufgabe 2:</b> Bestimme den Strom i(t) im eingeschwungenen Zustand, falls obiges Spannungssignal mit &Ucirc; = 9 V, T = 0,06 s, &delta; = T/6 an einem Serienschwingkreis mit R = 10 &Omega;, L = 0,15 H, C = 5 &mu;F liegt.</div>
+
+ <div class='in'><br>
+<img src='img/re_29.gif'></div>
+
+ <div class='in'><br>
+  <table class='t0' cellpadding='2'>
+   <tr>
+    <td class='tr br pb5'>
+n
+    </td>
+    <td class='tc br pb5'>
+<span class='uo'><span class='ui'>u</span></span><sub>n</sub>
+    </td>
+    <td class='tc br pb5'>
+<span class='uo'><span class='ui'>Z</span></span><sub>n</sub>
+    </td>
+    <td class='tc pb5'>
+<span class='uo p11'><span class='ui'>i</span></span><sub>n</sub> = <span class='uo'><span class='ui'>u</span></span><sub>n</sub><span class='p11'>/</span><span class='uo'><span class='ui'>Z</span></span><sub>n</sub>
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br pt5'>
+1
+    </td>
+    <td class='tl br pt5'>
+<span class='p01'>9,477</span>e<sup>jn&omega;t</sup>
+    </td>
+    <td class='tr br pt5'>
+<span class='p01'>1894,2</span>e<sup>–89,7°j</sup>
+    </td>
+    <td class='tl pt5'>
+<span class='p01'>0,0050</span>e<sup>j(n&omega;t<span class='p11'>+</span>89,7°)</sup>
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br'>
+5
+    </td>
+    <td class='tl br'>
+<span class='p01'>0,379</span>e<sup>j(n&omega;t<span class='p11'>+</span>180°)</sup>
+    </td>
+    <td class='tr br'>
+<span class='p01'>303,6</span>e<sup>–88,1°j</sup>
+    </td>
+    <td class='tl'>
+<span class='p01'>0,0012</span>e<sup>j(n&omega;t<span class='p11'>–</span>91,9°)</sup>
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br'>
+7
+    </td>
+    <td class='tl br'>
+<span class='p01'>0,193</span>e<sup>jn&omega;t</sup>
+    </td>
+    <td class='tr br'>
+<span class='p01'>163,2</span>e<sup>–86,5°j</sup>
+    </td>
+    <td class='tl'>
+<span class='p01'>0,0012</span>e<sup>j(n&omega;t<span class='p11'>+</span>86,5°)</sup>
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br'>
+11
+    </td>
+    <td class='tl br'>
+<span class='p01'>0,078</span>e<sup>j(n&omega;t<span class='p11'>+</span>180°)</sup>
+    </td>
+    <td class='tr br'>
+<span class='p01'>10,0</span>e<sup style='padding-right:7px;'>–4,8°j</sup>
+    </td>
+    <td class='tl'>
+<span class='p01'>0,0078</span>e<sup>j(n&omega;t<span class='p11'>–</span>175,2°)</sup>
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br'>
+13
+    </td>
+    <td class='tl br'>
+<span class='p01'>0,056</span>e<sup>jn&omega;t</sup>
+    </td>
+    <td class='tr br'>
+<span class='p01'>58,2</span>e<sup style='padding-right:7px;'>80,1°j</sup>
+    </td>
+    <td class='tl'>
+<span class='p01'>0,0010</span>e<sup>j(n&omega;t<span class='p11'>–</span>80,1°)</sup>
+    </td>
+   </tr>
+   <tr>
+    <td class='tr br'>
+17
+    </td>
+    <td class='tl br'>
+<span class='p01'>0,033</span>e<sup>j(n&omega;t<span class='p11'>+</span>180°)</sup>
+    </td>
+    <td class='tr br'>
+<span class='p01'>155,0</span>e<sup style='padding-right:7px;'>86,3°j</sup>
+    </td>
+    <td class='tl'>
+<span class='p01'>0,0002</span>e<sup>j(n&omega;t<span class='p11'>+</span>93,7°)</sup>
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+···
+    </td>
+    <td class='tc br'>
+···
+    </td>
+    <td class='tc br'>
+···
+    </td>
+    <td class='tc'>
+···
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in' style='clear:left;'><br>
+Wie man sieht, dominieren die Grundschwingung &omega; (= 104,7 rad/s) und die Oberschwingung 11&omega;, die nahe der Resonanzfrequenz liegt:</div>
+
+ <div class='in'><br>
+<img src='img/re_30.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> LAPLACE-TRANSFORMATION</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Definition und Bausteine</b></div>
+
+ <div><br>
+Die <b>Laplace-Transformierte</b> einer bei t = 0 einsetzenden Funktion f(t) schaut so aus:</div>
+
+ <div><br>
+<img src='img/re_31.gif'></div>
+
+ <div><br>
+F(s) gibt an, wie viel Weg eine Geschwindigkeit-Zeit-Funktion f(t) zurückgelegt, wenn sie einer exponentiellen s-Dämpfung ausgesetzt wird. Aus der Kenntnis all dieser Wegstrecken ist die Originalfunktion rekonstruierbar. Die Laplace-Transformierten der Taylor/Fourierbausteine merken wir uns:</div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b><img src='sym/llap.gif'>{t<sup>n</sup>}</b> = <div class='frac'><div class='num'><b>n!</b></div><div class='den'><b>s<sup>n+1</sup></b></div></div></div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b><img src='sym/llap.gif'>{cosbt}</b> = <div class='frac'><div class='num'><b>s</b></div><div class='den'><b>s<sup>2</sup> + b<sup>2</sup></b></div></div></div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b><img src='sym/llap.gif'>{sinbt}</b> = <div class='frac'><div class='num'><b>b</b></div><div class='den'><b>s<sup>2</sup> + b<sup>2</sup></b></div></div></div>
+
+ <div><br>
+Beweis für Potenzfunktion:</div>
+
+ <div class='in'><br>
+<img src='img/re_32.gif'></div>
+
+ <div class='in'><br>
+Für n = 1, 2, 3,... können wir den sogenannten "Multiplikationssatz" ausnützen:</div>
+
+ <div class='in'><br>
+<img src='img/re_33.gif'></div>
+
+ <div class='mt1'>
+Beweis für Kosinusfunktion:</div>
+
+ <div class='in'><br>
+<img src='img/re_34.gif'></div>
+
+ <div class='in' style='margin-top:25px;'>
+<img src='img/re_35.gif'></div>
+
+ <div class='in'><br>
+Also:</div>
+
+ <div class='in' style='margin-top:10px;'>
+<img src='img/re_36.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> Sätze zur Laplace-Transformation</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>Linearität:</b> <img src='sym/lap.gif'>{f(t)<span class='p22'>+</span>g(t)} = <img src='sym/lap.gif'>{f(t)} + <img src='sym/lap.gif'>{g(t)} &nbsp; und &nbsp; <img src='sym/lap.gif'>{<span class='p02'>k</span>f(t)} = <span class='p02'>k</span><img src='sym/lap.gif'>{f(t)}</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>Dämpfungssatz:</b> <img src='sym/lap.gif'>{f(t)e<sup class='p02'>–at</sup>} = F(s<span class='p22'>+</span>a)</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>Ableitungssatz:</b> <img src='sym/lap.gif'>{f<span class='p20'>'</span>(t)} = <span class='p02'>s</span>F(s) – f(0)</div>
+
+ <div><br>
+<img src='sym/lap.gif' style='margin-left:132px;'>{<span class='p02'>f</span>"(t)} = s<img src='sym/lap.gif'>{f<span class='p20'>'</span>(t)} – <span class='p02'>f</span>'(0) = s<sup class='p02'>2</sup>F(s) – <span class='p02'>s</span>f(0) – f<span class='p20'>'</span>(0) &nbsp; usw.</div>
+
+ <div><br>
+Beweis für Dämpfungsssatz:</div>
+
+ <div class='in mt1'>
+<img src='sym/lap.gif'>{f(t)e<sup>–at</sup>} = <img src='sym/int0i.gif' style='vertical-align:-24px;'>f(t)e<sup class='p02'>–at</sup>e<sup>–st</sup><span style='margin-left:3px;'>dt</span> = <img src='sym/int0i.gif' style='vertical-align:-24px;'>f(t)e<sup class='p02'>–(s+a)t</sup><span style='margin-left:3px;'>dt</span> = F(s<span class='p22'>+</span>a)</div>
+
+ <div><br>
+Beweis für Ableitungssatz:</div>
+
+ <div class='in mt1'>
+<img src='img/re_37.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b>
+
+<b>a)</b> <img src='sym/lap.gif'>{t<sup>2</sup> + 2t} = ? &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> <img src='sym/lap.gif'>{e<sup class='p02'>1–t</sup>} = ? &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> <img src='sym/lap.gif'>{e<sup class='p02'>–0,5t</sup>cost} = ?</div>
+
+ <div class='in'><br>
+<b>a)</b> <img src='sym/lap.gif'>{t<sup>2</sup> + 2t} = <img src='sym/lap.gif' class='p20'>{t<sup>2</sup>} + 2<img src='sym/lap.gif' class='p20'>{t<sup>1</sup>} = <div class='frac'><div class='num'>2!</div><div class='den'>s<sup>3</sup></div></div> + 2<div class='frac p40'><div class='num'>1!</div><div class='den'>s<sup>2</sup></div></div></div>
+
+ <div class='in'><br>
+<b>b)</b> <img src='sym/lap.gif'>{e<sup class='p02'>1–t</sup>} = e<img src='sym/lap.gif' class='p20'>{t<sup>0</sup>e<sup class='p02'>–t</sup>} = e<div class='frac p40'><div class='num'>0!</div><div class='den'>s + 1</div></div></div>
+
+ <div class='in'><br>
+<b>c)</b> <img src='sym/lap.gif'>{e<sup class='p02'>–0,5t</sup>cost} = <div class='frac'><div class='num'>s + 0,5</div><div class='den'>(s + 0,5)<sup>2</sup> + 1<sup>2</sup></div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-top:8px; padding-bottom:8px;'>
+<b>Aufgabe 10:</b> <img src='img/re_38.gif' style='vertical-align:-12px;'></div>
+
+ <div class='in'><br>
+<img src='img/re_39.gif'></div>
+
+ <div class='in'><br>
+Vom Integrieren her ist uns die Partialbruchzerlegung bereits geläufig:</div>
+
+ <div class='in mt2'>
+<img src='img/re_40.gif'></div>
+
+ <div class='in'><br>
+Ebenso die quadratische Ergänzung, wenn ein quadratischer Nenner nicht zerfällt:</div>
+
+ <div class='in mt2'>
+<img src='img/re_41.gif'></div>
+
+  <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.3' class='box'>3</a> Differenzialgleichungen lösen</b></div>
+
+ <div><br>
+Angewendet wird die Laplace-Transformation etwa zur Lösung linearer DG, die Polynome als Koeffizienten haben. Wir beschränken uns auf Zahlen als Koeffizienten, dann führt die Transformation auf eine Gleichung, die algebraisch gelöst (ohne Integrieren/Differenzieren) und rücktransformiert wird. Spezielle Lösungen erhalten wir unmittelbar, ohne Umweg über die allgemeine Lösung:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 11:</b> Bestimme die Lösung der DG: y'(t) – 3y(t) = 25te<sup>–2t</sup>, mit Anfangsbedingung y(0) = 0.</div>
+
+ <div class='in'><br>
+y'(t) – 3y(t) = 25te<sup>–2t</sup> &nbsp; | <img src='sym/lap.gif'>{.}</div>
+
+ <div class='in' style='margin-top:12px;'>
+sY(s) – y(0)<img src='sym/slash.gif' style='position:relative; bottom:-6px; margin-left:-24px; margin-right:5px;'> – 3Y(s) = 25<div class='frac p40'><div class='num'>1!</div><div class='den'>(s + 2)<sup>2</sup></div></div></div>
+
+ <div class='in' style='margin-top:7px;'>
+Y(s) = <div class='frac'><div class='num'>25</div><div class='den'>(s – 3)(s + 2)<sup>2</sup></div></div></div>
+
+ <div class='in'><br>
+Partialbruchzerlegung:</div>
+
+ <div class='in' style='margin-top:12px;'>
+<div class='frac'><div class='num'>25</div><div class='den'>(s – 3)(s + 2)<sup>2</sup></div></div> = <div class='frac'><div class='num'>A</div><div class='den'>s – 3</div></div> + <div class='frac'><div class='num'>B</div><div class='den'>s + 2</div></div> + <div class='frac'><div class='num'>C</div><div class='den'>(s + 2)<sup>2</sup></div></div> = <div class='frac'><div class='num'>A(s + 2)<sup>2</sup> + B(s – 3)(s + 2) + C(s – 3)</div><div class='den'>(s – 3)(s + 2)<sup>2</sup></div></div></div>
+
+ <div class='in'><br>
+s = 3: 25 = A·25 <img src='sym/rarr2.svg' class='p66'> A = 1</div>
+
+ <div class='in mt1'>
+s = –2: 25 = C·(–5) <img src='sym/rarr2.svg' class='p66'> C = –5</div>
+
+ <div class='in mt1'>
+Koeffvgl. s<sup>2</sup>: 0 = A + B <img src='sym/rarr2.svg' class='p66'> B = –1</div>
+
+ <div class='in'><br>
+Y(s) = <div class='frac'><div class='num'>1</div><div class='den'>s – 3</div></div> – <div class='frac'><div class='num'>1</div><div class='den'>s + 2</div></div> – <div class='frac'><div class='num'>5</div><div class='den'>(s + 2)<sup>2</sup></div></div> &nbsp; <span class='ll'>&thinsp;</span><img src='sym/lap.gif'><sup>–1</sup>{.}</div>
+
+ <div class='in'><br>
+y(t) = e<sup>3t</sup> – e<sup>–2t</sup> – 5te<sup>–2t</sup></div>
+
+ <div class='grau'><br>
+Bem: Wenn wir y(0) = y<sub>0</sub> unbestimmt belassen, erhalten wir die allgemeine Lösung:</div>
+
+ <div class='in grau'><br>
+y(t) = (y<sub>0</sub><span class='p22'>+</span>1)e<sup>3t</sup> – e<sup>–2t</sup> – 5te<sup>–2t</sup> &nbsp; mit y<sub>0</sub> <img src='sym/isin_g.gif'> <img src='sym/setR_g.gif'></div>
+
+  <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.4' class='box'>4</a> Anwendung: Elektrische Netzwerke</b></div>
+
+ <div style='margin-bottom:-10px;'><br>
+Den Zusammenhang zwischen Strom und Spannung an ohmschen Widerständen, Kondensatoren und Induktivitäten, die zum Zeitpunkt t<span class='p22'>=</span>0 ohne Energie sein sollen, unterziehen wir einer Laplace-Transformation:</div>
+
+ <div style='position:relative; left:14px; float:left; padding-top:11px;'><br>
+u(t) = <span class='p02'>R</span>i(t) &nbsp; <span class='ll'>&thinsp;</span><img src='sym/lap.gif'>{.}<br><br>
+U(s) = <span class='p02'>R</span>I(s)</div>
+
+ <div style='margin-left:74px; float:left;'>
+ 	<div><br>
+q(t) = <span class='p02'>C</span>u(t)<span class='ll' style='margin-left:22px;'>&thinsp;</span><div class='frac p04'><div class='num'>d</div><div class='den'>dt</div></div>(.)</div>
+  <div style='margin-top:5px;'>
+i(t) = <span class='p02'>C</span>u'(t)<span class='ll' style='margin-left:24px;'>&thinsp;</span><img src='sym/lap.gif'>{.}</div>
+  <div style='margin-top:16px;'>
+I(s) = <span class='p02'>Cs</span>U(s) &nbsp; <span class='ll'>:</span>Cs</div>
+ 	<div style='margin-top:6px;'>
+U(s) = <div class='frac p04'><div class='num'>1</div><div class='den'>Cs</div></div>I(s)</div></div>
+
+ <div style='margin-left:60px; float:left; padding-top:11px;'><br>
+u(t) = <span class='p02'>L</span>i'(t) &nbsp; <span class='ll'>&thinsp;</span><img src='sym/lap.gif'>{.}<br><br>
+U(s) = <span class='p02'>Ls</span>I(s)</div>
+
+ <div style='clear:left;'><br>
+Das ergibt in allen Fällen dieselbe Gleichung</div>
+
+ <div class='in'><br>
+U(s) = <span class='p02'>Z(s)</span>I(s),</div>
+
+ <div><br>
+wobei Z(s) wie der komplexe Widerstand ausschaut, aber mit s statt j&omega;. Dazu kommen die bekannten Regeln, wonach sich bei Serienschaltungen die Z(s) addieren und bei Parallelschaltungen ihre Kehrwerte:</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 12:</b> Bestimme i(t) für die folgende Schaltung, wenn u(t) = <span class='p01'>149</span>sin120t V und u<sub>C</sub>(0) = 0.
+
+  <div class='in'><br>
+<img src='img/re_42.gif' style='float:left; margin-right:40px;'></div>
+
+  <div style='line-height:25px; margin-top:15px; margin-bottom:10px;'>
+R<sub>1</sub> = 800 &Omega;<br>
+R<sub>2</sub> = 500 &Omega;<br>
+C = 50 &mu;F</div></div>
+
+ <div class='in'><br>
+<img src='img/re_43.gif'></div>
+
+ <div class='in'><br>
+<img src='img/re_44.gif'></div>
+
+ <div class='in mt1'>
+Partialbruchzerlegung:</div>
+
+ <div class='in' style='margin-top:12px;'>
+<div class='frac to1'><div class='num'>22,35s + 894</div><div class='den'>(s<sup>2</sup> + 120<sup>2</sup>)(s + 65)</div></div> = <div class='frac to1'><div class='num'>Es + F</div><div class='den'>s<sup>2</sup> + 120<sup>2</sup></div></div> + <div class='frac to1'><div class='num'>G</div><div class='den'>s + 65</div></div> = <div class='frac to1'><div class='num'>(Es + F)(s + 65) + G(s<sup>2</sup> + 120<sup>2</sup>)</div><div class='den'>(s<sup>2</sup> + 120<sup>2</sup>)(s + 65)</div></div></div>
+
+ <div class='in'><br>
+s = –65: –558,75 = 18625G <img src='sym/rarr2.svg' class='p66'> G = –0,03</div>
+
+ <div class='in mt1'>
+Koeffvgl. s<sup>2</sup>: 0 = E + G <img src='sym/rarr2.svg' class='p66'> E = 0,03</div>
+
+ <div class='in mt1'>
+Koeffvgl. s<sup>0</sup>: 894 = 65F + 120<sup>2</sup>G <img src='sym/rarr2.svg' class='p66'> F = 20,4</div>
+
+ <div class='in' style='margin-top:12px;'>
+I(s) = 0,03<div class='frac to1 p40'><div class='num'>s</div><div class='den'>s<sup>2</sup> + 120<sup>2</sup></div></div> + <div class='frac to1'><div class='num'>20,4</div><div class='den'>120</div></div><span class='p22'>·</span><div class='frac to1'><div class='num'>120</div><div class='den'>s<sup>2</sup> + 120<sup>2</sup></div></div> – 0,03<div class='frac to1 p40'><div class='num'>1</div><div class='den'>s + 65</div></div> &nbsp; <span class='ll'>&thinsp;</span><img src='sym/lap.gif'><sup>–1</sup>{.}</div>
+
+ <div class='in'><br>
+i(t) = 0,03cos120t + 0,17sin120t – 0,03e<sup>–65t</sup></div>
+
+ </div></body>
+ </html>

@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Mathematische Statistik</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ <style type='text/css'>
+.ws2 {
+  word-spacing:-3px;
+}
+ </style>
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>XVIII. MATHEMATISCHE STATISTIK</b></div>
+
+ <div><br>
+<a href='18_statistik.html#A'>A. Teststatistiken</a><br>
+<a href='18_statistik.html#B'>B. Parametertests</a><br>
+<a href='18_statistik.html#C'>C. Konfidenzintervalle</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='18a_statistik.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> TESTSTATISTIKEN</b></div>
+
+  <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Stichprobenmittel und -varianz</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Fasse von der unten angegebenen Zufallsvariablen X erzeugte Zahlen zu 5er-Gruppen zusammen,  überlege, wie deren Mittelwerte im Vergleich zu den Originalzahlen liegen, und skizziere demenstprechend die Glockenkurve der Mittelwerte <span class='ol'>X</span>.<br><br>
+
+<img src='img/st_00.gif' class='in'></div>
+
+<div class='in'><br>
+Offenbar streuen die Mittelwerte nach wie vor um den ursprünglichen Erwartungswert, aber nicht mehr so stark. D.h. die Flanken der Glocke sind steiler und die Haube liegt höher, da die Fläche unter Dichtefunktionen immer 1 ist:</div>
+
+ <div class='in'><br>
+<img src='img/st_01.gif'></div>
+
+ <div style='margin-top:-6px; margin-left:59px;'>
+<img src='img/st_02.gif'></div>	
+
+ <div><br>
+In der <b>mathematischen Statistik</b> geht es darum, über eine <b>Zufallsstichprobe vom Umfang n</b> auf die Verteilung eines Merkmals X in einer großen Population zu schließen. Dazu wählen wir n-mal unabhängig voneinander einen Merkmalsträger aus und rechnen die auf dieses Gesamtexperiment aufsetzenden Zufallsvariablen</div>
+
+ <div class='in'><br>
+X<sub>i</sub> = X-Wert der i-ten Ausführung</div>
+
+ <div><br>
+über diverse Formeln zu neuen Zufallsvariablen, den sogenannten <b>Teststatistiken</b> (Prüfgrößen), zusammen.</div>
+
+ <div><br>
+Das <b>Stichprobenmittel</b></div>
+
+ <div class='mt1'>
+&bull; <b><span class='ol'>X</span> :</b>= <div class='frac to1'><div class='num'><b>1</b></div><div class='den'><b>n</b></div></div> <div class='sum'><div class='eos'><b>n</b></div><img src='sym/ssum.gif' class='p44'><div class='sos'><b>i=1</b></div></div><b>X<sub>i</sub></b></div>
+
+ <div>
+ist ein Schätzer für den Erwartungswert von X, weil E(<span class='ol'>X</span>) = &mu; und Var(<span class='ol'>X</span>) = <div class='frac'><div class='num'>&sigma;<sup>2</sup></div><div class='den'>n</div></div> <img src='sym/rarr.svg' class='bo1'> 0 (für n <img src='sym/rarr.svg' class='bo1'> &infin;).</div>
+
+ <div class='mt1'>
+Beweis:</div>
+
+ <div class='in mt2'>
+E(<span class='ol'>X</span>) = E
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+<div class='frac'><div class='num'>1</div><div class='den'>n</div></div> X<sub>1</sub> + … + <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> X<sub>n</sub></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> E(X<sub>1</sub>) + … + <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> E(X<sub>n</sub>) = n <div class='frac'><div class='num'>&mu;</div><div class='den'>n</div></div> = &mu;
+ </div>
+
+ <div class='in mt2'>
+Var(<span class='ol'>X</span>) = Var
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+<div class='frac'><div class='num'>1</div><div class='den'>n</div></div> X<sub>1</sub> + … + <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> X<sub>n</sub></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= <div class='frac'><div class='num'>1</div><div class='den'>n<sup>2</sup></div></div> Var(X<sub>1</sub>) + … + <div class='frac'><div class='num'>1</div><div class='den'>n<sup>2</sup></div></div> Var(X<sub>n</sub>) = n <div class='frac'><div class='num'>&sigma;<sup>2</sup></div><div class='den'>n<sup>2</sup></div></div> = <div class='frac'><div class='num'>&sigma;<sup>2</sup></div><div class='den'>n</div></div>
+ </div>
+
+ <div style='margin-left:233px;'>
+<img src='sym/uarr_g.gif'></div>
+
+ <div class='grau' style='font-size:11px; margin-left:198px;'>
+X<sub>i</sub> unabhängig</div>
+
+ <div><br>
+Die <b>Stichprobenvarianz</b></div>
+
+ <div class='mt1'>
+&bull; <b>S<sup>2</sup> :</b>= <div class='frac to1'><div class='num'><b>1</b></div><div class='den'><b>n – 1</b></div></div> <div class='sum'><div class='eos'><b>n</b></div><img src='sym/ssum.gif' class='p44'><div class='sos'><b>i=1</b></div></div><b>(X<sub>i</sub><span class='p44'>–</span><span class='ol'>X</span>)<sup>2</sup></b></div>
+
+ <div class='mt1'>
+ist aus denselben Gründen ein Schätzer für die Varianz von X (n<span class='p44'>–</span>1 ist der "Erwartungstreue" geschuldet, da die Formel <span class='ol'>X</span> statt &mu; verwendet).</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.2' class='box'>2</a> Verteilungen dazu</b></div>
+
+<div><br>
+Streng genommen ist X eine diskrete Zufallsvariable, da jede Population endlich ist. Aber bei kontinuierlichen Merkmalen aus großen Populationen können wir X als stetig ansehen. Im Folgenden beschränken wir uns auf <b>normalverteilte X</b> und gehen von Teststatistiken aus, die auf den oben eingeführten Schätzern beruhen, aber deren Parameter herausrechnen (wodurch es weniger Verteilungen braucht):</div>
+
+ <div class='mt2'>
+<span class='p02'>•</span> <div class='frac to2'><div class='num'><b><span class='ol'>X</span> – &mu;</b></div><div class='den to1'><b>&sigma;/</b><span class='r2a'>&radic;</span><b class='rad'>n</b></div></div> = <b>N(0<span class='p02'>;</span>1) verteilt</b></div>
+
+ <div class='mt2'>
+<span class='p02'>•</span> <div class='frac'><div class='num'><b>n – 1</b></div><div class='den'><b>&sigma;<sup>2</sup></b></div></div> <b>S<sup>2</sup></b> = <b>&chi;<sup>2</sup><sub>n–1</sub> verteilt</b></div>
+
+ <div><br>
+<span class='p02'>•</span> <div class='frac to2'><div class='num'><b><span class='ol'>X</span> – &mu;</b></div><div class='den to1'><b>S/</b><span class='r2a'>&radic;</span><b class='rad'>n</b></div></div> = <b>t<sub>n–1</sub> verteilt</b></div>
+
+ <div class='mt2'>
+Wobei die <b>Chi-Quadrat-Verteilung</b> und die (studentsche) <b>t-Verteilung</b> mit n Freiheitsgraden so definiert sind:</div>
+
+ <div><br>
+Z<sub>i</sub><span class='p44'>=</span>N(0<span class='p02'>;</span>1) verteilt und unabhängig <img src='sym/rarr2.svg' class='p66'> <b>Z<sub>1</sub><sup>2</sup><span class='p22'>+</span>...<span class='p22'>+</span>Z<sub>n</sub><sup>2</sup></b> =<b>: &chi;<sup>2</sup><sub>n</sub> verteilt</b></div>
+
+ <div class='in mt2'>
+<img src='img/st_03.gif'></div>
+
+ <div><br>
+Z<span class='p44'>=</span>N(0<span class='p02'>;</span>1) verteilt, Y<span class='p44'>=</span>&chi;<sup>2</sup><sub>n</sub> verteilt und unabhängig <img src='sym/rarr2.svg' class='p66'> <div class='frac to2'><div class='num'><b>Z</b></div><div class='den to1'><span class='r2a'>&radic;</span><b class='rad'>Y/n</b></div></div> =<b>: t<sub>n</sub> verteilt</b></div>
+
+ <div class='in mt2'>
+<img src='img/st_04.gif'></div>
+
+ <div><br>
+Die <b>&alpha;-Quantile</b> dieser Verteilungen kürzen wir so ab:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+P(X &le; &alpha;) =<span class='rdf'>:</span>
+    </td>
+    <td>
+<img src='sym/lbr2.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td style='line-height:23px; padding-top:1px;'>
+z<sub>&alpha;</sub>,<span style='margin-left:24px;'>X = N(0; 1) verteilt</span><br>
+&chi;<sup>2</sup><sub>n;&alpha;</sub>, X = &chi;<sup>2</sup><sub>n</sub> verteilt<br>
+t<sub>n;&alpha;</sub>,<span style='margin-left:14px;'>X = t<sub>n</sub> verteilt</span>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> PARAMETERTESTS</b></div>
+
+ <div><br><br>
+<b><a name='B.1' class='box'>1</a> Was ist ein Parametertest?</b></div>
+
+ <div><br>
+Von einer Zufallsvariablen X kennen wir die Art der Verteilung, aber zu einem ihrer Parameter gibt es nur eine Behauptung, die <b>Nullhypothese H<sub>0</sub>.</b> Je nachdem, inwieweit eine aus Stichprobenwerten errechnete Teststatistik in dieses "Weltbild" passt, sprechen wir entweder von einer zufälligen oder <b>signifikanten Abweichung</b> vom zu erwartenden Wert. Im ersten Fall wird die Nullhypothese beibehalten, im zweiten abgelehnt.</div>
+
+ <div><br>
+Signifikanz ergibt sich zum einen aus dem <b>Signifikanzniveau &alpha;,</b> das ist der (vorgegebene) Prozentsatz der als signifikant anzusehenden Extreme, also gewissermaßen die Revolutionsbereitschaft. Zum anderen aus der <b>Alternativhypothese H<sub>1</sub>,</b> die Extreme nur in einer Richtung oder in beide Richtungen signifikant macht.</div>
+
+ <div class='in'><br>
+<b>einseitiger Test:</b> <span class='p02'>H<sub>0</sub>:</span>&mu;<span class='p22'>=</span>&mu;<sub>0</sub> gegen <span class='p02'>H<sub>1</sub>:</span>&mu;<span class='p22'>&gt;</span>&mu;<sub>0</sub>
+<b style='margin-left:20px;'>zweiseitiger Test:</b> <span class='p02'>H<sub>0</sub>:</span>&mu;<span class='p22'>=</span>&mu;<sub>0</sub> gegen  <span class='p02'>H<sub>1</sub>:</span>&mu;<span class='p22'>&ne;</span>&mu;<sub>0</sub></div>
+
+ <div class='in'><br>
+<img src='img/st_05.gif'></div>
+
+ <div><br>
+Im Hinblick auf die jeweilige Teststatistik ist der <b>p-Wert</b> einer Stichprobe das Signifikanzniveau, bei dem diese Stichprobe auf der Kippe zwischen Ablehnen/Beibehalten liegt. Der p-Wert ist also die Wahrscheinlichkeit, dass die Teststatistik (im behaupteten Weltbild) den beobachteten oder einen extremeren Wert annimmt:</div>
+
+ <div class='in'><br>
+p-Wert &ge; &alpha; <img src='sym/rarr2.svg' class='p66'> H<sub>0</sub> beibehalten, sonst ablehnen</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.2' class='box'>2</a> Hypothese zu &mu; bei bekanntem &sigma; (z-Test)</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 2:</b> Der Durchmesser eines Bauteils sei normalverteilt mit &sigma;&nbsp;=&nbsp;1,9&nbsp;mm. <b>a)</b> Bestimme unter der Annahme, dass die Nullhypothese <span class='nw'>&mu; = 35 mm</span> zutrifft, den um &mu; zentrierten 99%-Zufallsstreubereich für das Stichprobenmittel von 6er-Stichproben. <b>b)</b> Bewirkt eine 6er-Stichprobe mit Mittelwert 36,8 mm die Ablehnung/Beibehaltung der Nullhypothese (wenn auf dem 1%-Niveau getestet wird)? <b>c)</b> Wie groß ist der p-Wert der Stichprobe?</div>
+
+ <!-- Stichprobenwerte: 39,1 37,2 34,3 36,5 36,6 37,1 -->
+
+ <div class='in'><br>
+X = Durchmesser in mm = N(&mu;<span class='p02'>;</span>1,9) verteilt</div>
+
+ <div class='in'><br>
+Getestet wird H<sub>0</sub>: &mu; = 35 gegen H<sub>1</sub>: &mu; &ne; 35</div>
+
+ <div class='in mt2'>
+<b>a)</b> 0,99 = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+z<sub>0,005</sub> &le; <div class='frac to2'><div class='num'><span class='ol'>X</span> – &mu;</div><div class='den to1'>&sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &le; z<sub>0,995</sub></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+&mu;<span class='p44'>+</span>z<sub>0,005</sub> <div class='frac to2'><div class='num'>&sigma;</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &le; <span class='ol'>X</span> &le; &mu;<span class='p44'>+</span>z<sub>0,995</sub> <div class='frac to2'><div class='num'>&sigma;</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>n</span></div></div></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+ </div>
+
+ <div class='in mt2'>
+99%-ZSB für <span class='ol'>X</span> =
+  <div class='brac'>
+   <div class='lb2'>
+&nbsp;</div>
+   <div class='mid'>
+35<span class='p44'>–</span>2,576 <div class='frac to2'><div class='num'>1,9</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>6</span></div></div>; 35<span class='p44'>+</span>2,576 <div class='frac to2'><div class='num'>1,9</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>6</span></div></div></div>
+   <div class='rb2'>
+&nbsp;</div></div>
+= [33,0; 37,0]
+ </div>
+
+ <div class='in'><br>
+<b>b)</b> 36,8 <img src='sym/isin.gif'> ZSB <img src='sym/rarr2.svg' class='p66'> H<sub>0</sub> beibehalten</div>
+
+ <div class='in mt2'>
+<b>c)</b> <div class='frac to2'><div class='num'><span class='ol'>x</span> – &mu;</div><div class='den to1'>&sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> = <div class='frac to2'><div class='num'>36,8 – 35</div><div class='den to1'>1,9/<span class='r2a'>&radic;</span><span class='rad'>6</span></div></div> = 2,32</div>
+
+ <div class='in mt2'>
+p-Wert = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+–&infin; &lt; <div class='frac to2'><div class='num'><span class='ol'>X</span> – &mu;</div><div class='den to1'>&sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &lt; –2,32</div>
+   <div class='rb1'>
+&nbsp;</div></div>
++ P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+2,32 &lt; <div class='frac to2'><div class='num'><span class='ol'>X</span> – &mu;</div><div class='den to1'>&sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &lt; &infin;</div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= 2&Phi;(–2,32) = 0,02 (&gt; &alpha;)
+ </div>
+
+ <div class='mt2'>
+Exkurs: Bei <b>Qualitätsregelkarten</b> werden die Stichprobenmittel in bestimmten Zeitintervallen eingetragen. Sobald die "Eingriffsgrenzen" auf dem 1%-Niveau überschritten werden, ist die Maschine neu einzurichten. Wenn nur die "Warngrenzen" auf dem 5%-Niveau überschritten werden, wird beispielsweise das Zeitintervall verkürzt.</div>
+
+ <div class='in'><br>
+<img src='img/st_06.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='B.3' class='box'>3</a> Hypothese zu &mu; bei unbekanntem &sigma; (t-Test)</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b>  Die (normalverteilte) Reißfähigkeit von Nylonschnüren soll durch eine Änderung im Herstellungsprozess verbessert werden. Bewirkt die folgende Stichprobe (alle Werte in kg) eine Ablehnung/Beibehaltung der Nullhypothese &mu;&nbsp;&le;&nbsp;50&nbsp;kg, wenn das Signifikanzniveau &alpha; = 5% ist?
+
+  <div class='in'><br>
+48,4 &nbsp; 46,5 &nbsp; 54,7 &nbsp; 51,5 &nbsp; 49,8 &nbsp; 54,3 &nbsp; 56,7 &nbsp; 55,1 &nbsp; 54,1 &nbsp; 51,3</div></div>
+
+ <div class='in'><br>
+X = Reißfestigkeit in kg = N(&mu;<span class='p02'>;</span>&sigma;) verteilt</div>
+
+ <div class='in mt1'>
+Stichprobe <img src='sym/rarr2.svg' class='p66'> <span class='ol'>x</span> = <div class='frac to1'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>x<sub>i</sub> = 52,24 &nbsp; und &nbsp; s<sup>2</sup> = <div class='frac to1'><div class='num'>1</div><div class='den'>n – 1</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>(x<sub>i</sub><span class='p44'>–</span><span class='ol'>x</span>)<sup>2</sup> = 3,28<sup>2</sup></div>
+
+ <div class='in mt1'>
+Getestet wird H<sub>0</sub>: &mu; = 50 gegen H<sub>1</sub>: &mu; &gt; 50, d.h. nur extrem große Werte der Teststatistik</div>
+
+ <div class='in'><br>
+<div class='frac in'><div class='num'><span class='ol'>X</span> – &mu;</div><div class='den to3'>S/<span class='r1t'>&radic;</span><span class='rad'>n</span></div></div></div>
+
+ <div class='in'><br>
+sind signifikant (extrem kleine Werte wären unter H<sub>1</sub> ja noch extremer).</div>
+
+ <div class='in'><br>
+<b>Lösungsvariante 1:</b> über ZSB</div>
+
+ <div class='in mt2'>
+0,95 = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+–&infin; &lt; <div class='frac to2'><div class='num'><span class='ol'>X</span> – &mu;</div><div class='den to1'>S/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &le; t<sub>n–1;0,95</sub></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+ </div>
+
+ <div class='in mt2'>
+95%-ZSB für <div class='frac to2'><div class='num'><span class='ol'>X</span> – &mu;</div><div class='den to1'>S/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> = ]–&infin;; 1,83]</div>
+
+ <div class='in mt2'>
+<div class='frac to2'><div class='num'><span class='ol'>x</span> – &mu;</div><div class='den to1'>s/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> = <div class='frac to2'><div class='num'>52,24 – 50</div><div class='den to1'>3,28/<span class='r2a'>&radic;</span><span class='rad'>10</span></div></div> = 2,16 <img src='sym/nisin.gif' style='vertical-align:-2px;'> ZSB <img src='sym/rarr2.svg' class='p66'> H<sub>0</sub> ablehnen</div>
+
+ <div class='in mt2'>
+<b>Lösungsvariante 2:</b> über p-Wert</div>
+
+ <div class='in mt2'>
+p-Wert = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+2,16 &le; <div class='frac to2'><div class='num'><span class='ol'>X</span> – &mu;</div><div class='den to1'>S/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &lt; &infin;</div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= 1<span class='p44'>–</span>T<sub>9</sub>(2,16) = 0,03 &lt; &alpha; <img src='sym/rarr2.svg' class='p66'> H<sub>0</sub> ablehnen
+ </div>
+
+ <div><br>
+Bem: Auf den ersten Blick mag verwundern, warum man das Gegenteil von dem, was man zeigen will, zur Nullhypothese macht. Der Grund ist, dass die Ablehnung der Nullhypothese eine starke Aussage ist, weil deren Fehlerwahrscheinlichkeit gering ist – nämlich &alpha;. Dagegen ist die Beibehaltung der Nullhypothese eine schwache Aussage, solange ihre Fehlerwahrscheinlichkeit unbekannt ist.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='B.4' class='box'>4</a> Hypothese zu relativem Anteil p</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Bei einer großen Tombola wird versprochen, dass höchstens 40% der Lose Nieten sind. Jemand kauft 250 Lose, um die Behauptung auf dem 1%-Niveau zu testen. Bestimme näherungsweise über die Normalverteilung, wie viel Nieten darunter sein dürfen.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+X<span class='poi'>·</span> = Niete?
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+1 = ja (Wahrscheinlichkeit p)<br><br>
+0 = nein (Wahrscheinlichkeit q)
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+X = X<span class='poi'>·</span><sub>1</sub> + … + X<span class='poi'>·</span><sub>n</sub> (Anzahl Nieten) = n-p-binomialverteilt &asymp; N(np;<span class='p20 r1t'>&radic;</span><span class='rad'>npq</span>) verteilt</div>
+
+ <div class='in'><br>
+Getestet wird H<sub>0</sub>: p = 0,40 (&mu; = 100) gegen H<sub>1</sub>: p &gt; 0,40 (&mu; &gt; 100)</div>
+
+ <div class='in mt2'>
+0,99 = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+–&infin; &lt; <div class='frac to2'><div class='num'>X – np</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>npq</span></div></div> &le; z<sub>0,99</sub></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= P(–&infin; &lt; X &le; np<span class='p44'>+</span>z<sub>0,99</sub><span class='r2a'>&radic;</span><span class='rad'>npq</span><span class='p20'>)</span>
+ </div>
+
+ <div class='in'><br>
+99%-ZSB für X = [–&infin;; 250·0,40<span class='p44'>+</span>2,326<span class='r2a'>&radic;</span><span class='rad'>250·0,40·0,60</span><span class='p20'>]</span> = [–&infin;; 118]</div>
+
+ <!-- pbinom(117,250,0.4) = 0.988, pbinom(118,250,0.4) = 0.991 -->
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.5' class='box'>5</a> Fehler bei statistischen Tests</b></div>
+
+ <div><br>
+<span class='p02'>•</span> <b>&alpha;-Fehler</b> (Fehler 1. Art) <span class='ldf'>:</span>= fälschliche <b>A</b>blehnung der Nullhypothese</div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> <b>&beta;-Fehler</b> (Fehler 2. Art) <span class='ldf'>:</span>= fälschliche <b>B</b>eibehaltung der Nullhypothese</div>
+
+ <div><br>
+Die Wahrscheinlichkeit &alpha; für einen Fehler 1. Art ("Irrtumswahrscheinlichkeit") ist gerade das Signifikanzniveau. Die Wahrscheinlichkeit &beta; für einen Fehler 2. Art ist nur im Hinblick auf eine punktuelle Alternativhypothese bestimmbar, die Gegenwahrscheinlichkeit 1<span class='p44'>–</span>&beta; heißt <b>Power</b> des Tests.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> Die Urinproduktion pro Tag sei normalverteilt mit <span class='nw'>&mu;<sub>0</sub> = 1200 ml</span> und <span class='nw'>&sigma; = 330 ml</span> und soll durch ein neues Medikament auf &mu;<sub>1</sub> = 1450 ml erhöht werden. Wie groß muss der Stichprobenumfang sein, um die Nullhypothese, dass das Medikament keine Erhöhung bewirkt, gegen die Forschungshypothese mit <span class='nw'>&alpha; = 5%</span> und <span class='nw'>&beta; = 10%</span> zu testen.</div>
+
+ <div class='in'><br>
+Je größer der Stichprobenumfang n, umso geringer der &beta;-Fehler, weil sich der unter H<sub>0</sub> ermittelte ZSB von &mu;<sub>1</sub> wegbewegt und über diesem Bereich die unter H<sub>1</sub> gültige Wahrscheinlichkeitsdichte absackt.</div>
+
+ <div class='in mt2'>
+<img src='img/st_07.gif'></div>
+
+ <div class='in'><br>
+X = Urinpoduktion im ml = N(&mu;<span class='p02'>;</span>330) verteilt</div>
+
+ <div class='in'><br>
+<b>Schritt 1:</b> Getestet wird H<sub>0</sub>: &mu; = &mu;<sub>0</sub> gegen H<sub>1</sub>: &mu; &gt; &mu;<sub>0</sub></div>
+
+ <div class='in mt2'>
+0,95 = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+–&infin; &lt; <div class='frac to2'><div class='num'><span class='ol'>X</span> – &mu;<sub>0</sub></div><div class='den to1'>&sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &le; z<sub>0,95</sub></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= P(–&infin; &lt; <span class='ol'>X</span> &le; <span class='rot'>&mu;<sub>0</sub><span class='p44'>+</span>z<sub>0,95</sub> &sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></span><span class='p20'>)</span>
+ </div>
+
+ <div class='in mt2'>
+<b>Schritt 2:</b> Wechsel des Weltbildes zu H<sub>1</sub>: &mu; = &mu;<sub>1</sub></div>
+
+ <div class='in mt2'>
+0,10 = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+–&infin; &lt; <div class='frac to2'><div class='num'><span class='ol'>X</span> – &mu;<sub>1</sub></div><div class='den to1'>&sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &le; <div class='frac to2'><div class='num'><span class='rot'>&mu;<sub>0</sub><span class='p44'>+</span>z<sub>0,95</sub> &sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></span> – &mu;<sub>1</sub></div><div class='den to1'>&sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= &Phi;
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+<div class='frac to2'><div class='num'>&mu;<sub>0</sub> – &mu;<sub>1</sub></div><div class='den to1'>&sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> + z<sub>0,95</sub></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+– &Phi;(–&infin;) &nbsp; <span class='ll'>&Phi;<sup>–1</sup>(.)</span>
+ </div>
+
+ <div class='in mt2'>
+–1,282 =  <div class='frac to1'><div class='num'>1200 – 1450</div><div class='den'>330</div></div> <span class='r1t'>&radic;</span><span class='rad'>n</span> + 1,645 <img src='sym/rarr2.svg' class='p66'> n = 15</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> KONFIDENZINTERVALLE</b></div>
+
+ <div><br><br>
+<b><a name='C.1' class='box'>1</a> Was ist ein Konfidenzintervall?</b></div>
+
+ <div><br>
+Ein ein/zweiseitig abgegrenztes <b>(1<span class='p22'>–</span>&alpha;)-Konfidenzintervall</b> (Vertrauensbereich) wird von einer ein/zweidimensionalen Zufallsvariablen realisiert, die aus jeder Stichprobe die Grenzen eines Intervalls errechnet, das den wahren Wert des Parameters mit der Wahrscheinlichkeit 1<span class='p22'>–</span>&alpha; überdeckt. Diese Wahrscheinlichkeit heißt auch <b>Konfidenzniveau</b> (Vertrauensniveau).</div>
+
+ <div><br>
+Beachte, dass die <b>Grenzen drehen,</b> wenn wir in unseren Teststatistiken den Parameter (Subtrahend/Divisor) freistellen. Bei einseitig abgegrenzten Konfidenzintervallen lassen wir daher die Teststatisik auf der anderen Seite ins Unendliche laufen.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Konfidenzintervall für &mu; bei bekanntem &sigma; (z-Intervall)</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Die Fettgehalt einer Käsesorte ist normalverteilt mit &sigma; = 1,5%. Bestimme das einseitig nach oben abgegrenzte 95%-Konfidenzintervall für den Erwartungswert anhand der folgenden 8er-Stichprobe (alle Werte in %):
+
+  <div class='in'><br>
+13,1 &nbsp; 11,2 &nbsp; 11,5 &nbsp; 11,3 &nbsp; 11,4 &nbsp; 11,0 &nbsp; 8,4 &nbsp; 10,1</div></div>
+
+ <div class='in'><br>
+X = Fettgehalt in % = N(&mu;<span class='p02'>;</span>1,5) verteilt</div>
+
+ <div class='in mt1'>
+Stichprobe <img src='sym/rarr2.svg' class='p66'> <span class='ol'>x</span> = <div class='frac to1'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>x<sub>i</sub> = 11</div>
+
+ <div class='in mt1'>
+0,95 = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+z<sub>0,05</sub> &le; <div class='frac to2'><div class='num'><span class='ol'>X</span> – &mu;</div><div class='den to1'>&sigma;/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &lt; &infin;</div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+–&infin; &lt; &mu; &le; <span class='ol'>X</span><span class='p44'>–</span>z<sub>0,05</sub> <div class='frac to2'><div class='num'>&sigma;</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>n</span></div></div></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+ </div>
+
+ <div class='in mt2'>
+95%-KI für &mu; =
+  <div class='brac'>
+   <div class='rb2' style='margin:0px 4px 0px 0px;'>
+&nbsp;</div>
+   <div class='mid'>
+–&infin;; 11<span class='p44'>+</span>1,645 <div class='frac to2'><div class='num'>1,5</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>8</span></div></div></div>
+   <div class='rb2'>
+&nbsp;</div></div>
+= ]–&infin;; 11,9]
+ </div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.3' class='box'>3</a> Konfidenzintervall für &mu; bei unbekanntem &sigma; (t-Intervall)</b></div>
+
+ <div><br>
+In der <b>Messtechnik</b> wird als Konfidenzniveau gern die Wahrscheinlichkeit, dass X im Bereich <span class='ws4'>&mu; ± t&sigma;</span> liegt, verwendet:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<span class='ws4'>P(&mu; – t&sigma; &le; X &le; &mu; + t&sigma;)</span> =
+    </td>
+    <td>
+<img src='sym/lbr2.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td style='line-height:23px; padding-top:1px;'>
+68,3% <span class='grau'>= &Phi;(1)<span class='p44'>–</span>&Phi;(–1)</span>, t = 1<br>
+95,4% <span class='grau'>= &Phi;(2)<span class='p44'>–</span>&Phi;(–2)</span>, t = 2<br>
+99,7% <span class='grau'>= &Phi;(3)<span class='p44'>–</span>&Phi;(–3)</span>, t = 3
+    </td>
+   </tr>
+  </table></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 7:</b> Die Zeitmessung bei einem unter gleichen Bedingungen wiederholten physikalischen Experiment streue normalverteilt um den wahren Wert. Bestimme das 68,3%-Konfidenzintervall für den wahren Wert anhand der folgenden 5 Messergebnisse (alle Werte in ms):
+
+  <div class='in'><br>
+239 &nbsp; 242 &nbsp; 255 &nbsp; 249 &nbsp; 250</div></div>
+
+ <div class='in mt1'><br>
+X = gemessene Zeit in ms = N(&mu;<span class='p02'>;</span>&sigma;) verteilt</div>
+
+ <div class='in mt2'>
+Stichprobe <img src='sym/rarr2.svg' class='p66'> <span class='ol'>x</span> = <div class='frac to1'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>x<sub>i</sub> = 247 &nbsp; und &nbsp; s<sup>2</sup> = <div class='frac to1'><div class='num'>1</div><div class='den'>n – 1</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>(x<sub>i</sub><span class='p44'>–</span><span class='ol'>x</span>)<sup>2</sup> = 6,44<sup>2</sup>
+</div>
+
+ <div class='in mt1'>
+0,683 = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+t<sub>n–1;0,159</sub> &le; <div class='frac to2'><div class='num'><span class='ol'>X</span> – &mu;</div><div class='den to1'>S/<span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &le; t<sub>n–1;0,841</sub></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+<span class='ol'>X</span><span class='p44'>–</span>t<sub>n–1;0,841</sub> <div class='frac to2'><div class='num'>S</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>n</span></div></div> &le; &mu; &le; <span class='ol'>X</span><span class='p44'>–</span>t<sub>n–1;0,159</sub> <div class='frac to2'><div class='num'>S</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>n</span></div></div></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+ </div>
+
+ <div class='in mt2'>
+68,3%-KI für &mu; =
+  <div class='brac'>
+   <div class='lb2'>
+&nbsp;</div>
+   <div class='mid'>
+247<span class='p44'>–</span>1,140 <div class='frac to2'><div class='num'>6,44</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>5</span></div></div>; 247<span class='p44'>+</span>1,140 <div class='frac to2'><div class='num'>6,44</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>5</span></div></div></div>
+   <div class='rb2'>
+&nbsp;</div></div>
+= [243,7; 250,3]
+ </div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='C.4' class='box'>4</a> Konfidenzintervall für &sigma;<sup>2</sup> bei unbekanntem &mu;</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Der Wert von Metalloxidwiderständen, die zu einer Produktionsserie gehören, sei normalverteilt. Bestimme das 99%-Konfidenzintervall für die Varianz anhand der folgenden 10er-Stichprobe (alle Werte in &Omega;):
+
+ <div class='in'><br>
+978 &nbsp; 966 &nbsp; 976 &nbsp; 952 &nbsp; 915 &nbsp; 1002 &nbsp; 994 &nbsp; 1028 &nbsp; 1102 &nbsp; 1040</div></div>
+
+ <div class='in'><br>
+X = Widerstand in &Omega; = N(&mu;<span class='p02'>;</span>&sigma;) verteilt</div>
+
+ <div class='in mt1'>
+Stichprobe <img src='sym/rarr2.svg' class='p66'> <span class='ol'>x</span> = <div class='frac to1'><div class='num'>1</div><div class='den'>n</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>x<sub>i</sub> = 995,3 &nbsp; und &nbsp; s<sup>2</sup> = <div class='frac to1'><div class='num'>1</div><div class='den'>n – 1</div></div> <div class='sum'><div class='eos'>n</div><img src='sym/sum.gif' class='p44'><div class='sos'>i=1</div></div>(x<sub>i</sub><span class='p44'>–</span><span class='ol'>x</span>)<sup>2</sup> = 52<sup>2</sup>
+</div>
+
+ <div class='in mt1'>
+0,99 = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+&chi;<sup>2</sup><sub>n–1;0,005</sub> &le; <div class='frac to2'><div class='num'>n – 1</div><div class='den to1'>&sigma;<sup>2</sup></div></div> S<sup>2</sup> &le; &chi;<sup>2</sup><sub>n–1;0,995</sub></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+<div class='frac to2'><div class='num'>n – 1</div><div class='den to1'>&chi;<sup>2</sup><sub>n–1;0,995</sub></div></div> S<sup>2</sup> &le; &sigma;<sup>2</sup> &le; <div class='frac to2'><div class='num'>n – 1</div><div class='den to1'>&chi;<sup>2</sup><sub>n–1;0,005</sub></div></div> S<sup>2</sup></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+ </div>
+
+ <div class='in mt2'>
+99%-KI für &sigma;<sup>2</sup> =
+  <div class='brac'>
+   <div class='lb2' style='line-height:40px;'>
+&nbsp;</div>
+   <div class='mid'>
+<div class='frac to2'><div class='num'>9</div><div class='den'>23,59</div></div> 52<sup>2</sup>; <div class='frac to2'><div class='num'>9</div><div class='den'>1,735</div></div> 52<sup>2</sup></div>
+   <div class='rb2' style='line-height:40px;'>
+&nbsp;</div></div>
+= [32,1<sup>2</sup>; 118,4<sup>2</sup>]
+ </div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='C.5' class='box'>5</a> Konfidenzintervall für relativen Anteil p</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 9:</b> Bei einer Umfrage sprechen sich 162 von 600 zufällig ausgewählten Personen für eine bestimmte Partei aus. Bestimme näherungsweise über die Normalverteilung das 90%-Konfidenzintervall für den Stimmenanteil, den die Partei bei einer Wahl erzielen würde.</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+X<span class='poi'>·</span> = Parteiwähler?
+    </td>
+    <td>
+<img src='sym/2arr1.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+1 = ja (Wahrscheinlichkeit p)<br><br>
+0 = nein (Wahrscheinlichkeit q)
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+X = X<span class='poi'>·</span><sub>1</sub> + … + X<span class='poi'>·</span><sub>n</sub> (Anzahl Parteiwähler) = n-p-binomialverteilt &asymp; N(np;<span class='p20 r1t'>&radic;</span><span class='rad'>npq</span>) verteilt</div>
+
+ <div class='in mt2'>
+0,90 = P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+z<sub>0,05</sub> &le; <div class='frac to2'><div class='num'>X – np</div><div class='den to1'><span class='r2a'>&radic;</span><span class='rad'>npq</span></div></div> &le; z<sub>0,95</sub></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+= P
+  <div class='brac'>
+   <div class='lb1'>
+&nbsp;</div>
+   <div class='mid'>
+<div class='frac to1'><div class='num'>X</div><div class='den'>n</div></div><span class='p44'>–</span><div class='frac to1'><div class='num'>z<sub>0,95</sub></div><div class='den'>n</div></div> <span class='r2a'>&radic;</span><span class='rad'>npq</span> &le; p &le; <div class='frac to1'><div class='num'>X</div><div class='den'>n</div></div><span class='p44'>–</span><div class='frac to1'><div class='num'>z<sub>0,05</sub></div><div class='den'>n</div></div> <span class='r2a'>&radic;</span><span class='rad'>npq</span></div>
+   <div class='rb1'>
+&nbsp;</div></div>
+ </div>
+
+ <div class='in'><br>
+Statt p tatsächlich freizustellen (was aufwendig ist), schätzen wir p unter der Wurzel als X/n ab:</div>
+
+ <div class='in mt2'>
+90%-KI für p =
+  <div class='brac'>
+   <div class='lb2' style='line-height:38px;'>
+&nbsp;</div>
+   <div class='mid'>
+0,27<span class='p44'>–</span><div class='frac to1'><div class='num'>1,645</div><div class='den'>600</div></div> <span class='r2a'>&radic;</span><span class='rad'>600·0,27·0,73</span>; 0,27<span class='p44'>+</span><div class='frac to1'><div class='num'>1,645</div><div class='den'>600</div></div> <span class='r2a'>&radic;</span><span class='rad'>600·0,27·0,73</span></div>
+   <div class='rb2' style='line-height:38px;'>
+&nbsp;</div></div>
+= [0,24; 0,30]
+ </div>
+
+ </div></body>
+ </html>

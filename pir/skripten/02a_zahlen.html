@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Zahlmengen und -operatoren</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ <style type='text/css'>
+.min {
+	font-size:10px;
+	margin-top:5px;
+	margin-bottom:-10px;
+}
+.box {
+	border: solid 1px;
+	padding: 0px 2px;
+}
+ </style>
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>Anhang zu: ZAHLENLEHRE</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>AXIOMATISIERUNG DER NATÜRLICHEN ZAHLEN?</b></div>
+
+ <div><br>
+Im Skriptum haben wir die natürlichen Zahlen als Positionen auf der Zahlengeraden eingeführt. Das bringt Details ins Spiel, die nichts mit dem Wesen der natürlichen Zahlen zu tun haben. Das wird besser von einer abstrakten Definition wie den <b>Axiomen von Peano</b> eingefangen:</div>
+
+ <div style='margin-top:5px; line-height:27px;'>
+ 	<table cellpadding='0' cellspacing='0'>
+ 	 <tr>
+ 	 	<td>
+(1) Eins ist eine natürliche Zahl.<br>
+(2) Jede natürliche Zahl hat genau eine solche als Nachfolger.<br>
+(3) Es gibt keine natürliche Zahl, deren Nachfolger Eins ist.<br>
+(4) Natürliche Zahlen mit gleichem Nachfolger sind gleich.
+    </td>
+    <td>
+<img src='img/za_a00.gif' style='margin-top:10px; margin-left:40px;'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div style='margin-top:5px;'>
+(5) Enthält eine Menge die Eins und mit jeder natürlichen Zahl auch deren Nachfolger, dann enthält sie <i>alle</i> natürlichen Zahlen (Induktionsaxiom).</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>DEFINITION DER ADDITION?</b></div>
+
+ <div><br>
+Zu jedem x <img src='sym/isin.gif'> <img src='sym/setN.gif'> gibt es genau eine Funktion add<sub>x</sub>: <img src='sym/setN.gif'> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setN.gif'>, sodass</div>
+
+ <div class='in mt1'>
+E<sub>1</sub>: add<sub>x</sub>(1) = x + 1 <span class='grau'>(angehängtes "<span class='p02'>+</span>1" soll den Nachfolger bezeichnen)</span></div>
+
+ <div class='in mt1'>
+E<sub>2</sub>: add<sub>x</sub>(y<span class='p44'>+</span>1) = add<sub>x</sub>(y) + 1 &nbsp; für alle y <img src='sym/isin.gif'> <img src='sym/setN.gif'></div>
+
+ <div><br>
+Beweis:</div>
+
+ <div class='in'><br>
+<b>a) Existenz:</b></div>
+
+ <div class='in'><br>
+Induktionsanfang: add<sub>1</sub>(y) <span class='ldf'>:</span>= y + 1
+
+ <div class='in'><br>
+E<sub>1</sub>: add<sub>1</sub>(1) = 1 + 1 <img src='sym/ok.svg' class='to3'></div>
+
+ <div class='in'><br>
+E<sub>2</sub>: add<sub>1</sub>(y<span class='p44'>+</span>1) = (y<span class='p44'>+</span>1) + 1 = add<sub>1</sub>(y) + 1 <img src='sym/ok.svg' class='to4'></div></div>
+
+ <div class='in'><br>
+Induktionsschritt: Wenn es ein add<sub>x</sub> mit E<sub>1,2</sub> gibt, sei add<sub>x+1</sub>(y) <span class='ldf'>:</span>= add<sub>x</sub>(y) + 1
+
+ <div class='in'><br>
+E<sub>1</sub>: add<sub>x+1</sub>(1) = add<sub>x</sub>(1) + 1 = (x + 1) + 1 <img src='sym/ok.svg' class='to4'></div>
+
+ <div class='in'><br>
+E<sub>2</sub>: add<sub>x+1</sub>(y<span class='p44'>+</span>1) = add<sub>x</sub>(y<span class='p44'>+</span>1) + 1 = (add<sub>x</sub>(y) + 1) + 1 = add<sub>x+1</sub>(y) + 1 <img src='sym/ok.svg' class='to4'></div></div>
+
+ <div class='in'><br>
+Induktionsschluss: M = { x <img src='sym/isin.gif'> <img src='sym/setN.gif'> | es gibt ein add<sub>x</sub> mit E<sub>1,2</sub> } enthält 1 und mit jedem x auch x<span class='p44'>+</span>1, daher ist M = <img src='sym/setN.gif'>.</div>
+
+ <div class='in'><br>
+<b>b) Eindeutigkeit:</b></div>
+
+ <div class='in'><br>
+Für jede Funktion f<sub>x</sub> mit den Eigenschaften E<sub>1,2</sub> gilt:</div>
+
+ <div class='in'><br>
+Induktionsanfang: f<sub>x</sub>(1) = x + 1 = add<sub>x</sub>(1)</div>
+
+ <div class='in'><br>
+Induktionsschritt: f<sub>x</sub>(y) = add<sub>x</sub>(y) <img src='sym/rarr2.svg' class='p66'> f<sub>x</sub>(y<span class='p44'>+</span>1) = f<sub>x</sub>(y) + 1 = add<sub>x</sub>(y) + 1 = add<sub>x</sub>(y<span class='p44'>+</span>1)</div>
+
+ <div class='in'><br>
+Induktionsschluss: M<sub>x</sub> = { y <img src='sym/isin.gif'> <img src='sym/setN.gif'> | f<sub>x</sub>(y) = add<sub>x</sub>(y) } enthält 1 und mit jedem y auch y<span class='p44'>+</span>1, daher ist M<sub>x</sub> = <img src='sym/setN.gif'>.</div>
+
+
+ <div><br>
+Die für den Nachfolger von x eingeführte Schreibweise dehnen wir mit</div>
+
+ <div class='in'><br>
+x + y <span class='ldf'>:</span>= add<sub>x</sub>(y)</div>
+
+ <div><br>
+auf alle y aus, sodass sich E<sub>2</sub> so liest:</div>
+
+ <div class='in'><br>
+x + (y<span class='p44'>+</span>1) = (x<span class='p44'>+</span>y) + 1 &nbsp; für alle x, y <img src='sym/isin.gif'> <img src='sym/setN.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BEWEIS: ADDITION IST ASSOZIATIV</b></div>
+
+ <div class='in'><br>
+Für feste x, y <img src='sym/isin.gif'> <img src='sym/setN.gif'> gilt:</div>
+
+ <div class='in'><br>
+Induktionsanfang: (x<span class='p44'>+</span>y) + 1 = x + (y<span class='p44'>+</span>1)</div>
+
+ <div class='in'><br>
+Induktionsschritt: <span class='ws4'>(x + y) + z</span> = <span class='ws4'>x + (y + z)</span> <img src='sym/rarr2.svg' class='p66'> <span class='ws4'>[x + y] + (z + 1)</span> = <span class='ws4'>[(x + y) + z] + 1</span> = <span class='ws4'>[x + (y + z)] + 1</span> = <span class='ws4'>x + [(y + z) + 1]</span> = <span class='ws4'>x + [y + (z + 1)]</span></div>
+
+ <div class='in'><br>
+Induktionsschluss: M<sub>xy</sub> = { z <img src='sym/isin.gif'> <img src='sym/setN.gif'> | (x<span class='p44'>+</span>y) + z = x + (y<span class='p44'>+</span>z) } enthält 1 und mit jedem z auch z<span class='p44'>+</span>1, daher ist M<sub>xy</sub> = <img src='sym/setN.gif'>.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BEWEIS: ADDITION IST KOMMUTATIV</b></div>
+
+ <div class='in'><br>
+Für festes y <img src='sym/isin.gif'> <img src='sym/setN.gif'> gilt:</div>
+
+ <div class='in'><br>
+Induktionsanfang: 1 + y = add<sub>1</sub>(y) = y + 1</div>
+
+ <div class='in'><br>
+Induktionsschritt: x + y = y + x <img src='sym/rarr2.svg' class='p66'> (x<span class='p44'>+</span>1) + y = add<sub>x+1</sub>(y) = add<sub>x</sub>(y) + 1 = (x<span class='p44'>+</span>y) + 1 = (y<span class='p44'>+</span>x) + 1 = y + (x<span class='p44'>+</span>1)</div>
+
+ <div class='in'><br>
+Induktionsschluss: M<sub>y</sub> = { x <img src='sym/isin.gif'> <img src='sym/setN.gif'> | x + y = y + x } enthält 1 und mit jedem x auch x<span class='p44'>+</span>1, daher ist M<sub>y</sub> = <img src='sym/setN.gif'>.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>1-BIT-VOLLADDIERER ALS LOGIKGATTER?</b></div>
+
+ <div class='mt2'>
+Mit den Schaltsymbolen laut IEC 60617-12: <span class='box'>&amp;</span> = UND, <span class='box'>&ge;1</span> = ODER, <span class='box'>=1</span> = XOR</div>
+
+ <div class='in'><br>
+1-Bit-Halbaddierer:
+<span style='margin-left:68px;'>1-Bit-Volladdierer:</span></div>
+
+ <div class='in'><br>
+<img src='img/za_a01.gif'></div>
+
+ <div><br>
+Dass der 1-Bit-Volladdierer seinem Namen gerecht wird, zeigt die Wahrheitstafel:</div>
+
+ <div class='in'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br bb' style='padding-bottom:4px;'>
+x
+    </td>
+    <td class='tc br bb' style='padding-bottom:4px;'>
+y
+    </td>
+    <td class='tc br bb' style='padding-bottom:4px;'>
+c<sub>in</sub>
+    </td>
+    <td class='tc br bb' style='padding-bottom:4px;'>
+<div style='margin-bottom:3px;'>c<sub>out</sub> = &Sigma; div 2 =</div>
+<span class='ws4'>(x &and; y) &or; [<span class='p22'>(x <img src='sym/oplus.gif'> y) &and; c<sub>in</sub></span>]</span>
+    </td>
+    <td class='tc bb' style='padding-bottom:4px;'>
+<div style='margin-bottom:3px;'>sum = &Sigma; mod 2 =</div>
+<span class='ws4'>(x <img src='sym/oplus.gif'> y) <img src='sym/oplus.gif'> c<sub>in</sub></span>
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+0
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+0
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc br'>
+1
+    </td>
+    <td class='tc'>
+1
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>GRAFISCHE SUBTRAKTION UND divISION?</b></div>
+
+ <div class='in'><br>
+<img src='img/za_a02.gif'></div>
+
+ <div class='in mt1'><br>
+<img src='img/za_a03.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>ERZWUNGENE DEFINITIONEN?</b></div>
+
+ <div><br>
+Wenn wir bei der Erfindung neuer Zahlen eine abstrakte Vorgehensweise wählen und bei der Ausdehnung der Operatordefinitionen verlangen, dass die Operatoreigenschaften erhalten bleiben sollen, gibt es keinen Spielraum mehr. Am Beispiel der Vorzeichenregel:</div>
+
+ <div style='float:left;'>
+  <div class='in'><br>
+<b>a)</b> 0a =</div>
+
+  <div class='min grau'>
+0 bei ADD neutral</div>
+
+  <div class='in'><br>
+0a + 0 =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+0a + [a + (–a)] =</div>
+
+  <div class='min grau'>
+Assoziativgesetz</div>
+
+  <div class='in'><br>
+[0a + a] + (–a) =</div>
+
+  <div class='min grau'>
+1 bei MUL neutral</div>
+
+  <div class='in'><br>
+[0a + 1a] + (–a) =</div>
+
+  <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+  <div class='in'><br>
+(0 + 1)a + (–a) =</div>
+
+  <div class='min grau'>
+0 bei ADD neutral</div>
+
+  <div class='in'><br>
+1a + (–a) =</div>
+
+  <div class='min grau'>
+1 bei MUL neutral</div>
+
+  <div class='in'><br>
+a + (–a) =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+0</div></div>
+
+ <div style='float:left; margin-left:45px;'>
+  <div class='in'><br>
+<b>b)</b> (–a)b =</div>
+
+  <div class='min grau'>
+0 bei ADD neutral</div>
+
+  <div class='in'><br>
+(–a)b + 0 =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+(–a)b + [ab + (–ab)] =</div>
+
+  <div class='min grau'>
+Assoziativgesetz</div>
+
+  <div class='in'><br>
+[(–a)b + ab] + (–ab) =</div>
+
+  <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+  <div class='in'><br>
+[(–a) + a]b + (–ab) =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+0b + (–ab) =</div>
+
+  <div class='min grau'>
+siehe a)</div>
+
+  <div class='in'><br>
+0 + (–ab) =</div>
+
+  <div class='min grau'>
+0 bei ADD neutral</div>
+
+  <div class='in'><br>
+–ab</div></div>
+
+ <div style='float:left; margin-left:45px;'>
+  <div class='in'><br>
+<b>c)</b> (–a)(–b) =</div>
+
+  <div class='min grau'>
+0 bei ADD neutral</div>
+
+  <div class='in'><br>
+(–a)(–b) + 0 =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+(–a)(–b) + [(–ab) + ab] =</div>
+
+  <div class='min grau'>
+Assoziativgesetz</div>
+
+  <div class='in'><br>
+[(–a)(–b) + (–ab)] + ab =</div>
+
+  <div class='min grau'>
+siehe b)</div>
+
+  <div class='in'><br>
+[(–a)(–b) + (–a)b] + ab =</div>
+
+  <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+  <div class='in'><br>
+(–a)[(–b) + b] + ab =</div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+(–a)0 + ab =</div>
+
+  <div class='min grau'>
+siehe a)</div>
+
+  <div class='in'><br>
+0 + ab =</div>
+
+  <div class='min grau'>
+0 bei ADD neutral</div>
+
+  <div class='in'><br>
+ab</div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ --> <div style='clear:left;'></div>
+
+ <div><br>
+Und Bruchrechenregeln:</div>
+
+ <div style='float:left;'>
+  <div class='in'><br>
+<b>a)</b> <div class='frac'><div class='num'>a</div><div class='den'>b</div></div> + <div class='frac'><div class='num'>c</div><div class='den'>d</div></div> =</div>
+
+  <div class='min grau'>
+erweitern</div>
+
+  <div class='in'><br>
+<div class='frac'><div class='num'>ad</div><div class='den'>bd</div></div> + <div class='frac'><div class='num'>bc</div><div class='den'>bd</div></div> =</div>
+
+  <div class='min grau'>
+Division als Multiplikation</div>
+
+  <div class='in'><br>
+ad<div class='frac p40'><div class='num'>1</div><div class='den'>bd</div></div> + bc<div class='frac p40'><div class='num'>1</div><div class='den'>bd</div></div> =</div>
+
+  <div class='min grau'>
+Distributivgesetz (herausheben)</div>
+
+  <div class='in'><br>
+(ad + bc)<div class='frac p40'><div class='num'>1</div><div class='den'>bd</div></div> =</div>
+
+  <div class='min grau'>
+Multiplikation als Division</div>
+
+  <div class='in'><br>
+<div class='frac'><div class='num'>ad + bc</div><div class='den'>bd</div></div></div>
+ </div>
+
+ <div style='float:left; margin-left:45px;'>
+  <div class='in'><br>
+<b>b)</b> <div class='frac'><div class='num'>1</div><div class='den'>a</div></div><span class='p22'>·</span><div class='frac'><div class='num'>1</div><div class='den'>b</div></div> =</div>
+
+  <div class='min grau'>
+erweitern</div>
+
+  <div class='in'><br>
+<div class='frac'><div class='num'>1</div><div class='den'>a</div></div><span class='p22'>·</span><div class='frac'><div class='num'>a</div><div class='den'>ab</div></div> =</div>
+
+  <div class='min grau'>
+Division als Multiplikation</div>
+
+  <div class='in' style='margin-top:18px; margin-bottom:-3px;'>
+<img src='img/za_a04.gif'></div>
+
+  <div class='min grau'>
+Assoziativgesetz</div>
+
+  <div class='in' style='margin-top:19px; margin-bottom:-3px;'>
+<img src='img/za_a05.gif'></div>
+
+  <div class='min grau'>
+Inverse Elemente</div>
+
+  <div class='in'><br>
+1<div class='frac p40'><div class='num'>1</div><div class='den'>ab</div></div> =</div>
+
+  <div class='min grau'>
+1 bei MUL neutral</div>
+
+  <div class='in'><br>
+<div class='frac'><div class='num'>1</div><div class='den'>ab</div></div></div>
+ </div>
+
+ <div style='float:left; margin-left:45px;'>
+  <div class='in'><br>
+<b>c)</b> <div class='frac'><div class='num'>a</div><div class='den'>b</div></div><span class='p22'>·</span><div class='frac'><div class='num'>c</div><div class='den'>d</div></div> =</div>
+
+  <div class='min grau'>
+Division als Multiplikation</div>
+
+  <div class='in' style='margin-top:17px; margin-bottom:-3px;'>
+<img src='img/za_a06.gif'></div>
+
+  <div class='min grau'>
+"Kompass"-Regel</div>
+
+  <div class='in' style='margin-top:19px; margin-bottom:-3px;'>
+<img src='img/za_a07.gif'></div>
+
+  <div class='min grau'>
+siehe b)</div>
+
+  <div class='in'><br>
+ac<div class='frac p40'><div class='num'>1</div><div class='den'>bd</div></div> =</div>
+
+  <div class='min grau'>
+Multiplikation als Division</div>
+
+  <div class='in'><br>
+<div class='frac'><div class='num'>ac</div><div class='den'>bd</div></div></div>
+ </div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ --> <div style='clear:left;'></div>
+
+ <div><br>
+Auch die erweiterte Potenzdefinition wird dadurch erzwungen, dass die (Potenz)Rechenregeln erhalten bleiben sollen:</div>
+
+ <div class='in'><br>
+<b>a)</b> x<sup>n</sup><span class='p20'>x</span><sup>0</sup> = x<sup>n<span class='p11'>+</span>0</sup> = x<sup>n</sup> |:x<sup>n</sup> <img src='sym/rarr2.svg' class='p66'> x<sup>0</sup> = 1</div>
+
+ <div class='in'><br>
+<b>b)</b> x<sup>n</sup><span class='p20'>x</span><sup>–n</sup> = x<sup>n<span class='p11'>–</span>n</sup> = x<sup>0</sup> = 1 |:x<sup>n</sup> <img src='sym/rarr2.svg' class='p66'> x<sup>–n</sup> = <div class='frac'><div class='num'>1</div><div class='den'>x<sup>n</sup></div></div></div>
+
+ <div class='in mt1'>
+<b>c)</b> <img src='img/za_a08.gif' style='vertical-align:-3px;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BEWEIS: EUKLIDISCHER ALGORITHMUS</b></div>
+
+ <div><br>
+Beginnend mit a<sub>1</sub><span class='p02'>,</span>a<sub>2</sub> <img src='sym/isin.gif'> <img src='sym/setN.gif'>* führen wir fortlaufend Modulo-Divisionen aus, indem wir den vorigen Divisor durch den vorigen Rest dividieren. Sobald der Rest 0 wird, haben wir mit dem letzten Divisor das ggT(a<sub>1</sub><span class='p02'>,</span>a<sub>2</sub>) gefunden.</div>
+
+ <div><br>
+Beweis (im Folgenden steht ? für wechselnde ganze Zahlen):</div>
+
+ <div class='in' style='margin-bottom:14px;'><br>
+1) Wir schreiben die fortlaufenden Divisionen untereinander und ersetzen von unten nach oben:</div>
+
+ <div class='in' style='float:left; line-height:20px;'>
+a<sub>1</sub> = <span class='p01'>?</span>a<sub>2</sub> + <span class='grau'>(0 &lt;)</span> a<sub>3</sub> <span class='grau'>(&lt; a<sub>2</sub>)</span><br>
+a<sub>2</sub> = <span class='p01'>?</span>a<sub>3</sub> + <span class='grau'>(0 &lt;)</span> a<sub>4</sub> <span class='grau'>(&lt; a<sub>3</sub>)</span><br>
+a<sub>3</sub> =  <span class='p01'>?</span>a<sub>4</sub> + <span class='grau'>(0 &lt;)</span> a<sub>5</sub> <span class='grau'>(&lt; a<sub>4</sub>)</span><br>
+···<br>
+a<sub>n–2</sub> =  <span class='p01'>?</span>a<sub>n–1</sub> + <span class='grau'>(0 &lt;)</span> a<sub>n</sub> <span class='grau'>(&lt; a<sub>n–1</sub>)</span><br>
+a<sub>n–1</sub> = <span class='p01'>?</span>a<sub>n</sub> + 0
+ </div>
+ <svg width=14 height=120 style='float:left; margin: 0px 10px;'>
+<marker id="pfeil"
+	refX="1" refY="4"
+	markerUnits="strokeWidth"
+	markerWidth="6" markerHeight="8"
+	orient="auto">
+	<path d="M 0,0 l 6,4 l -6,4 M 1,4 l 5,0" style="stroke:black; fill:none;"/>
+</marker>
+<path d="M 4,53 A 20 25 0 0 0 4,12  M 4,32 A 30 20 0 0 0 4,12" marker-end="url(#pfeil)" style="stroke:black; fill:none;"/>
+<path d="M 6,118 A 30 20 0 0 0 6,98" marker-end="url(#pfeil)" style="stroke:black; fill:none;"/>
+ </svg>
+ <div style='margin-top:35px;'>
+a<sub>1</sub> = <span class='p01'>?</span>a<sub>n</sub> &nbsp;und&nbsp; a<sub>2</sub> = <span class='p01'>?</span>a<sub>n</sub>
+ </div>
+ <div style='margin-top:56px;'>
+a<sub>n–2</sub> = <span class='p01'>?</span>a<sub>n</sub>
+ </div>
+ <div style='clear:left;'>
+ </div>
+
+ <div class='in' style='margin-bottom:14px;'><br>
+2) Wir stellen in obigen Divisionen den Rest frei und ersetzen von oben nach unten:</div>
+
+ <div class='in' style='float:left; line-height:20px;'>
+a<sub>3</sub> = a<sub>1</sub> + <span class='p01'>?</span>a<sub>2</sub><br>
+a<sub>4</sub> = a<sub>2</sub> + <span class='p01'>?</span>a<sub>3</sub><br>
+a<sub>5</sub> = a<sub>3</sub> + <span class='p01'>?</span>a<sub>4</sub><br>
+···<br>
+a<sub>n</sub> = a<sub>n–2</sub> + <span class='p01'>?</span>a<sub>n–1</sub>
+ </div>
+ <svg width=14 height=100 style='float:left; margin: 0px 10px;'>
+<path d="M 6,10 A 30 20 0 0 1 6,30" marker-end="url(#pfeil)" style="stroke:black; fill:none;"/>
+<path d="M 4,51 A 20 25 0 0 1 4,92  M 4,72 A 30 20 0 0 1 4,92" marker-end="url(#pfeil)" style="stroke:black; fill:none;"/>
+ </svg>
+ <div style='margin-top:29px;'>
+a<sub>4</sub> = <span class='p01'>?</span>a<sub>1</sub> + <span class='p01'>?</span>a<sub>2</sub>
+ </div>
+ <div style='margin-top:33px;'>
+a<sub>n</sub> = <span class='p01'>?</span>a<sub>1</sub> + <span class='p01'>?</span>a<sub>2</sub>
+ </div>
+ <div style='clear:left;'>
+ </div>
+
+ <div class='in'><br>
+1) sagt, dass a<sub>n</sub> gemeinsamer Teiler von a<sub>1</sub> und a<sub>2</sub> ist, und aus 2) folgt, dass jeder gemeinsame Teiler von a<sub>1</sub> und a<sub>2</sub> auch Teiler von a<sub>n</sub> ist.</div>
+
+ <div><br>
+Beispiel:  ggT(540<span class='p02'>,</span>200) = ?</div>
+
+ <div class='in' style='line-height:22px; margin-top:12px;'>
+540 mod 200 = 140<br>
+200 mod 140 = 60<br>
+140 mod 60 = 20<br>
+60 mod 20 = 0 <img src='sym/rarr2.svg' class='p66'> ggT = 20</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BEWEIS: EINDEUTIGKEIT DER PRIMFAKTORZERLEGUNG</b></div>
+
+ <div><br>
+Aus 2) folgt weiters, dass jede Primzahl p, die das Produkt von a<span class='p02'>,</span>b <img src='sym/isin.gif'> <img src='sym/setN.gif'>* teilt, bereits a oder b teilt:</div>
+
+ <div class='in'><br>
+Wenn p kein Teiler von a, ist ggT(a<span class='p02'>,</span>p) = 1 = <span class='p01'>?</span>a + <span class='p01'>?</span>p |·b <img src='sym/rarr2.svg' class='p66'> b = <span class='p01'>?</span>ab + <span class='p01'>?</span>p = <span class='p01'>?</span>p</div>
+
+ <div><br>
+Daher muss jede Primzahl p, die das Produkt der Primzahlen p<sub>1</sub><span class='p02'>,</span>... p<sub>k</sub> teilt, mit einem der Faktoren übereinstimmen:</div>
+
+ <div class='in'><br>
+Wenn p &ne; p<sub>1</sub> <img src='sym/rarr2.svg' class='p66'> p Teiler von p<sub>2</sub><span class='p22'>...</span>p<sub>k</sub> und wenn p &ne; p<sub>2</sub> <img src='sym/rarr2.svg' class='p66'> p Teiler von p<sub>3</sub><span class='p22'>...</span>p<sub>k</sub> usw.</div>
+
+ <div><br>
+Hätte eine Zahl zwei verschiedene Primfaktorzerlegungen, dann gäbe es einen Primfaktor p, der in beiden Zerlegungen unterschiedlich oft vorkommt. Wenn wir beide Zerlegungen so oft durch p dividieren, dass p in der einen Zerlegung nicht mehr vorkommt, ist diese nicht mehr durch p teilbar, die andere aber schon – ein Widerspruch.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>BEWEIS:</b> <span class='r2a'>&radic;</span><b class='rad'>x</b> = <b>irrational, falls x</b> &ne; <b>1<sup>2</sup><span class='p02'>,</span>2<sup>2</sup><span class='p02'>,</span>3<sup>2</sup><span class='p02'>,</span>…</b></div>
+
+ <div><br>
+Die in x (&gt; 1) enthaltenen Primzahlen seien p<sub>1</sub>,... p<sub>k</sub>, sodass:</div>
+
+ <div class='in'><br>
+x = p<sub>1</sub><sup>m1</sup> ... p<sub>k</sub><sup>mk</sup> &nbsp; (m<sub>i</sub> &gt; 0)</div>
+
+ <div><br>
+Wenn x nicht Quadrat einer natürlichen Zahl ist, muss eines der m<sub>i</sub> ungerade sein und damit folgt aus</div>
+
+ <div class='in'><br>
+<span class='r1t'>&radic;</span><span class='rad'>p<sub>1</sub><sup>m1</sup> ... p<sub>k</sub><sup>mk</sup></span> = <div class='frac'><div class='num'>m</div><div class='den'>n</div></div> &nbsp; <span class='ll'>(.)<sup>2</sup></span> &nbsp; <span class='ll'>·n<sup>2</sup></div>
+
+ <div><br>
+der Widerspruch zur Eindeutigkeit der Primfaktorzerlegung, da dann p<sub>i</sub> links ungeradzahlig oft vorkommt und rechts geradzahlig oft:</div>
+
+ <div class='in'><br>
+p<sub>1</sub><sup>m1</sup> ... p<sub>k</sub><sup class='p02'>mk</sup>n<sup>2</sup> = m<sup>2</sup></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>KETTENBRÜCHE?</b></div>
+
+ <div><br>
+Ein <b>(regulärer) Kettenbruch</b> ist der euklidische Algorithmus, geschrieben als Bruchschachtelung. Beispiel:</div>
+
+ <div class='in'><br>
+<img src='img/za_a09.gif'></div>
+
+ <div><br>
+Jede Zahl a <img src='sym/isin.gif'> <img src='sym/setR.gif'> ist so in einen Kettenbruch <span class='p02'>[</span>a<sub>0</sub>; a<sub>1</sub>, a<sub>2</sub>, ...<span class='p20'>]</span> entwickelbar, wobei die "Näherungsbrüche"</div>
+
+ <div class='in'><br>
+<span class='p02'>[</span>a<sub>0</sub><span class='p20'>]</span>, <span class='p02'>[</span>a<sub>0</sub>; a<sub>1</sub><span class='p20'>]</span>, <span class='p02'>[</span>a<sub>0</sub>; a<sub>1</sub>, a<sub>2</sub><span class='p20'>]</span>, ...</div>
+
+ <div><br>
+oszillierend gegen a laufen. Die endlichen Kettenbrüche entsprechen den rationalen Zahlen, die unendlichen den irrationalen. Die irrationalen Zahlen werden in <b>algebraisch</b> und <b>transzendet</b> eingeteilt – je nachdem, ob es sich um Nullstellen von Polynomen mit rationalen Koeffizienten handelt oder nicht. Die periodischen Kettenbrüche entsprechen in diesem Zusammenhang den (irrationalen) Nullstellen quadratischer Polynome.</div>
+
+ <div><br>
+Beispiel für eine quadratische Irrationalität: </div>
+
+ <div class='in'><br>
+<span class='r1t'>&radic;</span><span class='rad'>3</span> = [1; 1, 2, 1, 2, 1, 2,  ...]</div>
+
+ <div><br>
+Beispiel für eine transzendente Irrationalität: </div>
+
+ <div class='in'><br>
+e = [2; 1, 2, 1, 1, 4, 1, 1, 6, 1, 1, 8, ...]</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>DEZIMALZAHLEN IN DUALZAHLEN UMWANDELN?</b></div>
+
+ <div><br>
+Vor- und Nachkommateil der Dezimalzahl werden fortlaufend mit 2 dividiert/multipliziert, sodass sie näher an das Komma heranrücken. Was über das Komma hinausschießt, wird gestrichen. Jede Operation mit/ohne Streichung liefert eine 1/0 der Dualzahl. Beispiel:</div>
+
+ <div class='in'><br>
+<img src='img/za_a10.gif'></div>
+
+ <div><br>
+Bem: Programme speichern und verrechnen Dualzahlen, während im Quelltext in der Regel Dezimalzahlen stehen. Wie man sieht, kann bereits die Kompilierung des Quelltexts in maschinentaugliche Form Rundungsfehler zur Folge haben.</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b>ALGEBRAISCHE STRUKTUREN?</b></div>
+
+ <div><br>
+Wie in der Logik und Mengenlehre können wir auch beim Rechnen mit Zahlen den Operatoren/Operanden ihre konkrete Bedeutung nehmen. An die Stelle der booleschen Algebra treten dann, ausgehend von einer Menge A samt Operatoren <img src='sym/op2.gif'>, <img src='sym/op1.gif'>: A<span class='p22'>x</span>A <img src='sym/rarr.svg' class='bo1'> A, folgende algebraische Strukturen:</div>
+
+ <div class='in'><br>
+(A, <img src='sym/op1.gif'>) heißt <b>(kommutative) Halbgruppe,</b> wenn <img src='sym/op1.gif'> (kommutativ und) assoziativ ist.</div>
+
+ <div class='in mt1'>
+(A, <img src='sym/op1.gif'>) heißt <b>Monoid,</b>  wenn (A, <img src='sym/op1.gif'>) eine Halbgruppe mit neutralem Element n<img src='sym/op1.gif' class='to4'> ist.</div>
+
+ <div class='in mt1'>
+(A, <img src='sym/op1.gif'>) heißt <b>Gruppe,</b> wenn (A, <img src='sym/op1.gif'>) ein Monoid ist und zu jedem x ein inverses Element x<img src='sym/op1.gif' class='to4'> existiert.</div>
+
+ <div class='in mt1'>
+(A, <img src='sym/op1.gif'>, <img src='sym/op2.gif'>) heißt <b>(kommutativer) Ring,</b> wenn (A, <img src='sym/op1.gif'>) eine kommutative Gruppe und <img src='sym/op2.gif'> (kommutativ und) assoziativ und distributiv zu <img src='sym/op1.gif'> ist.</div>
+
+ <div class='in mt1'>
+(A, <img src='sym/op1.gif'>, <img src='sym/op2.gif'>) heißt <b>unitärer Ring,</b> wenn (A, <img src='sym/op1.gif'>, <img src='sym/op2.gif'>) ein Ring mit neutralem Element n<img src='sym/op2.gif' class='to4'> ist.</div>
+
+ <div class='in mt1'>
+(A, <img src='sym/op1.gif'>, <img src='sym/op2.gif'>) heißt <b>Körper,</b> wenn (A, <img src='sym/op1.gif'>, <img src='sym/op2.gif'>) ein kommutativer unitärer Ring ist und zu jedem x &ne; n<img src='sym/op1.gif' class='to4'> ein inverses Element x<img src='sym/op2.gif' class='to4'> existiert.</div>
+
+ <div><br>
+Beispiele: (<img src='sym/setZ.gif'>, +, ·) ist ein kommutativer unitärer Ring, der durch Reduktion auf gerade/ungerade zum Restklassenring <img src='sym/setZ.gif'>/2<img src='sym/setZ.gif'> = ({0<span class='p02'>,</span>1}, <img src='sym/oplus.gif'>, &and;) wird, dem kleinsten aller Körper. Weitere Körper sind (<img src='sym/setQ.gif' style='vertical-align:-2px;'>, +, ·) und (<img src='sym/setR.gif'>, +, ·), der größte ist (<img src='sym/setC.gif'>, +, ·).</div>
+
+ </div></body>
+ </html>

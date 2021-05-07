@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Goniometrie/Trigonometrie</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>IX. GONIOMETRIE<span class='p22'>/</span>TRIGONOMETRIE</b></div>
+
+ <div><br>
+<a href='09_goniometrie.html#A'>A. Eigenschaften der Winkelfunktionen</a><br>
+<a href='09_goniometrie.html#B'>B. Goniometrische Gleichungen</a><br>
+<a href='09_goniometrie.html#C'>C. Sinus- und Kosinussatz</a><br>
+<a href='09_goniometrie.html#D'>D. Trigonometrie im allgemeinen Dreieck</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='09a_goniometrie.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> EIGENSCHAFTEN DER WINKELFUNKTIONEN</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Symmetrie und Periodizität</b></div>
+
+ <div><br>
+Die Kosinusfunktion ist <b>gerade,</b> Sinus und Tangens sind <b>ungerade,</b> d.h. die an der y-Achse bzw. am Ursprung gespiegelte Funktionskurve landet wieder in sich selbst. Rechentechnisch heißt das:</div>
+
+ <div class='in' style='margin-top:20px;'>
+<img src='img/go_00.gif'></div>
+
+ <div><br>
+Kosinus und Sinus sind <b>periodisch</b> mit Periode 360°, Tangens mit Periode 180°, d.h. für alle n <img src='sym/isin.gif'> <img src='sym/setZ.gif'> gilt:</div>
+
+ <div class='in'><br>
+f(x + n·Periode) = f(x)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Die Arkusfunktionen von Kosinus und Sinus decken daher nur eine halbe Persiode ab, die Lösung in der anschließenden Hälfte erhalten wir so:</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/go_01.gif'>
+    </td>
+    <td width='30'>
+&nbsp;
+    </td>
+    <td>
+&alpha;<sub>1</sub> = arccos(.)<br><br>
+<img src='sym/d2arr.gif' style='margin-left:35px;'><br><br>
+&alpha;<sub>2</sub> = 360° – &alpha;<sub>1</sub>
+    </td>
+    <td width='60'>
+&nbsp;
+    </td>
+    <td>
+<img src='img/go_02.gif'>
+    </td>
+    <td width='30'>
+&nbsp;
+    </td>
+    <td>
+&alpha;<sub>1</sub> = arcsin(.)<br><br>
+<img src='sym/d2arr.gif' style='margin-left:35px;'><br><br>
+&alpha;<sub>2</sub> = 180° – &alpha;<sub>1</sub>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='A.2' class='box'>2</a> Summensätze</b></div>
+
+ <div><br>
+<span class='p02'>•</span> <b>cos(&alpha; + &beta;)</b> = <b>cos&alpha;<span class='p20'>cos&beta;</span> – sin&alpha;<span class='p20'>sin&beta;</span></b> &nbsp; ("COCO<span class='p44'>–</span>SISI")</div>
+
+ <div><br>
+<span class='p02'>•</span> <b>sin(&alpha; + &beta;)</b> = <b>sin&alpha;<span class='p20'>cos&beta;</span> + cos&alpha;<span class='p20'>sin&beta;</span></b> &nbsp; ("SICO<span class='p44'>+</span>COSI")</div>
+
+ <div><br>
+Beweis (im ersten Quadranten):</div>
+
+ <div class='in'><br>
+<img src='img/go_03.gif'></div>
+
+ <div><br>
+Für den Tangens folgt daraus:</div>
+
+ <div><br>
+<img src='img/go_04.gif'></div>
+
+ <div><br>
+Obige Formeln bleiben richtig, wenn wir überall Additionen und Subtraktionen vertauschen. Und für 2&alpha; (= &alpha;<span class='p22'>+</span>&alpha;) merken wir uns:</div>
+
+ <div><br>
+<span class='p02'>•</span> cos2&alpha; = cos<sup>2</sup>&alpha; – sin<sup>2</sup>&alpha;</div>
+
+ <div><br>
+<span class='p02'>•</span> sin2&alpha; = 2sin&alpha;cos&alpha;</div>
+
+ <div class='mt1'>
+<span class='p02'>•</span> tan2&alpha; = <div class='frac'><div class='num'>2tan&alpha;</div><div class='den'>1 – tan<sup>2</sup>&alpha;</div></div></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 1:</b> Vereinfache: <div class='frac'><div class='num'>2tan&alpha;</div><div class='den'>sin2&alpha;</div></div> – 1</div>
+
+ <div class='in'><br>
+<img src='img/go_05.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.3' class='box'>3</a> Sinusförmige Wechselgrößen</b></div>
+
+ <div><br>
+Wir verallgemeinern den elementaren Sinus (als Funktion der Zeit), indem wir die Periode von 2<span style='font-family:arial;'>&pi;</span> auf T ändern und dann um t<sub>0</sub> verschieben:</div>
+
+ <div class='in'><br>
+<img src='img/go_06.gif'></div>
+
+ <div class='in'><br>
+<img src='img/go_07.gif'></div>
+
+ <div class='in'><br>
+<img src='img/go_08.gif'></div>
+
+ <div><br>
+In y-Richtung ändern wir die Amplitude von 1 auf r, das Ergebnis heißt dann <b>sinusförmige Wechselgröße:</b></div>
+
+ <div><br>
+<span class='p02'>•</span> <b>y(t)</b> = <b><span class='p01'>r</span>sin(&omega;t<span class='p22'>+</span>&phi;)</b> &nbsp; mit Kreisfrequenz &omega; <span class='ldf'>:</span>= <div class='frac'><div class='num'>2<span style='font-family:arial;'>&pi;</span></div><div class='den'>T</div></div>, Nullphasenwinkel &phi; <span class='ldf'>:</span>= –<span class='p01'>&omega;</span>t<sub>0</sub></div>
+
+ <div><br>
+Bem: Mit Hilfe der Summensätze können wir obige Amplituden-Phasen-Form in eine Kosinus-Sinus-Linearkombination umwandeln.</div>
+
+ <div class='in'><br>
+<span class='p01'>r</span>sin(&omega;t<span class='p22'>+</span>&phi;) = <span class='p01'>r</span>(<span class='p01'>sin&omega;t</span>cos&phi; + <span class='p01'>cos&omega;t</span>sin&phi;) = r<sub class='p01'>y</sub>cosωt + r<sub class='p01'>x</sub>sinωt</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 2:</b> Die Nabe eines Riesenrads mit 50 m Durchmesser liegt 28 m über dem Boden, die Umlaufzeit liegt bei 210 s. Bestimme, wie viel Meter über dem Boden sich die unten eingezeichnete Gondel nach t Sekunden befindet.<br><br>
+
+<img src='img/go_09.gif' class='in'></div>
+
+  <div class='in'><br>
+<img src='img/go_10.gif'></div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td style='line-height:25px; padding-top:1px;'>
+r = 25<br>
+&omega; = 2<span style='font-family:arial;'>&pi;</span>/T = 0,03<br>
+t<sub>0</sub> = T/12 <img src='sym/rarr2.svg' class='p66'> &phi; = –<span class='p01'>&omega;</span>t<sub>0</sub> =  –<span class='p01'>0,525</span>
+    </td>
+    <td>
+<img src='sym/rbr2.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+y(t) = <span class='p01'>25</span>sin(0,03t<span class='p22'>–</span>0,525) <img src='sym/rarr2.svg' class='p66'> h(t) = 28<span class='p44'>+</span>y(t)
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> GONIOMETRISCHE GLEICHUNGEN</b></div>
+
+ <div><br>
+Ein "aufgeblasenes" Argument einer Winkelfunktion substitutieren wir, dann lösen wir die Gleichung in [0°, 360°[ und berücksichtigen die Perioden.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Wann kann ein Schiff tagsüber in einem Hafen anlegen, wenn der in Meter gemessene Wasserstand nach t Stunden dieses Tages wie folgt berechnet wird und über 8 m liegen muss?
+
+  <div class='in'><br>
+h(t) = <span class='ws4'>7,4 + <span class='p01'>1,5</span>sin(0,507t + 1,2)</span></div></div>
+
+ <div class='in'><br>
+u = <span class='ws4'>0,507t + 1,2</span> &nbsp; mit t <img src='sym/isin.gif'> [0; 24[ <img src='sym/rarr2.svg' class='p66'> u <img src='sym/isin.gif'> [1,2; 13,368[</div>
+
+ <div class='in'><br>
+<span class='ws4'>7,4 + <span class='p01'>1,5</span>sinu</span> = 8 &nbsp;<span class='ll'>–</span>&thinsp;7,4 &nbsp;<span class='ll'>:</span>1,5</div>
+
+ <div class='in mt1'>
+sinu = 0,4<span class='ll' style='margin-left:57px;'>&thinsp;</span>arcsin(.)</div>
+
+ <div class='in mt1'>
+u<sub>1</sub> = 0,412 <img src='sym/rarr2.svg' class='p66'> t<sub>1</sub> = <div class='frac'><div class='num'>u – 1,2</div><div class='den'>0,507</div></div> = –1,95</div>
+
+ <div class='in mt1'>
+u<sub>2</sub> = <span style='font-family:arial;'>&pi;</span> – u<sub>1</sub> = 2,730 <img src='sym/rarr2.svg' class='p66'> t<sub>2</sub> = … = 3,02</div>
+
+ <div class='in mt1'>
+u<sub>3</sub> = u<sub>1</sub> + 2<span style='font-family:arial;' class='p01'>&pi;</span> = 6,695 <img src='sym/rarr2.svg' class='p66'> t<sub>3</sub> = … = 10,84</div>
+
+ <div class='in mt1'>
+u<sub>4</sub> = u<sub>2</sub> + 2<span style='font-family:arial;' class='p01'>&pi;</span> = 9,013 <img src='sym/rarr2.svg' class='p66'> t<sub>4</sub> = … = 15,41</div>
+
+ <div class='in mt1'>
+u<sub>5</sub> = u<sub>1</sub> + 4<span style='font-family:arial;' class='p01'>&pi;</span> = 12,978 <img src='sym/rarr2.svg' class='p66'> t<sub>5</sub> = … = 23,23</div>
+
+  <div class='in'><br>
+h(0) = 8,8 <img src='sym/rarr2.svg' class='p66'> h(t<sub>2</sub>)<span class='p44'>&darr;</span>8, h(t<sub>3</sub>)<span class='p44'>&uarr;</span>8, h(t<sub>4</sub>)<span class='p44'>&darr;</span>8, h(t<sub>5</sub>)<span class='p44'>&uarr;</span>8 <img src='sym/rarr2.svg' class='p66'> 10:50 bis 15:25</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Verschiedene Winkelfunktionen reduzieren wir über die Zusammenhänge, die uns bei ihrer Definition im Einheitskreis aufgefallen sind, auf eine.</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> cos<sup>2</sup>&alpha; + sin<sup>2</sup>&alpha; = 1</div>
+
+ <div class='in mt1'>
+<span class='out'>•</span> tan&alpha; = <div class='frac'><div class='num'>sin&alpha;</div><div class='den'>cos&alpha;</div></div></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Bestimme die Lösungsmenge in [0°, 360°[: <span class='p02'>17</span>cos&alpha; + <span class='p02'>16</span>sin&alpha; = 23</div>
+
+ <div class='in'><br>
+<span class='p01'>17</span>cos&alpha; + <span class='p01'>16</span>sin&alpha; = 23 &nbsp; <span class='ll p02'>–</span><span class='p01'>16</span>sin&alpha;</div>
+
+ <div class='in mt1'>
+<span class='p01'>17</span>cos&alpha; = 23 – <span class='p01'>16</span>sin&alpha;<span class='ll' style='margin-left:16px;'>&thinsp;</span><span class='rot'>(.)<sup>2</sup></span></div>
+
+ <div class='in mt1'>
+<span class='p01'>289</span>cos<sup>2</sup>&alpha; = 529 – <span class='p01'>736</span>sin&alpha; + <span class='p01'>256</span>sin<sup>2</sup>&alpha;</div>
+
+ <div class='in mt1'>
+289(1<span class='p44'>–</span>sin<sup>2</sup>&alpha;) = 529 – <span class='p01'>736</span>sin&alpha; + <span class='p01'>256</span>sin<sup>2</sup>&alpha; &nbsp; <span class='ll'>&thinsp;</span>u = sin&alpha;</div>
+
+ <div class='in mt1'>
+0 = 545u<sup>2</sup> – 736u + 240</div>
+
+ <div class='in' style='margin-top:8px;'>
+u<sub>1,2</sub> = <div class='frac'><div class='num'>736 ± <span class='r1t'>&radic;</span><span class='rad'>(–736)<sup>2</sup> – 4·545·240</span></div><div class='den'>2·545</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17'>0,55</span><span class='to17' style='margin-left:-25px;'>0,8</span></div>
+
+ <div class='in'><br>
+<b>Fall u<sub>1</sub>:</b> sin&alpha; = 0,55 <img src='sym/rarr2.svg' class='p66'> &alpha;<sub>1</sub> = 33,40° <img src='sym/rarr2.svg' class='p66'> &alpha;<sub>2</sub> = 180° – &alpha;<sub>1</sub> = 146,60°</div>
+
+ <div class='in mt1'>
+<b>Fall u<sub>2</sub>:</b> sin&alpha; = 0,8 <img src='sym/rarr2.svg' class='p66'> &alpha;<sub>3</sub> = 53,13° <img src='sym/rarr2.svg' class='p66'> &alpha;<sub>4</sub> = 180° – &alpha;<sub>3</sub> = 126,87°</div>
+
+ <div class='in mt1'>
+<span class='rot'>Einsetzprobe</span> <img src='sym/rarr2.svg' class='p66'> L = { 33,40°; 53,13° }</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> Bestimme die Lösungsmenge in [0°, 360°[: cos&alpha; + <div class='frac'><div class='num'>1 – tan<sup>2</sup>&alpha;</div><div class='den'>1 + tan<sup>2</sup>&alpha;</div></div> = 0</div>
+
+ <div class='in'><br>
+cos&alpha; + <div class='frac'><div class='num'>1 – tan<sup>2</sup>&alpha;</div><div class='den'>1 + tan<sup>2</sup>&alpha;</div></div> = 0 &nbsp; <span class='ll'>·</span>(1 + tan<sup>2</sup>&alpha;)</div>
+
+ <div class='in'><br>
+<img src='img/go_11.gif'></div>
+
+ <div class='in'><br>
+cos&alpha;(cos<sup>2</sup>&alpha; + sin<sup>2</sup>&alpha;) + cos<sup>2</sup>&alpha; – sin<sup>2</sup>&alpha; = 0</div>
+
+ <div class='in mt1'>
+cos&alpha; + cos<sup>2</sup>&alpha; – (1 – cos<sup>2</sup>&alpha;) = 0<span class='ll' style='margin-left:30px;'>&thinsp;</span>u = cos&alpha;</div>
+
+ <div class='in mt1'>
+2u<sup>2</sup> + u – 1 = 0</div>
+
+ <div class='in mt1'>
+u<sub>1,2</sub> = <div class='frac'><div class='num'>–1 ± <span class='r1t'>&radic;</span><span class='rad'>1<sup>2</sup> – 4·2·(–1)</span></div><div class='den'>2·2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17'>0,5</span><span class='to17' style='margin-left:-20px;'>–1</span></div>
+
+ <div class='in'><br>
+<b>Fall u<sub>1</sub>:</b> cos&alpha; = 0,5 <img src='sym/rarr2.svg' class='p66'> &alpha;<sub>1</sub> = 60° <img src='sym/rarr2.svg' class='p66'> &alpha;<sub>2</sub> = 360° – &alpha;<sub>1</sub> = 300°</div>
+
+ <div class='in' style='margin-top:12px; margin-bottom:8px;'>
+<b>Fall u<sub>2</sub>:</b> cos&alpha; = –1 <img src='sym/rarr2.svg' class='p66'> &alpha;<sub>3</sub> = 180°</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> SINUS- UND KOSINUSSATZ</b></div>
+
+ <div><br><br>
+<b><a name='C.1' class='box'>1</a> Wiederholung</b></div>
+
+ <div><br>
+Im <b>rechtwinkeligen Dreieck</b> setzen wir uns auf den gegebenen/gesuchten Winkel &alpha;, unterscheiden die Katheten in die dem Winkel anliegende und gegenüberliegende und erhalten:</div>
+
+ <div><br>
+<img src='img/go_12.gif'></div>
+
+ <div><br>
+Das <b>allgemeine Dreieck</b> können wir immer in rechtwinkelige Dreiecke zerlegen bzw. auf solche ergänzen. Indem wir die obigen Definitionen dort anwenden, stoßen wir auf folgende Sätze, die nur Seiten und Winkel des ursprünglichen Dreiecks enthalten:</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Sinussatz</b></div>
+
+ <div><br>
+<img src='img/go_13.gif'></div>
+
+ <div><br>
+Beweis (&Delta;):</div>
+
+ <div style='margin-left:26px;'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/go_14.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+<img src='img/go_15.gif'>
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+Die <b>trigonometrische Flächenformel</b> (vgl. Betrag des Vektorprodukts) folgt genauso:</div>
+
+ <div><br>
+<img src='img/go_16.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+  <div><br>
+<b><a name='C.3' class='box'>3</a> Kosinussatz</b></div>
+
+ <div><br>
+<img src='img/go_17.gif'></div>
+
+ <div><br>
+Beweis (&Delta;):</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/go_18.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+<img src='img/go_19.gif'>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> TRIGONOMETRIE IM ALLGEMEINEN DREIECK</b></div>
+
+ <div><br>
+Welcher Satz hilft uns im Folgenden weiter?</div>
+
+ <div class='in'><br>
+<img src='img/go_20.gif'></div>
+
+ <div style='margin-top:10px; margin-left:28px;'>
+Sinussatz
+ <span style='margin-left:55px;'>
+Kosinussatz</span>
+ <span style='margin-left:53px;'>
+Sinussatz</span>
+ <span style='margin-left:58px;'>
+Sinussatz</span>
+ <span style='margin-left:54px;'>
+Kosinussatz</span></div>
+
+ <div><br>
+Zusammengefasst: Wenn wir 3 Bestimmungstücke haben und es sind zwei Seiten und der eingeschlossene Winkel oder alle drei Seiten, nehmen wir den Kosinussatz, ansonsten den Sinussatz.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Die Scharnierseite einer 90 cm breiten Tür ist 55 cm von der Zimmerecke entfernt, wo die Wände den Winkel &alpha; = 100° einschließen. Bis zu welchem Winkel lässt sich die Tür öffnen?</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/go_21.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+[Länge] = cm<br>
+ <div class='frac mt1'><div class='num'>a</div><div class='den'>sin&alpha;</div></div> = <div class='frac'><div class='num'>b</div><div class='den'>sin&beta;</div></div> <img src='sym/rarr2.svg' class='p66'> sin&beta; = <div class='frac'><div class='num'>bsin&alpha;</div><div class='den'>a</div></div> &nbsp; <span class='ll'>arcsin(.)</span>
+     <div><br>
+&beta;<sub>1</sub> = 37° <img src='sym/rarr2.svg' class='p66'> &beta;<sub>2</sub> = <span class='ws4'>180° – &beta;<sub>1</sub></span> = 143° <img src='sym/flash.svg' class='to3'><br><br>
+Öffungswinkel = <span class='ws4'>&alpha; + &beta;<sub>1</sub></span> = 137°
+     </div>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 7:</b> Die unzugänglichen Punkte C und D und die abseits gelegene Standlinie AB = 180 m liegen im ebenen Gelände. Von den Punkten A und B aus werden die unten angegebenen Winkel gemessen. Wie weit sind C und D voneinander entfernt?
+
+  <div class='in'><br>
+&alpha;<sub>1</sub> = <img src='sym/arc.gif'>BAC = 41,3° &nbsp;
+&alpha;<sub>2</sub> = <img src='sym/arc.gif'>CAD = 81,3° &nbsp;
+&beta;<sub>1</sub> = <img src='sym/arc.gif'>DBA = 27,5° &nbsp;
+&beta;<sub>2</sub> = <img src='sym/arc.gif'>CBD = 83,9°</div>
+
+	<div><br>
+Hinweis: Mit <img src='sym/arc.gif'>B<span class='rot'>A</span>C ist der Winkel zwischen den Schenkeln <span class='rot'>A</span>B und <span class='rot'>A</span>C gemeint.</div></div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/go_22.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+<img src='img/go_23.gif'>
+    </td>
+   </tr>
+  </table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Vom Ort O aus (780 m Seehöhe) sieht man die Bergspitze A (2310 m) unter dem Höhenwinkel &alpha; = 13,8° und die Bergspitze B (1990 m) unter &beta; = 10,8°. Projiziert man beide Sehlinien in die durch O gehende Horizontalebene, dann schließen sie dort den Winkel &gamma; = 62,6° ein. AB = ?</div>
+
+ <div class='in'><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/go_24.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+<img src='img/go_25.gif'>
+    </td>
+   </tr>
+  </table></div>
+
+ </div></body>
+ </html>

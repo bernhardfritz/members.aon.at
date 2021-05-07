@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Integralrechnung</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>XII. INTEGRALRECHNUNG</b></div>
+
+ <div><br>
+<a href='12_intrechnung.html#A'>A. Grundintegrale</a><br>
+<a href='12_intrechnung.html#B'>B. Integrationsregeln</a><br>
+<a href='12_intrechnung.html#C'>C. Partialbruchzerlegung</a><br>
+<a href='12_intrechnung.html#D'>D. Bestimmte Integrale</a><br>
+<a href='12_intrechnung.html#E'>E. Integralmittelwerte</a><br>
+<a href='12_intrechnung.html#F'>F. Integralformeln</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='12a_intrechnung.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> GRUNDINTEGRALE</b></div>
+
+ <div><br>
+Eine <b>Stammfunktion von f(x),</b> auch unbestimmtes Integral genannt, ist eine Funktion F(x), die abgeleitet f(x) ergibt. Schreibweise:</div>
+
+ <div class='in'><br>
+<img src='sym/int.gif' style='vertical-align:-12px;'>f(x)<span class='p40'>dx</span> <span class='ldf'>:</span>= F(x) + c &nbsp; mit c <img src='sym/isin.gif'> <img src='sym/setR.gif'> <span class='grau'>(denken wir uns im Folgenden immer dazu)</span></div>
+
+ <div><br>
+Unter <b>Integrieren</b> versteht man das Ermitteln der Stammfunktion. Das basiert wie gehabt auf zwei Säulen: auf bekannten Grundintegralen und Integrationsregeln. Im Unterschied zum Differenzieren artet Integrieren häufig in ein Probieren aus und es ist auch nicht gesagt, dass Funktionen, die aus elementaren Funktionen zusammengesetzt sind, ebensolche Stammfunktionen haben. Beispiel:</div>
+
+ <div class='in'><br>
+<img src='sym/int.gif' style='vertical-align:-12px;'><div class='frac p20'><div class='num'>1</div><div class='den'>lnx</div></div> dx = ???</div>
+
+ <div><br>
+Die Liste der <b>Grundintegrale</b> ergibt sich aus den Ableitungen der elementaren Funktionen. Neu ist der Betrag im Logarithmus, da wir jetzt von der anderen Seite kommen und die Funktion 1/x für positive <i>und</i> negative x definiert ist.</div>
+
+ <div><br>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<span class='p02'>•</span> <img src='sym/int_b.gif' style='vertical-align:-12px;'><b>x<sup>r</sup><span class='p40'>dx</span></b> = <div class='frac'><div class='num'><b>x<sup>r+1</sup></b></div><div class='den'><b>r<span class='p22'>+1</span></b></div></div><br><br>
+
+<span class='p02'>•</span> <img src='sym/int_b.gif' style='vertical-align:-12px;'><div class='frac p20'><div class='num'><b>1</b></div><div class='den'><b>x</b></div></div> <b>dx</b> = <b>ln|x|</b><br><br>
+
+<span class='p02'>•</span> <img src='sym/int_b.gif' style='vertical-align:-12px;'><b>e<sup>x</sup><span class='p40'>dx</span></b> = <b>e<sup>x</sup></b><br><br>
+
+<span class='p02'>•</span> <img src='sym/int_b.gif' style='vertical-align:-12px;'><b>cosx<span class='p40'>dx</span></b> = <b>sinx</b><br><br>
+
+<span class='p02'>•</span> <img src='sym/int_b.gif' style='vertical-align:-12px;'><b>sinx<span class='p40'>dx</span></b> = <b>–cosx</b><br><br>
+
+<span class='p02'>•</span> <img src='sym/int_b.gif' style='vertical-align:-12px;'><div class='frac p20'><div class='num'><b>1</b></div><div class='den'><b>cos<sup>2</sup>x</b></div></div> <b>dx</b> = <b>tanx</b><br><br>
+
+<span class='p02'>•</span> <img src='sym/int_b.gif' style='vertical-align:-12px;'><div class='frac to2 p20'><div class='num'><b>1</b></div><div class='den to2'><span class='r2a'>&radic;</span><b class='rad'>1 – x<sup>2</sup></b></div></div> <b>dx</b> = <b>arcsinx</b><br><br>
+
+<span class='p02'>•</span> <img src='sym/int_b.gif' style='vertical-align:-12px;'><div class='frac p20'><div class='num'><b>1</b></div><div class='den'><b>1 + x<sup>2</sup></b></div></div> <b>dx</b>  = <b>arctanx</b>
+  </td>
+   <td>
+<img src='img/in_00.gif' style='margin-left:50px;'>
+   </td>
+  </tr></table></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> INTEGRATIONSREGELN</b></div>
+
+ <div><br><br>
+Die Integrationsregeln sind nur umgeschriebene Differenziationsregeln, was sich zeigt, wenn wir beide Seiten nach x differenzieren.</div>
+
+ <div><br>
+<b><a name='B.1' class='box'>1</a> Linearität des Integrals</b></div>
+
+ <div><br>
+Das Integrieren ist ein <b>linearer Operator</b> in dem Sinn, dass</div>
+
+ <div><br>
+<span class='p02'>•</span> <b><img src='sym/int_b.gif' style='vertical-align:-12px;'>f(x)<span class='p22'>+</span>g(x)<span class='p40'>dx</span></b> = <b><img src='sym/int_b.gif' style='vertical-align:-12px;'>f(x)<span class='p40'>dx</span> + <img src='sym/int_b.gif' style='vertical-align:-12px;'>g(x)<span class='p40'>dx</span></b> &nbsp; und &nbsp; <b><img src='sym/int_b.gif' class='p20' style='vertical-align:-12px;'><span class='p02'>k</span>f(x)<span class='p40'>dx</span></b> = <b>k<img src='sym/int_b.gif' class='p20' style='vertical-align:-12px;'>f(x)<span class='p40'>dx</span></b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe 1:</b> <b>a)</b> <img src='sym/int.gif' style='vertical-align:-12px;'>5x + 2<span class='p40'>dx</span> = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> <img src='sym/int.gif' style='vertical-align:-12px;'><div class='frac to1 p20'><div class='num'><span class='p02'>3</span><span class='r1t'>&radic;</span><span class='rad'>x</span> + <sup>3</sup><span class='r1t'>&radic;</span><span class='rad'>x</span></div><div class='den to3'><sup>3</sup><span class='r1t'>&radic;</span><span class='rad'>x<sup>4</sup></span></div></div> dx = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> <img src='sym/int.gif' style='vertical-align:-12px;'>tan<sup>2</sup>x<span class='p40'>dx</span> =</div>
+
+ <div class='in'><br>
+<b>a)</b> <img src='sym/int.gif' style='vertical-align:-12px;'>5x + 2<span class='p40'>dx</span> = 5<img src='sym/int.gif' style='vertical-align:-12px;'>x<sup>1</sup><span class='p40'>dx</span> + 2<img src='sym/int.gif' style='vertical-align:-12px;'>x<sup>0</sup><span class='p40'>dx</span> = 5<div class='frac p40'><div class='num'>x<sup>2</sup></div><div class='den'>2</div></div> + 2<div class='frac p40'><div class='num'>x<sup>1</sup></div><div class='den'>1</div></div></div>
+
+ <div class='in mt2'>
+<img src='img/in_01.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/in_02.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.2' class='box'>2</a> Integration durch Subsitution</b></div>
+
+ <div><br>
+Bei der <b>Integration durch Substitution</b> ersetzen wir einen Teilausdruck durch eine neue Variable und machen sie zur Integrationsvariablen:</div>
+
+ <div><br>
+<span class='p02'>•</span> <img src='sym/int_b.gif' style='vertical-align:-12px;'><b><span class='p01'>f</span>(g(x))<span class='p40'>dx</span></b> = <img src='sym/int_b.gif' style='vertical-align:-12px;'><b>f(u)<div class='frac p40'><div class='num'>du</div><div class='den'>u'</div></div></b></div>
+
+ <div style='margin-top:-3px; margin-left:104px;'>
+<img src='sym/uarr.gif'></div>
+ <div style='margin-left:85px; font-size:11px;'>
+<b>u</b><span class='p22'>=</span><b>g(x)</b></div>
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe 2: a)</b> <img src='sym/int.gif' style='vertical-align:-12px;'>cos3x<span class='p40'>dx</span> = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>b)</b> <img src='sym/int.gif' style='vertical-align:-12px;'>tanx<span class='p40'>dx</span> = &nbsp;&nbsp;&nbsp;&nbsp;
+<b>c)</b> <img src='sym/int.gif' style='vertical-align:-12px;'><div class='frac p20'><div class='num'>e<sup>2x</sup></div><div class='den'>e<sup>x</sup> + 1</div></div> dx =</div>
+
+ <div class='in'><br>
+<b>a)</b> <img src='img/in_03.gif' style='vertical-align:-27px;'></div>
+
+ <div class='in mt2'>
+<b>b)</b> <img src='img/in_04.gif' style='vertical-align:-42px;'></div>
+
+ <div class='in'><br>
+<b>c)</b> Wenn x nicht von selbst wegfällt,  müssen wir x als Funktion von u ausdrücken:</div>
+
+ <div class='in mt2'>
+<img src='img/in_05.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='B.3' class='box'>3</a> Partielle Integration</b></div>
+
+ <div><br>
+Bei der <b>partiellen Integration</b> brauchen wir als Integrand ein Produkt, wobei auch der neutrale Faktor 1 hilfreich sein kann:</div>
+
+ <div><br>
+<span class='p02'>•</span> <b><img src='sym/int_b.gif' style='vertical-align:-12px;'><span class='p01'>f</span>'(x)<span class='p20'>g(x)</span><span class='p40'>dx</span></b> = <b>f(x)<span class='p20'>g(x)</span> – <img src='sym/int_b.gif' style='vertical-align:-12px;'>f(x)<span class='p20'>g'(x)</span><span class='p40'>dx</span></b></div>
+
+ <div><br>
+Schreiben wir einen Faktor integriert über denselben und den anderen differenziert darunter, dann können wir uns das Ergebnis so merken:</div>
+
+ <div class='in'><br>
+Produkt der <b>höherstehenden</b> Funktionen <b>minus</b> Integral vom Produkt der <b>neuerzeugten</b> Funktionen.</div>
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe 3:</b> <b>a)</b> <img src='sym/int.gif' style='vertical-align:-12px;'>lnx<span class='p40'>dx</span> = &nbsp;&nbsp;&nbsp;&nbsp;<b>b)</b> <img src='sym/int.gif' style='vertical-align:-12px;'>x<sup>2</sup>sinx<span class='p40'>dx</span> = &nbsp;&nbsp;&nbsp;&nbsp; <b>c)</b> <img src='sym/int.gif' style='vertical-align:-12px;'>e<sup>x</sup>sinx<span class='p40'>dx</span> = </div>
+
+ <div class='in'><br>
+<b>a)</b> <img src='img/in_06.gif' style='vertical-align:-42px;'></div>
+
+ <div class='in'><br>
+<b>b)</b> Falls das neue Integral zwar einfacher, aber nicht unmittelbar lösbar ist, setzen wir den eingeschlagenen Weg fort:</div>
+
+ <div class='in'><br>
+<img src='img/in_07.gif'>
+<img src='img/in_08.gif'></div>
+
+ <div class='in'><br>
+<b>c)</b> Falls die Fortsetzung des eingeschlagenen Wegs wieder zum Ausgangsintegral führt, können wir dieses freistellen:</div>
+
+ <div class='in'><br>
+<img src='img/in_09.gif'></div>
+
+<div class='in'><br>
+Anfang und Ende der fortlaufenden Rechnung:</div>
+
+ <div class='in'><br>
+<img src='sym/int.gif' style='vertical-align:-12px;'>e<sup>x</sup>sinx<span class='p40'>dx</span> = e<sup>x</sup>sinx – e<sup>x</sup>cosx – <img src='sym/int.gif' style='vertical-align:-12px;'>e<sup>x</sup>sinx<span class='p40'>dx</span> &nbsp; <span class='ll p02'>+</span><img src='sym/int.gif' style='vertical-align:-12px;'>e<sup>x</sup>sinx<span class='p40'>dx</span> &nbsp; <span class='ll'>:</span>2</div>
+
+ <div class='in'><br>
+<img src='sym/int.gif' style='vertical-align:-12px;'>e<sup>x</sup>sinx<span class='p40'>dx</span> = <div class='frac'><div class='num'>e<sup>x</sup>sinx – e<sup>x</sup>cosx</div><div class='den'>2</div></div>
+</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> PARTIALBRUCHZERLEGUNG</b></div>
+
+ <div class='in'><br><br>
+<div class='frac p02' style='float:left;'><div class='num p44'>Polynom in x</div><div class='den'>Polynom in x</div></div><div style='margin-top:-10px;'><span class='up' style='position:relative; top:5px;'>↗</span> Zählergrad &lt; Nennergrad (allenfalls nach Polynomdivision)</div><div style='margin-top:23px;'><span class='up' style='position:relative; bottom:4px;'>↘</span> Nenner faktorisieren: x<sub>1</sub> Nullstelle <span class='up'>&rArr;</span> (x<span class='p44'>–</span>x<sub>1</sub>) teilt Polynom</div></div>
+
+ <div><br>
+Den Partialbruchansatz erfasst man am schnellsten anhand eines Beispiels:</div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>x<sup>4</sup> + 2x – 9</div><div class='den'>(x – 1)(x + 1)<sup class='p01'>3</sup>(x + 2)</div></div> = <div class='frac'><div class='num'>A</div><div class='den'>x – 1</div></div> + <div class='frac'><div class='num'>B</div><div class='den'>x + 1</div></div> + <div class='frac'><div class='num'>C</div><div class='den'>(x + 1)<sup>2</sup></div></div> + <div class='frac'><div class='num'>D</div><div class='den'>(x + 1)<sup>3</sup></div></div> + <div class='frac'><div class='num'>E</div><div class='den'>x + 2</div></div></div>
+
+ <div><br>
+Bem: Falls im Nenner quadratische, nicht faktorisierbare Faktoren überbleiben, tritt im Zähler Ax<span class='p44'>+</span>B an die Stelle von A, sonst ändert sich nichts.</div>
+
+ <div><br>
+Um A, B,… zu bestimmen, rechnen wird den Partialbruchansatz zu einem Bruch zusammen, sodass die Nenner links und rechts übereinstimmen. Das müssen dann auch die Zählerpolynome tun und das tun sie nur bei gleichen Koeffizienten. Stattdessen können wir auch die Übereinstimmung in so vielen Kurvenpunkten verlangen, wie es braucht, um die Koeffizienten zu berechnen. (Wir können auch beide Methoden mischen.)</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> <img src='sym/int.gif' style='vertical-align:-12px;'><div class='frac p20'><div class='num'>2x – 8</div><div class='den'>x<sup>3</sup> + 2x<sup>2</sup></div></div> dx =</div>
+
+ <div class='in'><br>
+<div class='frac'><div class='num'>2x – 8</div><div class='den'>x<sup>2</sup>(x + 2)</div></div> = <div class='frac'><div class='num'>A</div><div class='den'>x</div></div> + <div class='frac'><div class='num'>B</div><div class='den'>x<sup>2</sup></div></div> + <div class='frac'><div class='num'>C</div><div class='den'>x + 2</div></div> = <div class='frac'><div class='num'>Ax(x + 2) + B(x + 2) + Cx<sup>2</sup></div><div class='den'>x<sup>2</sup>(x + 2)</div></div> = <div class='frac'><div class='num'>(A + C)x<sup>2</sup> + (2A + B)x + 2B</div><div class='den'>x<sup>2</sup>(x + 2)</div></div></div>
+
+ <div class='in'><br>
+Variante 1: Koeffizientenvergleich</div>
+
+ <div class='in mt1'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td style='line-height:25px; padding-top:1px;'>
+x<sup>2</sup>: 0 = A + C<br>
+x<sup>1</sup>: 2 = 2A + B<br>
+x<sup>0</sup>: –8 = 2B
+    </td>
+    <td>
+<img src='sym/rbr2.gif' style='margin:6px 8px 0px;'>
+    </td>
+    <td>
+A = 3, B = –4, C = –3
+    </td>
+   </tr>
+  </table></div>
+
+ <div class='in'><br>
+Variante 2: Punktevergleich</div>
+
+ <div class='in mt1'>
+(Nullstelle) x = 0: –8 = B·2 <img src='sym/rarr2.svg' class='p66'> B = –4</div>
+
+ <div class='in mt1'>
+(Nullstelle) x = –2: –12 = C·4 <img src='sym/rarr2.svg' class='p66'> C = –3</div>
+
+ <div class='in mt1'>
+(beliebiges) x = 1: –6 = A·3 + (–4)·3 + (–3)·1 <img src='sym/rarr2.svg' class='p66'> A = 3</div>
+
+ <div class='in'><br>
+Bem: Auf den ersten Blick verwundert, dass wir für die Punkte die Nullstellen des Nenners verwenden, obwohl die Terme dort nicht definiert sind. Aber die Terme sind über ihrem Definitionsbereich nur gleich, wenn die Zählerpolynome gleich sind und die sind überall definiert. Im Zähler haben die Nullstellen des Nenners den Effekt, unmittelbar Ergebnisse zu liefern (und wir sparen uns das Ordnen nach Potenzen von x).</div>
+
+ <div class='in'><br>
+<img src='sym/int.gif' style='vertical-align:-12px;'><div class='frac p20'><div class='num'>2x – 8</div><div class='den'>x<sup>3</sup> + 2x<sup>2</sup></div></div> dx = 3<img src='sym/int.gif' class='p20' style='vertical-align:-12px;'><div class='frac p20'><div class='num'>1</div><div class='den'>x</div></div> dx – 4<img src='sym/int.gif' class='p20' style='vertical-align:-12px;'><div class='frac p20'><div class='num'>1</div><div class='den'>x<sup>2</sup></div></div> dx – 3<img src='sym/int.gif' class='p20' style='vertical-align:-12px;'><div class='frac p20'><div class='num'>1</div><div class='den'>x + 2</div></div> dx = 3ln|x| + <div class='frac'><div class='num'>4</div><div class='den'>x</div></div> – 3ln|x + 2|</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> <img src='sym/int.gif' style='vertical-align:-12px;'><div class='frac p20'><div class='num'>x – 9</div><div class='den'>x<sup>2</sup> – 2x + 5</div></div> dx =</div>
+
+ <div class='in'><br>
+x<sup>2</sup> – 2x + 5 = 0 <img src='sym/rarr2.svg' class='p66'> x<sub>1,2</sub> = <div class='frac to1'><div class='num'>2 ± <span class='r1t'>&radic;</span><span class='rad'>(–2)<sup>2</sup> – 4·5</span></div><div class='den'>2</div></div> <img src='sym/2arr1.gif' class='to11 p22'> <span class='bo17 ws4'>1 + 2j</span><span class='to17 ws4' style='margin-left:-37px;'>1 – 2j</span></div>
+
+ <div class='in'><br>
+Quadratische Nenner formen wir mittels quadratischer Ergänzung oder dem Satz von Vieta so um, dass x nur mehr einmal vorkommt:</div>
+
+ <div class='in'><br>
+Variante 1: x<sup>2</sup> – 2x <img src='sym/dotlin.gif' class='to4'> + 5 = (x – 1)<sup>2</sup> – 1 <img src='sym/dotlin.gif' class='to4'> + 5 =  (x – 1)<sup>2</sup> + 4</div>
+
+ <div class='in'><br>
+Variante 2: x<sup>2</sup> – 2x + 5 = <span class='up'>[</span>x – (1 + 2j)<span class='up'>][</span>x – (1 – 2j)<span class='up'>]</span> = <span class='up'>[</span>(x – 1) + 2j<span class='up'>][</span>(x – 1) – 2j<span class='up'>]</span> = (x – 1)<sup>2</sup> + 4</div>
+
+ <div class='in mt2'>
+<img src='img/in_10.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/in_11.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/in_12.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> BESTIMMTE INTEGRALE (= MIT GRENZEN)</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> Flächeninhalt als Riemann-Integral</b></div>
+
+ <div><br>
+Flächeninhalte erhalten wir durch "Austapezieren" mit Flächeneinheiten bzw. Bruchteilen davon. Das <b>Riemann-Integral</b> definiert den Flächeninhalt zwischen der Kurve einer <i>beschränkten</i> Funktion f(x) und der x-Achse über dem Intervall [a, b] so:</div>
+
+ <div class='in mt2'>
+  <table cellpadding='0' cellspacing='0'>
+   <tr>
+    <td>
+<img src='img/in_13.gif' style='margin-right:40px;'>
+    </td>
+    <td>
+<img src='img/in_14.gif'><br><br>
+mit &Delta;x <span class='ldef'>:</span>= <span class='p02'>max</span>{|&Delta;x<sub>i</sub>|} &nbsp; und &nbsp; x<sub>i+</sub> <img src='sym/isin.gif'> [x<sub>i</sub><span class='p02'>,</span>x<sub>i+1</sub>]
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+<b>Zum Grenzwert:</b> Dieser ist so definiert, dass für jede Folge von Unterteilungen-mit-Stützstellen mit &Delta;x <img src='sym/rarr.svg' class='bo1'> 0 die Riemann-Summen gegen dieselbe Zahl laufen müssen. Man kann zeigen, dass ein solcher Grenzwert existiert, wenn f(x) im Intervall [a, b] nur endlich viele Unstetigkeitsstellen hat.</div>
+
+ <div><br>
+Dass zwischen dem, was wir intuitiv als Fläche wahrnehmen, und dem Riemann-Integral nichts mehr hineinpasst, erkennen wir über Unterteilungen mit Stützstellen, die so liegen, dass sie den kleinsten/größten Funktionswert im jeweiligen Intervall haben. Diese <b>Unter/Obersummen</b> sperren die zu definierende Fläche zwischen sich ein und laufen für &Delta;x <img src='sym/rarr.svg' class='bo1'> 0 gegen dieselbe Zahl.</div>
+
+ <div><br>
+Die beim bestimmten Intergral angegebenen Grenzen sind so zu verstehen, dass immer von der unteren zur oberen gezählt wird – unabhängig davon, was links/rechts liegt. Laut Definition ist das Integral ein <b>Flächensaldo:</b> Falls von links nach rechts integriert wird, zählen Flächen über der x-Achse positiv und solche darunter negativ. Falls von rechts nach links integriert wird, ist es andersrum.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b><img src='img/in_15.gif' style='margin-left:-10px; vertical-align:-100px;'></div>
+
+ <div class='in'><br>
+<img src='img/in_16.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.2' class='box'>2</a> Hauptsatz der Diff-Int-Rechnung</b></div>
+
+ <div><br>
+Wenn wir im Fall einer stetigen Funktion f(x) die untere Integrationsgrenze bei 0 (oder sonstwo) festhalten und die obere variieren, erhalten wir eine Funktion F<sub>0</sub>(x), die abgeleitet wieder f(x) ergibt:</div>
+
+ <div class='in'><br>
+<img src='img/in_17.gif'></div>
+
+ <div><br>
+F<sub>0</sub>(x) ist also Stammfunktion von f(x) und unterscheidet sich von jeder anderen Stammfunktion F(x) nur durch die Integrationskonstante:</div>
+
+ <div><br>
+<img src='img/in_18.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 7:</b> Berechne die Fläche zwischen f(x) = cos<sup>4</sup>x<span class='p20'>sinx</span> und x-Achse für 0 &le; x &le; <span style='font-family:arial;'>&pi;</span>.</div>
+
+ <div class='in'><br>
+<b>Lösungsvariante 1:</b></div>
+
+ <div class='in' style='margin-top:25px;'>
+<span style='position:relative; top:24px; font-size:11px;'>0</span><span style='position:relative; bottom:25px; right:3px; font-size:11px; font-family:arial;'>&pi;</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-17px;'>cos<sup>4</sup>x<span class='p20'>sinx</span><span class='p40'>dx</span> = (<span class='to4'>*</span>)</div>
+
+ <div class='in' style='margin-top:25px;'>
+<img src='img/in_19.gif'></div>
+
+ <div class='in'><br>
+<img src='img/in_20.gif'></div>
+
+ <div class='in'><br>
+<b>Lösungsvariante 2:</b></div>
+
+ <div class='in'><br>
+<img src='img/in_21.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+Auch wenn wir das Integral als Flächeninhalt eingeführt haben, repräsentiert der letztlich das Produkt der auf den Achsen aufgetragenen Größen:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 8:</b> Die Terme v<sub>i</sub>(t) liefern die Fallgeschwindigkeiten zweier Körper so wie unten dargestellt. Wie berechnet man den schraffierten Bereich und welche physikalische Bedeutung kommt ihm zu?
+
+  <div class='in'><br>
+<img src='img/in_22.gif'></div></div>
+
+ <div class='in mt1'><br>
+Fläche zwischen Kurve und x-Achse = <img src='sym/int.gif' style='vertical-align:-12px;'><sub style='position:relative; top:24px; right:12px;'>0</sub><sup style='position:relative; bottom:25px; right:18px;'>10</sup> <span style='margin-left:-25px;'>v</span>(t)<span class='p40'>dt</span> = <img src='sym/int.gif' style='vertical-align:-12px;'><sub style='position:relative; top:24px; right:12px;'>0</sub><sup style='position:relative; bottom:25px; right:18px;'>10</sup> <span style='margin-left:-25px;'>s'</span>(t)<span class='p40'>dt</span> = <span class='ws4'>s(10) – s(0)</span> = Strecke in m, die der Körper in den ersten 10 s fällt </div>
+
+ <div class='in mt2'><br>
+Fläche zwischen beiden Kurven = <img src='sym/int.gif' style='vertical-align:-12px;'><sub style='position:relative; top:24px; right:12px;'>0</sub><sup style='position:relative; bottom:25px; right:18px;'>10</sup> <span style='margin-left:-25px;'>v</span><sub>1</sub>(t)<span class='p40'>dt</span> – <img src='sym/int.gif' style='vertical-align:-12px;'><sub style='position:relative; top:24px; right:12px;'>0</sub><sup style='position:relative; bottom:25px; right:18px;'>10</sup> <span style='margin-left:-25px;'>v</span><sub>2</sub>(t)<span class='p40'>dt</span> = Strecke in m, um die Körper1 in den ersten 10 s weiter fällt als Körper2</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+<b><a name='D.3' class='box'>3</a> Uneigentliche Integrale</b></div>
+
+ <div><br>
+Das für horizontal und vertikal "eingekastelte" Funktionskurven definierte Riemann-Integral erweitern wir darüber hinaus wie folgt:</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>Uneigentliches Integral 1. Art,</b> falls der Integrationsbereich ins Unendliche reicht:</b></div>
+
+ <div class='in'><br>
+<img src='img/in_23.gif'></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> <b>Uneigentliches Integral 2. Art,</b> falls im Integrationsbereich eine Polstelle c liegt:</div>
+
+ <div class='in'><br>
+<img src='img/in_24.gif'></div>
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b style='position:relative; bottom:24px;'>Aufgabe 9:</b> <img src='img/in_25.gif'></div>
+
+ <div class='in'><br>
+<img src='img/in_26.gif'>&nbsp;&nbsp;<img src='img/in_27.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/in_28.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/in_29.gif'></div>
+
+ <div class='grau'><br>
+<b>Frage:</b> Könnten wir beispielsweise in c) statt dem uneigentlichen Integral auch die Riemann-Definition auf das Intervall ]0<span class='p02'>,</span>1] anwenden?</div>
+
+ <div class='in grau'><br>
+Nein, weil der Grenzwert nicht existiert: x<sub>0</sub> = 0, x<sub>0+</sub> = <div class='frac p02'><div class='num'>1</div><div class='den'>n<sup>4</sup></div></div>, x<sub>1</sub> = <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> <img src='sym/rarr2_g.svg' class='p66'> f(x<sub>0+</sub>)&Delta;x<sub>0</sub> = n (<img src='sym/rarr_g.svg' class='bo1'> &infin;)
+</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='E' class='box'>E</a> INTEGRALMITTELWERTE</b></div>
+
+ <div><br><br>
+<b><a name='E.1' class='box'>1</a> Arithmetisches Mittel mehrerer Zahlen</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Das <b>arithmetische Mittel <span class='ol'>x</span></b> der Zahlen x<sub>1</sub><span class='p02'>,</span>… x<sub>n</sub> ändert deren Summe nicht, wenn es an die Stelle jedes Summanden tritt.</div>
+
+ <div class='in'><br>
+<span class='ws4'>x<sub>1</sub> + … + x<sub>n</sub></span> = <span class='ws4'><span class='ol'>x</span> + … + <span class='ol'>x</span></span> = n<span class='ol'>x</span> <img src='sym/rarr2.svg' class='p66'> <span class='ol'>x</span> = <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> <img src='sym/sum.gif' style='vertical-align:-6px;'><sup style='position:relative; bottom:19px; margin-left:-12px;'>n</sup><sub style='position:relative; top:18px; margin-left:-13px; margin-right:3px;'>i=1</sub>x<sub>i</sub></div>
+
+ <div><br>
+Schneller lässt sich das arithmetische Mittel berechnen, falls die Zahlen in Form einer Häufigkeitstabelle vorliegen:</div>
+
+ <div class='in' style='float:left;'><br>
+  <table class='t0'>
+   <tr>
+    <td class='tc br' style='padding-top:0px;'>
+x<sub>1</sub>
+    </td>
+    <td class='tc' style='padding-top:0px;'>
+n<sub>1</sub>-mal
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br' style='padding-top:4px;'>
+···
+    </td>
+    <td class='tc' style='padding-top:4px;'>
+···
+    </td>
+   </tr>
+   <tr>
+    <td class='tc br'>
+x<sub>m</sub>
+    </td>
+    <td class='tc'>
+n<sub>m</sub>-mal
+    </td>
+   </tr>
+  </table></div>
+
+ <div><br>
+<img src='sym/rbr2.gif' style='margin:0px 10px; vertical-align:middle;'><span class='ol'>x</span> = <div class='frac'><div class='num'>1</div><div class='den'>n</div></div> <img src='sym/sum.gif' style='vertical-align:-6px;'><sup style='position:relative; bottom:19px; margin-left:-15px;'>m</sup><sub style='position:relative; top:18px; margin-left:-14px; margin-right:3px;'>j=1</sub>x<sub class='p01'>j</sub>n<sub>j</sub> &nbsp; mit n = <img src='sym/sum.gif' style='vertical-align:-6px;'><sup style='position:relative; bottom:19px; margin-left:-15px;'>m</sup><sub style='position:relative; top:18px; margin-left:-14px; margin-right:3px;'>j=1</sub>n<sub>j</sub></div>
+
+ <div><br>
+Das verallgemeinern wir zum <b>gewichteten</b> arithmetischen Mittel, indem wir die n<sub>j</sub> durch irgendwelche Gewichte w<sub>j</sub> ersetzen:</div>
+
+ <div class='in' style='margin-bottom:7px;'><br>
+<span class='ol'>x</span> = <div class='frac'><div class='num'>1</div><div class='den'>w</div></div> <img src='sym/sum.gif' style='vertical-align:-6px;'><sup style='position:relative; bottom:19px; margin-left:-15px;'>m</sup><sub style='position:relative; top:18px; margin-left:-14px; margin-right:3px;'>j=1</sub>x<sub class='p01'>j</sub>w<sub>j</sub> &nbsp; mit w = <img src='sym/sum.gif' style='vertical-align:-6px;'><sup style='position:relative; bottom:19px; margin-left:-15px;'>m</sup><sub style='position:relative; top:18px; margin-left:-14px; margin-right:3px;'>j=1</sub>w<sub>j</sub></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 10:</b> Zeige, dass bei der linearen Interpolation die zur Interpolationsstelle benachbarten Werte, gewichtet mit dem Abstand der jeweils anderen Stelle zur Interpolationsstelle, gemittelt werden.</div>
+
+ <div class='in' style='float:left;'><br>
+<img src='img/in_30.gif' style='margin-right:50px;'></div>
+
+ <div><br>
+y(x) = <div class='frac p04'><div class='num'>y<sub>2</sub> – y<sub>1</sub></div><div class='den'>x<sub>2</sub> – x<sub>1</sub></div></div>(x– x<sub>1</sub>) + y<sub>1</sub> =</div>
+
+ <div><br>
+<div class='frac'><div class='num'>xy<sub>2</sub> – x<sub>1</sub>y<sub>2</sub> – xy<sub>1</sub> + x<sub>1</sub>y<sub>1</sub> + x<sub>2</sub>y<sub>1</sub> – x<sub>1</sub>y<sub>1</sub></div><div class='den'>x<sub>2</sub> – x<sub>1</sub></div></div> =</div>
+
+ <div><br>
+<div class='frac'><div class='num'>y<sub>1</sub>(x<sub>2</sub> – x) + y<sub>2</sub>(x – x<sub>1</sub>)</div><div class='den'>x<sub>2</sub> – x<sub>1</sub></div></div> = <div class='frac'><div class='num'>y<sub>1</sub>w<sub>1</sub> + y<sub>2</sub>w<sub>2</sub></div><div class='den'>w<sub>1</sub> + w<sub>2</sub></div></div></div>
+
+ <div style='clear:left;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.2' class='box'>2</a> Linearer Mittelwert einer Funktion</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Den <b>Integralmittelwert <span class='ol'>f</span></b> der Funktion f(x)</b> über [a<span class='p02'>,</span>b] charakterisieren wir wie eingangs, indem wir "Summe" durch "Integral" ersetzen.</div>
+
+ <div class='in' style='margin-top:25px; margin-bottom:5px;'>
+<span style='position:relative; top:24px; right:2px; font-size:11px;'>a</span><span style='position:relative; bottom:25px; right:3px; font-size:11px;'>b</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-17px;'>f(x)<span class='p40'>dx</span> = <span style='position:relative; top:24px; right:2px; font-size:11px;'>a</span><span style='position:relative; bottom:25px; right:3px; font-size:11px;'>b</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-17px;'><span class='ol'>f</span><span class='p40'>dx</span> = <span class='ol'>f</span><span class='ws4 p10'>(b – a)</span> <img src='sym/rarr2.svg' class='p66'> <span class='ol'>f</span> = <div class='frac p06'><div class='num'>1</div><div class='den'>b – a</div></div><span style='position:relative; top:24px; right:2px; font-size:11px;'>a</span><span style='position:relative; bottom:25px; right:3px; font-size:11px;'>b</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-17px;'>f(x)<span class='p40'>dx</span></div>
+
+ <div><br>
+Der <b>Gleichanteil</b> einer periodischen Funktion f(t) ist der Intergralmittelwert über eine Periode, der <b>Effektivwert</b> von f(t) ist die Wurzel aus dem Mittelwert von f<sup class='p10'>2</sup>(t) über eine Periode.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 11:</b> Bestimme den Gleichanteil von P(t) = i(t)u(t), wenn
+
+ <div class='in mt1'>
+i(t) = <span class='p01'>&Icirc;</span>sin&omega;t &nbsp; und &nbsp; u(t) = <span class='p01'>&Ucirc;</span>sin&omega;t</div></div>
+
+ <div class='in'><br>
+<img src='img/in_31.gif'></div>
+
+ <div class='in mt1'>
+<img src='img/in_32.gif'></div>
+
+ <div class='in mt2'>
+(<span class='to4'>*</span>) = <div class='frac to1'><div class='num'><span class='p01'>&Icirc;</span>&Ucirc;</div><div class='den'>2<span style='font-family:arial;' class='p01'>&pi;</span></div></div>
+  <div style='display:inline-block; vertical-align:middle;'>
+   <div class='lbr'>
+<br><br>
+   </div>
+   <div class='bbr'>
+<div class='frac'><div class='num'><span class='p01'>–sinu</span>cosu + u</div><div class='den'>2</div></div>
+   </div>
+   <div class='rbr'>
+<br><br>
+   </div>
+  </div>
+<span style='position:relative; bottom:15px; right:2px; font-size:11px;'>2<span style='font-family:arial;' class='p01'>&pi;</span></span><span style='position:relative; top:13px; right:18px; margin-right:-10px; font-size:11px;'>0</span> = <div class='frac to1'><div class='num'><span class='p01'>&Icirc;</span>&Ucirc;</div><div class='den'>2<span style='font-family:arial;' class='p01'>&pi;</span></div></div><span style='font-family:arial;' class='p40'>&pi;</span> = <div class='frac to1'><div class='num'><span class='p01'>&Icirc;</span>&Ucirc;</div><div class='den'>2</div></div></div>
+
+ <div class='grau mt1'><br>
+Bem: Dass sin<sup>2</sup>x den Gleichanteil 1/2 hat, sieht man auch so:</div>
+
+ <div class='in grau mt1'>
+cos2x = <span class='ws4'>cos<sup>2</sup>x – sin<sup>2</sup>x</span> = <span class='ws4'>(1 – sin<sup>2</sup>x) – sin<sup>2</sup>x</span> = <span class='ws4'>1 – 2sin<sup>2</sup>x</span> <img src='sym/rarr2_g.svg' class='p66'> sin<sup>2</sup>x = <div class='frac'><div class='num'>1</div><div class='den'>2</div></div> – <div class='frac p04'><div class='num'>1</div><div class='den'>2</div></div>cos2x</div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='E.3' class='box'>3</a> Kepler/Simpson'sche Regel</b></div>
+
+ <div><br>
+Auf Kepler geht die Regel zurück, dass der Integralmittelwert einer <b>quadratischen Funktion</b> über [a<span class='p02'>,</span>b] als gewichtetes Mittel berechenbar ist, indem die Funktionswerte an den Rändern einfach und in der Mitte vierfach gewichtet werden.</div>
+
+ <div class='in'><br>
+<img src='img/in_33.gif'></div>
+
+ <div><br>
+Die <b>Simpson'sche Regel</b> nützt das zur näherungsweisen Berechnung bestimmter Integrale: Gleich weit auseinanderliegende Stellen liefern zum einen Funktionswerte und zerlegen zum anderen den Integrationsbereich in Teilintervalle. Jeweils zwei davon werden zusammengefasst und die Fläche darüber mit obigem Integralmittelwert geschätzt.</div>
+
+ <br><div class='bsp' style='padding-top:17px; padding-bottom:17px;'>
+<b>Aufgabe 12:</b> Bestimme <span style='position:relative; top:24px; right:2px; font-size:11px;'>1</span><span style='position:relative; bottom:25px; right:3px; font-size:11px;'>5</span><img src='sym/int.gif' class='p20' style='vertical-align:-12px; margin-left:-17px;'><div class='frac p44'><div class='num'>e<sup>x</sup></div><div class='den'>x</div></div>dx näherungsweise mithilfe der Simpson'schen Regel und 4 Teilintervallen.</div>
+
+ <div class='in' style='float:left; margin-right:40px;'><br>
+<img src='img/in_34.gif'></div>
+
+ <div class='mt2'><br>
+<img src='img/in_35.gif'></div>
+
+ <div class='grau'><br>
+Zum Vergleich der exakte Wert: 38,29</div>
+
+ <div style='clear:left;'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='F' class='box'>F</a> INTEGRALFORMELN</b></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br><br>
+Es geht darum, einen Grenzprozess als solchen einer Riemann-Summe zu erkennen und dementsprechend als Integral zu schreiben:</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 13:</b> Bestimme <b>a)</b> die Integralformel für das Volumen des Körpers, der durch Drehung der Fläche zwischen f(x) und <span class='nw ws4'>a &le; x &le; b</span> um die x-Achse entsteht, und damit <b>b)</b> die Formel für das Kugelvolumen.</div>
+
+ <div class='in'><br>
+<img src='img/in_36.gif'></div>
+
+ <div class='in' style='margin-top:-50px;'>
+<img src='img/in_37.gif'></div>
+
+ <div class='in'><br>
+<img src='img/in_38.gif'></div>
+
+ </div></body>
+ </html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <meta charset='utf-8'>
+ <meta name='robots' content='noindex'>
+ <title>Matrizenrechnung</title>
+ <style type='text/css'>@import url(css/main.css);</style>
+ <!--[if IE]><style type='text/css'>@import url(css/iefix.css);</style><![endif]-->
+ </head>
+
+ <body><div>
+
+ <div style='font-size:18px; line-height:22px;'>
+<b>XIII. MATRIZENRECHNUNG</b></div>
+
+ <div><br>
+<a href='13_matrizenrechnung.html#A'>A. Matrizen und Determinanten</a><br>
+<a href='13_matrizenrechnung.html#B'>B. Lineare Gleichungssysteme</a><br>
+<a href='13_matrizenrechnung.html#C'>C. Lineare Abbildungen</a><br>
+<a href='13_matrizenrechnung.html#D'>D. Praktische Anwendungen</a></div>
+
+ <div style='margin-top:8px;'>
+<a href='13a_matrizenrechnung.html'><img src='sym/link.gif' border='0'> Ergänzungen und Details</a></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='A' class='box'>A</a> MATRIZEN UND DETERMINANTEN</b></div>
+
+ <div><br><br>
+<b><a name='A.1' class='box'>1</a> Was ist eine Matrix?</b></div>
+
+ <div><br>
+Eine <b>Matrix</b> besteht aus <b>Elementen,</b> typischerweise reelle Zahlen, die in einer rechteckigen Tabelle angeordnet und dementsprechend über Zeilen- und Spaltenindizes nach der <b class='rot'>Z</b>eile-<b class='rot'>z</b>uerst-Regel adressiert werden. Eine mxn-Matrix hat also m Zeilen und n Spalten:</div>
+
+ <div class='in'><br>
+<img src='img/mr_00.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.2' class='box'>2</a> Matrixoperationen</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Die <b>transponierte Matrix</b> erhalten wir, indem wir die Spalten als Zeilen (oder umgekehrt) schreiben:</div>
+
+ <div class='in'><br>
+<img src='img/mr_01.gif'></div>
+
+ <div class='in'><br>
+<span class='out'>•</span>
+Die <b>Matrizenaddition</b> (und -subtraktion) und die <b>Multiplikation-mit-Skalar</b> wird wie bei Vektoren ausgeführt, also elementweise:</div>
+
+ <div class='in'><br>
+<img src='img/mr_02.gif'></div>
+
+ <div><br>
+Hinsichtlich der zugehörigen Rechenregeln bilden die mxn-Matrizen damit genauso einen <b>reellen Vektorraum</b> wie die "klassischen" Vektoren. Diese wiederum können wir auch als einspaltige/zeilige Matrizen ansehen.</div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Bei der <b>Matrizenmultiplikation</b> werden die Zeilenvektoren der ersten Matrix mit den Spaltenvektoren der zweiten Matrix skalar multipliziert:</div>
+
+ <div class='in'><br>
+<img src='img/mr_03.gif'></div>
+
+ <div><br>
+Die Matrizenmultiplikation ist <b>assoziativ,</b> aber <b>nicht kommutativ</b> (auch nicht für quadratische Matrizen).</div>
+
+ <br><div class='bsp' style='padding-top:8px;'>
+<b>Aufgabe 1:</b> Berechne <b>a)</b> 3A + BC, <b>b)</b> CA<sup>T</sup> + B<sup>2</sup>, <b>c)</b> (A – C)<sup class='p02'>T</sup>B, wenn
+
+  <div class='in'><br>
+<img src='img/mr_04.gif'></div></div>
+
+ <div class='in'><br>
+<b>a)</b> <img src='img/mr_05.gif' style='vertical-align:-13px;'></div>
+
+ <div class='in mt2'>
+<b>b)</b> <img src='img/mr_06.gif' style='vertical-align:-23px;'></div>
+
+ <div class='in mt2'>
+<b>c)</b> <img src='img/mr_07.gif' style='vertical-align:-23px;'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='A.3' class='box'>3</a> Determinanten</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Für die <b>Determinante</b> einer quadratischen Matrix gehen wir alle Möglichkeiten durch, in jeder Spalte eine andere Zeilennummer auszuwählen und die dortigen Elemente miteinander zu multiplizieren. Diese Produkte werden addiert bzw. im Fall von ungeradzahlig vielen Fehlständen subtrahiert. (Zwei Spalten "stehen fehl" zueinander, wenn in der vorderen eine größere Zeilennummer ausgewählt wurde als in der hinteren.)</div>
+
+ <div><br>
+Schreibweise:</div>
+
+ <div class='in'><br>
+|A| oder det(A) <span class='ldf'>:</span>= Determinante von A</div>
+
+ <div><br>
+Bem: Ob wir das Ganze über Spalten oder Zeilen aufziehen, ist egal (d.h. eine Matrix und ihre transponierte Matrix haben dieselbe Determinante).</div>
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 2:</b> Berechne die Determinante von A über die "Leibniz-Formel" so wie oben beschrieben.
+
+  <div class='in'><br>
+<img src='img/mr_08.gif'></div></div>
+
+ <div class='in'><br>
+<img src='img/mr_09.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='B.4' class='box'>4</a> Laplace'scher Entwicklungssatz</b></div>
+
+ <div><br>
+Ein Platztausch <b>benachbarter</b> Spalten/Zeilen ändert deren Stand zueinander und damit das Vorzeichen der Determinante, da alle Produkte ihr altes Muster in ein neues mit einem Fehlstand mehr bzw. weniger ändern. Das können wir nützen, um die Determinante von A in solche von A<sub style='text-decoration:line-through;'>ij</sub> (= A ohne i-te Zeile und j-te Spalte) zu <b>entwickeln,</b> beispielsweise nach der j-ten Spalte:</div>
+
+ <div class='in'><br>
+<img src='img/mr_10.gif'></div>
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 2':</b> Entwickle die Determinante von A nach der zweiten Spalte.
+
+  <div class='in'><br>
+<img src='img/mr_08.gif'></div></div>
+
+ <div class='in'><br>
+<img src='img/mr_11.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='B' class='box'>B</a> LINEARE GLEICHUNGSSYSTEME</b></div>
+
+ <div><br><br>
+<b><a name='B.1' class='box'>1</a> Cramer'sche Regel</b></div>
+
+ <div><br>
+Historisch gesehen ist man zuerst beim Lösen linearer Gleichungssysteme auf Determinanten gestoßen:</div>
+
+<!-- Determinanten tauchen schon Jiu Zhang Suànshù auf, den "Neun Kapiteln der Rechenkunst" (1. Jh.n.Chr.) -->
+
+ <div class='in' style='float:left; line-height:22px; margin-top:12px; margin-bottom:2px;'>
+(1) <span class='ws4'>a<sub>11</sub>x + a<sub>12</sub>y</span> = b<sub>1</sub> &nbsp; |·a<sub>22</sub><br>
+(2) <span class='ws4'>a<sub>21</sub>x + a<sub>22</sub>y</span> = b<sub>2</sub> &nbsp; |·(–a<sub>12</sub>)</div>
+
+ <div style='float:left; margin-top:22px;'>&nbsp;
+<img src='sym/add.gif'></div>
+
+ <div class='in mt2' style='clear:left;'>
+<img src='sym/rarr2.svg' class='p06'> <span class='ws4'>(a<sub>11</sub>a<sub>22</sub> – a<sub>21</sub>a<sub>12</sub>)x</span> = <span class='ws4'>a<sub>22</sub>b<sub>1</sub> – a<sub>12</sub>b<sub>2</sub></span> &nbsp;<span class='ll'>:</span>(&nbsp;) <img src='sym/rarr2.svg' class='p66'> x = <div class='frac'><div class='num'>a<sub>22</sub>b<sub>1</sub> – a<sub>12</sub>b<sub>2</sub></div><div class='den'>a<sub>11</sub>a<sub>22</sub> – a<sub>21</sub>a<sub>12</sub></div></div></div>
+
+ <div class='in' style='float:left; line-height:22px; margin-top:12px; margin-bottom:2px;'>
+(1) <span class='ws4'>a<sub>11</sub>x + a<sub>12</sub>y</span> = b<sub>1</sub> &nbsp; |·(–a<sub>21</sub>)<br>
+(2) <span class='ws4'>a<sub>21</sub>x + a<sub>22</sub>y</span> = b<sub>2</sub> &nbsp; |·a<sub>11</sub></div>
+
+ <div class='in mt2' style='clear:left;'>
+<img src='sym/rarr2.svg' class='p06'> <span class='ws4'>(a<sub>11</sub>a<sub>22</sub> – a<sub>21</sub>a<sub>12</sub>)y</span> = <span class='ws4'>a<sub>11</sub>b<sub>2</sub> – a<sub>21</sub>b<sub>1</sub></span> &nbsp;<span class='ll'>:</span>(&nbsp;) <img src='sym/rarr2.svg' class='p66'> y = <div class='frac'><div class='num'>a<sub>11</sub>b<sub>2</sub> – a<sub>21</sub>b<sub>1</sub></div><div class='den'>a<sub>11</sub>a<sub>22</sub> – a<sub>21</sub>a<sub>12</sub></div></div></div>
+
+ <div><br>
+Der Nenner ist die Determinante der Koeffizientenmatrix und bestimmt (lat. determinare), ob das System eindeutig lösbar ist, weil wir nur im Fall von |A|<span class='p44'>&ne;</span>0 dividieren können. Der Übergang zu höheren Dimensionen enthüllt das generelle Rechenschema hinter Determinanten, ändert aber nichts an der <b>Cramer'schen Regel,</b> die die Determinanten von A<sub>j</sub> (= A mit b-Spalte als j-ter Spalte) und A ins Verhältnis setzt:</div>
+
+ <div class='in'><br>
+<img src='img/mr_12.gif'></div>
+
+ <div><br>
+Für mehr Einblick schreiben wir das Ganze als Vektorgleichung:</div>
+
+ <div class='in'><br>
+<img src='img/mr_13.gif'></div>
+
+ <div><br>
+Linear unabhängige Vektoren <span class='ol'>a</span><span class='vec'>`</span><sub>1</sub><span class='p02'>,</span>... <span class='ol'>a</span><span class='vec'>`</span><sub>n</sub> spannen für 0 &le; x<sub>j</sub> &le; 1 ein n-dimensionales Parallelepiped auf und |A| ist das "orientierte Volumen" davon.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 3:</b> Löse das folgende Gleichungssystem über die Cramer'sche Regel und interpretiere das Ganze grafisch:<br><br>
+
+  <table class='in'>
+   <tr>
+ 		<td style='vertical-align:top;'>
+(1) 4x – 2y = 2
+     <div style='margin-top:5px;'>
+(2) x + y = 5
+     </div>
+    </td>
+    <td>
+<img src='img/mr_14.gif' style='margin-left:20px;'>
+    </td>
+   </tr>
+  </table>
+ </div>
+
+ <div class='in'><br>
+<img src='img/mr_15.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/mr_16.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='B.2' class='box'>2</a> Einheitsmatrix und inverse Matrizen</b></div>
+
+ <div class='in mt2'>
+<span class='out'>•</span> Eine quadratische Nullmatrix mit 1en in der Hauptdiagonale heißt <b>Einheitsmatrix E,</b> weil sie sich bei Matrizenmultiplikationen neutral verhält.</div>
+
+ <div><br>
+Beispiel:</div>
+
+ <div class='in'><br>
+<img src='img/mr_17.gif'></div>
+
+ <div><br>
+<span class='p02'>•</span> Die zu einer quadratischen Matrix A <b>inverse Matrix A<sup>–1</sup></b> = (x<sub>ij</sub>)<sup>T</sup> mit x<sub>ij</sub> = (–1)<sup>i+j</sup><div class='frac p40'><div class='num'>|A<sub style='text-decoration:line-through;'>ij</sub>|</div><div class='den'>|A|</div></div> heißt so, weil AA<sup>–1</sup> = A<sup>–1</sup>A = E.</div>
+
+ <div class='mt1'>
+Beweis:</div>
+
+ <div class='in'><br>
+Wir betrachten die Spalten von AX<sup>T</sup> = E als lineare Gleichungssysteme und lösen sie über die Cramer'sche Regel:</div>
+
+ <div class='in'><br>
+<img src='img/mr_18.gif'></div>
+
+ <div class='in grau'><br>
+Genauso können wir die Zeilen von X<sup>T</sup>A = E als lineare Gleichungssysteme betrachten:</div>
+
+ <div class='in'><br>
+<img src='img/mr_19.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <br><div class='bsp'>
+<b>Aufgabe 4:</b> Löse das folgende Gleichungssystem über die inverse Koeffizientenmatrix:<br><br>
+
+  <table class='in'>
+   <tr>
+ 		<td style='vertical-align:top;'>
+(1) 2x – 2z = 1
+     <div style='margin-top:5px;'>
+(2) 4x + 3y – 6z = 4
+     </div>
+     <div style='margin-top:5px;'>
+(3) –3x + 2y + 2z = 2
+     </div>
+    </td>
+    <td>
+<img src='img/mr_20.gif' style='margin-left:20px;'>
+    </td>
+   </tr>
+  </table>
+ </div>
+
+ <div class='in mt2'>
+<img src='img/mr_21.gif'></div>
+
+ <div class='in mt2'>
+A<span class='ol'>x</span><span class='vec'>`</span> = <span class='ol'>b</span><span class='vec'>`</span> &nbsp; <span class='ll'>A<sup class='p02'>–1</sup></span>(.)</div>
+
+ <div class='in mt2'>
+<img src='img/mr_22.gif'></div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='C' class='box'>C</a> LINEARE ABBILDUNGEN</b></div>
+
+ <div><br><br>
+<b><a name='C.1' class='box'>1</a> Matrizen als lineare Abbildungen</b></div>
+
+ <div class='in'><br>
+<span class='out'>•</span> Eine Abbildung a zwischen Vektorräumen heißt <b>linear,</b> wenn</div>
+
+ <div class='in'><br>
+a(<span class='ol'>x</span><span class='vec'>`</span><sub>1</sub> + <span class='ol'>x</span><span class='vec'>`</span><sub>2</sub>) = a(<span class='ol'>x</span><span class='vec'>`</span><sub>1</sub>) + a(<span class='ol'>x</span><span class='vec'>`</span><sub>2</sub>) &nbsp; und &nbsp; a(&lambda;<span class='ol'>x</span><span class='vec'>`</span>) = &lambda;a(<span class='ol'>x</span><span class='vec'>`</span>)</div>
+
+ <div class='in'><br>
+<span class='p02' style='margin-left:-14px;'>•</span> Eine <b>lineare Abbildung a: <img src='sym/ssetR.gif'><sup>n</sup> <img src='sym/rarr.svg' class='bo1'> <img src='sym/ssetR.gif'><sup>m</sup></b> ist daher durch die Bildvektoren der Basisvektoren charakterisiert, weil damit die Bilder der übrigen aus den Basisvektoren zusammengebauten Vektoren unter Beibehaltung der "Baupläne" nachgebaut werden:</div>
+
+ <div class='in'><br>
+<img src='img/mr_23.gif'></div>
+
+ <div><br>
+Die linearen Abbildungen <img src='sym/setR.gif'><sup>n</sup> <img src='sym/rarr.svg' class='bo1'> <img src='sym/setR.gif'><sup>m</sup> entsprechen also den mxn-Matrizen, wobei die Hintereinanderausführung zur Matrizenmultiplikation wird:</div>
+
+ <div class='in'><br>
+(a<span class='aft'>o</span>b)(<span class='ol'>x</span><span class='vec'>`</span>) = A(B<span class='ol'>x</span><span class='vec'>`</span>) = (AB)<span class='ol'>x</span><span class='vec'>`</span></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='C.2' class='box'>2</a> Eigenwerte/vektoren</b></div>
+
+ <div><br>
+Wenn eine lineare Abbildung eines Vektorraums auf sich selbst einen Vektor &ne; <span class='ol'>o</span><span class='vec'>`</span> nur skaliert, heißt dieser <b>Eigenvektor</b> und der Skalierungsfaktor <b>Eigenwert.</b> Da der Nullvektor immer eine Lösung des linearen Gleichungssystems</div>
+
+ <div class='in'><br>
+A<span class='ol'>x</span><span class='vec'>`</span> = &lambda;<span class='ol'>x</span><span class='vec'>`</span> <img src='sym/rarr2.svg' class='p66'> (A – &lambda;E)<span class='ol'>x</span><span class='vec'>`</span> = <span class='ol'>o</span><span class='vec'>`</span></div>
+
+ <div><br>
+ist, setzt die Existenz weiterer Lösungen voraus, dass die Cramer'sche Regel nicht anwendbar ist:</div>
+
+ <div class='in'><br>
+|A – &lambda;E| = 0</div>
+
+ <div><br>
+Um die Eigenwerte/vektoren einer quadratischen Matrix A zu bestimmen, müssen wir daher die Polynomgleichung</div>
+
+ <div class='in'><br>
+<img src='img/mr_24.gif'></div>
+
+ <div><br>
+lösen und anschließend für jede Lösung &lambda;<sub>i</sub> das entsprechende lineare Gleichungssystem.</div>
+
+ <!-- +++++++++++++++++++++++++++++ -->
+ <!-- +++++++++++++++++++++++++++++ -->
+
+ <div><br><br>
+<b><a name='D' class='box'>D</a> PRAKTISCHE ANWENDUNGEN</b></div>
+
+ <div><br><br>
+<b><a name='D.1' class='box'>1</a> SVG-Transformationen</b></div>
+
+ <div><br>
+SVG (Scalable Vector Graphics) ist eine Sprache zur Beschreibung 2-dimensionaler Grafiken, um diese von Webbrowsern am Bildschirm darstellen zu lassen. Der Bildschirm wird in einen xyz-Raum eingebettet, damit auch das Verschieben am Bildschirm zur linearen Abbildung wird: Die x-Achse läuft nach rechts, die y-Achse nach unten, die z-Achse in den Bildschirm hinein, der Ursprung liegt links oben und eine Einheit vor dem Bildschirm.</div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 5:</b> Bestimme die Transformationsmatrix<br><br>
+
+<img src='img/mr_25.gif' class='in'><br><br>
+
+für <b>a)</b> translate(t<sub>x</sub>, t<sub>y</sub>)
+<span style='margin-left:80px;'><b>b)</b> scale(s<sub>x</sub>, s<sub>y</sub>)</span>
+<span style='margin-left:90px;'><b>c)</b> rotate(&alpha;)</span><br><br>
+
+<img src='img/mr_26.gif' class='in'></div>
+
+ <div class='in'><br>
+Die Spalten der Transformationsmatrix sind die Bilder der Basisvektoren:</div>
+
+ <div class='in'><br>
+<img src='img/mr_27.gif'></div>
+
+ <div><br>
+<b>Zusatzaufgabe:</b> Bestimme die Transformationsmatrix einer 18°-Drehung um den Ursprung mit anschließender Verschiebung um 50 Pixel nach rechts und 20 Pixel nach unten.</div>
+
+ <div class='in mt2'>
+<img src='img/mr_28.gif'></div>
+
+ <div class='grau'><br>
+Bem: In SVG werden Transformationsmatrizen spaltenweise ohne die letzte Zeile angegeben, d.h.</div>
+
+ <pre class='in grau'>
+<tt>&lt;g transform="translate(50,20)"&gt;</tt>
+  &lt;g transform="rotate(18)"&gt;
+    ...
+  &lt;/g&gt;
+&lt;/g&gt;</pre>
+
+ <div class='grau'>
+entspricht</div>
+
+ <pre class='in grau'>
+&lt;g transform="matrix(0.95,0.31,-0.31,0.95,50,20)"&gt;
+  ...
+&lt;/g&gt;</pre>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div class='mt2'>
+<b><a name='D.2' class='box'>2</a> Produktionsketten</b></div>
+
+ <br><div class='bsp'>
+<b>Aufgabe 6:</b> Das folgende Diagramm gibt an, wie viele Einheiten von Vorprodukten in die Produktion einer Einheit eines Folgeprodukts einfließen. Benötigt werden g und h Einheiten der Endprodukte G und H. Formuliere über Gleichungen, wie viele Einheiten von Vorprodukten dafür benötigt werden und wie viele Einheiten von Vor-Vorprodukten wiederum dafür. Mache daraus <i>eine</i> Matrizengleichung und löse sie für g = 150 und h = 200.
+
+  <div class='in'><br>
+<img src='img/mr_29.gif'></div></div>
+
+ <div class='in'><br>
+<img src='img/mr_30.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/mr_31.gif'></div>
+
+ <div class='in mt2'>
+<img src='img/mr_32.gif'></div>
+
+ <!-- +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ -->
+
+ <div><br>
+<b><a name='D.3' class='box'>3</a> Lineare Vierpole</b></div>
+
+ <div><br>
+Vierpole sind Netzwerke mit je zwei Ein- und Ausgangsklemmen zur Übertragung elektrischer Energie:</div>
+
+ <div class='in'><br>
+<img src='img/mr_33.gif'></div>
+
+ <br><div class='bsp' style='padding-bottom:8px;'>
+<b>Aufgabe 7:</b> Bestimme die Kettenmatrix<br><br>
+
+<img src='img/mr_34.gif' class='in'><br><br>
+
+für die Vierpole<br><br>
+
+<img src='img/mr_35.gif' class='in'><br><br>
+
+und die fehlenden Größen in c), wenn <b>d)</b> U<sub>a</sub> = 4 V, I<sub>a</sub> = 0,1 A bzw. <b>e)</b> U<sub>e</sub> = 15 V, I<sub>e</sub> = 0,4 A.</div>
+
+ <div class='in'><br>
+<b>a)</b> I<sub>e</sub> = I<sub>a</sub> &nbsp; und &nbsp; U<sub>e</sub> = <span class='p02'>R</span>I<sub>a</sub> + U<sub>a</sub> &nbsp; <img src='img/mr_36.gif' style='vertical-align:-13px;'></div>
+
+ <div class='in mt2'>
+<b>b)</b> U<sub>e</sub> = U<sub>a</sub> &nbsp; und &nbsp; I<sub>e</sub> = <div class='frac'><div class='num'>U<sub>a</sub></div><div class='den'>R</div></div> + I<sub>a</sub> &nbsp; <img src='img/mr_37.gif' style='vertical-align:-13px;'></div>
+
+ <div class='in mt2'>
+<b>c)</b> <img src='img/mr_38.gif' style='vertical-align:-13px;'></div>
+
+ <div class='in mt2'>
+<b>d)</b> <img src='img/mr_39.gif' style='vertical-align:-13px;'></div>
+
+ <div class='in mt2'>
+<b>e)</b> <img src='img/mr_40.gif' style='vertical-align:-23px;'></div>
+
+ </div></body>
+ </html>
